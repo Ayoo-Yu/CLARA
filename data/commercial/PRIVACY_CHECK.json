@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "audited_asset_shards": 6,
+  "audited_parquet_files": 711,
+  "audited_numeric_npz_files": 60,
+  "base_adaptation_and_test_records": 11518320,
+  "checksums_verified": 774,
+  "direct_site_identifiers_removed": true,
+  "absolute_dates_removed": true,
+  "relative_time_and_group_membership_preserved": true,
+  "schema_and_string_values_inspected": true,
+  "only_numeric_npz_arrays": true,
+  "personal_paths_and_contact_identifiers_removed": true,
+  "archive_member_paths_and_metadata_inspected": true,
+  "archive_member_timestamps": "fixed non-source timestamp",
+  "issues_found": 0
+}

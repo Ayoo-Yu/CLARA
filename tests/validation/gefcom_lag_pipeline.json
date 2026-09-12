@@ -1,0 +1,114 @@
+{
+  "status": "PASS",
+  "scope": "All ten zones, four forecasters, five horizons and three seeds; evaluated base predictions, candidate event context, and source facts consumed by CLARA/CART/LinUCB.",
+  "checks": [
+    {
+      "zone": "zone1",
+      "base_streams": 60,
+      "base_rows": 419796,
+      "candidate_core_rows": 2309208,
+      "source_fact_rows": 2308548,
+      "max_lag_error": 0.0,
+      "max_ramp_error": 0.0,
+      "all_lag_timestamps_strictly_before_issue": true
+    },
+    {
+      "zone": "zone2",
+      "base_streams": 60,
+      "base_rows": 419796,
+      "candidate_core_rows": 2309208,
+      "source_fact_rows": 2308548,
+      "max_lag_error": 0.0,
+      "max_ramp_error": 0.0,
+      "all_lag_timestamps_strictly_before_issue": true
+    },
+    {
+      "zone": "zone3",
+      "base_streams": 60,
+      "base_rows": 419796,
+      "candidate_core_rows": 2309208,
+      "source_fact_rows": 2308548,
+      "max_lag_error": 0.0,
+      "max_ramp_error": 0.0,
+      "all_lag_timestamps_strictly_before_issue": true
+    },
+    {
+      "zone": "zone4",
+      "base_streams": 60,
+      "base_rows": 419796,
+      "candidate_core_rows": 2309208,
+      "source_fact_rows": 2308548,
+      "max_lag_error": 0.0,
+      "max_ramp_error": 0.0,
+      "all_lag_timestamps_strictly_before_issue": true
+    },
+    {
+      "zone": "zone5",
+      "base_streams": 60,
+      "base_rows": 419796,
+      "candidate_core_rows": 2309208,
+      "source_fact_rows": 2308548,
+      "max_lag_error": 0.0,
+      "max_ramp_error": 0.0,
+      "all_lag_timestamps_strictly_before_issue": true
+    },
+    {
+      "zone": "zone6",
+      "base_streams": 60,
+      "base_rows": 419796,
+      "candidate_core_rows": 2309208,
+      "source_fact_rows": 2308548,
+      "max_lag_error": 0.0,
+      "max_ramp_error": 0.0,
+      "all_lag_timestamps_strictly_before_issue": true
+    },
+    {
+      "zone": "zone7",
+      "base_streams": 60,
+      "base_rows": 419796,
+      "candidate_core_rows": 2309208,
+      "source_fact_rows": 2308548,
+      "max_lag_error": 0.0,
+      "max_ramp_error": 0.0,
+      "all_lag_timestamps_strictly_before_issue": true
+    },
+    {
+      "zone": "zone8",
+      "base_streams": 60,
+      "base_rows": 419796,
+      "candidate_core_rows": 2309208,
+      "source_fact_rows": 2308548,
+      "max_lag_error": 0.0,
+      "max_ramp_error": 0.0,
+      "all_lag_timestamps_strictly_before_issue": true
+    },
+    {
+      "zone": "zone9",
+      "base_streams": 60,
+      "base_rows": 419796,
+      "candidate_core_rows": 2309208,
+      "source_fact_rows": 2308548,
+      "max_lag_error": 0.0,
+      "max_ramp_error": 0.0,
+      "all_lag_timestamps_strictly_before_issue": true
+    },
+    {
+      "zone": "zone10",
+      "base_streams": 60,
+      "base_rows": 419796,
+      "candidate_core_rows": 2309208,
+      "source_fact_rows": 2308548,
+      "max_lag_error": 0.0,
+      "max_ramp_error": 0.0,
+      "all_lag_timestamps_strictly_before_issue": true
+    }
+  ],
+  "source_locations": {
+    "datetime_sort": "run_base_predictor._load_source; common.prepare_multihorizon",
+    "training_lag_recomputation": "common.prepare_multihorizon",
+    "prediction_context_lag_recomputation": "run_base_predictor._build_feature_context",
+    "candidate_context": "run_calibration.prepare_candidate_base; build_candidate_frames",
+    "selector_state_construction": "source_tuning_facts.build_source_facts"
+  },
+  "limitation": "This test verifies lag chronology and context propagation; it is not a full rerun of the forecast model grid."
+}

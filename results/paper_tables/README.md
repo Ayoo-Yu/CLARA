@@ -1,0 +1,3 @@
+# Publication tables
+
+These CSV files transcribe the included final manuscript and supplementary tables, including their published rounding. The caption and dimensions of each table are recorded in `INDEX.json`. Dataset metadata tables (main Table 4 and supplementary Tables S2–S3) are omitted from this public package to avoid adding calendar and capacity anchors to the anonymized archive. Tables containing symbols or descriptive method definitions remain text tables. Use the numerical analysis files and commercial reproduction archive for recomputation; these transcriptions do not replace forecast-level data.

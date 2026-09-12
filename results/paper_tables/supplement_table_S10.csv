@@ -1,0 +1,26 @@
+ρ,Screen / fallback,GEFCom ERRF,GEFCom TUWR (%),Farm ERRF,Farm TUWR (%)
+1,Symmetric / cost,1.6391,20.90,0.3841,24.06
+1,Symmetric / reliability,1.6465,19.83,0.3927,19.02
+1,One-sided / cost,1.6418,20.42,0.3885,20.61
+1,CLARA,1.6432,20.26,0.3904,19.41
+1,No screen,1.5906,30.42,0.3601,39.92
+2,Symmetric / cost,1.8655,19.25,0.4348,21.91
+2,Symmetric / reliability,1.8758,16.95,0.4448,15.61
+2,One-sided / cost,1.8706,17.81,0.4399,17.08
+2,CLARA,1.8722,17.61,0.4418,15.84
+2,No screen,1.8266,30.14,0.4158,35.64
+20/3.56,Symmetric / cost,2.5827,8.57,0.5949,13.52
+20/3.56,Symmetric / reliability,2.5857,7.88,0.6023,9.71
+20/3.56,One-sided / cost,2.5611,8.38,0.5951,10.37
+20/3.56,CLARA,2.5630,8.07,0.5969,9.44
+20/3.56,No screen,2.5461,12.94,0.5815,18.40
+10,Symmetric / cost,3.3596,5.78,0.7644,8.41
+10,Symmetric / reliability,3.3618,5.35,0.7677,6.26
+10,One-sided / cost,3.2824,5.67,0.7539,6.66
+10,CLARA,3.2839,5.40,0.7552,6.29
+10,No screen,3.2753,7.99,0.7481,11.74
+20,Symmetric / cost,5.0048,3.59,1.1265,7.62
+20,Symmetric / reliability,5.0063,3.17,1.1276,5.38
+20,One-sided / cost,4.8623,3.29,1.1036,6.42
+20,CLARA,4.8634,3.11,1.1048,5.46
+20,No screen,4.8596,4.52,1.1013,9.50

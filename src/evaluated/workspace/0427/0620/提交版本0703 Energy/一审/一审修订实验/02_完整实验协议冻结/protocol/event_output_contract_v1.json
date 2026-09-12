@@ -1,0 +1,169 @@
+{
+  "contract_id": "CLARA_EVENT_OUTPUT_V1",
+  "format": "partitioned_parquet_and_utf8_json_csv_summaries",
+  "partitions": [
+    "protocol_id",
+    "run_id",
+    "dataset_id",
+    "outer_fold",
+    "predictor",
+    "seed"
+  ],
+  "tables": {
+    "events": {
+      "grain": "one_unique_release_event",
+      "unique_key": [
+        "event_id"
+      ],
+      "required_fields": [
+        "protocol_id",
+        "protocol_sha256",
+        "code_commit",
+        "run_id",
+        "study_mode",
+        "dataset_id",
+        "outer_fold",
+        "zone_or_farm",
+        "event_id",
+        "issue_timestamp",
+        "label_timestamp",
+        "label_available_timestamp",
+        "snapshot_revision",
+        "predictor",
+        "horizon_steps",
+        "horizon_hours",
+        "horizon_group",
+        "seed",
+        "alpha",
+        "target_coverage",
+        "previous_target_timestamp",
+        "previous_target_value",
+        "base_lower",
+        "base_center",
+        "base_upper",
+        "ramp_proxy",
+        "ramp_state",
+        "raw_width_value",
+        "raw_width_q33",
+        "raw_width_q67",
+        "raw_width_state",
+        "rolling_history_start",
+        "rolling_history_end",
+        "rolling_n",
+        "rolling_gap",
+        "rolling_towr",
+        "rolling_tuwr",
+        "rolling_ard",
+        "rolling_state",
+        "support_backoff_level",
+        "support_backoff_name",
+        "guardrail_evidence_level",
+        "guardrail_empty_fallback",
+        "selected_action",
+        "selected_lower",
+        "selected_upper",
+        "schedule_proxy",
+        "target_after_maturity",
+        "selected_covered_after_maturity",
+        "selected_ERRF_after_maturity"
+      ]
+    },
+    "candidates": {
+      "grain": "one_event_action",
+      "unique_key": [
+        "event_id",
+        "action"
+      ],
+      "required_fields": [
+        "event_id",
+        "action",
+        "candidate_lower",
+        "candidate_upper",
+        "support_n",
+        "support_source_zones",
+        "risk_mean",
+        "risk_parent_mean",
+        "risk_shrunken_mean",
+        "risk_zone_cluster_se",
+        "risk_score",
+        "coverage_point",
+        "coverage_lcb",
+        "tuwr_point",
+        "tuwr_ucb",
+        "ard_point",
+        "ard_ucb",
+        "guardrail_pass",
+        "guardrail_failure_reasons",
+        "chosen",
+        "target_after_maturity",
+        "covered_after_maturity",
+        "reserve_up_after_maturity",
+        "reserve_down_after_maturity",
+        "miss_upper_after_maturity",
+        "miss_lower_after_maturity",
+        "ERRF_after_maturity"
+      ]
+    },
+    "feedback": {
+      "grain": "one_event_action_feedback_application",
+      "unique_key": [
+        "event_id",
+        "action",
+        "feedback_application_timestamp"
+      ],
+      "required_fields": [
+        "event_id",
+        "action",
+        "label_timestamp",
+        "feedback_application_timestamp",
+        "eligible_by_strict_time_rule",
+        "candidate_calibrator_updated",
+        "rolling_diagnostic_updated",
+        "upper_landscape_updated",
+        "landscape_revision_before",
+        "landscape_revision_after"
+      ]
+    },
+    "run_manifest": {
+      "grain": "one_run",
+      "required_fields": [
+        "protocol_id",
+        "protocol_sha256",
+        "baseline_registry_sha256",
+        "output_contract_sha256",
+        "code_commit",
+        "input_sha256_manifest",
+        "run_id",
+        "start_time",
+        "end_time",
+        "environment_lock_sha256",
+        "random_seeds",
+        "partition_counts",
+        "event_count",
+        "candidate_count",
+        "duplicate_event_count",
+        "future_information_violation_count",
+        "recomputation_mismatch_count"
+      ]
+    }
+  },
+  "summary_outputs": [
+    "zone_level_paired_metrics.csv",
+    "overall_zone_balanced_metrics.csv",
+    "state_conditional_metrics.csv",
+    "action_share_and_entropy.csv",
+    "support_backoff_diagnostics.csv",
+    "guardrail_diagnostics.csv",
+    "oracle_gap.csv",
+    "statistical_inference.csv",
+    "resource_profile.json"
+  ],
+  "recomputation_contract": {
+    "all_tables_and_figures_derive_from_events_and_candidates": true,
+    "event_loss_recomputed_from_geometry_and_theta": true,
+    "overall_unique_event_assertion": true,
+    "ordinary_ramp_partition_assertion": true,
+    "frozen_landscape_hash_assertion": true,
+    "strict_feedback_time_assertion": true
+  }
+}

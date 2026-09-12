@@ -1,0 +1,9 @@
+Variant,Mean ERRF,ERRF change (%)[95% interval],Conditions belowcoverage floor,TUWR (%)
+Full CLARA,2.562995,0,"19/2,200(0.864%)",8.072
+Uniform historical cost ranking,2.609370,"+1.809[+1.741, +1.876]","9/2,200(0.409%)",6.256
+Ranking by candidate width,2.664859,"+3.974[+3.872, +4.089]","683/2,200(31.045%)",23.045
+Without operating-condition information,2.552586,"-0.406[-0.487, -0.326]","97/2,200(4.409%)",11.039
+Without reliability constraints,2.546102,"-0.659[-0.763, -0.557]","310/2,200(14.091%)",12.940
+Without operating information and reliability constraints,2.544904,"-0.706[-0.833, -0.574]","327/2,200(14.864%)",13.610
+Global fixed action,2.604572,"+1.622[+1.548, +1.698]","29/2,200(1.318%)",7.834
+Unconstrained width-only selection,2.689083,"+4.920[+4.728, +5.131]","1480/2,200(67.273%)",38.219

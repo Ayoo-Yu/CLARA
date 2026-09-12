@@ -1,0 +1,16 @@
+Ablation or comparison,ERRF change (%)[95% interval],TUWR change (pp)[95% interval],Capacity(%),Exceedance(%)
+Remove forecaster identity,"+0.003[-0.102, +0.129]","+0.202[-0.281, +0.628]",+0.022,-0.019
+Remove lead-time group,"+0.068[-0.054, +0.221]","-0.196[-0.893, +0.396]",+0.037,+0.031
+Remove target coverage,"+2.465[+2.131, +2.812]","-3.890[-4.332, -3.318]",+2.283,+0.182
+Remove power-change flag,"-0.217[-0.252, -0.177]","+1.975[+1.627, +2.322]",-0.345,+0.128
+Remove width category,"-0.126[-0.193, -0.062]","+0.433[+0.201, +0.660]",-0.140,+0.014
+Remove recent-coverage state,"-0.226[-0.254, -0.198]","+1.515[+1.314, +1.699]",-0.376,+0.150
+"Remove power change, width and recent coverage","-0.674[-0.802, -0.551]","+5.129[+4.436, +5.850]",-1.099,+0.424
+Retain only target coverage,"-0.709[-0.850, -0.572]","+5.812[+5.036, +6.583]",-1.312,+0.603
+Retain only power-change flag,"+2.285[+2.014, +2.582]","-3.431[-4.005, -2.705]",+2.108,+0.177
+Remove reliability constraints,"-0.898[-1.017, -0.785]","+6.314[+5.399, +7.259]",-1.571,+0.673
+Global fixed action,"+0.188[+0.122, +0.267]","+3.101[+2.206, +3.994]",-0.375,+0.563
+Select the narrowest interval,"+12.701[+12.243, +13.200]","+27.330[+24.202, +30.520]",-9.600,+22.302
+Remove risk shrinkage,"+0.003[+0.002, +0.003]","-0.002[-0.004, +0.000]",-0.002,+0.005
+Remove standard-error penalty,"-0.029[-0.041, -0.017]","+0.180[+0.140, +0.208]",-0.126,+0.097
+Cost-only if no candidate qualifies,"-0.053[-0.069, -0.038]","+0.224[+0.182, +0.273]",-0.077,+0.024

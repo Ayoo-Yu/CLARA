@@ -1,0 +1,12 @@
+State coordinate,Category,Excluded candidates (%),No candidate eligible (%),CLARA TUWR (%),No-constraint TUWR (%)
+All,all,14.72,1.39,10.890,17.203
+Power change,ordinary,6.81,1.21,9.378,15.190
+Power change,ramp,27.27,2.57,12.343,19.245
+Width,medium,15.21,1.20,10.561,16.836
+Width,narrow,15.21,3.43,10.002,15.286
+Width,wide,13.90,0.52,11.278,17.121
+Recent coverage,cold start,26.35,6.87,12.528,24.071
+Recent coverage,overcoverage pressure,17.28,2.99,0.174,0.316
+Recent coverage,stable,15.03,2.65,3.393,4.485
+Recent coverage,undercoverage pressure,17.10,0.33,31.548,46.784
+Recent coverage,volatile,12.08,0.69,4.549,7.544

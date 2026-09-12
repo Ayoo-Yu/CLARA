@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "shards": 6,
+  "farm_seed_price_units": 30,
+  "seed_condition_rows": 190080,
+  "pooled_condition_rows": 63360,
+  "max_absolute_metric_difference": 2.1360690993788012e-13,
+  "CLARA_pooled_ERRF": 0.6522091467118256,
+  "CLARA_pooled_TUWR_fraction": 0.10467576411872766,
+  "all_six_candidates_all_prices_all_methods": true,
+  "float64_values_preserved": true
+}

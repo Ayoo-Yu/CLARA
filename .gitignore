@@ -1,0 +1,30 @@
+# Local environments and generated files
+.venv/
+__pycache__/
+*.py[cod]
+*.nbc
+*.nbi
+.pytest_cache/
+.DS_Store
+Thumbs.db
+outputs/
+results/recomputed/
+
+# Large archives are distributed as separate release assets.
+*.zip
+*.7z
+commercial_candidate_archive/
+gefcom_policy_evidence/
+data/raw/
+data/gefcom/
+assets/
+
+# Credentials and private authoring material do not belong in this repository.
+.env
+.env.*
+*.pem
+*.key
+private/
+submission/
+*.docx
+~$*

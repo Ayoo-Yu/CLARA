@@ -1,0 +1,184 @@
+{
+  "schema": "TEST_CLARA_FOUR_VERSION_PROTOCOL_V1",
+  "version": "1.0.0",
+  "status": "FROZEN_BEFORE_ADAPTIVE_HELDOUT_PERFORMANCE_READ",
+  "freeze_date": "2026-09-01",
+  "author_approval": "作者要求建立测试CLARA独立目录，编写代码并运行四版本比较",
+  "known_evidence_boundary": {
+    "fixed_version_heldout_results_known": true,
+    "adaptive_version_heldout_results_known": false,
+    "adaptive_rules_changed_after_heldout_read": false
+  },
+  "causal_event_protocol": {
+    "protocol_id": "CLARA_CAUSAL_EVENT_V1",
+    "protocol_version": "1.1.0",
+    "sha256": "194f9c7d52efe7f59c91e4c4e8bba0a17bb3712240dfb69832ce5cd875ecc22b"
+  },
+  "scope": {
+    "zones": [
+      "zone1",
+      "zone2",
+      "zone3",
+      "zone4",
+      "zone5",
+      "zone6",
+      "zone7",
+      "zone8",
+      "zone9",
+      "zone10"
+    ],
+    "seeds": [0, 1, 2],
+    "price_ids": [
+      "R01",
+      "R02",
+      "R05P6179775281",
+      "R10",
+      "R20"
+    ],
+    "versions": [
+      "V1_FIXED",
+      "V2_ADAPTIVE_SUPPORT",
+      "V3_ADAPTIVE_GUARDRAIL",
+      "V4_FULLY_ADAPTIVE"
+    ],
+    "actions": [
+      "Static",
+      "ACI",
+      "AgACI",
+      "EnbPI_RH"
+    ],
+    "query_state_count_per_fold_seed": 6600,
+    "expected_unit_count": 30,
+    "expected_metric_row_count": 600,
+    "expected_state_decision_row_count": 3960000
+  },
+  "fixed_support": {
+    "n_min": 30,
+    "nu": 30
+  },
+  "adaptive_support": {
+    "n_min_candidates": [10, 20, 30, 50],
+    "n_min_selection_rule": "SMALLEST_CANDIDATE_WITH_TOP_TWO_RISK_MARGIN_SE_RATIO_AT_LEAST_THRESHOLD",
+    "risk_margin_se_ratio_threshold": 1.0,
+    "n_min_no_candidate_rule": 50,
+    "nu_candidates": [0, 10, 30, 60, 100],
+    "nu_diagnostic": "MEDIAN_ABS_STATE_PARENT_RISK_DIFFERENCE_DIVIDED_BY_MEDIAN_ZONE_CLUSTER_SE",
+    "nu_rules": [
+      {"minimum_ratio": 2.0, "nu": 0},
+      {"minimum_ratio": 1.0, "nu": 10},
+      {"minimum_ratio": 0.5, "nu": 30},
+      {"minimum_ratio": 0.25, "nu": 60},
+      {"minimum_ratio": 0.0, "nu": 100}
+    ],
+    "diagnostic_nu": 30,
+    "numeric_floor": 1e-12
+  },
+  "fixed_guardrail": {
+    "coverage_shortfall_epsilon": 0.02,
+    "tuwr_upper": 0.35,
+    "ard_upper": 0.15,
+    "rule": "CLARA_FROZEN_EMPIRICAL_MEAN_GUARDRAIL_V1"
+  },
+  "adaptive_guardrail": {
+    "market_risk_signal": "MISS_TO_CAPACITY_PRICE_RATIO",
+    "interpolation_axis": "NATURAL_LOG_PRICE_RATIO",
+    "anchors": [
+      {
+        "miss_to_capacity_ratio": 1.0,
+        "coverage_shortfall_epsilon": 0.05,
+        "tuwr_upper": 0.45,
+        "ard_upper": 0.20
+      },
+      {
+        "miss_to_capacity_ratio": 5.6179775281,
+        "coverage_shortfall_epsilon": 0.02,
+        "tuwr_upper": 0.35,
+        "ard_upper": 0.15
+      },
+      {
+        "miss_to_capacity_ratio": 20.0,
+        "coverage_shortfall_epsilon": 0.01,
+        "tuwr_upper": 0.25,
+        "ard_upper": 0.10
+      }
+    ],
+    "outside_anchor_rule": "CLIP_TO_NEAREST_ANCHOR",
+    "empty_safe_set_rule": "ORIGINAL_MINIMUM_RISK_THEN_RELIABILITY_TIES"
+  },
+  "version_contracts": {
+    "V1_FIXED": {
+      "adaptive_support": false,
+      "adaptive_guardrail": false
+    },
+    "V2_ADAPTIVE_SUPPORT": {
+      "adaptive_support": true,
+      "adaptive_guardrail": false
+    },
+    "V3_ADAPTIVE_GUARDRAIL": {
+      "adaptive_support": false,
+      "adaptive_guardrail": true
+    },
+    "V4_FULLY_ADAPTIVE": {
+      "adaptive_support": true,
+      "adaptive_guardrail": true
+    }
+  },
+  "execution": {
+    "reuse_existing_price_components": true,
+    "reuse_existing_candidate_intervals": true,
+    "base_predictor_retraining_allowed": false,
+    "candidate_interval_rebuild_allowed": false,
+    "calibrator_retraining_allowed": false,
+    "maximum_workers": 4,
+    "minimum_free_disk_gib": 100.0,
+    "numeric_tolerance": 1e-10,
+    "fixed_version_exact_action_regression_required": true
+  },
+  "inputs": {
+    "causal_event_protocol": {
+      "relative_path": "02_完整实验协议冻结/protocol/causal_event_protocol_v1_1.json",
+      "sha256": "194f9c7d52efe7f59c91e4c4e8bba0a17bb3712240dfb69832ce5cd875ecc22b"
+    },
+    "landscape_index_contract": {
+      "relative_path": "07_GEFCom完整主实验/configs/s07_landscape_index_contract_v1.json",
+      "sha256": "4a42f7980b523328dbe0853a19516d40173726178028a43821cf91ffeeb0152b"
+    },
+    "fold_width_thresholds": {
+      "relative_path": "06_基线实现与训练区调参/results_raw/nested_source_selection_v1/fold_width_thresholds.parquet",
+      "sha256": "ef3ebd2ed7dc4105212ea27fa0d62729c5101416eff8aba2a37c166ceced96ba"
+    },
+    "price_sensitivity_protocol": {
+      "relative_path": "08_敏感性分析与消融/01_价格敏感性/configs/price_sensitivity_protocol_v1.json",
+      "sha256": "8bae1efb823f64631806e47a2cb7c2f9cbcc39c0ede1ba50113b47d60cebbd19"
+    },
+    "price_component_index_root_manifest": {
+      "relative_path": "08_敏感性分析与消融/01_价格敏感性/results_raw/price_component_index_v1/root_manifest.json",
+      "sha256": "f623b95b9b2a22698906eed32ba7da56ed8dd2d13d11af8a47a5e53ff49fa18f"
+    },
+    "price_decision_cache_root_manifest": {
+      "relative_path": "08_敏感性分析与消融/01_价格敏感性/results_raw/price_decision_cache_v1/root_manifest.json",
+      "sha256": "350e83c9af3de27071607c0c325fd2c1719d68f8dada09ff85a1acb93140a5fa"
+    },
+    "price_cache_builder": {
+      "relative_path": "08_敏感性分析与消融/01_价格敏感性/scripts/build_price_decision_caches.py",
+      "sha256": "9201fd82b35fab903bbf5ced30b079468f20be02516b8ff27c1d5b47023911f4"
+    },
+    "decision_cache_accelerator": {
+      "relative_path": "07_GEFCom完整主实验/scripts/s07_decision_cache_accelerator.py",
+      "sha256": "c5149d1ef46d7c1f1d2ca6c5da0d115e5f5888eb3e0e9f586fd912e5d0609588"
+    },
+    "sealed_fixed_price_summary": {
+      "relative_path": "08_敏感性分析与消融/01_价格敏感性/results_verified/price_sensitivity_v1/price_comparison.csv",
+      "sha256": "ef890d92327b3ba4084122c48f6f461fbae3d343b9c1b6187b4f1792540ab7cf"
+    }
+  },
+  "stop_conditions": [
+    "protocol_or_input_hash_mismatch",
+    "outer_heldout_zone_used_in_fit",
+    "fixed_version_action_regression_failure",
+    "metric_reconstruction_failure",
+    "systematic_nonreproducibility",
+    "free_disk_below_safety_gate"
+  ]
+}
+

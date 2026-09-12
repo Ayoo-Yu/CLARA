@@ -1,0 +1,173 @@
+[
+  {
+    "file": "main_figure_1.png",
+    "caption": "Fig. 1. CLARA’s interval-selection process. Historical cost and coverage estimates determine candidate eligibility and scores. Delayed observations evaluate all six intervals and enter the histories available to subsequent forecasts.",
+    "pixel_size": [
+      2060,
+      1087
+    ],
+    "sha256": "31497d4eb41258c95320cb32a275e7199109cdd6bfcb2fe79e160a0aed3fa528"
+  },
+  {
+    "file": "main_figure_2.png",
+    "caption": "Fig. 2. Capacity and exceedance components of ERRF for one forecast. The left panel shows the distances from the shared forecast center to the interval bounds. The right panel adds the distance by which observed power exceeds a bound. The weights assign costs to the four distances.",
+    "pixel_size": [
+      2386,
+      850
+    ],
+    "sha256": "e3516e318ff677f650237a31a1367beb43dd4a4a930b80b70743cf9ef1749a25"
+  },
+  {
+    "file": "main_figure_3.png",
+    "caption": "Fig. 3. Chronological data splits. GEFCom uses policies fitted on the other nine zones. The commercial farms use local adaptation data and subsequently available feedback under Eq. (3).",
+    "pixel_size": [
+      1936,
+      889
+    ],
+    "sha256": "3bc22aac67809837e24348ad921680d033b7c77f91fe80c6a284895417084e26"
+  },
+  {
+    "file": "main_figure_4.png",
+    "caption": "Fig. 4. Calibration differences across forecasting conditions. (a) Candidate with the lowest mean ERRF at each price and target coverage. (b) Percentage excess ERRF over the six-candidate minimum under the same conditions; boxes show quartiles and medians, with full-range whiskers. (c) ERRF increase when a rule fitted for the column forecaster is applied to the row forecaster, averaged over five prices. (d) Overall coverage deviation versus TUWR; hexagon colors show counts on a logarithmic scale, and the dashed line marks target coverage. Comparison details: Supplementary Text S2 and Table S24.",
+    "pixel_size": [
+      2220,
+      1688
+    ],
+    "sha256": "a23f57b0933fb5d06d59af561acebfac13fcf0b3f4bc0b89240b49ab56c6c4b5"
+  },
+  {
+    "file": "main_figure_5.png",
+    "caption": "Fig. 5. Economic performance and undercoverage across five prices. (a) Mean ERRF versus TUWR; shading marks values higher than CLARA on both metrics. The inset separates three overlapping candidates. (b) CLARA-relative ERRF differences: small points show individual zones; large markers and error bars show pooled estimates and pointwise 95% paired zone-bootstrap intervals. Negative values favor CLARA. Open diamonds denote the feasible state oracle. (c,d) Economic rank and relative excess cost for the nine main methods: bars use all ten zones; points omit each zone in turn, with lines spanning those estimates.",
+    "pixel_size": [
+      2220,
+      1937
+    ],
+    "sha256": "c2737e6167fa251b003b5ad4713c100500406cfaf4e3fde2fa7bc992f3b35a4f"
+  },
+  {
+    "file": "main_figure_6.png",
+    "caption": "Fig. 6. Sources of CLARA's selection advantage. (a) CLARA-minus-fixed component cost changes as percentages of fixed-method ERRF across matched prediction conditions; dots denote means and contours enclose 50% and 85% of density. (b) CART-minus-CLARA cost distribution on different choices, with equal-cost outcomes reported separately. (c) Peak-normalized error densities for the estimated LinUCB-minus-CLARA cost difference on the same disagreements. Errors equal estimated minus realized differences. The horizontal scales in (b,c) expand values near zero while retaining both tails; ticks show original ERRF units.",
+    "pixel_size": [
+      2881,
+      2740
+    ],
+    "sha256": "dbd9e9f1e6b45fa1e621644a3fd831d9f1be00cf21dd5fda00d2f264d162f350"
+  },
+  {
+    "file": "main_figure_7.png",
+    "caption": "Fig. 7. Sensitivity of cost and coverage. (a) Estimation parameters and joint coverage-tolerance multipliers. (b) Power-change threshold in source-zone validation. Bars show mean ERRF; orange points use the right TUWR axis. Panels (a,b) average five prices. (c) Price-adapted and fixed reference-price choices; labels give ERRF reductions.",
+    "pixel_size": [
+      2161,
+      2173
+    ],
+    "sha256": "2cfa8bf99f93118fecb7870e560cf5ea3fa9d3fe5f710d94c9d1dc2d53876817"
+  },
+  {
+    "file": "main_figure_8.png",
+    "caption": "Fig. 8. Economic risk and temporal undercoverage during local adaptation. (a,b) Bars show equal-farm means; circles and triangles show individual farms. The lower three rows retain initial estimates or update only one evidence component. (c,d) All nine methods across five prices; cost excess is relative to the minimum mean ERRF at each price. All matched forecasting conditions are retained.",
+    "pixel_size": [
+      4322,
+      3779
+    ],
+    "sha256": "3611a4d6458927c413f34a482f60d1894aca689a585cb066f58030d5d137cf0b"
+  },
+  {
+    "file": "supplement_figure_S1.png",
+    "caption": "Supplementary Fig. S1. Price-specific screening and fallback comparisons with fixed historical estimates.",
+    "pixel_size": [
+      2047,
+      1572
+    ],
+    "sha256": "df6828cce7184a538940d7b541e98868006f5812c30c9f9ec8f5c2691706aab5"
+  },
+  {
+    "file": "supplement_figure_S2.png",
+    "caption": "Supplementary Fig. S2. Two forecast-time decisions. Candidate intervals, historical cost scores and historical coverage for an ordinary case and a predicted-ramp case. Detailed source estimates and realized outcomes are in Table S16.",
+    "pixel_size": [
+      4488,
+      4370
+    ],
+    "sha256": "621e8fd43cfa7e3d016132d28007ff5f35a508ba1732fe6614cacd575ea76a7e"
+  },
+  {
+    "file": "supplement_figure_S3.png",
+    "caption": "Supplementary Fig. S3. Price and tolerance response in GEFCom. (a) Gap to the lowest mean ERRF at each price; (b) relative-excess-cost distributions across 11,000 conditions, with medians and interquartile ranges; (c,d) ERRF and TUWR under half, standard and double coverage tolerances. Horizontal positions in (b) use log(1 + x), with x in percent.",
+    "pixel_size": [
+      4488,
+      3637
+    ],
+    "sha256": "6e15e9c73ec4b385c700ab676c2459c38b2f3b962a1b6fb7f87e049a9f2e62fa"
+  },
+  {
+    "file": "supplement_figure_S4.png",
+    "caption": "Supplementary Fig. S4. Complete price-coverage comparisons for the six individual state removals and the global fixed-action rule. (a) ERRF change; (b) TUWR change. The five column blocks identify price ratios; each contains all eleven target coverages from 0.10 to 0.99. Differences are ablation minus CLARA on matched forecasting conditions. Pooled comparisons are in Table S35; Table S34 gives the separate MLP example.",
+    "pixel_size": [
+      2220,
+      1889
+    ],
+    "sha256": "7d8fc141c7c457cb8aeabcf595ef80ff9065ddbd740a6eb7418ab21eef41920b"
+  },
+  {
+    "file": "supplement_figure_S5.png",
+    "caption": "Supplementary Fig. S5. Full price–coverage comparison for sequential local CLARA. In every farm–price–coverage stratum, the reference is the lowest-ERRF method among all eight baselines; both cost and TUWR differences use that same reference. Negative values favor CLARA. All five prices and eleven target coverages are retained, averaging matched forecasters and lead times. Color scales are shared across farms for each metric.",
+    "pixel_size": [
+      4322,
+      4015
+    ],
+    "sha256": "a742846e469513c1c238dd2fae93a673f652cd251d7de86b5326afddb5d713b4"
+  },
+  {
+    "file": "supplement_figure_S6.png",
+    "caption": "Supplementary Fig. S6. Fixed-estimate sensitivity experiment. Separate-farm sensitivity to half, standard and double coverage-shortfall and TUWR tolerances across all five prices. The candidate intervals, local fitting records and test sequences remain unchanged.",
+    "pixel_size": [
+      1860,
+      1323
+    ],
+    "sha256": "7ccd5b2ad9afee255f0dc5c5af2f40bba48254969a9f682b62b5734bc16b479c"
+  },
+  {
+    "file": "supplement_figure_S7.png",
+    "caption": "Supplementary Fig. S7. Separate sensitivity to minimum historical count and final shrinkage strength across all five prices. Differences are fixed-parameter minus full CLARA; the other parameter retains its original selection rule.",
+    "pixel_size": [
+      2159,
+      1168
+    ],
+    "sha256": "4e070b4537f6ace44af3b9fb13887afa53027e9c8eaf114567420bfd28fb188c"
+  },
+  {
+    "file": "supplement_figure_S8.png",
+    "caption": "Supplementary Fig. S8. Historical candidate exclusions and subsequent TUWR by operating state. Exclusion refers to the original six-candidate set before repair. The reliability comparison uses full CLARA and its no-constraint ablation on the same chronological forecasts.",
+    "pixel_size": [
+      1948,
+      1305
+    ],
+    "sha256": "16ae0b2e1a0d0708aea3db16a0d07bcd83abc90d62da483b9e6f65f205bc3ef9"
+  },
+  {
+    "file": "supplement_figure_S9.png",
+    "caption": "Supplementary Fig. S9. Raw point-forecast residual distributions for the four base forecasters. Errors are expressed in normalized power. The curves supplement the forecaster-rule transfer comparison in main Fig. 4(c).",
+    "pixel_size": [
+      1860,
+      900
+    ],
+    "sha256": "2f81cfb20e7486abb7a2658831ad17b7eaa62f180517eaa0f0c944937b947c22"
+  },
+  {
+    "file": "supplement_figure_S10.png",
+    "caption": "Supplementary Fig. S10. Global and rolling coverage for GBR in zone 1, seed 0, at 6 h and 90% target coverage. (a) Global coverage; (b) 168 h rolling coverage during September 2013, with the target and lower diagnostic tolerance; (c) TUWR. Global summaries use the same complete sequence of 3,495 forecasts.",
+    "pixel_size": [
+      1903,
+      1110
+    ],
+    "sha256": "72813e74695573408d4045deb3d39631435ac026b424f3abbae8d5c7e1a916c9"
+  },
+  {
+    "file": "supplement_figure_S11.png",
+    "caption": "Supplementary Fig. S11. Cost changes after removing the power-change flag for MLP at 1 h, 50% target coverage and a price ratio of 20/3.56. Changes are ablation minus CLARA; capacity and exceedance contributions use the full-CLARA ERRF denominator within each regime. This selected example is separate from the complete-condition functional comparisons; numerical results and its selection scope are in Table S34.",
+    "pixel_size": [
+      1913,
+      850
+    ],
+    "sha256": "32f80de3dbfa92c3ce78d6b48bd196462c73f081a680fbb815c1fc6b3a41cef6"
+  }
+]

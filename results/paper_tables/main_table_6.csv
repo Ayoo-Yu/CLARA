@@ -1,0 +1,6 @@
+Variant,Mean ERRF,ERRF change (%),Conditions belowcoverage floor (%)
+Full CLARA,2.5630,—,0.86
+Uniform historical cost ranking,2.6094,+1.81,0.41
+Ranking by candidate width,2.6649,+3.97,31.05
+Without operating-condition information,2.5526,-0.41,4.41
+Without reliability constraints,2.5461,-0.66,14.09

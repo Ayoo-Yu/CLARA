@@ -1,0 +1,218 @@
+{
+  "schema": "TEST_CLARA_GEFCOM_6A_SELECTOR_EXECUTION_PROTOCOL_V1",
+  "version": "1.1.0",
+  "status": "AUTHOR_APPROVED_B_FROZEN_IMPLEMENTED_PENDING_INDEPENDENT_REVIEW",
+  "run_id": "GEFCOM_SIX_ACTION_SELECTOR_V1",
+  "author_scope": {
+    "status": "AUTHOR_APPROVED_B_FROZEN",
+    "training_support_identity": "B_UNIFIED_FIVE_HORIZON_NEW_IDENTITY",
+    "implementation_authorized": true,
+    "scientific_scope_statement": "Complete the reselected-each-ratio primary analysis and fixed-R05 deployment price scan across five evaluation prices, eleven coverages, five horizons, and nine methods under the author-approved unified five-horizon six-action GEFCom identity.",
+    "source_approval_record": "test_clara_gefcom_six_action_full_v1.json#/training_support_identity/author_approval_record"
+  },
+  "formal_scope": {
+    "zones": [
+      "zone1",
+      "zone2",
+      "zone3",
+      "zone4",
+      "zone5",
+      "zone6",
+      "zone7",
+      "zone8",
+      "zone9",
+      "zone10"
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "horizons": [
+      1,
+      3,
+      6,
+      12,
+      24
+    ],
+    "predictors": [
+      "Ridge",
+      "GBR",
+      "MLP",
+      "QRLSTM"
+    ],
+    "coverages": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.99
+    ],
+    "actions": [
+      "Static",
+      "ACI",
+      "AgACI",
+      "EnbPI_RH",
+      "TunedSingleConformal",
+      "EqualEndpointEnsemble"
+    ],
+    "methods": [
+      "CLARA_6A",
+      "CART_6A",
+      "LinUCB_6A",
+      "TunedSingleConformal",
+      "EqualEndpointEnsemble",
+      "FixedStatic",
+      "FixedACI",
+      "FixedAgACI",
+      "FixedEnbPI_RH"
+    ],
+    "price_ids": [
+      "R01",
+      "R02",
+      "R05P6179775281",
+      "R10",
+      "R20"
+    ],
+    "policy_modes": [
+      "RESELECT_EACH_RATIO",
+      "FIXED_MAIN_RATIO_R05P6179775281"
+    ],
+    "fit_parent_count": 30,
+    "replay_parent_count": 30,
+    "fit_price_child_count": 150,
+    "replay_price_child_count": 300,
+    "endpoint_unit_count": 150,
+    "endpoint_total_event_count": 23024760,
+    "event_count_per_method_policy_mode_price": 23024760,
+    "method_policy_mode_price_row_count": 90,
+    "method_event_policy_mode_price_score_count": 2072228400
+  },
+  "implementation": {
+    "selector_fit": true,
+    "causal_target_loader": true,
+    "global_five_horizon_linucb_replay": true,
+    "compact_streaming_metrics": true,
+    "fixed_main_ratio_deployment_scan": true,
+    "aggregation": true,
+    "independent_qa": true,
+    "full_event_materialization_allowed": false,
+    "nonformal_cli_escape_hatch_allowed": false
+  },
+  "reviewer_release": {
+    "required": true,
+    "status": "PASS",
+    "relative_path": "测试CLARA/results_raw/gefcom_six_action_price_full_v1/selector_v1/control/reviewer_release_v1.json",
+    "manifest_sha256": "987dcc3df6572a45d0ced71d0f0c9c926a4dcbf84fe8dae81ea0bcd4f07a1e95",
+    "required_verdict": "PASS",
+    "required_reviewer_role": "independent_pipeline_review"
+  },
+  "paths": {
+    "main_protocol_relative_path": "测试CLARA/configs/test_clara_gefcom_six_action_full_v1.json",
+    "main_protocol_sha256": "71a8b000ff97c8f13cbffe47c904a6fbb0def5854305cd9162ffc7d3ff8c94c9",
+    "selector_core_relative_path": "测试CLARA/scripts/gefcom_six_action_selector_core_v1.py",
+    "selector_artifacts_relative_path": "测试CLARA/scripts/gefcom_six_action_selector_artifacts_v1.py",
+    "target_loader_relative_path": "测试CLARA/scripts/gefcom_six_action_selector_target_loader_v1.py",
+    "independent_qa_relative_path": "测试CLARA/scripts/gefcom_six_action_selector_qa_v1.py",
+    "runner_relative_path": "测试CLARA/scripts/run_gefcom_six_action_selectors_v1.py",
+    "landscape_index_contract_relative_path": "07_GEFCom完整主实验/configs/s07_landscape_index_contract_v1.json",
+    "landscape_index_contract_sha256": "4a42f7980b523328dbe0853a19516d40173726178028a43821cf91ffeeb0152b",
+    "landscape_index_contract_id": "S07_SOURCE_LANDSCAPE_INDEX_V1",
+    "landscape_index_contract_version": "1.0.0",
+    "landscape_index_contract_status": "FROZEN_FOR_PREFLIGHT",
+    "landscape_index_parent_execution_contract_sha256": "e967f5904163da208c225d292782ed98d50015f64823291f341fab7dec02bea3",
+    "landscape_index_causal_event_protocol_sha256": "194f9c7d52efe7f59c91e4c4e8bba0a17bb3712240dfb69832ce5cd875ecc22b",
+    "landscape_index_source_fact_root_manifest_sha256": "30a0f86d6f775c7c32a3654117807dfa9acabc8187c2bdefeb8440e1466ef9e7",
+    "landscape_index_source_fact_ledger_sha256": "bcb6da55c70cba48c36456ed4f4cfcb6fd1baea4352c2f94969456361d0cde4a",
+    "base_state_space_size": 2200,
+    "full_six_axis_state_space_size": 6600,
+    "full_six_axis_state_universe_sha256": "c80bee4a80b9a4073caa5fbc0f418cb5c9b33572b037ca808b14aaed752639c6",
+    "endpoint_root_manifest_relative_path": "测试CLARA/results_raw/gefcom_six_action_price_full_v1/endpoint_units/root_manifest__B_UNIFIED_FIVE_HORIZON_NEW_IDENTITY.json",
+    "output_relative_path": "测试CLARA/results_raw/gefcom_six_action_price_full_v1/selector_v1"
+  },
+  "checkpoint_contract": {
+    "fit_parent": "heldout_zone_seed",
+    "fit_child": "heldout_zone_seed_price",
+    "replay_parent": "heldout_zone_seed_global_five_horizon_two_policy_mode_coordinator",
+    "replay_child": "heldout_zone_seed_policy_mode_evaluation_price_global_five_horizon_coordinator",
+    "child_commit": "UNIQUE_TEMP_DIRECTORY_THEN_ATOMIC_RENAME",
+    "parent_commit": "INCREMENTAL_CHILD_CONTAINER_PLUS_SEPARATE_ATOMIC_SEAL",
+    "resume": "VALIDATE_AND_REUSE_ONLY_EXACT_CHILDREN; BLOCK_ANY_TEMP_INVALID_OR_EXTRA_CHILD",
+    "linucb_rule": "RESELECT_MODE_INITIALIZES_PER_EVALUATION_PRICE; FIXED_MODE_INITIALIZES_ONCE_USING_R05_REWARD_AND_REUSES_THE_EXACT_FIVE_HORIZON_DECISION_TRAJECTORY_FOR_ALL_FIVE_EVALUATION_PRICES",
+    "replay_child_id": "<policy_mode>__<evaluation_price_id>",
+    "fixed_mode_policy_price_id": "R05P6179775281",
+    "r05_cross_mode_identity": "EXACT_COMPACT_NUMERIC_ACTION_AND_POLICY_DIGEST_EQUALITY_REQUIRED"
+  },
+  "output_contract": {
+    "mode": "COMPACT_ONLY",
+    "streaming_memory_contract": {
+      "production_aggregate_pass": "ONE_PARENT_AT_A_TIME",
+      "independent_qa_pass": "SECOND_INDEPENDENT_ONE_PARENT_AT_A_TIME_SCAN",
+      "maximum_retained_raw_parent_count": 1,
+      "maximum_retained_raw_child_count": 10,
+      "paired_blocks_rule": "REDUCE_EACH_CHILD_IMMEDIATELY_TO_ZONE_METHOD_SCOPE_TOTALS; NEVER_CONCAT_RAW_PAIRED_BLOCKS_ACROSS_CHILDREN",
+      "rss_audit_required": true,
+      "full_300_child_retention_allowed": false
+    },
+    "fit_artifacts": [
+      "CLARA state decisions",
+      "CLARA evidence",
+      "CART versioned replayable selector",
+      "fit audits"
+    ],
+    "replay_artifacts": [
+      "policy mode and evaluation/policy price identities",
+      "cell metrics",
+      "action counts",
+      "paired UTC-day blocks",
+      "selected-endpoint rolling reliability diagnostics",
+      "CLARA full-state support and guardrail counts",
+      "event conservation",
+      "causal audits"
+    ],
+    "aggregate_artifacts": [
+      "equal-zone primary metrics",
+      "event-weighted descriptive metrics",
+      "660-cell equal-design paired inference",
+      "selected-endpoint TOWR TUWR ARD",
+      "reserve and miss components",
+      "action entropy and shares",
+      "support backoff and guardrail rates",
+      "full-state count table"
+    ],
+    "prohibited": [
+      "full method-event-policy-mode-evaluation-price score table",
+      "persisted LinUCB event decision table"
+    ]
+  },
+  "environment": {
+    "python": "3.12.12",
+    "formal_python_executable": "python",
+    "formal_python_flags": [
+      "-s"
+    ],
+    "required_process_environment": {
+      "PYTHONNOUSERSITE": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "packages": {
+      "numpy": "1.26.4",
+      "pandas": "3.0.3",
+      "scipy": "1.16.3",
+      "scikit-learn": "1.4.2",
+      "pyarrow": "21.0.0",
+      "psutil": "5.9.0",
+      "numba": "0.63.1",
+      "llvmlite": "0.46.0"
+    }
+  }
+}

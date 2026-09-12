@@ -1,0 +1,75 @@
+{
+  "dataset": "GEFCom2014 wind",
+  "acquisition": "Official author-supplied complete archive or its GEFCom2014-W_V2.zip; raw observations are not bundled.",
+  "columns": {
+    "timestamp": "Hourly valid timestamp; parsed and sorted before model training.",
+    "target": "Normalized observed wind power.",
+    "capacity": "1.0 for this normalized benchmark.",
+    "site_id": "gefcom2014_zoneN",
+    "zone_id": "Integer N from 1 to 10.",
+    "feature_u10": "Provided zonal U10 component.",
+    "feature_v10": "Provided zonal V10 component.",
+    "feature_u100": "Provided zonal U100 component.",
+    "feature_v100": "Provided zonal V100 component.",
+    "feature_ws10": "Euclidean norm of U10 and V10.",
+    "feature_ws100": "Euclidean norm of U100 and V100.",
+    "feature_wd10": "Wind direction in degrees.",
+    "feature_wd100": "Wind direction in degrees.",
+    "feature_target_lag1": "Previous available observation on the chronologically sorted retained issue timeline; the evaluated model entry point recomputes this column for both training and prediction.",
+    "feature_hour_sin": "sin(2*pi*hour/24)",
+    "feature_hour_cos": "cos(2*pi*hour/24)",
+    "feature_month_sin": "sin(2*pi*(month-1)/12)",
+    "feature_month_cos": "cos(2*pi*(month-1)/12)"
+  },
+  "forecast_grid": {
+    "predictors": [
+      "Ridge",
+      "GBR",
+      "MLP",
+      "QRLSTM"
+    ],
+    "horizons_hours": [
+      1,
+      3,
+      6,
+      12,
+      24
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "coverages": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.99
+    ]
+  },
+  "split": {
+    "chronological_fractions": [
+      0.6,
+      0.2,
+      0.2
+    ],
+    "label_rule": "Exact physical lead; exclude training or calibration rows whose labels reach the next split.",
+    "feedback_rule": "Observation available at the first issue strictly after the label timestamp."
+  },
+  "six_actions": [
+    "Static",
+    "ACI",
+    "AgACI",
+    "EnbPI-RH",
+    "TSC",
+    "EEE"
+  ],
+  "scope_note": "The portable forecaster/candidate command runs one stream. Full fold training, source fitting and selector orchestration are provided as evaluated source archives, whose historical cache/provenance requirements must be regenerated for a new installation."
+}

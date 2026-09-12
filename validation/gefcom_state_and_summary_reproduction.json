@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "fitted_policies": 150,
+  "state_choices_reproduced": 990000,
+  "forecasting_conditions": 11000,
+  "methods": 9,
+  "conditions_with_gap_decomposition": 77000,
+  "CLARA": {
+    "ERRF": 2.8451532639035735,
+    "capacity": 1.5816572982481354,
+    "exceedance": 1.2634959656554385,
+    "coverage": 0.6419445441020255,
+    "width": 0.44342235254426043,
+    "TUWR": 0.10889654407153819,
+    "TOWR": 0.4212059077609697,
+    "ARD": 0.08407038439244466,
+    "under_gap": 0.01382668249217916,
+    "over_gap": 0.07024370190026549,
+    "mean_rank": 2.660409090909091,
+    "relative_excess_pct": 1.6454909394028288
+  },
+  "scope": "Original selector on fitted evidence; numerical summaries from released condition-level results; no forecast-model retraining."
+}

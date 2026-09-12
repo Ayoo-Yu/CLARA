@@ -1,0 +1,83 @@
+{
+  "schema": "TEST_CLARA_EXTENDED_ACTION_EXTERNAL_PROTOCOL_V1",
+  "version": "1.0.0",
+  "status": "FROZEN_EXPLORATORY_ABLATION_AFTER_S09_READ",
+  "purpose": "在同一批冻结事件上检验五动作与六动作CLARA的外部效果",
+  "scope": {
+    "farms": ["FarmA", "FarmB"],
+    "predictors": ["Ridge", "GBR", "MLP", "QRLSTM"],
+    "seeds": [0, 1, 2],
+    "horizon_steps": [4, 24, 48, 96],
+    "target_coverages": [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 0.99]
+  },
+  "action_libraries": {
+    "CLARA_5A_Local": [
+      "Static",
+      "ACI",
+      "AgACI",
+      "EnbPI_RH",
+      "TunedSingleConformal_Local"
+    ],
+    "CLARA_6A_Local": [
+      "Static",
+      "ACI",
+      "AgACI",
+      "EnbPI_RH",
+      "TunedSingleConformal_Local",
+      "EqualEndpointEnsemble"
+    ]
+  },
+  "new_methods": ["CLARA_5A_Local", "CLARA_6A_Local"],
+  "change_contract": {
+    "only_changes": [
+      "append_TunedSingleConformal_Local_to_original_four_action_library",
+      "append_EqualEndpointEnsemble_to_the_five_action_library"
+    ],
+    "state_fields_unchanged": true,
+    "support_and_backoff_unchanged": true,
+    "adaptive_n_min_and_nu_unchanged": true,
+    "guardrail_unchanged": true,
+    "risk_objective_unchanged": true,
+    "base_predictor_retraining_allowed": false,
+    "candidate_rebuild_for_original_four_allowed": false,
+    "final_test_split_change_allowed": false,
+    "price_change_allowed": false
+  },
+  "fifth_action": {
+    "configuration_source": "S09_frozen_target_farm_local_conformal_selection",
+    "FarmA": "SAOCP_learning_rate_0.05_temperature_0.1_windows_24_48_96_168h",
+    "FarmB": "NEX_decay_0.99_history_336h",
+    "strict_delayed_feedback": true,
+    "physical_clipping": true
+  },
+  "sixth_action": {
+    "definition": "eventwise_arithmetic_mean_of_lower_and_upper_endpoints_from_Static_ACI_AgACI_EnbPI_RH",
+    "uses_only_original_four_endpoints": true,
+    "strict_delayed_feedback_for_training_reliability": true,
+    "physical_clipping_inherited_from_original_endpoints": true
+  },
+  "evaluation": {
+    "primary_metric": "equal_farm_weighted_overall_mean_ERRF",
+    "current_best_method": "TunedSingleConformal_Local",
+    "current_best_value": 0.5931620466980159,
+    "success_rule": "report_CLARA_5A_and_CLARA_6A_against_current_best_without_posthoc_tuning",
+    "report_regimes": ["overall", "ordinary", "ramp"],
+    "report_weightings": [
+      "time_sample_weighted",
+      "equal_farm_weighted",
+      "capacity_weighted"
+    ]
+  },
+  "execution": {
+    "max_workers": 2,
+    "minimum_free_disk_gib": 20,
+    "checkpoint_unit": "target_farm_and_seed",
+    "preserve_failed_unit": true
+  },
+  "inputs": {
+    "s09_evaluation_config": "../09_商业场站外部验证/configs/s09_minimum_external_evaluation_v1.json",
+    "s09_external_protocol": "../09_商业场站外部验证/configs/s09_external_validation_v1.json",
+    "s09_local_conformal_selection": "../09_商业场站外部验证/results_raw/local_conformal_selection_v1/selected_configurations.json",
+    "v4_protocol": "configs/test_clara_four_versions_v1.json"
+  }
+}

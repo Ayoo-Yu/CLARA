@@ -1,0 +1,95 @@
+{
+  "schema": "S09_METHOD_TRANSFER_PROTOCOL_V1",
+  "version": "1.0.0",
+  "status": "FROZEN_BEFORE_EXTERNAL_METHOD_PERFORMANCE_READ",
+  "parent_external_config_sha256": "8e45ff0e98ffb6873ce4131a72f87c9912ebf2a0022d92551fb630e6e65a2504",
+  "full_external_rebuild_manifest_sha256": "f80a7f93e586ca08244dfcf67c978e0d872cd053cca4b7064347b0267ca81272",
+  "direct_source_model_rule": "deterministic_consensus_of_ten_existing_gefcom_outer_models",
+  "direct_consensus_tie_break": "frozen_action_order",
+  "source_configuration_rule": "outer_selection_mode_then_lower_complexity_then_configuration_id",
+  "adaptation_internal_split": {
+    "candidate_warmup_fraction": 0.5,
+    "selector_fit_fraction": 0.5,
+    "horizon_specific_label_embargo": true,
+    "final_test_use_count": 0,
+    "source_rows": "original_middle_twenty_percent_calibration_split_only",
+    "midpoint_rule": "floor_half_by_issue_timestamp_order",
+    "warmup_retention_rule": "label_available_timestamp_strictly_before_first_selector_fit_issue",
+    "selector_fit_retention_rule": "label_available_timestamp_strictly_before_first_final_test_issue",
+    "derived_split_labels": {
+      "candidate_warmup": "calibration",
+      "selector_fit": "test"
+    },
+    "frozen_candidate_replay_allowed": true,
+    "candidate_definition_refitting_allowed": false,
+    "base_predictor_retraining_allowed": false
+  },
+  "state_encoding": {
+    "CLARA_V4_Direct": "each_source_outer_model_uses_its_own_frozen_width_thresholds",
+    "CART_Direct": "each_source_outer_tree_uses_its_own_frozen_width_thresholds",
+    "CLARA_V4_Local": "target_adaptation_width_tertiles_frozen_before_final_test",
+    "CART_Local": "target_adaptation_width_tertiles_frozen_before_final_test",
+    "LinUCB_Direct": "median_of_ten_source_outer_width_thresholds",
+    "LinUCB_Local": "target_adaptation_width_tertiles_frozen_before_final_test"
+  },
+  "methods": {
+    "CLARA_V4_Direct": "ten_source_outer_models_consensus",
+    "CLARA_V4_Local": "target_adaptation_landscape_refit_then_frozen",
+    "CART_Direct": "ten_source_outer_trees_consensus",
+    "CART_Local": "target_adaptation_refit_with_source_modal_hyperparameters",
+    "LinUCB_Direct": "source_modal_hyperparameters_cold_start_on_final_test",
+    "LinUCB_Local": "source_modal_hyperparameters_preheated_on_target_adaptation",
+    "TunedSingleConformal_Direct": "source_modal_configuration_refit_on_full_target_calibration",
+    "TunedSingleConformal_Local": "configuration_selected_on_target_adaptation_then_refit_on_full_target_calibration",
+    "EqualEndpointEnsemble": "single_version",
+    "Static": "single_version",
+    "ACI": "single_version",
+    "AgACI": "single_version",
+    "EnbPI_RH": "single_version"
+  },
+  "selected_source_configurations": {
+    "CART": {
+      "selection_count": 7,
+      "configuration_id": "d214877c984683893ed0c712bec814b2ea14f90d677607090c7bc0f3943ba1e0",
+      "configuration": {
+        "class_weight": "balanced",
+        "max_depth": null,
+        "min_samples_leaf": 300,
+        "random_state": 0
+      }
+    },
+    "LinUCB": {
+      "selection_count": 6,
+      "configuration_id": "1c6870d1c0b2ab099107e2a727914dbaa4fd4904b4ced285cf11933a93018fda",
+      "configuration": {
+        "exploration_alpha": 1.0,
+        "l2_regularization": 10.0
+      }
+    },
+    "TunedSingleConformal": {
+      "selection_count": 10,
+      "configuration_id": "996f625def857d7772788a87f7a8e4ebe87202ded973bcde2462122dde17cf7d",
+      "family": "SAOCP",
+      "configuration": {
+        "learning_rate": 0.05,
+        "temperature": 0.1,
+        "window_hours": [24.0, 48.0, 96.0, 168.0]
+      }
+    }
+  },
+  "local_clara_support": {
+    "minimum_target_farms": 1,
+    "minimum_time_span_hours": 336.0,
+    "empirical_mean_guardrail": true,
+    "adaptive_n_min_and_nu": true
+  },
+  "inputs": {
+    "v4_protocol_sha256": "29ec03b10940ea4e53632802a40bdede094a12cd66582703bba29fcb69e71572",
+    "v4_verified_qa_sha256": "56b60751a6bf2cac07b86dd62fde382877cb2706bd4c2aa54af5c55bc0d8a54d",
+    "supervised_selected_configurations_sha256": "984833345a8e5901ccd5bf4c01c1d19c7ec625de7fe63fa69e56b0c78b676735",
+    "sequential_selected_configurations_sha256": "7daaeef989c5f73c4ff427e20a1d5009d297e661f2926999e8a5eb8cff5ab8b6",
+    "conformal_selected_configurations_sha256": "44cb6c9954dd9aa6f2aade5dd1a5eb9169f7be663ed7d66bf35a088a3fc7fcc3",
+    "fold_width_thresholds_sha256": "ef3ebd2ed7dc4105212ea27fa0d62729c5101416eff8aba2a37c166ceced96ba"
+  },
+  "performance_read_allowed": false
+}

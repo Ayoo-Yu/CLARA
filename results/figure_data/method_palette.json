@@ -1,0 +1,13 @@
+{
+  "CLARA": "#177E89",
+  "LinUCB": "#8865A2",
+  "CART": "#5678A5",
+  "Static": "#D99B68",
+  "ACI": "#87B79D",
+  "AgACI": "#7EACC7",
+  "EnbPI-RH": "#ACB5BD",
+  "TSC": "#B29DC3",
+  "EEE": "#DDC47E",
+  "WIDTH_ONLY": "#9D9D9D",
+  "FEASIBLE_STATE_ORACLE": "#555555"
+}

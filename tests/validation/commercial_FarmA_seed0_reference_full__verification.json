@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "farm": "FarmA",
+  "seed": 0,
+  "price": "rho_reference",
+  "adaptation_records": 665192,
+  "test_records_replayed": 1330560,
+  "test_records_total": 1330560,
+  "all_test_records_replayed": true,
+  "update_controls": [
+    "CLARA_frozen",
+    "CLARA",
+    "CLARA_cost_update",
+    "CLARA_coverage_update"
+  ],
+  "initial_evidence_max_error": 2.1178614417749486e-12,
+  "matured_feedback_records": 1329680,
+  "exact_selected_actions": true,
+  "seconds": 10.563000000023749,
+  "scope": "Original loss/reliability/support/update/selection functions on anonymized candidate intervals; base predictors are not retrained."
+}

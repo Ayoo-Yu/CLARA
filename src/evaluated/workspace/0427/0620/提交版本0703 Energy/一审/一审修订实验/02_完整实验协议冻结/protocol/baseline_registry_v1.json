@@ -1,0 +1,314 @@
+{
+  "registry_id": "CLARA_BASELINES_V1",
+  "status": "FROZEN_FOR_S06_IMPLEMENTATION",
+  "selection_scope": "nested_leave_one_source_zone_out_within_each_outer_fold",
+  "heldout_zone_use": "final_evaluation_only",
+  "common_information_contract": {
+    "release_time_state_fields": [
+      "predictor",
+      "horizon_group",
+      "target_coverage",
+      "ramp_state",
+      "rolling_state",
+      "raw_width_state"
+    ],
+    "actions": [
+      "Static",
+      "ACI",
+      "AgACI",
+      "EnbPI_RH"
+    ],
+    "strict_delayed_feedback": true,
+    "same_errf_formula": true,
+    "same_clipping_policy": true,
+    "same_event_complete_cases": true
+  },
+  "inner_validation": {
+    "fold_unit": "source_zone",
+    "primary_objective": "zone_balanced_mean_ERRF_proxy_per_mw",
+    "feasibility_constraints": {
+      "mean_coverage_gap_minimum": -0.02,
+      "tuwr_maximum": 0.35
+    },
+    "no_feasible_configuration_rule": "minimum_ERRF_then_smallest_coverage_shortfall_then_simplest_configuration",
+    "general_tie_order": [
+      "lower_primary_objective",
+      "lower_complexity",
+      "lexicographic_configuration_id"
+    ]
+  },
+  "mandatory_fixed_and_ablation_baselines": [
+    {
+      "id": "FixedStatic",
+      "type": "fixed_action",
+      "action": "Static"
+    },
+    {
+      "id": "FixedACI",
+      "type": "fixed_action",
+      "action": "ACI"
+    },
+    {
+      "id": "FixedAgACI",
+      "type": "fixed_action",
+      "action": "AgACI"
+    },
+    {
+      "id": "FixedEnbPI_RH",
+      "type": "fixed_action",
+      "action": "EnbPI_RH"
+    },
+    {
+      "id": "WidthOnly",
+      "type": "release_time_rule",
+      "rule": "minimum_final_interval_width_then_fixed_action_order"
+    },
+    {
+      "id": "GlobalRiskSelector",
+      "type": "context_ablation",
+      "rule": "source_zone_global_minimum_risk_action_for_each_target_coverage_and_theta"
+    }
+  ],
+  "mandatory_contextual_selectors": [
+    {
+      "id": "CARTBestAction",
+      "type": "supervised_best_action_classifier",
+      "label": "lowest_counterfactual_action_ERRF",
+      "grid": {
+        "max_depth": [
+          2,
+          3,
+          4,
+          6,
+          null
+        ],
+        "min_samples_leaf": [
+          30,
+          100,
+          300
+        ],
+        "class_weight": [
+          null,
+          "balanced"
+        ]
+      }
+    },
+    {
+      "id": "RidgePerActionRisk",
+      "type": "per_action_cost_regression",
+      "grid": {
+        "alpha": [
+          0.01,
+          0.1,
+          1.0,
+          10.0,
+          100.0
+        ]
+      }
+    },
+    {
+      "id": "GBRPerActionRisk",
+      "type": "per_action_cost_regression",
+      "grid": {
+        "n_estimators": [
+          100,
+          300
+        ],
+        "learning_rate": [
+          0.03,
+          0.05
+        ],
+        "max_depth": [
+          2,
+          3
+        ],
+        "min_samples_leaf": [
+          30,
+          100
+        ]
+      }
+    },
+    {
+      "id": "DelayedHedge",
+      "type": "delayed_full_information_expert_advice",
+      "loss_normalization": "divide_by_source_training_95th_percentile_then_clip_to_zero_one",
+      "grid": {
+        "eta": [
+          0.001,
+          0.005,
+          0.01,
+          0.05,
+          0.1
+        ]
+      }
+    },
+    {
+      "id": "LinUCB",
+      "type": "delayed_partial_feedback_contextual_bandit",
+      "partial_feedback_note": "selected_action_loss_only_even_though_counterfactual_losses_exist",
+      "grid": {
+        "exploration_alpha": [
+          0.1,
+          0.5,
+          1.0,
+          2.0
+        ],
+        "l2_regularization": [
+          0.1,
+          1.0,
+          10.0
+        ]
+      }
+    }
+  ],
+  "mandatory_conformal_and_ensemble_baselines": [
+    {
+      "id": "TunedSingleConformal",
+      "type": "one_fixed_conformal_configuration_selected_in_source_zones",
+      "candidate_grid": {
+        "SplitCF": [
+          {
+            "clip_final": true
+          }
+        ],
+        "ACI": [
+          {
+            "learning_rate": 0.01
+          },
+          {
+            "learning_rate": 0.02
+          },
+          {
+            "learning_rate": 0.05
+          },
+          {
+            "learning_rate": 0.1
+          }
+        ],
+        "AgACI": [
+          {
+            "learning_rates": [
+              0.005,
+              0.01,
+              0.02,
+              0.05
+            ]
+          },
+          {
+            "learning_rates": [
+              0.01,
+              0.02,
+              0.05,
+              0.1
+            ]
+          },
+          {
+            "learning_rates": [
+              0.02,
+              0.05,
+              0.1,
+              0.2
+            ]
+          }
+        ],
+        "FACI": [
+          {
+            "eta_min": 0.005,
+            "eta_max": 0.05,
+            "adapt_window_hours": 24
+          },
+          {
+            "eta_min": 0.01,
+            "eta_max": 0.1,
+            "adapt_window_hours": 24
+          },
+          {
+            "eta_min": 0.01,
+            "eta_max": 0.1,
+            "adapt_window_hours": 168
+          }
+        ],
+        "EnbPI_RH": [
+          {
+            "history_duration_hours": 168
+          },
+          {
+            "history_duration_hours": 336
+          },
+          {
+            "history_duration_hours": 672
+          }
+        ],
+        "SAOCP": [
+          {
+            "learning_rate": 0.05,
+            "window_hours": [
+              24,
+              48,
+              96,
+              168
+            ],
+            "temperature": 0.1
+          }
+        ],
+        "SPCI": [
+          {
+            "history_duration_hours": 336,
+            "decay": 0.995
+          }
+        ],
+        "NEX": [
+          {
+            "history_duration_hours": 336,
+            "decay": 0.99
+          }
+        ],
+        "KOWCPI": [
+          {
+            "history_duration_hours": 336,
+            "lag_duration_hours": 24,
+            "bandwidth": 0.15,
+            "kernel": "epanechnikov"
+          }
+        ],
+        "WACI": [
+          {
+            "learning_rate": 0.05,
+            "width_power": 0.5,
+            "adapt_floor": 0.2,
+            "adapt_cap": 5.0
+          }
+        ]
+      }
+    },
+    {
+      "id": "EqualEndpointEnsemble",
+      "type": "simple_interval_ensemble",
+      "rule": "arithmetic_mean_of_four_action_lower_endpoints_and_four_action_upper_endpoints_then_clip_zero_one"
+    }
+  ],
+  "diagnostic_only": [
+    {
+      "id": "CellwiseHindsightLowerBound",
+      "reason": "nondeployable_oracle"
+    }
+  ],
+  "primary_holm_family": [
+    "BestFixedChosenInSourceZones",
+    "CARTBestAction",
+    "RidgePerActionRisk",
+    "GBRPerActionRisk",
+    "DelayedHedge",
+    "LinUCB",
+    "TunedSingleConformal",
+    "EqualEndpointEnsemble"
+  ],
+  "required_reports": [
+    "exact_grid_and_selected_configuration_per_outer_fold",
+    "inner_zone_validation_scores",
+    "heldout_ERRF_and_reliability",
+    "action_shares",
+    "runtime_and_memory",
+    "configuration_hash"
+  ]
+}

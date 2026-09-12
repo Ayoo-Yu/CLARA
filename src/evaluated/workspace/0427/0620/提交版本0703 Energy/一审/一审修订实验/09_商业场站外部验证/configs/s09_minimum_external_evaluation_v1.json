@@ -1,0 +1,123 @@
+{
+  "schema": "S09_MINIMUM_EXTERNAL_EVALUATION_PROTOCOL_V1",
+  "version": "1.0.0",
+  "status": "FROZEN_BEFORE_EXTERNAL_AGGREGATE_PERFORMANCE_READ",
+  "parent_method_transfer_config_sha256": "65caab0db70399b431f979b37938b15e9e582c557da45e5f9f6640f073e6f810",
+  "scope": {
+    "farms": ["FarmA", "FarmB"],
+    "predictors": ["Ridge", "GBR", "MLP", "QRLSTM"],
+    "seeds": [0, 1, 2],
+    "horizon_steps": [4, 24, 48, 96],
+    "target_coverages": [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.95, 0.99],
+    "methods": [
+      "CLARA_V4_Direct",
+      "CLARA_V4_Local",
+      "CART_Direct",
+      "CART_Local",
+      "LinUCB_Direct",
+      "LinUCB_Local",
+      "TunedSingleConformal_Direct",
+      "TunedSingleConformal_Local",
+      "EqualEndpointEnsemble",
+      "Static",
+      "ACI",
+      "AgACI",
+      "EnbPI_RH"
+    ]
+  },
+  "local_clara_estimator": {
+    "fit_unit": "one_target_farm_and_seed_pooling_predictors_horizons_and_coverages",
+    "fit_rows": "adaptation_selector_fit_complete_cases_only",
+    "query_rows": "final_test_complete_cases_only",
+    "width_thresholds": "target_adaptation_tertiles_by_predictor_horizon_group_coverage_seed",
+    "support_levels": "seven_frozen_CLARA_backoff_levels",
+    "temporal_cluster": "UTC_calendar_day",
+    "risk_standard_error": "standard_error_of_nonempty_daily_block_means",
+    "n_min_candidates": [10, 20, 30, 50],
+    "n_min_rule": "smallest_candidate_with_top_two_risk_margin_se_ratio_at_least_one_else_50",
+    "nu_candidates": [0, 10, 30, 60, 100],
+    "nu_signal": "median_absolute_selected_group_minus_global_action_risk",
+    "nu_noise": "median_daily_block_standard_error",
+    "nu_rules": [
+      {"minimum_ratio": 2.0, "nu": 0},
+      {"minimum_ratio": 1.0, "nu": 10},
+      {"minimum_ratio": 0.5, "nu": 30},
+      {"minimum_ratio": 0.25, "nu": 60},
+      {"minimum_ratio": 0.0, "nu": 100}
+    ],
+    "risk_parent": "global_action_mean_within_target_farm_and_seed",
+    "guardrail": "frozen_empirical_mean_guardrail_at_price_ratio_5.6179775281",
+    "coverage_shortfall_epsilon": 0.02,
+    "tuwr_upper": 0.35,
+    "ard_upper": 0.15,
+    "cold_start_rule": "coverage_only",
+    "empty_safe_set_rule": "minimum_shrunken_risk_then_reliability_then_frozen_action_order"
+  },
+  "cart": {
+    "direct": "ten_source_outer_trees_with_outer_selected_configuration_then_consensus",
+    "local": "one_target_farm_and_seed_refit_with_source_modal_configuration",
+    "local_configuration": {
+      "class_weight": "balanced",
+      "max_depth": null,
+      "min_samples_leaf": 300,
+      "random_state": 0
+    }
+  },
+  "linucb": {
+    "configuration": {
+      "exploration_alpha": 1.0,
+      "l2_regularization": 10.0
+    },
+    "direct": "cold_start_at_final_test_then_strict_delayed_selected_action_feedback",
+    "local": "prewarm_on_adaptation_selector_fit_then_continue_on_final_test",
+    "final_feedback_drain": false
+  },
+  "tuned_single_conformal": {
+    "direct_family": "SAOCP",
+    "direct_configuration": {
+      "learning_rate": 0.05,
+      "temperature": 0.1,
+      "window_hours": [24.0, 48.0, 96.0, 168.0]
+    },
+    "local_grid": "all_19_frozen_conformal_configurations",
+    "local_selection_seed": 0,
+    "local_selection_pool": "all_predictors_horizons_and_coverages_within_target_farm",
+    "local_feasibility": {
+      "coverage_gap_lower": -0.02,
+      "tuwr_upper": 0.35
+    },
+    "local_objective": "minimum_mean_ERRF_then_complexity_then_configuration_id",
+    "final_refit": "full_middle_twenty_percent_calibration_then_final_test"
+  },
+  "reporting": {
+    "regimes": ["overall", "ordinary", "ramp"],
+    "weightings": ["time_sample_weighted", "equal_farm_weighted", "capacity_weighted"],
+    "block_hours": [24, 168],
+    "bootstrap_replicates": 5000,
+    "bootstrap_seed": 2026082803,
+    "primary_metric": "mean_ERRF",
+    "secondary_metrics": ["coverage_gap", "average_width", "TOWR", "TUWR", "ARD"]
+  },
+  "storage": {
+    "event_level_method_table": false,
+    "save_cell_metrics": true,
+    "save_action_counts": true,
+    "save_paired_block_sufficient_statistics": true,
+    "save_per_unit_hash_audit": true
+  },
+  "adverse_result_gate": {
+    "pause_if": "both_CLARA_transfer_modes_exceed_best_fixed_action_ERRF_by_more_than_10_percent_in_equal_farm_overall_mean_and_neither_improves_TUWR_or_ramp_ERRF",
+    "performance_read_requires_independent_technical_QA": true
+  },
+  "inputs": {
+    "full_external_rebuild_root_manifest_sha256": "f80a7f93e586ca08244dfcf67c978e0d872cd053cca4b7064347b0267ca81272",
+    "full_external_rebuild_qa_sha256": "6957f50264d48e27925a1f6803cdf15bf6c4b64719d1c5dba9463c49627224de",
+    "adaptation_candidate_root_manifest_sha256": "6b7f714c610e65e11a490d3b85725e357cf398b30e75369e8f58081f9bc6ddbd",
+    "adaptation_candidate_qa_sha256": "db3d6d4ddb32380e938b950688cdc6e110bf5b917820bb4920b25125b55ace4d",
+    "state_sufficient_statistics_sha256": "8e083819b430f2723f4186997d9527b57bfd9cc59ccec7b114fffeacd1e939fb",
+    "supervised_selected_configurations_sha256": "984833345a8e5901ccd5bf4c01c1d19c7ec625de7fe63fa69e56b0c78b676735",
+    "sequential_selected_configurations_sha256": "7daaeef989c5f73c4ff427e20a1d5009d297e661f2926999e8a5eb8cff5ab8b6",
+    "conformal_selected_configurations_sha256": "44cb6c9954dd9aa6f2aade5dd1a5eb9169f7be663ed7d66bf35a088a3fc7fcc3"
+  },
+  "performance_read_allowed": false
+}

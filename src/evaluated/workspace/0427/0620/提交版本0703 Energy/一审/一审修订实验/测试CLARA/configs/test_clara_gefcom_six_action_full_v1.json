@@ -1,0 +1,574 @@
+{
+  "schema": "TEST_CLARA_GEFCOM_SIX_ACTION_PRICE_FULL_PROTOCOL_V1",
+  "version": "1.0.0",
+  "status": "FROZEN_AUTHOR_APPROVED_B_PENDING_PREFLIGHT",
+  "run_id": "GEFCOM_SIX_ACTION_PRICE_FULL_V1",
+  "decision_basis": {
+    "decision_log_id": "D0076",
+    "price_policy_rule": "REFIT_CART_AND_REPLAY_LINUCB_FOR_EACH_PRICE; REFIT_PRICE_CONDITIONED_CLARA_WITH_ADAPTIVE_GUARDRAIL; RESCORE_FIXED_ENDPOINT_METHODS_FOR_EACH_PRICE",
+    "coverage_count": 11,
+    "note": "13 was the legacy external-method count, not the number of coverage levels"
+  },
+  "training_support_identity": {
+    "status": "AUTHOR_APPROVED_B_FROZEN",
+    "chosen_identity": "B_UNIFIED_FIVE_HORIZON_NEW_IDENTITY",
+    "author_approved": true,
+    "scientific_execution_allowed": true,
+    "author_approval_record": {
+      "status": "APPROVED",
+      "approved_option": "B_UNIFIED_FIVE_HORIZON_NEW_IDENTITY",
+      "approved_by": "author",
+      "approved_at_utc": "2026-09-02T14:46:00.5955755Z",
+      "scope_statement": "作者明确：不需保持旧V4完全不变，按B_UNIFIED_FIVE_HORIZON_NEW_IDENTITY执行；统一使用1/3/6/12/24 h五时距训练新的六动作CLARA，全部六动作共同参与n_min、nu与安全护栏统计。"
+    },
+    "legacy_identity": "FULL_24_HORIZON_SOURCE_SUPPORT",
+    "legacy_evidence": "D0073 and the sealed V4 state decisions used all 24 source-support horizons",
+    "available_migration_inventory": "FIVE_HORIZON_SOURCE_SUPPORT_ONLY_[1,3,6,12,24]",
+    "options": {
+      "A_FULL_24_HORIZON_SOURCE_SUPPORT": "restore the missing 19 source horizons and preserve the legacy training identity",
+      "B_UNIFIED_FIVE_HORIZON_NEW_IDENTITY": "explicitly authorize a new identity and refit all price-conditioned CLARA/CART policies using the same five horizons"
+    },
+    "option_horizons": {
+      "A_FULL_24_HORIZON_SOURCE_SUPPORT": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "B_UNIFIED_FIVE_HORIZON_NEW_IDENTITY": [
+        1,
+        3,
+        6,
+        12,
+        24
+      ]
+    },
+    "approval_record_contract": "status=APPROVED, approved_option=chosen_identity, approved_by=author, and nonempty approved_at_utc/scope_statement; booleans alone never authorize execution",
+    "inventory_contract": "the chosen option must have complete S03 base/bundle and S06 source-fact inventories; every artifact hash is verified before formal execution",
+    "endpoint_cache_is_identity_independent": true,
+    "formal_runner_default": "B_APPROVED; A_REMAINS_FAIL_CLOSED_UNLESS_24_HORIZON_INVENTORY_IS_RESTORED_AND_SEPARATELY_APPROVED"
+  },
+  "scope": {
+    "dataset_id": "gefcom2014",
+    "zones": [
+      "zone1",
+      "zone2",
+      "zone3",
+      "zone4",
+      "zone5",
+      "zone6",
+      "zone7",
+      "zone8",
+      "zone9",
+      "zone10"
+    ],
+    "predictors": [
+      "Ridge",
+      "GBR",
+      "MLP",
+      "QRLSTM"
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "horizons": [
+      1,
+      3,
+      6,
+      12,
+      24
+    ],
+    "target_coverages": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.99
+    ],
+    "actions": [
+      "Static",
+      "ACI",
+      "AgACI",
+      "EnbPI_RH",
+      "TunedSingleConformal",
+      "EqualEndpointEnsemble"
+    ],
+    "methods": [
+      "CLARA_6A",
+      "CART_6A",
+      "LinUCB_6A",
+      "TunedSingleConformal",
+      "EqualEndpointEnsemble",
+      "FixedStatic",
+      "FixedACI",
+      "FixedAgACI",
+      "FixedEnbPI_RH"
+    ],
+    "expected_endpoint_unit_count_by_training_identity": {
+      "A_FULL_24_HORIZON_SOURCE_SUPPORT": 720,
+      "B_UNIFIED_FIVE_HORIZON_NEW_IDENTITY": 150
+    },
+    "expected_selector_unit_count": 30,
+    "expected_replay_unit_count": 30,
+    "expected_price_child_count": 300,
+    "expected_target_event_count_per_method_price": 23024760,
+    "expected_method_event_score_count": 1036114200
+  },
+  "price_grid": [
+    {
+      "price_id": "R01",
+      "miss_to_capacity_ratio": 1.0,
+      "theta": [
+        3.56,
+        3.56,
+        3.56,
+        3.56
+      ]
+    },
+    {
+      "price_id": "R02",
+      "miss_to_capacity_ratio": 2.0,
+      "theta": [
+        3.56,
+        3.56,
+        7.12,
+        7.12
+      ]
+    },
+    {
+      "price_id": "R05P6179775281",
+      "miss_to_capacity_ratio": 5.6179775281,
+      "theta": [
+        3.56,
+        3.56,
+        20.0,
+        20.0
+      ],
+      "base_submission_price": true
+    },
+    {
+      "price_id": "R10",
+      "miss_to_capacity_ratio": 10.0,
+      "theta": [
+        3.56,
+        3.56,
+        35.6,
+        35.6
+      ]
+    },
+    {
+      "price_id": "R20",
+      "miss_to_capacity_ratio": 20.0,
+      "theta": [
+        3.56,
+        3.56,
+        71.2,
+        71.2
+      ]
+    }
+  ],
+  "method_contract": {
+    "CLARA_6A": "price-conditioned risk, adaptive n_min/nu, and log-price-interpolated safety guardrail",
+    "CART_6A": "refit six-action labels independently for every held-out zone, seed, and price",
+    "LinUCB_6A": "strict delayed-feedback target replay independently for every price",
+    "TunedSingleConformal": "price-independent endpoints; rescore under every theta",
+    "EqualEndpointEnsemble": "mean of the original four lower endpoints and mean of the original four upper endpoints; rescore under every theta",
+    "fixed_actions": "price-independent endpoints; rescore under every theta"
+  },
+  "endpoint_contract": {
+    "schema": "TEST_CLARA_GEFCOM_6A_ENDPOINT_CONTRACT_V1",
+    "version": "1.0.0",
+    "algorithm_module": "scripts/gefcom_six_action_endpoint_contract_v1.py",
+    "unit": "zone_seed_horizon",
+    "actions": [
+      "TunedSingleConformal",
+      "EqualEndpointEnsemble"
+    ],
+    "target_coverages": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.99
+    ],
+    "nominal_cadence_minutes": 60.0,
+    "reliability_history_hours": 168,
+    "regression_horizons": [
+      1,
+      3,
+      6,
+      12,
+      24
+    ],
+    "regression_coverages": [
+      0.5,
+      0.9,
+      0.99
+    ],
+    "identity_input_ids": [
+      "causal_event_protocol",
+      "s03_root_manifest",
+      "s06_source_fact_root_manifest",
+      "s07_execution_registry",
+      "fold_width_thresholds",
+      "baseline_conformal_module",
+      "baseline_ensemble_module",
+      "baseline_common_module",
+      "baseline_sequential_module",
+      "baseline_training_module",
+      "clara_errf_module",
+      "source_tuning_facts_module",
+      "event_contract_module",
+      "baseline_supplement_runner",
+      "baseline_supplement_common",
+      "legacy_regression_verified_manifest",
+      "legacy_regression_input_audit",
+      "legacy_regression_independent_qa",
+      "migration_full_sha256_manifest"
+    ]
+  },
+  "adaptive_clara": {
+    "source_protocol": "configs/test_clara_four_versions_v1.json",
+    "version": "V4_FULLY_ADAPTIVE",
+    "n_min_candidates": [
+      10,
+      20,
+      30,
+      50
+    ],
+    "n_min_no_candidate_rule": 50,
+    "nu_candidates": [
+      0,
+      10,
+      30,
+      60,
+      100
+    ],
+    "guardrail_interpolation_axis": "NATURAL_LOG_PRICE_RATIO"
+  },
+  "selector_contract": {
+    "schema": "TEST_CLARA_GEFCOM_6A_SELECTOR_CONTRACT_V1",
+    "action_library": [
+      "Static",
+      "ACI",
+      "AgACI",
+      "EnbPI_RH",
+      "TunedSingleConformal",
+      "EqualEndpointEnsemble"
+    ],
+    "adaptive_statistics_action_scope": "ALL_SIX_ACTIONS",
+    "n_min_top_two_margin_rule": "sort all six price-conditioned risk scores; compute the best-vs-second margin and its joint SE over all six actions",
+    "nu_signal_rule": "median absolute state-parent risk difference over all six actions divided by median source-zone cluster SE over the nine zone-balanced source-zone means and all six actions",
+    "guardrail_safe_set_rule": "construct coverage/TUWR/ARD safe set across all six actions before risk minimization",
+    "tie_break_rule": "within the six-action safe candidates: minimum risk, maximum coverage, minimum TUWR, minimum ARD, then frozen action order",
+    "prohibited_shortcut": "do not adapt n_min/nu or guardrail on the original four actions and append the two new actions afterward",
+    "price_conditioning": "repeat all six-action adaptive statistics and safe-set selection independently for every price",
+    "linucb_bundle_level_independence_allowed": false,
+    "linucb_global_replay_rule": "for each heldout zone×seed×price, initialize once and globally coordinate all five horizons×four predictors×eleven coverages in issue-time order; horizon-wise restart is prohibited",
+    "linucb_six_action_identity": {
+      "action_library_contract": {
+        "schema": "TEST_CLARA_6A_ACTION_LIBRARY_IDENTITY_V1",
+        "tie_order": [
+          "Static",
+          "ACI",
+          "AgACI",
+          "EnbPI_RH",
+          "TunedSingleConformal",
+          "EqualEndpointEnsemble"
+        ],
+        "action_count": 6
+      },
+      "ordered_action_library_sha256": "e8cc20e0ee0c76f63a78188ee7d2557037aa75994c866f997773e14695e9aa24",
+      "global_replay_scope_contract": {
+        "schema": "TEST_CLARA_6A_GLOBAL_REPLAY_SCOPE_V1",
+        "coordination_unit": "heldout_zone_seed_price",
+        "horizons": [
+          1,
+          3,
+          6,
+          12,
+          24
+        ],
+        "predictors": [
+          "Ridge",
+          "GBR",
+          "MLP",
+          "QRLSTM"
+        ],
+        "coverages": [
+          0.1,
+          0.2,
+          0.3,
+          0.4,
+          0.5,
+          0.6,
+          0.7,
+          0.8,
+          0.9,
+          0.95,
+          0.99
+        ],
+        "order": "issue_time_global",
+        "initialize_once": true
+      },
+      "global_replay_scope_sha256": "9e406ed7429b4217064a6657323df701232cf5f74724f66d692822a7d741297e",
+      "hyperparameter_source": "s07_execution_registry LinUCB rows; retain each heldout zone's frozen exploration_alpha and l2_regularization but bind them into a new six-action child identity",
+      "candidate_feedback_conservation": "each replay price child must prove the same ordered six actions are present for every issued event, and feedback counts close without future or within-issue use",
+      "price_child_identity_fields": [
+        "ordered_action_library_sha256",
+        "theta_sha256",
+        "price_sha256",
+        "global_replay_scope_sha256",
+        "heldout_zone_alpha_lambda_sha256",
+        "endpoint_root_manifest_sha256",
+        "selector_price_child_manifest_sha256"
+      ]
+    },
+    "required_endpoint_root_seal_schema": "TEST_CLARA_GEFCOM_6A_ENDPOINT_ROOT_SEAL_V1",
+    "endpoint_root_pin_rule": "selector fitting must record and verify the chosen identity's endpoint root-manifest SHA256"
+  },
+  "checkpoint_contract": {
+    "endpoint_unit": "zone_seed_horizon",
+    "selector_unit": "heldout_zone_seed_coordinator_loading_compact_sources_once_and_emitting_five_price_CLARA_CART_policy_artifacts_only",
+    "selector_price_subcheckpoint": "five atomic price submanifests inside each zone-seed coordinator; each price refits CLARA/CART independently; LinUCB has no fitted policy artifact here",
+    "linucb_replay_scope": "within each heldout-zone×seed×price, globally order all five horizons×four predictors×eleven coverages by issue time; never replay horizons independently",
+    "replay_unit": "heldout_zone_seed_loading_all_five_horizons_once; globally replaying LinUCB per price; scoring all five prices and nine methods; then writing horizon slices",
+    "replay_price_subcheckpoint": "five atomic price submanifests inside each zone-seed parent; each covers all five horizons before horizon-sliced outputs",
+    "price_child_commit": "WRITE_CHILD_TO_UNIQUE_TEMP_DIRECTORY_THEN_ATOMIC_RENAME",
+    "parent_commit": "INCREMENTAL_CONTAINER_WITH_SEPARATE_ATOMIC_SEAL_AFTER_ALL_FIVE_CHILD_MANIFEST_SHA256_PASS",
+    "parent_resume": "incremental resume: when the parent seal is absent, validate and reuse every legal completed price child, continue only missing prices, and block on any invalid child or residual child temp directory",
+    "parent_seal_contract": "atomically write the parent seal only after all five price-child manifests are PASS and their SHA256 values are enumerated",
+    "replay_price_dependency": "each replay price child pins only the same zone-seed-price selector child SHA256, the chosen endpoint-root seal SHA256, theta/config identity, and frozen LinUCB configuration; it must not wait for the other four selector prices",
+    "unit_commit": "ENDPOINT_UNITS_USE_UNIQUE_TEMP_DIRECTORY_THEN_ATOMIC_RENAME; PRICE_PARENTS_USE_INCREMENTAL_CHILDREN_PLUS_SEPARATE_SEAL",
+    "existing_incomplete_unit": "ENDPOINT_FAIL_CLOSED; PRICE_PARENT_RESUMES_ONLY_VALID_SEALED_CHILDREN_AND_BLOCKS_INVALID_OR_TEMP_CHILDREN",
+    "existing_complete_unit": "REUSE_ONLY_AFTER_CONFIG_RUNNER_AND_ARTIFACT_HASH_VALIDATION"
+  },
+  "implementation": {
+    "endpoint_cache": "IMPLEMENTED_WITH_SEALED_PREFLIGHT_TOKEN_GATE",
+    "task_planner": "IMPLEMENTED",
+    "input_and_environment_preflight": "IMPLEMENTED",
+    "price_conditioned_selector_fit": "PLANNED_NOT_IMPLEMENTED_IN_THIS_RUNNER_REVISION",
+    "target_replay": "PLANNED_NOT_IMPLEMENTED_IN_THIS_RUNNER_REVISION",
+    "aggregation_and_independent_qa": "PLANNED_NOT_IMPLEMENTED_IN_THIS_RUNNER_REVISION"
+  },
+  "execution": {
+    "maximum_workers": 4,
+    "preserve_failed_temporary_units": true,
+    "output_relative_path": "测试CLARA/results_raw/gefcom_six_action_price_full_v1",
+    "exact_environment_required_for_artifact_build": true,
+    "endpoint_build_enabled": true,
+    "endpoint_build_disabled_reason": null,
+    "disk_capacity_contract": {
+      "active_stage": "endpoint_cache",
+      "safety_margin_fraction": 0.5,
+      "fixed_reserve_bytes": 5368709120,
+      "stage_projected_bytes": {
+        "endpoint_cache": {
+          "persistent_output_bytes": 6442450944,
+          "peak_concurrent_temporary_bytes": 2147483648
+        },
+        "selector_fit_compact": {
+          "persistent_output_bytes": 2147483648,
+          "peak_concurrent_temporary_bytes": 2147483648
+        },
+        "target_replay_compact": {
+          "persistent_output_bytes": 4294967296,
+          "peak_concurrent_temporary_bytes": 3221225472
+        },
+        "aggregation_and_qa": {
+          "persistent_output_bytes": 1073741824,
+          "peak_concurrent_temporary_bytes": 1073741824
+        }
+      },
+      "required_free_bytes_formula": "fixed_reserve_bytes + (active_stage persistent_output_bytes + peak_concurrent_temporary_bytes) * (1 + safety_margin_fraction)"
+    }
+  },
+  "output_storage_contract": {
+    "mode": "COMPACT_ONLY_NO_FULL_METHOD_EVENT_PRICE_MATERIALIZATION",
+    "prohibited_materialization": "the 1,036,114,200 method-event-price Cartesian score table must never be persisted",
+    "allowed_outputs": [
+      "price-independent endpoint cache",
+      "cell-level sufficient metrics",
+      "action counts",
+      "paired-block sufficient statistics",
+      "price-conditioned CLARA/CART policy manifests",
+      "LinUCB delayed-feedback audit manifests",
+      "deterministic bounded QA samples"
+    ],
+    "event_conservation": "event counts plus artifact hashes close every parent and price-child manifest without retaining all method-event-price rows",
+    "qa_sample_only": true
+  },
+  "environment": {
+    "python": "3.12.12",
+    "formal_python_executable": "python",
+    "formal_python_flags": [
+      "-s"
+    ],
+    "required_process_environment": {
+      "PYTHONNOUSERSITE": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1"
+    },
+    "packages": {
+      "numpy": "1.26.4",
+      "pandas": "3.0.3",
+      "scipy": "1.16.3",
+      "scikit-learn": "1.4.2",
+      "pyarrow": "21.0.0",
+      "psutil": "5.9.0",
+      "numba": "0.63.1",
+      "llvmlite": "0.46.0"
+    }
+  },
+  "inputs": {
+    "causal_event_protocol": {
+      "relative_path": "02_完整实验协议冻结/protocol/causal_event_protocol_v1_1.json",
+      "sha256": "194f9c7d52efe7f59c91e4c4e8bba0a17bb3712240dfb69832ce5cd875ecc22b"
+    },
+    "s03_root_manifest": {
+      "relative_path": "03_基础预测与候选区间重建/results_raw/full_rebuild_v1/run_root_manifest.json",
+      "sha256": "5063d53444d4270e208ec95aac94ec414cebc5eae722e44e60674e9c1318b96e"
+    },
+    "s06_source_fact_root_manifest": {
+      "relative_path": "06_基线实现与训练区调参/results_raw/nested_source_selection_v1/source_fact_root_manifest.json",
+      "sha256": "30a0f86d6f775c7c32a3654117807dfa9acabc8187c2bdefeb8440e1466ef9e7"
+    },
+    "s07_execution_registry": {
+      "relative_path": "06_基线实现与训练区调参/results_verified/s07_execution_registry_v2/s07_baseline_execution_registry.parquet",
+      "sha256": "26d554902c94e46e30bf7afa42aa75cad0f2f2a5a4353955b90b75acf5bff0d5"
+    },
+    "fold_width_thresholds": {
+      "relative_path": "06_基线实现与训练区调参/results_raw/nested_source_selection_v1/fold_width_thresholds.parquet",
+      "sha256": "ef3ebd2ed7dc4105212ea27fa0d62729c5101416eff8aba2a37c166ceced96ba"
+    },
+    "v4_adaptive_protocol": {
+      "relative_path": "测试CLARA/configs/test_clara_four_versions_v1.json",
+      "sha256": "29ec03b10940ea4e53632802a40bdede094a12cd66582703bba29fcb69e71572"
+    },
+    "price_protocol": {
+      "relative_path": "08_敏感性分析与消融/01_价格敏感性/configs/price_sensitivity_protocol_v1.json",
+      "sha256": "8bae1efb823f64631806e47a2cb7c2f9cbcc39c0ede1ba50113b47d60cebbd19"
+    },
+    "baseline_conformal_module": {
+      "relative_path": "_权威代码/code/baseline_conformal.py",
+      "sha256": "79c08f71435e401620ffbdc7e5aa8a343e5ae39d8373ae56ff83693e20389ddc"
+    },
+    "baseline_ensemble_module": {
+      "relative_path": "_权威代码/code/baseline_ensemble.py",
+      "sha256": "21558cd8da31f50f40f842449bf7030b92be8c553267608c947b0f28797f8d48"
+    },
+    "baseline_common_module": {
+      "relative_path": "_权威代码/code/baseline_common.py",
+      "sha256": "8806847202e43722e6bcf35c2b20ef02e76bd4e45741d445c1cce5a0da052cc3"
+    },
+    "baseline_sequential_module": {
+      "relative_path": "_权威代码/code/baseline_sequential.py",
+      "sha256": "db87ad4d069de85a789c49a6bfb52a74951de4751306967ad7b86ea143111180"
+    },
+    "baseline_training_module": {
+      "relative_path": "_权威代码/code/baseline_training.py",
+      "sha256": "94845199ff1400957f0ceefaf3d7d2f22a086f613febcef476a8d2021b0d1d67"
+    },
+    "clara_errf_module": {
+      "relative_path": "_权威代码/code/clara_errf.py",
+      "sha256": "51e70aa9a4d57ebe8eda1686a037e7ab5de1edb94524337f694848d1bfcb8f97"
+    },
+    "source_tuning_facts_module": {
+      "relative_path": "_权威代码/code/source_tuning_facts.py",
+      "sha256": "7923cd95a8b903c38bdedee9a4dfb71170adc92b7185c14fdfd06c56dc9c0241"
+    },
+    "event_contract_module": {
+      "relative_path": "_权威代码/code/clara_event_contract.py",
+      "sha256": "091cc7da8f79e5d16f09e057420fed06d85b09837f0329718098f1c8f643e775"
+    },
+    "baseline_supplement_runner": {
+      "relative_path": "基线实验补充/scripts/run_baseline_supplement.py",
+      "sha256": "5a8b70c7d259dcb028eee412a4093fc575711181afde110c86ba9ba31628e053"
+    },
+    "baseline_supplement_common": {
+      "relative_path": "基线实验补充/scripts/baseline_supplement_common.py",
+      "sha256": "3038ac44c776897e00442450a2104b1238a8a0bcb87fe28439c430bb7db55d7c"
+    },
+    "legacy_regression_verified_manifest": {
+      "relative_path": "基线实验补充/results_verified/paper_equivalent_reaggregation_v1/manifest.json",
+      "sha256": "597390313a7dc0e16d57f8034a3870e5e5a64c45723468f6af7d0b6b43209209"
+    },
+    "legacy_regression_input_audit": {
+      "relative_path": "基线实验补充/results_verified/paper_equivalent_reaggregation_v1/input_audit.csv",
+      "sha256": "31a84145c6bb0de27b11fa2d8e9d9ac09be4a760fd568d33fa08a5052fcb3c71"
+    },
+    "legacy_regression_independent_qa": {
+      "relative_path": "基线实验补充/qa/paper_equivalent_reaggregation_v1/qa_summary.json",
+      "sha256": "65c3a5732f7ae16da541b7350a80d5916bab7f7695df89ce1ec778de0a0a54d4"
+    },
+    "migration_full_sha256_manifest": {
+      "relative_path": "../../../../../../FULL_SHA256_MANIFEST.csv",
+      "sha256": "0f5c18097f13f3f7c6fe3b6a1ff09c6a54d1afebca8860b9dcff9dcafab1c2f4",
+      "expected_entry_count": 31291
+    }
+  },
+  "regression_gate": {
+    "reference_relative_path": "基线实验补充/results_raw/baseline_supplement_v2/units",
+    "verified_manifest_input_id": "legacy_regression_verified_manifest",
+    "verified_input_audit_input_id": "legacy_regression_input_audit",
+    "independent_qa_input_id": "legacy_regression_independent_qa",
+    "expected_reference_unit_count": 150,
+    "expected_reference_unique_event_count": 6279480,
+    "coverages": [
+      0.5,
+      0.9,
+      0.99
+    ],
+    "methods": [
+      "TunedSingleConformal",
+      "EqualEndpointEnsemble"
+    ],
+    "endpoint_and_base_price_metric_absolute_tolerance": 1e-12,
+    "must_pass_for_every_endpoint_unit": true
+  },
+  "stop_conditions": [
+    "scope_or_price_grid_mismatch",
+    "input_hash_or_inventory_mismatch",
+    "environment_version_mismatch",
+    "legacy_three_coverage_endpoint_regression_failure",
+    "causal_reliability_or_event_conservation_failure",
+    "existing_incomplete_unit_detected",
+    "free_disk_below_safety_gate"
+  ]
+}

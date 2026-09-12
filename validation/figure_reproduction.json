@@ -1,0 +1,62 @@
+[
+  {
+    "figure": 4,
+    "source_size": [
+      2220,
+      1688
+    ],
+    "reproduced_size": [
+      2220,
+      1688
+    ],
+    "pixel_identical": true
+  },
+  {
+    "figure": 5,
+    "source_size": [
+      2220,
+      1937
+    ],
+    "reproduced_size": [
+      2220,
+      1937
+    ],
+    "pixel_identical": true
+  },
+  {
+    "figure": 6,
+    "source_size": [
+      2881,
+      2740
+    ],
+    "reproduced_size": [
+      2881,
+      2740
+    ],
+    "pixel_identical": true
+  },
+  {
+    "figure": 7,
+    "source_size": [
+      2161,
+      2173
+    ],
+    "reproduced_size": [
+      2161,
+      2173
+    ],
+    "pixel_identical": true
+  },
+  {
+    "figure": 8,
+    "source_size": [
+      4322,
+      3779
+    ],
+    "reproduced_size": [
+      4322,
+      3779
+    ],
+    "pixel_identical": true
+  }
+]

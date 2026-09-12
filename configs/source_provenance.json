@@ -1,0 +1,623 @@
+[
+  {
+    "path": "src/evaluated/analysis/all_method_price_evidence_20260905/price_evidence_runtime.py",
+    "source_sha256": "d552c04a1fcfbaba3a7fdeae3dacd74c3ca56cabd0c809d9f5805affad71ce96",
+    "packaged_sha256": "5bd4fb1324bae93176bccc3d14c31e2a23ca6b5be8c48a86b503de71f312267c",
+    "changes": [
+      "Private site identifier replaced with manuscript label."
+    ]
+  },
+  {
+    "path": "src/evaluated/analysis/all_method_price_evidence_20260905/vectorized_external_evidence.py",
+    "source_sha256": "1b606572d1e4dbe3b14addca49dfdbef0dc827f02794192403fa95ea1139ce4a",
+    "packaged_sha256": "bd2a5495253a3ccd334a03506888fb615551fe5975b3a5fb48b0c83fba9d6917",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/analysis/chapter4_evidence_explanation_20260910/oracle_audit.py",
+    "source_sha256": "81e7dce8c25e0a53578df9a8fd028993cbf63e9ff552c909654190965cfc4ad2",
+    "packaged_sha256": "9fb7793c47e3d562ac70577bbaf10e8e5e11cfb0aa2ac504793c10dd177ab221",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/analysis/clara_tsc_deep_audit_20260908/replay_mechanisms.py",
+    "source_sha256": "e3306c58263c140508da833f636b800971ace5eb85a42aad176854e8cfc48653",
+    "packaged_sha256": "a6bfe4a31106b906bf364767c37c33306f7178992f1a5bde3ceeee7008f078db",
+    "changes": [
+      "Private site identifier replaced with manuscript label."
+    ]
+  },
+  {
+    "path": "src/evaluated/analysis/complete_ablation_20260909/runtime.py",
+    "source_sha256": "336727a3cb910792095b186137826b039a9278e526b4a961f79802e9db2a6ca7",
+    "packaged_sha256": "acc0be594334981a4d8b6cbf727391f9232ef203bdb1ba2828416657ba7bb28a",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/analysis/guardrail_redesign_20260908/policies.py",
+    "source_sha256": "e062ab39bd00b17c15ac3ec0dc913fea15be0f4d123f6b834c59024c70bd6768",
+    "packaged_sha256": "8ab6f81f8927a4036ad31334d9b8c0e5e827f2d6b56505d0da2de731adbb36c6",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/analysis/guardrail_redesign_gefcom_20260908/evaluate.py",
+    "source_sha256": "2c1aa2136a7863401afa219ffb3afc5fa39536b42e1f27b670d007b44fda4bf9",
+    "packaged_sha256": "2c1aa2136a7863401afa219ffb3afc5fa39536b42e1f27b670d007b44fda4bf9",
+    "changes": []
+  },
+  {
+    "path": "src/evaluated/analysis/guardrail_redesign_gefcom_20260908/gefcom_guardrail_runtime.py",
+    "source_sha256": "f634a7d3d2c1c5b610b66fcbe5334e6abb36a95fbc66f7973800c6234401eaba",
+    "packaged_sha256": "a5e8a93eeb20f2a853b2a4c0c7aba6f9233a4f2f6351d4f45c6b37a40d20a576",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/analysis/section46_failure_diagnosis_20260911/diagnose.py",
+    "source_sha256": "3aece3495f32fae6c444b46e56d992de63fe29a58c06075a33fda7ce5e3ead63",
+    "packaged_sha256": "debea428cea0e9e39ba2ee04ce9dc50a4235e64071b38a7016482c89e152e81b",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/analysis/section46_online_update_20260911/engine.py",
+    "source_sha256": "a137e44b6a6f05926d565bb06bc3d495923f524490fa83bca08a0131a0dd9ab3",
+    "packaged_sha256": "51ed5358204df0268498c2d015f1d20d7b317a17c2b404e8119616cc672d9271",
+    "changes": [
+      "Private site identifier replaced with manuscript label."
+    ]
+  },
+  {
+    "path": "src/evaluated/analysis/section46_online_update_20260911/trial.py",
+    "source_sha256": "8da4c8cd25ed7a4a4fff8c8c60bb38e0f27cf7ab4f3aa0762ec631679d7cdee3",
+    "packaged_sha256": "3a1092c84733d942f66a1b1d978483027148c7446418ed4df17dfe30ecb3ebe4",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/02_完整实验协议冻结/protocol/baseline_registry_v1.json",
+    "source_sha256": "ea0d018cf46c94993396dc3ab2d58adcfb5f869e99731f8c4a04befff3659350",
+    "packaged_sha256": "ea0d018cf46c94993396dc3ab2d58adcfb5f869e99731f8c4a04befff3659350",
+    "changes": []
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/02_完整实验协议冻结/protocol/causal_event_protocol_v1.json",
+    "source_sha256": "b94f9ef64c379ba3bc71c34d06c6226d1a1710844e8f176810972889e002d9f5",
+    "packaged_sha256": "d5109ccc1492ebb674bbbd8c0c05ec96cb4549072acec9a8c5e0888f507c4757",
+    "changes": [
+      "Sanitized public contract labels and propagated their SHA-256 identities without changing numerical settings.",
+      "Physical commercial capacities omitted and stored power-base semantics clarified; normalized ERRF contract unchanged."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/02_完整实验协议冻结/protocol/causal_event_protocol_v1_1.json",
+    "source_sha256": "095e083a868a39a2b74afae4f869c7bf647e8addecb65ecda3449413a45d4df8",
+    "packaged_sha256": "194f9c7d52efe7f59c91e4c4e8bba0a17bb3712240dfb69832ce5cd875ecc22b",
+    "changes": [
+      "Sanitized public contract labels and propagated their SHA-256 identities without changing numerical settings.",
+      "References to the anonymized public protocol hash updated.",
+      "Physical commercial capacities omitted and stored power-base semantics clarified; normalized ERRF contract unchanged."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/02_完整实验协议冻结/protocol/event_output_contract_v1.json",
+    "source_sha256": "12fd166c19570073be5f5acde3712e079f7c5a44efa673cfaf753d40ab3d0b31",
+    "packaged_sha256": "12fd166c19570073be5f5acde3712e079f7c5a44efa673cfaf753d40ab3d0b31",
+    "changes": []
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/02_完整实验协议冻结/protocol/event_output_contract_v1_1.json",
+    "source_sha256": "e075ad3f80ed18de0c9331b5136cf160cfd6ac243ffd9dd9e3d16c68109425be",
+    "packaged_sha256": "e075ad3f80ed18de0c9331b5136cf160cfd6ac243ffd9dd9e3d16c68109425be",
+    "changes": []
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/03_基础预测与候选区间重建/scripts/run_s03_full_rebuild.py",
+    "source_sha256": "ac8d8b3e24bc22cd79c58d7acde754784b5f50e1234ddce0b3f80bc1135b7291",
+    "packaged_sha256": "ac8d8b3e24bc22cd79c58d7acde754784b5f50e1234ddce0b3f80bc1135b7291",
+    "changes": []
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/06_基线实现与训练区调参/results_verified/s07_execution_registry_v2/s07_baseline_execution_registry.parquet",
+    "source_sha256": "26d554902c94e46e30bf7afa42aa75cad0f2f2a5a4353955b90b75acf5bff0d5",
+    "packaged_sha256": "26d554902c94e46e30bf7afa42aa75cad0f2f2a5a4353955b90b75acf5bff0d5",
+    "changes": []
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/06_基线实现与训练区调参/scripts/build_full_source_facts.py",
+    "source_sha256": "f25c0b5e61a843ece49af288d18b228f678acddea34c0e524426df31d885e960",
+    "packaged_sha256": "56c6241b9d65c06b8104b2fa2e3631d116940eb22ba548c05cbb8268c140eb51",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/06_基线实现与训练区调参/scripts/build_outer_fold_state_statistics.py",
+    "source_sha256": "60fe58d697078417bfe571a64556002da4115fe8565a01420dd52e0a1048b289",
+    "packaged_sha256": "deef36294645646ab304f96fabc3e928f64d92d9cdce72ac6d56cac649af1eee",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/06_基线实现与训练区调参/scripts/build_outer_fold_width_thresholds.py",
+    "source_sha256": "985a8f9ed4a6a7ae5f3175a8b10ee6f1e85de9bc45b99967f2d9a1791b2c26e6",
+    "packaged_sha256": "a3d829ac57e4a40522d8e4583ce795adbe60c6b36e4b29760d5f2931863fbb1d",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/06_基线实现与训练区调参/scripts/run_conformal_nested_selection.py",
+    "source_sha256": "22137ca0d746d0dd2c633e6c080d4e5064500c317d66c130e90a609781f4d04a",
+    "packaged_sha256": "69aea02b084ff58409524f13cbed9bf06eaebce278a7f16aa68e7374cae8e75b",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/06_基线实现与训练区调参/scripts/run_sequential_nested_selection.py",
+    "source_sha256": "cd462d1cf5f47391f25adf75702caa6712d8d6be55ef8e6ce7ef0bd58b37eb7d",
+    "packaged_sha256": "000734375d691687ebf67670c3370979e2758ce12636f478bfe40a95bfd958a5",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/06_基线实现与训练区调参/scripts/run_supervised_nested_selection.py",
+    "source_sha256": "d1ed5f9eda71a9634162b49d3ac7c94153b9bd3e0425525b157fac141714f391",
+    "packaged_sha256": "88b3878374b2355a35b16335031c7a21b9b12308aec04c173093b90b5f15cbe9",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/07_GEFCom完整主实验/scripts/s07_decision_cache_accelerator.py",
+    "source_sha256": "c5149d1ef46d7c1f1d2ca6c5da0d115e5f5888eb3e0e9f586fd912e5d0609588",
+    "packaged_sha256": "d2f70d2413ebb8ef31f1ad1fa88ebf71ed1763a91004ceca735559a75856c9a1",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/08_敏感性分析与消融/01_价格敏感性/scripts/build_price_decision_caches.py",
+    "source_sha256": "9201fd82b35fab903bbf5ced30b079468f20be02516b8ff27c1d5b47023911f4",
+    "packaged_sha256": "4d1d44e2db909a5d075c8fc7d032af20bfde3605efb6681152ae650a9bf7ff17",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/08_敏感性分析与消融/01_价格敏感性/scripts/price_sensitivity_common.py",
+    "source_sha256": "c89e00e165b2bf78a791997c80e10c6d44ce8ee032ad200e2d9cbe30d98a756b",
+    "packaged_sha256": "4eee2b023f6b45fdbcb9d5bf717fba708a02d3d34d809dbad8b96cb392f1eb22",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/09_商业场站外部验证/configs/s09_method_transfer_v1.json",
+    "source_sha256": "65caab0db70399b431f979b37938b15e9e582c557da45e5f9f6640f073e6f810",
+    "packaged_sha256": "c38c5abd21ce3aeaa356a77ed7b805349aab754eede4295475f776e85c3f3c64",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/09_商业场站外部验证/configs/s09_minimum_external_evaluation_v1.json",
+    "source_sha256": "10c14010b913bb40427318e8bd0229f9f74faacf5da4fc6283c46de81bf0eee8",
+    "packaged_sha256": "d5b80906cd98e3bdc76e86553dfe41c6695e6591219512f87089967bfae849a3",
+    "changes": [
+      "Private site identifiers replaced with manuscript labels."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/09_商业场站外部验证/configs/s09_minimum_external_full_run_gate_v1.json",
+    "source_sha256": "e554c1a967e3fea20bb1012afdf7213804c3229ab77124ade4ca22f6d3ca2396",
+    "packaged_sha256": "2470af4f000caf32191496c0e102e61d5b7e0f696f871ae08bb1dfa2e7e4fa15",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/09_商业场站外部验证/scripts/run_s09_adaptation_candidate_replay.py",
+    "source_sha256": "2db0b3d54ed63a98c9d8052c74127eb9d8563905481169e5749e94e3a174fbeb",
+    "packaged_sha256": "62a5346d40ae73e4a957ad897641a19d6c1c4df9871377fad296f7cc262c757a",
+    "changes": [
+      "Private site identifier replaced with manuscript label."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/09_商业场站外部验证/scripts/run_s09_external_analysis.py",
+    "source_sha256": "993df7c3aca06552986f16b76396c61cefc3c5819ff794be625c41791d34b034",
+    "packaged_sha256": "754b1043e42e6bb87b35a5883162538b3a8150f8b61678856a55ab27e7fd24ca",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/09_商业场站外部验证/scripts/run_s09_full_rebuild.py",
+    "source_sha256": "1491a8272898d8a91c51747a563bf69c5b501b8d8c51e9d86107b3b0aacf692a",
+    "packaged_sha256": "b644dd0514e7f993296017318471ab504c7cdbd368120ed53838d34ae1233c9f",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/09_商业场站外部验证/scripts/run_s09_local_conformal_selection.py",
+    "source_sha256": "9ade2c672989b566068b57d6c61e7b132ea60c0693bffa5152344d58c23b4023",
+    "packaged_sha256": "946d9dfc9324645475eb0e8a5342d855e12db300fe2011e8cc5aa20e4cc41f2f",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/09_商业场站外部验证/scripts/run_s09_minimum_external_evaluation.py",
+    "source_sha256": "af9c027d678bc9b3e34d722436ecd91309d3d9dd4f2f64dabd5f45a5e37df709",
+    "packaged_sha256": "d6923464a90acdbbc4a8e12186c581339d5520fa1dec32ae8c4a4e64606d2e7c",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/09_商业场站外部验证/scripts/s09_external_summary.py",
+    "source_sha256": "f9fb85383a58c3e92b5bc1d70a75f5d5c59bf1aeb197d24dbf28ac3e74c83c06",
+    "packaged_sha256": "894eaec1de9aa0a9eb06149a3d14aa2951ed2db70a400269bfa5f0892040aaf5",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/09_商业场站外部验证/scripts/s09_linucb_batch_accelerator.py",
+    "source_sha256": "6227a3263b783c2d2676144a21a8c6d2dfe8ce6dc53631c94f1078a0cadbe186",
+    "packaged_sha256": "721d374b431f6853591e6385f7f3a4aa7456ebd2d99a96f9f30ef0f868fdb5c3",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/09_商业场站外部验证/scripts/s09_minimum_external_core.py",
+    "source_sha256": "0fd6b1a2acd5ce4d4382cd3c79708d4ed4673e6c16ebcbade61c366ac6282ddf",
+    "packaged_sha256": "7ae8c8c770395ab4247e4fe8e7987d4def45c31b5668f82d9773d52509e34e46",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/_权威代码/code/baseline_common.py",
+    "source_sha256": "8806847202e43722e6bcf35c2b20ef02e76bd4e45741d445c1cce5a0da052cc3",
+    "packaged_sha256": "68084d960c1d2219a02143535b2208f80da402acfa54f066713f8ffe5972dde6",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/_权威代码/code/baseline_compact_training.py",
+    "source_sha256": "d91dc2bdef27e0209b812a9f949b579b9760083476c74b248d4c0a20e6c060dd",
+    "packaged_sha256": "3c6507df682e58ca173c9bcd8d0de41df78f4f0648c05bde278902ef6fbcd5de",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/_权威代码/code/baseline_conformal.py",
+    "source_sha256": "79c08f71435e401620ffbdc7e5aa8a343e5ae39d8373ae56ff83693e20389ddc",
+    "packaged_sha256": "33e8b2663566e114ea65e30334df85e96fb2a54d813e0e63684fe587c4e9edef",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/_权威代码/code/baseline_conformal_compact.py",
+    "source_sha256": "04744ca200d8902b944396e9f481c5d94595a2ddfcbba550e4b7932123c493b4",
+    "packaged_sha256": "134dac78a1db195ab1940fca337940e488500b0047ef73a8d6cd0212d76bc600",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/_权威代码/code/baseline_ensemble.py",
+    "source_sha256": "21558cd8da31f50f40f842449bf7030b92be8c553267608c947b0f28797f8d48",
+    "packaged_sha256": "94877ded5adafdfee01320745be0e7d4d0df8297985719064ef4b29b6abcbb26",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/_权威代码/code/baseline_selection.py",
+    "source_sha256": "e88486a0e9501d82f1517758eee2e82d56d4a25d78c1ebbe1dde656f1e9508bc",
+    "packaged_sha256": "aab567a8866cb8858f620e94048c664fd746ca608a08bf848414de6dc9c188ff",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/_权威代码/code/baseline_sequential.py",
+    "source_sha256": "db87ad4d069de85a789c49a6bfb52a74951de4751306967ad7b86ea143111180",
+    "packaged_sha256": "3d49d79940eabfeec0d0119425a998d48690d963f11f97780012045cd70e5572",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/_权威代码/code/baseline_sequential_compact.py",
+    "source_sha256": "c385ac09a8d535be98017fc2d065f52e4709bbe96ea80d1d57cc10a86c300488",
+    "packaged_sha256": "c2bce584d6161fad2408a579eb9f8acf97ddb4110777cc6ef97bccfc0d20100d",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/_权威代码/code/baseline_training.py",
+    "source_sha256": "94845199ff1400957f0ceefaf3d7d2f22a086f613febcef476a8d2021b0d1d67",
+    "packaged_sha256": "6f9b0349e6996a2d288268e18d7df090cc25b8398c5d184695d4f2988f8c0aad",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/_权威代码/code/build_0427_configs.py",
+    "source_sha256": "31607eb9d40fc7b99aa1abbb5ec085ce51959dc679a34438e7f7c9585ab4b411",
+    "packaged_sha256": "3b89e3a70090b59cb70a66eabce23318846d45a6e49fffe72f2197d39cc23dde",
+    "changes": [
+      "Machine-specific path defaults replaced with CLARA_WORKDIR and relative data paths.",
+      "Private site identifier replaced with manuscript label."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/_权威代码/code/calibrators.py",
+    "source_sha256": "77caaba77b2d34e4699375cb80e3503c553e30578bf93b3200733f7025876425",
+    "packaged_sha256": "77a021728dacc7b1e6da81a3b3d1715460b005f3275e8466deb3897e3ce43373",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/_权威代码/code/clara_errf.py",
+    "source_sha256": "51e70aa9a4d57ebe8eda1686a037e7ab5de1edb94524337f694848d1bfcb8f97",
+    "packaged_sha256": "5b37da582cf1b5995c2025f7f01b2c3a9aef4fff34aa8f2e5f7bd084510b1535",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/_权威代码/code/clara_event_contract.py",
+    "source_sha256": "091cc7da8f79e5d16f09e057420fed06d85b09837f0329718098f1c8f643e775",
+    "packaged_sha256": "04334df83b94b88af949ce73781a801317934d9df015edf77e7e76c7bf8b5db9",
+    "changes": [
+      "Sanitized public contract labels and propagated their SHA-256 identities without changing numerical settings.",
+      "Public contract SHA-256 updated.",
+      "References to the anonymized public protocol hash updated."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/_权威代码/code/common.py",
+    "source_sha256": "f97ee63ab34329e10563f961b496c6130c027364dadb3e0fc4489d1b71c1fad5",
+    "packaged_sha256": "56716b358be1357208b84c53f0d11067cd9879322ceb6212f9e271b0a538d504",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/_权威代码/code/predictors.py",
+    "source_sha256": "9d51f6c595a80c27ae92528813fbfa6f116efd46b13db2ef10da66c102daa172",
+    "packaged_sha256": "7b66d553f740b805d2d7a01669a080ea029e5028d3a2473fef5aec4bfe9fade7",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/_权威代码/code/run_base_grid.py",
+    "source_sha256": "d3316857784075aa6ec5ab2612e21e3a9c2b6ac66249452b6e8e4f2dc698938f",
+    "packaged_sha256": "d3316857784075aa6ec5ab2612e21e3a9c2b6ac66249452b6e8e4f2dc698938f",
+    "changes": []
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/_权威代码/code/run_base_predictor.py",
+    "source_sha256": "4645b8b4f0e2535b4c23b5e2a02a159ed7489731e195c037068cf1201ab7112e",
+    "packaged_sha256": "fa2a97069db834a00add9789e6f103a2910e72426d42f647f198bb474e498480",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/_权威代码/code/run_calibration.py",
+    "source_sha256": "0c2866d7ff9ec2a5f41e7bf30e739a26518b82798336bee3f7355a658577d495",
+    "packaged_sha256": "6481c9974b8270ac82d7b1afa2113d04ab71a86a6551d6eb81919a0e4ad8ca65",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/_权威代码/code/run_candidate_bundle.py",
+    "source_sha256": "0ef3a6e6aa8d8d73f435e84af806198ea46eb0077d4c4788b2f3d24d4589ef66",
+    "packaged_sha256": "4b11a7109a851fec216b606f262341ea67e70e7033d19554b26ea10cd59c0d26",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/_权威代码/code/source_tuning_facts.py",
+    "source_sha256": "7923cd95a8b903c38bdedee9a4dfb71170adc92b7185c14fdfd06c56dc9c0241",
+    "packaged_sha256": "f203f85064bd2a4ef3191dce39b953da3c18175b223543958ae75fc3a874a998",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/基线实验补充/scripts/baseline_supplement_common.py",
+    "source_sha256": "3038ac44c776897e00442450a2104b1238a8a0bcb87fe28439c430bb7db55d7c",
+    "packaged_sha256": "7224d625db22d773bda8edb1ee2750c12d384d4cccd27fe7f3900fd447a0d30e",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/基线实验补充/scripts/run_baseline_supplement.py",
+    "source_sha256": "5a8b70c7d259dcb028eee412a4093fc575711181afde110c86ba9ba31628e053",
+    "packaged_sha256": "137843ba1bb3d8573b2e2ba6e86aca9ba8e457851fc903b66bd43b24226ac700",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/测试CLARA/configs/test_clara_extended_action_external_v1.json",
+    "source_sha256": "42710e3b54b0dcbf6fe93899632e473a4b58fa5fea4a5d5605b97e0605aee9dc",
+    "packaged_sha256": "84a7d91dd4835d7b58294fb03266feaf12a6d384133dc2802ca9d09f0282b798",
+    "changes": [
+      "Private site identifiers replaced with manuscript labels."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/测试CLARA/configs/test_clara_four_versions_v1.json",
+    "source_sha256": "29ec03b10940ea4e53632802a40bdede094a12cd66582703bba29fcb69e71572",
+    "packaged_sha256": "34a1eb68db70cda3f5fed9ad4b254fbca619b597f7beb7564e1c9554e78e16f8",
+    "changes": [
+      "Public contract SHA-256 updated.",
+      "References to the anonymized public protocol hash updated."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/测试CLARA/configs/test_clara_gefcom_six_action_full_v1.json",
+    "source_sha256": "71a8b000ff97c8f13cbffe47c904a6fbb0def5854305cd9162ffc7d3ff8c94c9",
+    "packaged_sha256": "bc109b69991f665748eda40d092a08021f6e08d2494dcd004154f4c15d5a09a4",
+    "changes": [
+      "Interpreter location replaced with a portable executable name.",
+      "References to the anonymized public protocol hash updated."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/测试CLARA/configs/test_clara_gefcom_six_action_selectors_v1.json",
+    "source_sha256": "bb67acef5a9249e18292edce914f0676c8ee37026c4576e90ecfda8c7d798743",
+    "packaged_sha256": "f8406b969de936e0d34c5277a55905e320b0382d1247c593a34c8b0827ae440a",
+    "changes": [
+      "Interpreter location replaced with a portable executable name.",
+      "References to the anonymized public protocol hash updated."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/测试CLARA/configs/test_clara_matched_six_action_selectors_v1.json",
+    "source_sha256": "b110e5f6851c9c8dbfca40563ce06e2d3e887407b91f56d6338936a5b560423e",
+    "packaged_sha256": "dcc6607b7872a82d3f10f48d1c8c941fb103871c6135d4e1668ec0be8b471544",
+    "changes": [
+      "Private site identifiers replaced with manuscript labels."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/测试CLARA/scripts/extended_selector_adapters.py",
+    "source_sha256": "34829c1a242f5d84aac4cba11a5f47ceaebfbab4dcbd9c9c4ba272560c02c969",
+    "packaged_sha256": "a690ab42ae06d2e93c90d48107869ce7f2107a1cd3b86b1de869f4e379e7a3e5",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/测试CLARA/scripts/gefcom_six_action_endpoint_contract_v1.py",
+    "source_sha256": "6db50d5a5996c1f27e404df30d308f4a4e895e44f9412457313adb860ad02f1a",
+    "packaged_sha256": "3395545a19edc41cb8e0228dc723bb996566f264805108d45d4514b989627dd8",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/测试CLARA/scripts/gefcom_six_action_selector_artifacts_v1.py",
+    "source_sha256": "91335004261c0ba9766bc5d55494f574ee186cb4947cccd5b8821bc6f94c8a22",
+    "packaged_sha256": "cc7490aedf318ceddfb39ba18317aefcca0ab2001bfbb8a237253ba671142574",
+    "changes": [
+      "Public contract SHA-256 updated.",
+      "References to the anonymized public protocol hash updated."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/测试CLARA/scripts/gefcom_six_action_selector_core_v1.py",
+    "source_sha256": "3dac3c248a07f2fb9896ae0a7a1fe14477f0a653fdb5a17fa12fba3ea61f0a7a",
+    "packaged_sha256": "f0cb8619a2f43c808e66d4b27429ea1f2d83a1cc3b21eed9751e69b969b965c5",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/测试CLARA/scripts/gefcom_six_action_selector_qa_v1.py",
+    "source_sha256": "ba4640b02c5aa9adbd39c499264e68ced44cc429a93275899df7e814504db385",
+    "packaged_sha256": "d7ebb8ac4ade6da2b51c7f01c41d2e90dc904f304fb2d9af33a9a5ad6a21cc1b",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/测试CLARA/scripts/gefcom_six_action_selector_target_loader_v1.py",
+    "source_sha256": "affad65fe86d8e08acca8ffda726e1ec6051b67e4389a951514b0fa274034d1e",
+    "packaged_sha256": "3ba2b95586d69dcdb0f736febe5b05d2edcbce4de3f3d178d8c4101fd732f500",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/测试CLARA/scripts/preflight_gefcom_six_action_selector_core_v1.py",
+    "source_sha256": "10e89922f541cb2563df46f357d25a038889b32547ef56cd5caf15e0d1f42d36",
+    "packaged_sha256": "49079b300e7e4977bcbd7acebc4527e5d617765622d072024b7bcf7dcc4a9c09",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/测试CLARA/scripts/run_extended_action_external.py",
+    "source_sha256": "af2665c4b8802d29b17e6d8f445e9dffc0cc8e361ba40b9951ead01fb9722bdd",
+    "packaged_sha256": "c61cafd8b4f7df4d7d9c8732a51116bc06b5b81184624390c54f49c4423e9bb7",
+    "changes": [
+      "Private site identifier replaced with manuscript label."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/测试CLARA/scripts/run_four_clara_versions.py",
+    "source_sha256": "4748fa7d8aef51b2a3fb7111a6e0bfbb50187d37818c6921bee6c86ef4b2705b",
+    "packaged_sha256": "d20f830e6335bbbb6503ff18b64f5898e46862d47a5070c88d7d9bd107ec4f05",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/测试CLARA/scripts/run_gefcom_six_action_full_v1.py",
+    "source_sha256": "19703562e4b429e1c4eac853ad22f0c4949e78ff871025621b5172e7325ce8a7",
+    "packaged_sha256": "4fe4ab7cb7ccafa076adf124e87ff3eb6da5e66d1846b360132f09ffc0d2c060",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/测试CLARA/scripts/run_gefcom_six_action_selector_scheduler_v1.py",
+    "source_sha256": "cb242fbbc038c876832f8cdcb843312e38edce548204ecba751b3f716678ac89",
+    "packaged_sha256": "f5a8093f792ecc33d23d6ee87c4ef635caa64fa1ed710a14e8ad6b4a46db8b06",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/测试CLARA/scripts/run_gefcom_six_action_selectors_v1.py",
+    "source_sha256": "ecf7b74a277de452e252f1290564261f6814f901859de87808a802dcac32d668",
+    "packaged_sha256": "f4eabcbe8d2e01e962825e77e29876f4040b20b048bce83bdd0ac5b679413b10",
+    "changes": [
+      "Public contract SHA-256 updated.",
+      "References to the anonymized public protocol hash updated."
+    ]
+  },
+  {
+    "path": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/测试CLARA/scripts/run_matched_six_action_selectors.py",
+    "source_sha256": "9f26246bd9c361c21ea3bbf44dfb9ad7a390cad84600110a6b825be0e56322b0",
+    "packaged_sha256": "11c7fe0d27dcbfa72c4282d6d39c7b13fb9fb2259bfb9a11a82f826bdf3fe8f3",
+    "changes": [
+      "Text encoding or newline normalization; computational source retained."
+    ]
+  }
+]

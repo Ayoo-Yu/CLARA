@@ -1,0 +1,3 @@
+-r requirements.txt
+matplotlib==3.10.6
+Pillow==12.3.0

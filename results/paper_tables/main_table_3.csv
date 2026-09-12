@@ -1,0 +1,5 @@
+Component,Weight,Distance being valued,Service and cost basis
+Upper capacity,π+,Positive distance: forecast center to upper bound.,Downward reserve capacity: availability cost.
+Lower capacity,π-,Positive distance: lower bound to forecast center.,Upward reserve capacity: availability cost.
+Upper exceedance,κ+,Power above the upper bound.,Downward balancing energy: activation cost.
+Lower exceedance,κ-,Power below the lower bound.,Upward balancing energy: activation cost.

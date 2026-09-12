@@ -1,0 +1,18 @@
+Comparison,Definition
+Full CLARA,"Retain contextual grouping, hierarchical risk shrinkage, the standard-error penalty, undercoverage constraints and the preference for smaller violations when no candidate qualifies."
+Uniform historical cost ranking,"Preserve the full CLARA admissible set and its minimum-violation set when none passes. Replace only the conditional cost score with the global source mean ERRF plus its standard-error penalty. Retain coverage, TUWR, ARD and action-order numerical tie rules."
+Ranking by candidate width,Preserve the same admissible/minimum-violation set. Rank the currently available candidate intervals by upper minus lower bound. Numerical ties retain the full CLARA coverage/TUWR/ARD/action ordering.
+Without operating-condition information,"Pool historical records across power-change, width and recent-coverage categories. Retain forecaster, horizon group and target coverage; apply the same fitting rules to these broader groups."
+Without operating information and reliability constraints,"Use the same pooled historical estimates as the operating-information removal, then compare all candidates without reliability screening or minimum-violation selection. This completes the joint information/constraint comparison."
+Without risk shrinkage,Use the unshrunk mean of the selected historical group in the final cost score. Retain its standard-error penalty and coverage evidence.
+Without standard-error penalty,Omit the standard-error term from the final cost score. Retain the shrunken mean and coverage-based selection.
+Without reliability constraints,"Compare all six candidates by the cost score, without the coverage/TUWR eligibility check or its conditional minimum-violation choice."
+Without undercoverage priority when no candidate qualifies,"Retain undercoverage constraints; if no candidate satisfies them, select by the cost score instead of prioritizing smaller coverage violations."
+Single-state removal,Remove the named coordinate from the historical grouping and every parent level; collapse duplicate parent levels. Refit risk estimates and the original support/shrinkage diagnostics on the same source records. All other conditioning variables are retained.
+Target-coverage removal,Remove coverage from historical grouping only. The requested coverage remains part of the forecast task and determines the coverage requirement applied during selection.
+Coverage-only / power-change-only,"Retain only the indicated coordinate in historical grouping. Preserve the original candidate, fitting and coverage-based selection rules."
+Global fixed action,"For each held-out zone, seed and price, choose the single candidate with the lowest source-fitted global cost score. Apply it to every test forecast without a state-dependent coverage screen."
+Width-only,At each forecast choose the narrowest of the same six candidate intervals. Width ties within 1e−12 use the existing action order.
+Without backoff,Restrict decisions to complete states that satisfy the fitted support requirement. Full CLARA and this restricted policy are compared on exactly those same forecasts.
+Forecaster-rule mismatch,"Fit a separate cost-minimizing action rule for each source forecaster and price, conditional on coverage, lead-time group, power-change category, recent coverage and width. Transfer the rule to another forecaster on held-out-zone data; compare with that forecaster’s own rule."
+Outcome oracle,The per-forecast oracle selects the smallest realized ERRF for each saved forecast. State and feasible-state oracles average costs within a state before choosing an action; the feasible version preserves CLARA’s historical admissible set. Full definitions are in Table S24.

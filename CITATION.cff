@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software or its accompanying analysis, please cite the CLARA manuscript and the source datasets used in your work."
+title: "CLARA: An Interpretable Contextual Decision Agent for Grid-Dispatch-Cost-Aware Calibration of Wind Power Prediction Intervals"
+type: software
+version: 1.0.0
+repository-code: "https://github.com/Ayoo-Yu/CLARA"
+url: "https://github.com/Ayoo-Yu/CLARA/releases/tag/v1.0.0"
+license: MIT
+authors:
+  - family-names: Yu
+    given-names: Zhongze
+  - family-names: Liu
+    given-names: Zhenqing
+abstract: "Evaluated six-candidate interval-selection code, configurations, analysis inputs and reproduction tools for cross-zone evaluation and sequential local adaptation."
+keywords:
+  - wind power
+  - prediction intervals
+  - conformal calibration
+  - contextual selection

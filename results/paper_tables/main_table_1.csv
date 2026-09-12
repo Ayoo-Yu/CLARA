@@ -1,0 +1,7 @@
+Method,Interval adjustment,Reason for inclusion
+Static,Fixed calibration based on the designated history.,A reference without subsequent calibration updates.
+ACI,Updates the calibration level using observed coverage errors.,A direct response to coverage drift.
+AgACI,Combines ACI rules with different update rates.,Several response rates within one candidate.
+EnbPI-RH,Updates bounds from recent residual history.,Adjustment informed by error magnitudes and their distribution.
+TSC,Uses a conformal rule and configuration selected before testing.,A tuned alternative to choosing a rule at each forecast.
+EEE,Averages the four original lower bounds and four upper bounds separately.,A fixed aggregation alternative to selecting one constituent.

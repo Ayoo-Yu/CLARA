@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "scope": "Official archive to chronological processed CSV, then original Ridge zone1 1h seed0 training and all six candidate intervals at 90% coverage; compared with the evaluated stored outputs. No full model-grid training or selector refit.",
+  "base_rows": 7013,
+  "base_quantile_max_error": 1.5543122344752192e-15,
+  "candidate_differences": {
+    "Static": {
+      "n": 3505,
+      "max_abs_error": 1.1102230246251565e-15
+    },
+    "ACI": {
+      "n": 3505,
+      "max_abs_error": 1.1102230246251565e-15
+    },
+    "AgACI": {
+      "n": 3505,
+      "max_abs_error": 1.1379786002407855e-15
+    },
+    "EnbPI_RH": {
+      "n": 3505,
+      "max_abs_error": 1.2212453270876722e-15
+    },
+    "TunedSingleConformal": {
+      "n": 3505,
+      "max_abs_error": 1.1102230246251565e-15
+    },
+    "EqualEndpointEnsemble": {
+      "n": 3505,
+      "max_abs_error": 1.1102230246251565e-15
+    }
+  }
+}

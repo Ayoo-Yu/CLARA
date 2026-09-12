@@ -1,0 +1,44 @@
+{
+  "schema": "S09_MINIMUM_EXTERNAL_FULL_RUN_GATE_V1",
+  "version": "1.0.0",
+  "status": "AUTHORIZED_FOR_FULL_TECHNICAL_EXECUTION",
+  "authorization_date": "2026-09-01",
+  "author_scope": "按冻结的最小外部验证方案继续，且不新增 Experiment Ledger",
+  "minimum_protocol": {
+    "relative_path": "configs/s09_minimum_external_evaluation_v1.json",
+    "sha256": "10c14010b913bb40427318e8bd0229f9f74faacf5da4fc6283c46de81bf0eee8"
+  },
+  "technical_regression": {
+    "relative_path": "results_raw/minimum_external_technical_regression_v1/manifest.json",
+    "sha256": "1d0ec0bdc117a8acddc783a40ecab50fbbe316f34491db0c7021c9c8f5be390a",
+    "status": "PASS",
+    "method_count": 13
+  },
+  "independent_qa": {
+    "relative_path": "qa/minimum_external_technical_regression_v1/qa_summary.json",
+    "sha256": "dc72377d0051f7a769e07283dc552bc752b7985d44fbd5a3d9fe0feb6e7b6b5d",
+    "qa_script_sha256": "9cc04be8f6e2d3da0be8bb7ca2c47f58397540dbd5682816e53bc0fac743e741",
+    "status": "PASS",
+    "passed_checks": 15,
+    "failed_checks": 0
+  },
+  "execution_permissions": {
+    "full_two_farm_run": true,
+    "reuse_frozen_external_candidates": true,
+    "reuse_frozen_source_models": true,
+    "write_cell_metrics": true,
+    "write_action_counts": true,
+    "write_paired_block_sufficient_statistics": true,
+    "write_event_level_method_table": false,
+    "read_aggregate_performance_before_full_independent_qa": false,
+    "perform_method_ranking_before_full_independent_qa": false
+  },
+  "stop_conditions": [
+    "protocol_or_input_hash_mismatch",
+    "causal_feedback_violation",
+    "systematic_nonreproducibility",
+    "disk_safety_gate_failure",
+    "full_independent_qa_failure",
+    "scientifically_adverse_result_after_qa"
+  ]
+}

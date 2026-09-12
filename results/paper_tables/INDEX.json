@@ -1,0 +1,254 @@
+[
+  {
+    "file": "main_table_1.csv",
+    "caption": "Table 1. Candidate calibrators and their roles in the action library.",
+    "rows": 7,
+    "columns": 3,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "main_table_2.csv",
+    "caption": "Table 2. Classification of recent coverage.",
+    "rows": 6,
+    "columns": 2,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "main_table_3.csv",
+    "caption": "Table 3. ERRF components and corresponding service costs.",
+    "rows": 5,
+    "columns": 4,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "main_table_5.csv",
+    "caption": "Table 5. Experimental settings for GEFCom and the commercial farms.",
+    "rows": 6,
+    "columns": 3,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "main_table_6.csv",
+    "caption": "Table 6. Functional ablations at the reference price ratio of 20/3.56.",
+    "rows": 6,
+    "columns": 4,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "main_table_7.csv",
+    "caption": "Table 7. Economic risk and temporal undercoverage by operating regime in the commercial farms.",
+    "rows": 10,
+    "columns": 5,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S8.csv",
+    "caption": "Supplementary Table S8. Five-price mean ERRF in GEFCom.",
+    "rows": 10,
+    "columns": 6,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S9.csv",
+    "caption": "Supplementary Table S9. Complete price–coverage-band profile.",
+    "rows": 21,
+    "columns": 6,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S10.csv",
+    "caption": "Supplementary Table S10. Screening and fallback controls with fixed historical estimates.",
+    "rows": 26,
+    "columns": 6,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S11.csv",
+    "caption": "Supplementary Table S11. Empty admissible sets under fixed historical estimates.",
+    "rows": 7,
+    "columns": 5,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S12.csv",
+    "caption": "Supplementary Table S12. Coverage-tolerance sensitivity with fixed historical estimates.",
+    "rows": 37,
+    "columns": 7,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S13.csv",
+    "caption": "Supplementary Table S13. Reference-price farm metrics with sequential local updating for CLARA.",
+    "rows": 19,
+    "columns": 6,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S14.csv",
+    "caption": "Supplementary Table S14. Farm-specific tolerance sensitivity with fixed historical estimates.",
+    "rows": 11,
+    "columns": 7,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S15.csv",
+    "caption": "Supplementary Table S15. Temporal uncertainty for fixed-estimate farm controls.",
+    "rows": 19,
+    "columns": 6,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S16.csv",
+    "caption": "Supplementary Table S16. Historical estimates and realized outcomes for the two decision examples.",
+    "rows": 13,
+    "columns": 7,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S17.csv",
+    "caption": "Supplementary Table S17. Computation time for action selection under the idle-state timing protocol.",
+    "rows": 7,
+    "columns": 6,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S18.csv",
+    "caption": "Supplementary Table S18. Economic performance across all commercial-farm conditions.",
+    "rows": 10,
+    "columns": 7,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S19.csv",
+    "caption": "Supplementary Table S19. Commercial-farm mean ERRF at each price.",
+    "rows": 10,
+    "columns": 6,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S20.csv",
+    "caption": "Supplementary Table S20. Controlled price adaptation with fixed historical estimates in the commercial farms.",
+    "rows": 5,
+    "columns": 6,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S21.csv",
+    "caption": "Supplementary Table S21. Definitions of the ablations and supporting comparisons.",
+    "rows": 18,
+    "columns": 2,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S22.csv",
+    "caption": "Supplementary Table S22. Commercial-farm component controls with fixed historical estimates.",
+    "rows": 7,
+    "columns": 6,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S23.csv",
+    "caption": "Supplementary Table S23. Historical support and reliability requirements during selection.",
+    "rows": 7,
+    "columns": 4,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S24.csv",
+    "caption": "Supplementary Table S24. Conditional-rule transfer and distinct oracle diagnostics.",
+    "rows": 13,
+    "columns": 8,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S25.csv",
+    "caption": "Supplementary Table S25. External predicted-ramp sample counts by lead time.",
+    "rows": 9,
+    "columns": 6,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S26.csv",
+    "caption": "Supplementary Table S26. Six-action power-change-threshold sensitivity.",
+    "rows": 7,
+    "columns": 6,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S27.csv",
+    "caption": "Supplementary Table S27. Cost and coverage evidence during sequential local adaptation.",
+    "rows": 13,
+    "columns": 6,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S28.csv",
+    "caption": "Supplementary Table S28. Complete ordinary and predicted-ramp results for each commercial farm.",
+    "rows": 19,
+    "columns": 6,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S29.csv",
+    "caption": "Supplementary Table S29. Separate minimum-count and shrinkage sensitivity.",
+    "rows": 10,
+    "columns": 3,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S30.csv",
+    "caption": "Supplementary Table S30. Historical exclusions and subsequent reliability by operating state.",
+    "rows": 12,
+    "columns": 6,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S31.csv",
+    "caption": "Supplementary Table S31. Paired uncertainty for sequential local CLARA against all baselines and update controls.",
+    "rows": 34,
+    "columns": 4,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S32.csv",
+    "caption": "Supplementary Table S32. Mean GEFCom performance across all five prices.",
+    "rows": 12,
+    "columns": 7,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S33.csv",
+    "caption": "Supplementary Table S33. Paired zone-level ERRF comparisons across five prices.",
+    "rows": 10,
+    "columns": 4,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S34.csv",
+    "caption": "Supplementary Table S34. Matched ablation example and cost decomposition.",
+    "rows": 16,
+    "columns": 3,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S34_part02.csv",
+    "caption": "Supplementary Table S34 (continued).",
+    "rows": 6,
+    "columns": 5,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S35.csv",
+    "caption": "Supplementary Table S35. Complete pooled ablation comparisons and cost decomposition.",
+    "rows": 16,
+    "columns": 5,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  },
+  {
+    "file": "supplement_table_S36.csv",
+    "caption": "Supplementary Table S36. Functional ablations and decision evidence at the reference price.",
+    "rows": 9,
+    "columns": 5,
+    "note": "Values transcribed from the final publication table; rounding is retained."
+  }
+]

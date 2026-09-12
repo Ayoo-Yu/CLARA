@@ -1,0 +1,13 @@
+Case,Action,Source score,Source cover (%),Screen,Interval (p.u.),Realized ERRF
+ordinary,Static *,1.7668,90.24,Pass,"[0.0000, 0.4889]",1.7406
+ordinary,ACI,1.9174,93.75,Pass,"[0.0000, 0.5139]",1.8294
+ordinary,AgACI,2.0421,94.06,Pass,"[0.0000, 0.5639]",2.0074
+ordinary,EnbPI-RH,1.8078,92.00,Pass,"[0.0010, 0.4839]",1.7191
+ordinary,TSC,1.8612,93.91,Pass,"[0.0000, 0.4901]",1.7446
+ordinary,EEE,1.8663,91.99,Pass,"[0.0002, 0.5126]",1.8241
+ramp,Static,3.0338,86.36,Coverage fail,"[0.0730, 0.9638]",3.1712
+ramp,ACI,3.2444,93.18,Pass,"[0.0781, 0.9588]",3.1354
+ramp,AgACI,3.2964,93.45,Pass,"[0.0781, 0.9588]",3.1354
+ramp,EnbPI-RH *,3.0823,89.21,Pass,"[0.0738, 0.9630]",3.1655
+ramp,TSC,3.2160,92.74,Pass,"[0.0672, 0.9696]",3.2128
+ramp,EEE,3.1502,89.98,Pass,"[0.0757, 0.9611]",3.1518

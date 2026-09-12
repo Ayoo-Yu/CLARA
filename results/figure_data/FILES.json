@@ -1,0 +1,118 @@
+[
+  {
+    "destination": "results\\figure_data\\figure04\\lowest_candidate_by_price_coverage.csv",
+    "sha256": "55ee1ad92eff14569ddaf2021f4b1c693f1640e44983b7a9cc465d934c1c888d"
+  },
+  {
+    "destination": "results\\figure_data\\figure04\\candidate_cost_distribution.csv",
+    "sha256": "a89a5cef939f75cb0b4e6fbed4beb38c8c3442efced702067e46085cc9b558d1"
+  },
+  {
+    "destination": "results\\figure_data\\figure04\\conditional_forecaster_transfer_all_prices.csv",
+    "sha256": "81d802b017b34f78ac6998d9ec7858c7a7b946078495e96e51fba35147786bd0"
+  },
+  {
+    "destination": "results\\figure_data\\figure04\\all_candidate_overall_and_rolling_reliability.csv",
+    "sha256": "a5eb8d61699a864a33e6f9e317d3d1b76ac0dd31a366d4b371087db4939a950e"
+  },
+  {
+    "destination": "results\\figure_data\\figure05\\main\\main_overall.csv",
+    "sha256": "84d466622c74fc313129cca71a006daa142e76f063e8914e3846b79a43be7e54"
+  },
+  {
+    "destination": "results\\figure_data\\figure05\\main\\paired_main_comparisons.csv",
+    "sha256": "3958d5a81a0837e0015c3e5f590f059d256e72520ae0f48749e34219c0981074"
+  },
+  {
+    "destination": "results\\figure_data\\figure05\\main\\zone_reductions.csv",
+    "sha256": "4a2bd17224af456175312abe18d3ebd2b82afe65e87f2c6bc00f76f1b266e91a"
+  },
+  {
+    "destination": "results\\figure_data\\figure05\\oracle\\oracle_means.csv",
+    "sha256": "ddc836c810b6eb7ecc56b406158ba266ef9d491c8ec868a59b8fa4f1d5342d31"
+  },
+  {
+    "destination": "results\\figure_data\\figure05\\oracle\\oracle_gaps.csv",
+    "sha256": "7dc80f30b26cd39e396bb7d6ee755d17341b94f4b44d734cb58549a36e78a89b"
+  },
+  {
+    "destination": "results\\figure_data\\figure05\\oracle\\oracle_zone_means.csv",
+    "sha256": "835bf3a9d55462cdc74e843cfe812900d873b6cdc87bf0739fbcc8000f40f122"
+  },
+  {
+    "destination": "results\\figure_data\\figure05\\ranking\\gefcom_ranks.csv",
+    "sha256": "476a55a80e6453dd11e6ea1e6ec919f0cc697c68513855aa89799708629cd066"
+  },
+  {
+    "destination": "results\\figure_data\\figure05\\ranking\\gefcom_rank_cells.parquet",
+    "sha256": "7210233f8122913501f4b6b4059fbff07a6ab93a9e2064deca2dabf9f5f7a891"
+  },
+  {
+    "destination": "results\\figure_data\\figure06\\distribution_summary.csv",
+    "sha256": "f2e60fda52d67d7d68436f1412150d5e54aa91ba30cfcb6d78d5ed13cca3a2bc"
+  },
+  {
+    "destination": "results\\figure_data\\figure06\\histograms.npz",
+    "sha256": "d61a83e82386657dac485305b330883c728c3b27e0382c2080a08691966c4bf0"
+  },
+  {
+    "destination": "results\\figure_data\\figure06\\condition_means.parquet",
+    "sha256": "ac18850c061f3416c18c5d7089591e22b3928e534781aa19a3e03ffddccd4dec"
+  },
+  {
+    "destination": "results\\figure_data\\figure07\\parameter_sensitivity.csv",
+    "sha256": "624f3c99f4e78dd25f2bbd297ad06ad3349eb634f4a2568fb3a9e2aed22be704"
+  },
+  {
+    "destination": "results\\figure_data\\figure07\\coverage_tolerances.csv",
+    "sha256": "33ccf293eb73877b10a712bd007d455f1f66f457ba0212eeceb47468d0cbbd63"
+  },
+  {
+    "destination": "results\\figure_data\\figure07\\threshold_sensitivity.csv",
+    "sha256": "c01967b6b342d935aec0f8ff51ef8a079060d762bfa46c516bb51b3a02d6ab52"
+  },
+  {
+    "destination": "results\\figure_data\\figure07\\price_adaptation_summary.csv",
+    "sha256": "c0a5c155770055bdbe2b5e9ae4b9ceb4c38f35fd0794dc3296b527b4865b5475"
+  },
+  {
+    "destination": "results\\figure_data\\figure08\\means.csv",
+    "sha256": "c22dfd95dac91b21c60c24a2cbe9b1c4f6dd588079a65c0e2725354bbd5f5a3d"
+  },
+  {
+    "destination": "results\\figure_data\\figure08\\expected\\Figure8_cost_by_price.csv",
+    "sha256": "4ad4281b55fc422c18c293415d937da8ce7a6b306e50e57844227bbb752b4d69"
+  },
+  {
+    "destination": "results\\figure_data\\figure08\\expected\\Figure8_TUWR_by_price.csv",
+    "sha256": "be1572d9d9c43e1b9b21546188ff5a22fa81105c1d36784354460ceac5107199"
+  },
+  {
+    "destination": "results\\figure_data\\figure08\\expected\\Figure8_summary_data.csv",
+    "sha256": "24a3caca14759e4c2092f8a1ded1f9152f32e7ac89df69ee91e89246a7e2b022"
+  },
+  {
+    "destination": "results\\figure_data\\method_palette.json",
+    "sha256": "e2cfbe08b37ea08cf8b8ed266d90ee003969018a99fe6d7096bd8e2eb1474a9a"
+  },
+  {
+    "destination": "plotting\\figure_04.py",
+    "sha256": "3b606b6ab3c3878a0b9e1798415c1d0306b5244945e17fb08e6c02ec4ae5ff7e"
+  },
+  {
+    "destination": "plotting\\figure_05.py",
+    "sha256": "50b7973aadb037ef5422f7f7a3796ce9a978aae9647db0d1fe39a438e89e74bd"
+  },
+  {
+    "destination": "plotting\\figure_06.py",
+    "sha256": "f6ee335ab184e3d039723ba177bc9f7f28d2b6a0782be3cc65285208400eb484"
+  },
+  {
+    "destination": "plotting\\figure_07.py",
+    "sha256": "3735a2fbdb2654020c290a736e5fb2f764f1bc40412873ff7413bd5b1fe7aa0c"
+  },
+  {
+    "destination": "plotting\\figure_08.py",
+    "sha256": "da4325d1cfbe8c4fad0d70b18f804bdfe327849bf16e8728f9461b60a92a7250"
+  }
+]
