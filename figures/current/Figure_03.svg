@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='utf8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1122" height="1402" viewBox="0 0 1122 1402" role="img" aria-labelledby="diagram-title diagram-description">
+  <title id="diagram-title">Candidate cost scores: hierarchical matching, recursive shrinkage, and historical standard error</title>
+  <desc id="diagram-description">Historical feedback and the current state determine the finest sufficiently supported group. Group statistics are recursively shrunk toward parent risk using a support-dependent weight. The selected group's shrunk loss plus beta times historical standard error yields the cost score for Static, ACI, AgACI, EnbPI-RH, TSC, and EEE.</desc>
+  <defs>
+    <style>
+      text { font-family: "Nimbus Roman", "Times New Roman", Tinos, "Liberation Serif", serif; paint-order: stroke fill; stroke: #fff; stroke-width: .95px; stroke-opacity: .8; stroke-linejoin: round; fill: #050606; }
+      .label { font-weight: 700; }
+      .math { font-family: "Nimbus Roman", STIXGeneral, "Times New Roman", serif; font-style: italic; font-weight: 400; }
+      .body { font-weight: 400; }
+      .connector { fill: none; stroke: #111211; stroke-width: 2.2; stroke-linecap: butt; stroke-linejoin: miter; marker-end: url(#arrow); }
+    </style>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e4f8f9"/>
+      <stop offset=".52" stop-color="#e0f5f7"/>
+      <stop offset="1" stop-color="#e5f8f9"/>
+    </linearGradient>
+    <linearGradient id="header-fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e9f9fa"/>
+      <stop offset="1" stop-color="#def6f8"/>
+    </linearGradient>
+    <linearGradient id="mint" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e5faef"/>
+      <stop offset=".6" stop-color="#e0f8ec"/>
+      <stop offset="1" stop-color="#e5faef"/>
+    </linearGradient>
+    <linearGradient id="static-fill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffddd4"/>
+      <stop offset="1" stop-color="#fdd7cd"/>
+    </linearGradient>
+    <linearGradient id="aci-fill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e3f9ef"/>
+      <stop offset="1" stop-color="#ddf5e9"/>
+    </linearGradient>
+    <linearGradient id="agaci-fill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d6edfd"/>
+      <stop offset="1" stop-color="#cde8fa"/>
+    </linearGradient>
+    <linearGradient id="enbpi-fill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e0e6e9"/>
+      <stop offset="1" stop-color="#dde5e8"/>
+    </linearGradient>
+    <linearGradient id="tsc-fill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e5d8f1"/>
+      <stop offset="1" stop-color="#ddcfea"/>
+    </linearGradient>
+    <linearGradient id="eee-fill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff2d8"/>
+      <stop offset="1" stop-color="#fef0d3"/>
+    </linearGradient>
+    <filter id="panel-shadow" x="-5%" y="-8%" width="110%" height="120%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy=".55" stdDeviation="1.15" flood-color="#38515b" flood-opacity=".16"/>
+    </filter>
+    <filter id="paper-grain" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="3" seed="7"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncR type="linear" slope=".03" intercept=".979"/>
+        <feFuncG type="linear" slope=".03" intercept=".979"/>
+        <feFuncB type="linear" slope=".03" intercept=".979"/>
+        <feFuncA type="linear" slope="0" intercept="1"/>
+      </feComponentTransfer>
+    </filter>
+    <marker id="arrow" viewBox="0 0 17 13" refX="16" refY="6.5" markerWidth="17" markerHeight="13" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0 .25 L16.5 6.5 L0 12.75 Z" fill="#111211"/>
+    </marker>
+  </defs>
+
+  <!-- Original-size canvas; the background grain is a procedural SVG filter. -->
+  <rect width="1122" height="1402" fill="#fdfdfd"/>
+  <rect width="1122" height="1402" filter="url(#paper-grain)"/>
+
+  <!-- 1. Six candidate cost scores. -->
+  <g id="candidate-cost-scores">
+    <rect x="21.3" y="53.2" width="1078.9" height="152.2" rx="3.0" fill="url(#header-fill)" stroke="#132d42" stroke-width="2.05" filter="url(#panel-shadow)"/>
+    <rect x="23.40" y="55.30" width="1074.70" height="148.00" rx="1.2" fill="none" stroke="#fff" stroke-opacity=".86" stroke-width="1.0"/>
+    <text x="559.8" y="98.0" font-size="40.7" text-anchor="middle" class="label" textLength="309" lengthAdjust="spacingAndGlyphs" id="heading-candidates">Candidate cost scores</text>
+    <rect x="35.8" y="116.7" width="164.7" height="76.9" rx="3.0" fill="url(#static-fill)" stroke="#f02b09" stroke-width="1.95" filter="url(#panel-shadow)"/>
+    <rect x="37.90" y="118.80" width="160.50" height="72.70" rx="1.2" fill="none" stroke="#fff" stroke-opacity=".86" stroke-width="1.0"/>
+    <text x="117.8" y="167.7" font-size="38" text-anchor="middle" class="label" textLength="73.5" lengthAdjust="spacingAndGlyphs" id="candidate-static">Static</text>
+    <rect x="212.6" y="116.7" width="164.0" height="76.9" rx="3.0" fill="url(#aci-fill)" stroke="#00a951" stroke-width="1.95" filter="url(#panel-shadow)"/>
+    <rect x="214.70" y="118.80" width="159.80" height="72.70" rx="1.2" fill="none" stroke="#fff" stroke-opacity=".86" stroke-width="1.0"/>
+    <text x="294.1" y="168.0" font-size="37" text-anchor="middle" class="label" textLength="50.5" lengthAdjust="spacingAndGlyphs" id="candidate-aci">ACI</text>
+    <rect x="389.1" y="116.7" width="164.8" height="76.9" rx="3.0" fill="url(#agaci-fill)" stroke="#005cff" stroke-width="1.95" filter="url(#panel-shadow)"/>
+    <rect x="391.20" y="118.80" width="160.60" height="72.70" rx="1.2" fill="none" stroke="#fff" stroke-opacity=".86" stroke-width="1.0"/>
+    <text x="471.2" y="167.7" font-size="37" text-anchor="middle" class="label" textLength="83.8" lengthAdjust="spacingAndGlyphs" id="candidate-agaci">AgACI</text>
+    <rect x="567.0" y="116.7" width="166.0" height="76.9" rx="3.0" fill="url(#enbpi-fill)" stroke="#496b7e" stroke-width="1.95" filter="url(#panel-shadow)"/>
+    <rect x="569.10" y="118.80" width="161.80" height="72.70" rx="1.2" fill="none" stroke="#fff" stroke-opacity=".86" stroke-width="1.0"/>
+    <text x="649.7" y="168.0" font-size="37" text-anchor="middle" class="label" textLength="127.5" lengthAdjust="spacingAndGlyphs" id="candidate-enbpi-rh">EnbPI-RH</text>
+    <rect x="746.4" y="116.7" width="163.5" height="76.9" rx="3.0" fill="url(#tsc-fill)" stroke="#7613b2" stroke-width="1.95" filter="url(#panel-shadow)"/>
+    <rect x="748.50" y="118.80" width="159.30" height="72.70" rx="1.2" fill="none" stroke="#fff" stroke-opacity=".86" stroke-width="1.0"/>
+    <text x="827.1" y="168.0" font-size="37" text-anchor="middle" class="label" textLength="54.5" lengthAdjust="spacingAndGlyphs" id="candidate-tsc">TSC</text>
+    <rect x="922.2" y="116.7" width="164.3" height="76.9" rx="3.0" fill="url(#eee-fill)" stroke="#bc7106" stroke-width="1.95" filter="url(#panel-shadow)"/>
+    <rect x="924.30" y="118.80" width="160.10" height="72.70" rx="1.2" fill="none" stroke="#fff" stroke-opacity=".86" stroke-width="1.0"/>
+    <text x="1001.8" y="167.7" font-size="36.5" text-anchor="middle" class="label" textLength="55.5" lengthAdjust="spacingAndGlyphs" id="candidate-eee">EEE</text>
+  </g>
+
+  <!-- 2. Score equation and the two arithmetic junctions. -->
+  <g id="score-and-operators">
+    <path d="M560.0 254.5 V207.0" class="connector"/>
+    <path d="M560.0 392.5 V350.1" class="connector"/>
+    <path d="M560.0 575.4 V469.4" class="connector"/>
+    <path d="M958.0 514.1 V429.8 H599.1" class="connector"/>
+    <path d="M958.0 652.4 V585.6" class="connector"/>
+    <rect x="348.6" y="254.4" width="425.2" height="94.1" rx="2.4" fill="url(#cyan)" stroke="#183249" stroke-width="2.0" filter="url(#panel-shadow)"/>
+    <rect x="350.70" y="256.50" width="421.00" height="89.90" rx="1.2" fill="none" stroke="#fff" stroke-opacity=".86" stroke-width="1.0"/>
+    <text x="401.2" y="313.3" font-size="43" text-anchor="start" class="math" textLength="30" lengthAdjust="spacingAndGlyphs" font-style="italic" id="score-Q">Q</text>
+    <text x="433.0" y="323.5" font-size="29" text-anchor="start" class="math" textLength="40" lengthAdjust="spacingAndGlyphs" font-style="italic">b,m</text>
+    <path d="M487.2 299.4 H504.0 M487.2 306.7 H504.0" fill="none" stroke="#101111" stroke-width="1.7"/>
+    <text x="517" y="311.5" font-size="38" text-anchor="start" class="math" textLength="21" lengthAdjust="spacingAndGlyphs" font-style="italic">L</text>
+    <path d="M522 280.85 C524.52 278.20 526.06 278.20 528.44 279.80 C531.10 281.70 533.76 281.70 536 279.35" fill="none" stroke="#111" stroke-width="1.45" stroke-linecap="round"/>
+    <text x="538.5" y="323.5" font-size="29" text-anchor="start" class="math" textLength="39" lengthAdjust="spacingAndGlyphs" font-style="italic">b,m</text>
+    <path d="M590.0 302.0 H611.0 M600.5 291.0 V313.0" fill="none" stroke="#101111" stroke-width="1.7"/>
+    <text x="621" y="313" font-size="40" text-anchor="start" class="math" textLength="60" lengthAdjust="spacingAndGlyphs" font-style="italic">βSE</text>
+    <text x="681" y="323.5" font-size="29" text-anchor="start" class="math" textLength="39" lengthAdjust="spacingAndGlyphs" font-style="italic">b,m</text>
+    <circle cx="560" cy="430.1" r="37.0" fill="#fefefe" stroke="#111211" stroke-width="2.25" filter="url(#panel-shadow)"/>
+    <path d="M548.0 430.1 H572.0 M560.0 418.1 V442.1" fill="none" stroke="#111211" stroke-width="2.0"/>
+    <circle cx="958" cy="549.7" r="35.8" fill="#fefefe" stroke="#111211" stroke-width="2.25" filter="url(#panel-shadow)"/>
+    <path d="M949.1 540.8 L966.9 558.6 M949.1 558.6 L966.9 540.8" fill="none" stroke="#111211" stroke-width="3.0"/>
+    <text x="574.4" y="537.0" font-size="37" text-anchor="start" class="math" textLength="58" lengthAdjust="spacingAndGlyphs" font-style="italic">L<tspan font-size="25" baseline-shift="-8px">b,m</tspan></text>
+    <path d="M579.0 506.85 C580.80 504.20 581.90 504.20 583.60 505.80 C585.50 507.70 587.40 507.70 589.0 505.35" fill="none" stroke="#111" stroke-width="1.45" stroke-linecap="round"/>
+    <text x="970.4" y="459.3" font-size="36" text-anchor="start" class="math" textLength="93" lengthAdjust="spacingAndGlyphs" font-style="italic">βSE<tspan font-size="26" baseline-shift="-8px">b,m</tspan></text>
+    <text x="1012.8" y="563.0" font-size="36" text-anchor="start" class="math" textLength="21" lengthAdjust="spacingAndGlyphs" font-style="italic">β</text>
+  </g>
+
+  <!-- 3. Hierarchical matching and the selected group's statistics. -->
+  <g id="matching-and-statistics">
+    <path d="M120.0 1192.0 V1067.8" class="connector"/>
+    <path d="M305.1 1192.0 V1067.8" class="connector"/>
+    <path d="M193.9 901.4 V815.0" class="connector"/>
+    <path d="M193.9 711.6 V626.3" class="connector"/>
+    <rect x="29.6" y="513.7" width="327.6" height="110.9" rx="2.4" fill="url(#cyan)" stroke="#14354b" stroke-width="2.05" filter="url(#panel-shadow)"/>
+    <rect x="31.70" y="515.80" width="323.40" height="106.70" rx="1.2" fill="none" stroke="#fff" stroke-opacity=".86" stroke-width="1.0"/>
+    <text x="191.8" y="582.4" font-size="40.7" text-anchor="middle" class="label" textLength="206" lengthAdjust="spacingAndGlyphs" id="heading-statistics">Group statistics</text>
+    <rect x="53.0" y="711.3" width="281.4" height="101.9" rx="2.4" fill="url(#cyan)" stroke="#14354b" stroke-width="2.05" filter="url(#panel-shadow)"/>
+    <rect x="55.10" y="713.40" width="277.20" height="97.70" rx="1.2" fill="none" stroke="#fff" stroke-opacity=".86" stroke-width="1.0"/>
+    <text x="193.7" y="773.8" font-size="37.6" text-anchor="middle" class="label" textLength="203" lengthAdjust="spacingAndGlyphs" id="heading-selected">Selected group <tspan font-style="italic" font-weight="400">b</tspan></text>
+    <rect x="30.0" y="901.5" width="330.3" height="163.8" rx="2.4" fill="url(#cyan)" stroke="#14354b" stroke-width="2.05" filter="url(#panel-shadow)"/>
+    <rect x="32.10" y="903.60" width="326.10" height="159.60" rx="1.2" fill="none" stroke="#fff" stroke-opacity=".86" stroke-width="1.0"/>
+    <text x="196.6" y="955.1" font-size="36.9" text-anchor="middle" class="label" textLength="255" lengthAdjust="spacingAndGlyphs" id="heading-matching">Hierarchical matching</text>
+    <text x="46.1" y="997.7" font-size="33" text-anchor="start" class="body" textLength="110" lengthAdjust="spacingAndGlyphs" id="matching-exact">Exact state</text>
+    <path d="M165.8 989.0 H187.1 M181.0 984.1 L187.6 989.0 L181.0 993.9" fill="none" stroke="#101111" stroke-width="1.7" stroke-linejoin="miter"/>
+    <text x="195.1" y="997.7" font-size="33" text-anchor="start" class="body" textLength="153" lengthAdjust="spacingAndGlyphs" id="matching-broader">broader groups</text>
+    <g id="minimum-support-condition" aria-label="Finest group with n greater than or equal to n minimum">
+    <text x="58.8" y="1038.0" font-size="33" text-anchor="start" class="body" textLength="180.7" lengthAdjust="spacingAndGlyphs" id="matching-finest">Finest group with</text>
+    <text x="246.3" y="1037.0" font-size="34" text-anchor="start" class="math" textLength="14" lengthAdjust="spacingAndGlyphs" font-style="italic">n</text>
+    <path d="M269.0 1018.5 L281.0 1025.0 L269.0 1031.5 M268.6 1035.5 H282.0" fill="none" stroke="#101111" stroke-width="1.5" stroke-linejoin="miter"/>
+    <text x="290.6" y="1037.0" font-size="34" text-anchor="start" class="math" textLength="15.5" lengthAdjust="spacingAndGlyphs" font-style="italic">n</text>
+    <text x="305.1" y="1044.7" font-size="25.5" text-anchor="start" class="math" textLength="31.0" lengthAdjust="spacingAndGlyphs" font-style="italic">min</text>
+    </g>
+  </g>
+
+  <!-- 4. Recursive path from the global prior to the selected group. -->
+  <g id="recursive-estimation">
+    <rect x="445.6" y="575.3" width="410.7" height="508.2" rx="1.7" fill="#fdfefe" stroke="#08628a" stroke-width="1.8" filter="url(#panel-shadow)"/>
+    <text x="500.3" y="617.6" font-size="35" text-anchor="start" class="label" textLength="76" lengthAdjust="spacingAndGlyphs" id="heading-global-selected">Global</text>
+    <path d="M584.4 607.2 H608.3 M601.4 601.8 L608.8 607.2 L601.4 612.6" fill="none" stroke="#101111" stroke-width="1.9" stroke-linejoin="miter"/>
+    <text x="619.0" y="617.6" font-size="35" text-anchor="start" class="label" textLength="180" lengthAdjust="spacingAndGlyphs" id="heading-selected-path">selected group <tspan font-style="italic" font-weight="400">b</tspan></text>
+    <path d="M357.3 568.9 H386.7 V917.1" fill="none" stroke="#111211" stroke-width="2.2"/>
+    <path d="M386.7 715.6 H468.2" class="connector"/>
+    <path d="M386.7 917.1 H470.6" class="connector"/>
+    <text x="396.0" y="695.0" font-size="32" text-anchor="start" class="math" textLength="51" lengthAdjust="spacingAndGlyphs" font-style="italic">L<tspan font-size="24" baseline-shift="-8px">k,m</tspan></text>
+    <text x="396.9" y="895.7" font-size="32" text-anchor="start" class="math" textLength="51" lengthAdjust="spacingAndGlyphs" font-style="italic">n<tspan font-size="24" baseline-shift="-8px">k,m</tspan></text>
+    <path d="M771.0 1192.0 V829.5" class="connector"/>
+    <path d="M618.0 901.5 V829.2" class="connector"/>
+    <text x="814.4" y="866.4" font-size="27" text-anchor="middle" class="body" textLength="52" lengthAdjust="spacingAndGlyphs">Parent</text>
+    <text x="814.5" y="892.8" font-size="27" text-anchor="middle" class="body" textLength="31" lengthAdjust="spacingAndGlyphs">risk</text>
+    <text x="630.0" y="876.8" font-size="32" text-anchor="start" class="math" textLength="53" lengthAdjust="spacingAndGlyphs" font-style="italic">w<tspan font-size="24" baseline-shift="-8px">k,m</tspan></text>
+    <rect x="469.7" y="638.3" width="367.1" height="189.0" rx="2.4" fill="url(#cyan)" stroke="#14354b" stroke-width="2.05" filter="url(#panel-shadow)"/>
+    <rect x="471.80" y="640.40" width="362.90" height="184.80" rx="1.2" fill="none" stroke="#fff" stroke-opacity=".86" stroke-width="1.0"/>
+    <text x="653.2" y="688.9" font-size="36.6" text-anchor="middle" class="label" textLength="243" lengthAdjust="spacingAndGlyphs" id="heading-recursive">Recursive shrinkage</text>
+    <text x="543.2" y="740.4" font-size="35" text-anchor="start" class="math" textLength="52" lengthAdjust="spacingAndGlyphs" font-style="italic">L<tspan font-size="25" baseline-shift="-8px">k,m</tspan></text>
+    <path d="M548.6 711.5500000000001 C550.40 708.90 551.50 708.90 553.20 710.50 C555.10 712.40 557.00 712.40 558.6 710.05" fill="none" stroke="#111" stroke-width="1.45" stroke-linecap="round"/>
+    <path d="M605.0 728.4 H619.5 M605.0 734.9 H619.5" fill="none" stroke="#101111" stroke-width="1.65"/>
+    <text x="630.7" y="740.4" font-size="35" text-anchor="start" class="math" textLength="54" lengthAdjust="spacingAndGlyphs" font-style="italic">w<tspan font-size="25" baseline-shift="-8px">k,m</tspan></text>
+    <text x="685.4" y="740.4" font-size="35" text-anchor="start" class="math" textLength="51" lengthAdjust="spacingAndGlyphs" font-style="italic">L<tspan font-size="25" baseline-shift="-8px">k,m</tspan></text>
+    <path d="M742.0 731.1 H759.8 M750.9 722.0 V740.3" fill="none" stroke="#101111" stroke-width="1.65"/>
+    <text x="495.7" y="792.0" font-size="41" text-anchor="start" class="body" textLength="10" lengthAdjust="spacingAndGlyphs">(</text>
+    <text x="507.2" y="791.6" font-size="34" text-anchor="start" class="body" textLength="15" lengthAdjust="spacingAndGlyphs">1</text>
+    <path d="M530.0 782.6 H546.7" fill="none" stroke="#101111" stroke-width="1.7"/>
+    <text x="555.8" y="792.6" font-size="35" text-anchor="start" class="math" textLength="57" lengthAdjust="spacingAndGlyphs" font-style="italic">w<tspan font-size="25" baseline-shift="-8px">k,m</tspan></text>
+    <text x="615.3" y="792.0" font-size="41" text-anchor="start" class="body" textLength="10" lengthAdjust="spacingAndGlyphs">)</text>
+    <text x="629.5" y="792.1" font-size="35" text-anchor="start" class="math" textLength="20" lengthAdjust="spacingAndGlyphs" font-style="italic">L</text>
+    <path d="M636.6 763.15 C638.58 760.50 639.79 760.50 641.66 762.10 C643.75 764.00 645.84 764.00 647.6 761.65" fill="none" stroke="#111" stroke-width="1.45" stroke-linecap="round"/>
+    <text x="649.1" y="799.1" font-size="25" text-anchor="start" class="math" textLength="110" lengthAdjust="spacingAndGlyphs" font-style="italic">parent(k),m</text>
+    <rect x="479.4" y="901.6" width="280.0" height="158.0" rx="2.1" fill="url(#mint)" stroke="#0c4e63" stroke-width="1.85" filter="url(#panel-shadow)"/>
+    <rect x="481.50" y="903.70" width="275.80" height="153.80" rx="1.2" fill="none" stroke="#fff" stroke-opacity=".86" stroke-width="1.0"/>
+    <text x="617.9" y="951.0" font-size="36.6" text-anchor="middle" class="label" textLength="200" lengthAdjust="spacingAndGlyphs" id="heading-weight">Shrinkage weight</text>
+    <text x="516.8" y="1014.5" font-size="40" text-anchor="start" class="math" textLength="59" lengthAdjust="spacingAndGlyphs" font-style="italic">w<tspan font-size="25" baseline-shift="-6.5px">k,m</tspan></text>
+    <path d="M586.2 999.4 H602.3 M586.2 1006.5 H602.3" fill="none" stroke="#101111" stroke-width="1.7"/>
+    <text x="642.1" y="987.0" font-size="35" text-anchor="start" class="math" textLength="52" lengthAdjust="spacingAndGlyphs" font-style="italic">n<tspan font-size="26" baseline-shift="-8px">k,m</tspan></text>
+    <path d="M617.5 1002.2 H723.7" fill="none" stroke="#141414" stroke-width="1.8"/>
+    <text x="617.7" y="1034.0" font-size="35" text-anchor="start" class="math" textLength="53" lengthAdjust="spacingAndGlyphs" font-style="italic">n<tspan font-size="26" baseline-shift="-8px">k,m</tspan></text>
+    <path d="M680.5 1026.0 H698.8 M689.6 1017.0 V1035.0" fill="none" stroke="#101111" stroke-width="1.7"/>
+    <text x="708.0" y="1034.7" font-size="36" text-anchor="start" class="math" textLength="16" lengthAdjust="spacingAndGlyphs" font-style="italic">ν</text>
+  </g>
+
+  <!-- 5. Historical standard error and its uncertainty multiplier. -->
+  <g id="historical-standard-error">
+    <path d="M985.9 1192.0 V832.7" class="connector"/>
+    <rect x="877.5" y="652.1" width="218.7" height="178.9" rx="2.1" fill="url(#cyan)" stroke="#125273" stroke-width="1.85" filter="url(#panel-shadow)"/>
+    <rect x="879.60" y="654.20" width="214.50" height="174.70" rx="1.2" fill="none" stroke="#fff" stroke-opacity=".86" stroke-width="1.0"/>
+    <text x="985.9" y="697.4" font-size="35" text-anchor="middle" class="label" textLength="148" lengthAdjust="spacingAndGlyphs" id="heading-se">Historical SE</text>
+    <text x="984.9" y="734.8" font-size="31" text-anchor="middle" class="body" textLength="99" lengthAdjust="spacingAndGlyphs" id="se-means-utc">Mean loss</text>
+    <text x="986.6" y="765.0" font-size="31" text-anchor="middle" class="body" textLength="120" lengthAdjust="spacingAndGlyphs" id="se-means-zone">uncertainty</text>
+    <text x="950.4" y="804.0" font-size="36" text-anchor="start" class="math" textLength="77" lengthAdjust="spacingAndGlyphs" font-style="italic">SE<tspan font-size="26" baseline-shift="-8px">b,m</tspan></text>
+  </g>
+
+  <!-- 6. The four source blocks. -->
+  <g id="source-blocks">
+    <rect x="29.2" y="1192.1" width="239.7" height="138.3" rx="2.0" fill="#fefefe" stroke="#1a1b1b" stroke-width="1.85" filter="url(#panel-shadow)"/>
+    <rect x="31.30" y="1194.20" width="235.50" height="134.10" rx="1.2" fill="none" stroke="#fff" stroke-opacity=".86" stroke-width="1.0"/>
+    <text x="148.9" y="1250.6" font-size="36" text-anchor="middle" class="label" textLength="207" lengthAdjust="spacingAndGlyphs" id="source-available">Available historical</text>
+    <text x="150.3" y="1285.8" font-size="36" text-anchor="middle" class="label" textLength="98" lengthAdjust="spacingAndGlyphs" id="source-feedback">feedback</text>
+    <rect x="287.9" y="1192.1" width="273.5" height="138.3" rx="2.0" fill="#fefefe" stroke="#1a1b1b" stroke-width="1.85" filter="url(#panel-shadow)"/>
+    <rect x="290.00" y="1194.20" width="269.30" height="134.10" rx="1.2" fill="none" stroke="#fff" stroke-opacity=".86" stroke-width="1.0"/>
+    <text x="426.4" y="1267.8" font-size="35.7" text-anchor="middle" class="label" textLength="171.5" lengthAdjust="spacingAndGlyphs" id="source-state">Current state <tspan font-style="italic" font-weight="400">s</tspan></text>
+    <rect x="580.2" y="1192.1" width="251.1" height="138.3" rx="2.0" fill="#fefefe" stroke="#1a1b1b" stroke-width="1.85" filter="url(#panel-shadow)"/>
+    <rect x="582.30" y="1194.20" width="246.90" height="134.10" rx="1.2" fill="none" stroke="#fff" stroke-opacity=".86" stroke-width="1.0"/>
+    <text x="708.2" y="1269.7" font-size="35.6" text-anchor="middle" class="label" textLength="136" lengthAdjust="spacingAndGlyphs" id="source-global">Global mean</text>
+    <rect x="850.7" y="1192.1" width="244.5" height="138.3" rx="2.0" fill="#fefefe" stroke="#1a1b1b" stroke-width="1.85" filter="url(#panel-shadow)"/>
+    <rect x="852.80" y="1194.20" width="240.30" height="134.10" rx="1.2" fill="none" stroke="#fff" stroke-opacity=".86" stroke-width="1.0"/>
+    <text x="978.3" y="1267.8" font-size="35.7" text-anchor="middle" class="label" textLength="185" lengthAdjust="spacingAndGlyphs" id="source-losses">Losses in group <tspan font-style="italic" font-weight="400">b</tspan></text>
+  </g>
+</svg>

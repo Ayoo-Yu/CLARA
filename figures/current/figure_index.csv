@@ -1,0 +1,32 @@
+figure,previous_release_figure,path,bytes,sha256,relationship,script
+01,main_figure_1,figures/current/Figure_01.png,630531,1e57458043debd31bd27a8941b3f3a40ead4b6ed75878769c971d18796987f6c,exact embedded resource,editable artwork; no numerical plotting script
+01,main_figure_1,figures/current/Figure_01.svg,27886,2f45aa1b3352428da2f85804f66903e5bc525564a394050176ad750e9991f861,authoritative vector or raster companion,editable artwork; no numerical plotting script
+02,main_figure_2,figures/current/Figure_02.pdf,64298,0976aa645b25d82cb734e90239f0e3ef65ea9d89d54a399dc420d008dae6ba94,authoritative vector or raster companion,editable artwork; no numerical plotting script
+02,main_figure_2,figures/current/Figure_02.png,101733,d3e300b3355c8e39d7710f2b6c6ae6f215e63e334d9da3af60368f02368844ec,exact embedded resource,editable artwork; no numerical plotting script
+02,main_figure_2,figures/current/Figure_02.svg,32261,035cd3865cff3cdfd07e4ad21e2e39de2ce34c22dd3083e9937acb22ed212700,authoritative vector or raster companion,editable artwork; no numerical plotting script
+03,new mechanism; old main_figure_3 data-split illustration retired,figures/current/Figure_03.png,4015782,b043043e2dc7d6b786cae344088a005a07cd457a9b095b80f66891b515836bbe,exact embedded resource,editable artwork; no numerical plotting script
+03,new mechanism; old main_figure_3 data-split illustration retired,figures/current/Figure_03.svg,23610,b62ff2838396030d8734bd9c337448507df0d90793da014cfa988058a6e938da,authoritative vector or raster companion,editable artwork; no numerical plotting script
+04,main_figure_4,figures/current/Figure_04.pdf,63912,178ac385a10b3847f4c011e60b7299870e79fdb7598b9a54ed7b89cabe2e8b70,authoritative vector or raster companion,plotting/current/figure_04.py
+04,main_figure_4,figures/current/Figure_04.png,312939,d4fa6a224aea6b83b327d6787380771770311cfb11268cdb32a2a2a63d09afa1,exact embedded resource,plotting/current/figure_04.py
+04,main_figure_4,figures/current/Figure_04.svg,112430,e8a537d1a2e946dde355bb1cec2fad6d5075bcbcad7fc972c210cb00ad0084d4,authoritative vector or raster companion,plotting/current/figure_04.py
+05,main_figure_5 (lead-time panel updated),figures/current/Figure_05.pdf,92129,4f4dfd7ddff4755d7c547eaa6fcb3e7f3d7e288a09b86817ba90545e6d8e5868,authoritative vector or raster companion,plotting/current/figure_05.py
+05,main_figure_5 (lead-time panel updated),figures/current/Figure_05.png,409853,db7b18ff9ca6e0c6a9be9308b1b4710ce8ef10eb4eeaae108f4a20f51ee567cc,exact embedded resource,plotting/current/figure_05.py
+05,main_figure_5 (lead-time panel updated),figures/current/Figure_05.svg,148473,c227ac30c3a60bbf5967a3404ed0eab57a6e7609a8495f5750acd13f5df99664,authoritative vector or raster companion,plotting/current/figure_05.py
+06,main_figure_6,figures/current/Figure_06.pdf,5218073,a53bd0a4610fc4a45ee869413cc217e6a8c716856da6dba09d2d96b51f2ab204,authoritative vector or raster companion,plotting/current/figure_06.py
+06,main_figure_6,figures/current/Figure_06.png,881566,261795f58db591e054cba407385581c322e8992edb4388f6e85bd03121a16a6a,exact embedded resource,plotting/current/figure_06.py
+06,main_figure_6,figures/current/Figure_06.svg,29011787,7fca8fa5edc0f429634fbfd76f89d607732a8721ade6a900f876eba630c08315,authoritative vector or raster companion,plotting/current/figure_06.py
+07,supplement_figure_S2 (redesigned),figures/current/Figure_07.emf,473080,5ae542a94a62082902824990c38be643f6ca8c365b76723a762f2d052accafe7,exact embedded resource,plotting/current/figure_07.py
+07,supplement_figure_S2 (redesigned),figures/current/Figure_07.pdf,60603,e7f0a24c6ce84d9cbc6b3eed00e480e6964440ae57eaa26474c1ae53fedc00b9,authoritative vector or raster companion,plotting/current/figure_07.py
+07,supplement_figure_S2 (redesigned),figures/current/Figure_07.png,422708,121e34bf83d76907d191f95448e29d896bdb1f8f75463c521939446700d0192f,authoritative vector or raster companion,plotting/current/figure_07.py
+07,supplement_figure_S2 (redesigned),figures/current/Figure_07.svg,32778,b47ec7155d2751ad9be5cc9bdd6b963cda06a3137ee36355f1fd339dbdebda31,authoritative vector or raster companion,plotting/current/figure_07.py
+08,main_figure_7 (former panel c removed),figures/current/Figure_08.emf,486464,21025c53474fe76a63351b22479f2116c7b92c7fb147f499e9e31ac0d9a568d6,exact embedded resource,plotting/current/figure_08.py
+08,main_figure_7 (former panel c removed),figures/current/Figure_08.pdf,50955,1fdf3226694588ae94dc37119ed1710e92ccd4bc313f88c9b50f3a8dad43ddb6,authoritative vector or raster companion,plotting/current/figure_08.py
+08,main_figure_7 (former panel c removed),figures/current/Figure_08.png,195346,1bb19abad8ccb339cbf5cd1fddf445d0eb47b620f03c5bd74a9dc92b19c9f8e3,authoritative vector or raster companion,plotting/current/figure_08.py
+08,main_figure_7 (former panel c removed),figures/current/Figure_08.svg,38570,62600a6b0bcd8e70467c5731f9172f1b4f3edccd5a2f100963bbd74769d0814c,authoritative vector or raster companion,plotting/current/figure_08.py
+09,main_figure_8 (update-control rows removed),figures/current/Figure_09.emf,1203248,ed82a6c8afb0a2106f1fab6454788498f0db8ff8f4ef371e86077ec83565b815,exact embedded resource,plotting/current/figure_09.py
+09,main_figure_8 (update-control rows removed),figures/current/Figure_09.pdf,69635,314e89452a2b2f46f59599403726d52c4e07471da7dd8f437752455e4725fc83,authoritative vector or raster companion,plotting/current/figure_09.py
+09,main_figure_8 (update-control rows removed),figures/current/Figure_09.png,638892,22e930db20970bf090ca8d5caf00ba413eb3c87a5de796c1819214ad43d331b8,authoritative vector or raster companion,plotting/current/figure_09.py
+09,main_figure_8 (update-control rows removed),figures/current/Figure_09.svg,72842,3d90ab246e3a80ed9fb7ce7cb282004b02ca48374be26fb9ac2fea7061d970c5,authoritative vector or raster companion,plotting/current/figure_09.py
+S1,supplement_figure_S10,figures/current/Figure_S1.pdf,50250,66804d70ad913898f5e6f670c72ccb31bd6aa5d7422710767f1185ba23c321a1,authoritative vector or raster companion,plotting/current/figure_S1.py
+S1,supplement_figure_S10,figures/current/Figure_S1.png,178840,c9fd3e50be720feea6e6617049f14ecc45a8768161e96c0019f6a2e6b3d45c6c,exact embedded resource,plotting/current/figure_S1.py
+S1,supplement_figure_S10,figures/current/Figure_S1.svg,38085,691941524550f8432d38d679e35c284f540c87ddbcec0e03192a3d373154f256,authoritative vector or raster companion,plotting/current/figure_S1.py

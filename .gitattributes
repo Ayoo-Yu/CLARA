@@ -1,0 +1,4 @@
+# Preserve exact bytes for scientific data, source snapshots and asset digests.
+* -text
+# Generated vector artwork is reviewed visually, not as million-line diffs.
+*.svg binary

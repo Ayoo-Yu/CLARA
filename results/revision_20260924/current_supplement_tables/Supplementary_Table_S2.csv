@@ -1,0 +1,6 @@
+﻿Category g,"Condition, applied in order"
+Insufficient history,A complete 168 h history of verified coverage records is unavailable.
+Undercoverage,"TUWR > 0.35, or 168 h history coverage < c - 0.05."
+Overcoverage,"TOWR > 0.50, or 168 h history coverage > c + 0.05."
+Large coverage deviation,ARD > 0.08
+Coverage close to target,None of the preceding conditions apply.

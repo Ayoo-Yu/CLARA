@@ -1,0 +1,62 @@
+[
+  {
+    "file": "Supplementary_Table_S1.csv",
+    "table": "S1",
+    "rows_including_headers": 5
+  },
+  {
+    "file": "Supplementary_Table_S2.csv",
+    "table": "S2",
+    "rows_including_headers": 6
+  },
+  {
+    "file": "Supplementary_Table_S3.csv",
+    "table": "S3",
+    "rows_including_headers": 8
+  },
+  {
+    "file": "Supplementary_Table_S4.csv",
+    "table": "S4",
+    "rows_including_headers": 4
+  },
+  {
+    "file": "Supplementary_Table_S5a.csv",
+    "table": "S5a",
+    "rows_including_headers": 4
+  },
+  {
+    "file": "Supplementary_Table_S5b.csv",
+    "table": "S5b",
+    "rows_including_headers": 6
+  },
+  {
+    "file": "Supplementary_Table_S6.csv",
+    "table": "S6",
+    "rows_including_headers": 7
+  },
+  {
+    "file": "Supplementary_Table_S7a.csv",
+    "table": "S7a",
+    "rows_including_headers": 12
+  },
+  {
+    "file": "Supplementary_Table_S7b.csv",
+    "table": "S7b",
+    "rows_including_headers": 6
+  },
+  {
+    "file": "Supplementary_Table_S8.csv",
+    "table": "S8",
+    "rows_including_headers": 7
+  },
+  {
+    "file": "Supplementary_Table_S9.csv",
+    "table": "S9",
+    "rows_including_headers": 17
+  },
+  {
+    "file": "Supplementary_Table_S10.csv",
+    "table": "S10",
+    "rows_including_headers": 9
+  }
+]

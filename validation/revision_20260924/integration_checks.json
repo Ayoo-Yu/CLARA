@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "revision": "2026-09-24",
+  "new_query_correctness": {
+    "state_mappings": 6600,
+    "actions": 220,
+    "endpoints": 440,
+    "new_timing": false
+  },
+  "new_ablation_summary_verification": {
+    "pooled_conditions": 66000,
+    "seed_conditions": 198000,
+    "paired_rows": 72,
+    "bootstrap_replicates": 5000,
+    "event_replay": false
+  },
+  "GEFCom_summary_verification": {
+    "conditions": 11000,
+    "state_choices": 33000,
+    "ERRF": 2.8451532639035735
+  },
+  "authoritative_figure_files_hash_checked": 31,
+  "new_python_files_parsed": 15,
+  "personal_path_and_credential_pattern_files": [],
+  "manuscript_or_review_documents_in_package": false,
+  "repository_private_before_upload": true,
+  "release_draft_before_upload": true,
+  "known_preprocessing_availability_limitation_retained": true
+}

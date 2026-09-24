@@ -1,0 +1,65 @@
+{
+  "embedded_asset_byte_identity": {
+    "Figure_01": true,
+    "Figure_02": true,
+    "Figure_03": true,
+    "Figure_04": true,
+    "Figure_05": true,
+    "Figure_06": true,
+    "Figure_07": true,
+    "Figure_08": true,
+    "Figure_09": true,
+    "Figure_S1": true
+  },
+  "figures": 10,
+  "publication_artwork": "authoritative assets unchanged",
+  "script_execution": "All seven scripts completed successfully",
+  "render_comparison": {
+    "04": {
+      "bytes_identical": true,
+      "dimensions_match": true,
+      "pixels_identical": true,
+      "different_pixels": 0
+    },
+    "05": {
+      "bytes_identical": false,
+      "dimensions_match": true,
+      "pixels_identical": false,
+      "different_pixels": 144059,
+      "all_visible_text_identical": true,
+      "note": "Numeric text, marker positions and axes geometry retained; font version changes small glyph metrics. Authoritative published artwork is unchanged."
+    },
+    "06": {
+      "bytes_identical": true,
+      "dimensions_match": true,
+      "pixels_identical": true,
+      "different_pixels": 0
+    },
+    "07": {
+      "bytes_identical": true,
+      "dimensions_match": true,
+      "pixels_identical": true,
+      "different_pixels": 0
+    },
+    "08": {
+      "bytes_identical": true,
+      "dimensions_match": true,
+      "pixels_identical": true,
+      "different_pixels": 0
+    },
+    "09": {
+      "bytes_identical": true,
+      "dimensions_match": true,
+      "pixels_identical": true,
+      "different_pixels": 0
+    },
+    "S1": {
+      "bytes_identical": true,
+      "dimensions_match": true,
+      "pixels_identical": true,
+      "different_pixels": 0
+    }
+  },
+  "privacy": "Commercial source file contains only anonymized aggregate metrics for the nine displayed methods; GEFCom source records use public zone data.",
+  "scope": "Authoritative files copied unchanged; independent plotting scripts tested without experiment reruns."
+}

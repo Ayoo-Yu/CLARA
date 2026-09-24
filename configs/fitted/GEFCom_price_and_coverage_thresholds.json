@@ -1,0 +1,77 @@
+{
+  "R01": {
+    "price": {
+      "base_submission_price": false,
+      "miss_to_capacity_ratio": 1.0,
+      "price_id": "R01",
+      "theta": [
+        3.56,
+        3.56,
+        3.56,
+        3.56
+      ]
+    },
+    "coverage_shortfall": 0.05,
+    "tuwr_limit": 0.45
+  },
+  "R02": {
+    "price": {
+      "base_submission_price": false,
+      "miss_to_capacity_ratio": 2.0,
+      "price_id": "R02",
+      "theta": [
+        3.56,
+        3.56,
+        7.12,
+        7.12
+      ]
+    },
+    "coverage_shortfall": 0.03795205328620368,
+    "tuwr_limit": 0.4098401776206789
+  },
+  "R05P6179775281": {
+    "price": {
+      "base_submission_price": true,
+      "miss_to_capacity_ratio": 5.6179775281,
+      "price_id": "R05P6179775281",
+      "theta": [
+        3.56,
+        3.56,
+        20.0,
+        20.0
+      ]
+    },
+    "coverage_shortfall": 0.02,
+    "tuwr_limit": 0.35
+  },
+  "R10": {
+    "price": {
+      "base_submission_price": false,
+      "miss_to_capacity_ratio": 10.0,
+      "price_id": "R10",
+      "theta": [
+        3.56,
+        3.56,
+        35.6,
+        35.6
+      ]
+    },
+    "coverage_shortfall": 0.015458881073007365,
+    "tuwr_limit": 0.30458881073007366
+  },
+  "R20": {
+    "price": {
+      "base_submission_price": false,
+      "miss_to_capacity_ratio": 20.0,
+      "price_id": "R20",
+      "theta": [
+        3.56,
+        3.56,
+        71.2,
+        71.2
+      ]
+    },
+    "coverage_shortfall": 0.01,
+    "tuwr_limit": 0.25
+  }
+}

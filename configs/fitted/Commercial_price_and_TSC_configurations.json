@@ -1,0 +1,383 @@
+{
+  "FarmA_seed0": {
+    "prices": [
+      {
+        "price_id": "rho_1",
+        "ratio": 1.0,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 3.56,
+        "tsc_configuration": "TSC01"
+      },
+      {
+        "price_id": "rho_2",
+        "ratio": 2.0,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 7.12,
+        "tsc_configuration": "TSC01"
+      },
+      {
+        "price_id": "rho_reference",
+        "ratio": 5.617977528089887,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 20.0,
+        "tsc_configuration": "TSC02"
+      },
+      {
+        "price_id": "rho_10",
+        "ratio": 10.0,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 35.6,
+        "tsc_configuration": "TSC02"
+      },
+      {
+        "price_id": "rho_20",
+        "ratio": 20.0,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 71.2,
+        "tsc_configuration": "TSC03"
+      }
+    ],
+    "tsc_configurations": {
+      "TSC01": {
+        "family": "EnbPI-RH",
+        "parameters": {
+          "history_duration_hours": 672
+        }
+      },
+      "TSC02": {
+        "family": "SAOCP",
+        "parameters": {
+          "learning_rate": 0.05,
+          "temperature": 0.1,
+          "window_hours": [
+            24.0,
+            48.0,
+            96.0,
+            168.0
+          ]
+        }
+      },
+      "TSC03": {
+        "family": "ACI",
+        "parameters": {
+          "learning_rate": 0.1
+        }
+      }
+    }
+  },
+  "FarmA_seed1": {
+    "prices": [
+      {
+        "price_id": "rho_1",
+        "ratio": 1.0,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 3.56,
+        "tsc_configuration": "TSC01"
+      },
+      {
+        "price_id": "rho_2",
+        "ratio": 2.0,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 7.12,
+        "tsc_configuration": "TSC01"
+      },
+      {
+        "price_id": "rho_reference",
+        "ratio": 5.617977528089887,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 20.0,
+        "tsc_configuration": "TSC02"
+      },
+      {
+        "price_id": "rho_10",
+        "ratio": 10.0,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 35.6,
+        "tsc_configuration": "TSC02"
+      },
+      {
+        "price_id": "rho_20",
+        "ratio": 20.0,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 71.2,
+        "tsc_configuration": "TSC03"
+      }
+    ],
+    "tsc_configurations": {
+      "TSC01": {
+        "family": "EnbPI-RH",
+        "parameters": {
+          "history_duration_hours": 672
+        }
+      },
+      "TSC02": {
+        "family": "SAOCP",
+        "parameters": {
+          "learning_rate": 0.05,
+          "temperature": 0.1,
+          "window_hours": [
+            24.0,
+            48.0,
+            96.0,
+            168.0
+          ]
+        }
+      },
+      "TSC03": {
+        "family": "ACI",
+        "parameters": {
+          "learning_rate": 0.1
+        }
+      }
+    }
+  },
+  "FarmA_seed2": {
+    "prices": [
+      {
+        "price_id": "rho_1",
+        "ratio": 1.0,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 3.56,
+        "tsc_configuration": "TSC01"
+      },
+      {
+        "price_id": "rho_2",
+        "ratio": 2.0,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 7.12,
+        "tsc_configuration": "TSC01"
+      },
+      {
+        "price_id": "rho_reference",
+        "ratio": 5.617977528089887,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 20.0,
+        "tsc_configuration": "TSC02"
+      },
+      {
+        "price_id": "rho_10",
+        "ratio": 10.0,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 35.6,
+        "tsc_configuration": "TSC02"
+      },
+      {
+        "price_id": "rho_20",
+        "ratio": 20.0,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 71.2,
+        "tsc_configuration": "TSC03"
+      }
+    ],
+    "tsc_configurations": {
+      "TSC01": {
+        "family": "EnbPI-RH",
+        "parameters": {
+          "history_duration_hours": 672
+        }
+      },
+      "TSC02": {
+        "family": "SAOCP",
+        "parameters": {
+          "learning_rate": 0.05,
+          "temperature": 0.1,
+          "window_hours": [
+            24.0,
+            48.0,
+            96.0,
+            168.0
+          ]
+        }
+      },
+      "TSC03": {
+        "family": "ACI",
+        "parameters": {
+          "learning_rate": 0.1
+        }
+      }
+    }
+  },
+  "FarmB_seed0": {
+    "prices": [
+      {
+        "price_id": "rho_1",
+        "ratio": 1.0,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 3.56,
+        "tsc_configuration": "TSC01"
+      },
+      {
+        "price_id": "rho_2",
+        "ratio": 2.0,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 7.12,
+        "tsc_configuration": "TSC01"
+      },
+      {
+        "price_id": "rho_reference",
+        "ratio": 5.617977528089887,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 20.0,
+        "tsc_configuration": "TSC01"
+      },
+      {
+        "price_id": "rho_10",
+        "ratio": 10.0,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 35.6,
+        "tsc_configuration": "TSC02"
+      },
+      {
+        "price_id": "rho_20",
+        "ratio": 20.0,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 71.2,
+        "tsc_configuration": "TSC02"
+      }
+    ],
+    "tsc_configurations": {
+      "TSC01": {
+        "family": "NEX",
+        "parameters": {
+          "decay": 0.99,
+          "history_duration_hours": 336
+        }
+      },
+      "TSC02": {
+        "family": "SAOCP",
+        "parameters": {
+          "learning_rate": 0.05,
+          "temperature": 0.1,
+          "window_hours": [
+            24.0,
+            48.0,
+            96.0,
+            168.0
+          ]
+        }
+      }
+    }
+  },
+  "FarmB_seed1": {
+    "prices": [
+      {
+        "price_id": "rho_1",
+        "ratio": 1.0,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 3.56,
+        "tsc_configuration": "TSC01"
+      },
+      {
+        "price_id": "rho_2",
+        "ratio": 2.0,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 7.12,
+        "tsc_configuration": "TSC01"
+      },
+      {
+        "price_id": "rho_reference",
+        "ratio": 5.617977528089887,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 20.0,
+        "tsc_configuration": "TSC01"
+      },
+      {
+        "price_id": "rho_10",
+        "ratio": 10.0,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 35.6,
+        "tsc_configuration": "TSC02"
+      },
+      {
+        "price_id": "rho_20",
+        "ratio": 20.0,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 71.2,
+        "tsc_configuration": "TSC02"
+      }
+    ],
+    "tsc_configurations": {
+      "TSC01": {
+        "family": "NEX",
+        "parameters": {
+          "decay": 0.99,
+          "history_duration_hours": 336
+        }
+      },
+      "TSC02": {
+        "family": "SAOCP",
+        "parameters": {
+          "learning_rate": 0.05,
+          "temperature": 0.1,
+          "window_hours": [
+            24.0,
+            48.0,
+            96.0,
+            168.0
+          ]
+        }
+      }
+    }
+  },
+  "FarmB_seed2": {
+    "prices": [
+      {
+        "price_id": "rho_1",
+        "ratio": 1.0,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 3.56,
+        "tsc_configuration": "TSC01"
+      },
+      {
+        "price_id": "rho_2",
+        "ratio": 2.0,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 7.12,
+        "tsc_configuration": "TSC01"
+      },
+      {
+        "price_id": "rho_reference",
+        "ratio": 5.617977528089887,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 20.0,
+        "tsc_configuration": "TSC01"
+      },
+      {
+        "price_id": "rho_10",
+        "ratio": 10.0,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 35.6,
+        "tsc_configuration": "TSC02"
+      },
+      {
+        "price_id": "rho_20",
+        "ratio": 20.0,
+        "capacity_weight": 3.56,
+        "exceedance_weight": 71.2,
+        "tsc_configuration": "TSC02"
+      }
+    ],
+    "tsc_configurations": {
+      "TSC01": {
+        "family": "NEX",
+        "parameters": {
+          "decay": 0.99,
+          "history_duration_hours": 336
+        }
+      },
+      "TSC02": {
+        "family": "SAOCP",
+        "parameters": {
+          "learning_rate": 0.05,
+          "temperature": 0.1,
+          "window_hours": [
+            24.0,
+            48.0,
+            96.0,
+            168.0
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+﻿Variant,Mean ERRF,"ERRF change (%)
+vs CLARA [95% CI]",Conditions with coverage< target − 0.02 (%),"TUWR
+(%)"
+Full CLARA,2.5630,—,0.86,8.07
+Cost ranking without state conditioning,2.6094,"+1.81 [+1.74, +1.88]",0.41,6.26
+Width-based ranking,2.6649,"+3.97 [+3.87, +4.09]",31.05,23.05
+Without recent-coverage state,2.5563,"-0.26 [-0.30, -0.22]",2.64,9.55
+Without all three operating states,2.5526,"-0.41 [-0.49, -0.33]",4.41,11.04
+Without coverage screening,2.5461,"-0.66 [-0.76, -0.56]",14.09,12.94
+Without hierarchical back-off,2.5660,"+0.12 [+0.03, +0.23]",0.27,7.65

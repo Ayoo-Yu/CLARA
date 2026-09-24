@@ -2,25 +2,31 @@
 
 CLARA selects a complete wind-power prediction interval from six calibration methods using historical cost estimates and coverage requirements. This repository accompanies **CLARA: An Interpretable Contextual Decision Agent for Grid-Dispatch-Cost-Aware Calibration of Wind Power Prediction Intervals**, by Zhongze Yu and Zhenqing Liu.
 
-[Repository](https://github.com/Ayoo-Yu/CLARA) · [Version 1.0.0 and data downloads](https://github.com/Ayoo-Yu/CLARA/releases/tag/v1.0.0)
+[Repository](https://github.com/Ayoo-Yu/CLARA) · [Release assets](https://github.com/Ayoo-Yu/CLARA/releases)
 
 The evaluated candidates are Static, ACI, AgACI, EnbPI-RH, TSC and EEE. The principal comparison includes these six standalone methods, CLARA, CART and LinUCB. The experiments use five exceedance-to-capacity price ratios: 1, 2, 20/3.56, 10 and 20.
 
 Two evaluation protocols are kept distinct. In the GEFCom cross-zone experiment, CLARA's risk estimates and selection mapping are fitted on nine zones and retained when evaluating the excluded zone. In the commercial-farm experiment, an initial local adaptation history is followed by causal updating of all six candidates' cost and coverage estimates. Forecasting and candidate calibration histories follow their specified availability rules in both experiments.
+
+The 24 September 2026 revision updates fitted settings, query timings, the exact-state no-backoff ablation, and the manuscript figures and tables. The repository is currently private and version 1.0.0 remains a draft release. Asset access requires repository permission.
 
 ## Contents
 
 | Path | Purpose |
 |---|---|
 | `src/evaluated/` | Evaluated forecasting, calibration, selection and analysis implementations. |
-| `configs/` | Experiment, price, state, calibration and selector settings. |
+| `configs/` and `configs/fitted/` | Experiment settings and the exact fitted state, price and baseline configurations. |
 | `scripts/` | Portable verification and commercial replay entry points. |
-| `results/gefcom/` | Complete condition-level main-comparison summaries and a compact fitted-policy example. |
-| `data/commercial/` | Anonymous numerical summaries, data dictionary and metric-recomputation program. |
-| `results/figure_data/` | Numerical inputs used by the final main result figures. |
-| `plotting/` | Runnable figure 4–8 programs and the shared palette/font helper. |
-| `results/paper_tables/` | Included final publication tables as CSV, with their published rounding. |
-| `figures/` | Final manuscript figures and included supplementary figures. |
+| `results/gefcom/` | Complete condition-level main-comparison summaries and a fitted-policy example. |
+| `data/commercial/` | Anonymous summaries, data dictionary and metric-recomputation program. |
+| `benchmarks/query/` | All measured current-policy query calls, fixtures and a portable correctness check. |
+| `analysis/exact_state_no_backoff/` | Ablation source snapshot, protocol and portable summary verification. |
+| `results/revision_20260924/` | Current Tables 5–7, supplementary tables S1–S10 and full-precision ablation results. |
+| `figures/current/` | Current main Figures 1–9 and Supplementary Figure S1, with an authoritative asset index. |
+| `plotting/current/` and `results/current_figure_data/` | Current result-figure programs and their numerical inputs. |
+
+Earlier presentation exports remain in legacy folders for traceability. They
+use older numbering; follow the current paths above for the revised manuscript.
 
 Large candidate records and the full fitted-policy evidence are separate release assets. Extract all six commercial shards into the same directory; each contains a different `commercial_candidate_archive/FarmA|FarmB/seed0|seed1|seed2` subtree. Do not concatenate their files or alter the relative time indices.
 
@@ -87,17 +93,50 @@ python scripts/replay_commercial.py --archive commercial_candidate_archive/FarmA
 
 The replay regenerates candidate losses and historical reliability from the anonymous endpoints and observations, checks initial fitted evidence, executes the evaluated update functions and compares every selected action against the archived decision paths. Other prices are `rho_1`, `rho_2`, `rho_10` and `rho_20`. Add `--max-test-days 2` for a short test prefix while retaining the complete adaptation history. Replaying saved candidate outputs does not retrain the commercial forecasting models; the raw training measurements are excluded from release.
 
-## Reproduce the main result figures
+## Current fitted settings, timings and ablation
+
+`configs/fitted/` records the 990,000 GEFCom and 198,000 commercial state-price
+configurations, state definitions, price-dependent thresholds and selected
+baseline settings. These are the fitted settings used in the reported results.
 
 ```bash
-python plotting/figure_04.py
-python plotting/figure_05.py
-python plotting/figure_06.py
-python plotting/figure_07.py
-python plotting/figure_08.py
+python benchmarks/query/benchmark_query.py --repository-root .
+python analysis/exact_state_no_backoff/verify_results.py
 ```
 
-These programs write figure files below `outputs/`. All five programs were executed against the included numerical inputs, and their PNG pixels matched the final main-result figure sources on the authors' checked environment. Figures 1–3 are supplied as the final process illustrations. Supplementary PNGs and publication-table transcriptions are supplied for comparison; this does not imply that every supplementary figure has a standalone plotting wrapper.
+The first command checks 6,600 state mappings, 220 choices and 440 interval
+endpoints without collecting new timings. The archived 1,920 calls support
+the current Table S6; the median single-query time is 7.00 ms for lookup and
+interval retrieval, or 11.43 ms including width classification. Hardware,
+background load, measurement scope and a command for new measurements are
+documented in `benchmarks/query/README.md`.
+
+The second command verifies the no-backoff paired summaries and bootstrap
+intervals from the supplied condition-level data. The ablation uses nonempty
+exact-state histories directly and chooses Static only for empty histories.
+Its source snapshot is included, but a complete policy rebuild and event replay
+also require the original statistics caches and fit receipts listed in its
+README. Summary verification is not a new experiment or a complete rebuild.
+
+## Reproduce the current result figures
+
+```bash
+python plotting/current/figure_04.py
+python plotting/current/figure_05.py
+python plotting/current/figure_06.py
+python plotting/current/figure_07.py
+python plotting/current/figure_08.py
+python plotting/current/figure_09.py
+python plotting/current/figure_S1.py
+```
+
+These programs write to `outputs/current/`. All seven were executed against the
+included inputs. Figures 4 and 6–9 and Supplementary Figure S1 matched the
+authoritative PNGs exactly in the checked environment. Figure 5 retained all
+visible text and numeric labels but differed slightly in font rendering; its
+approved source artwork is supplied unchanged. Figures 1–3 are supplied as
+mechanism illustrations. See `figures/current/figure_index.csv` for current and
+previous numbering, formats and checksums.
 
 ## Scope and interpretation
 

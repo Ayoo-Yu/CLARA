@@ -1,0 +1,4 @@
+﻿Method,GEFCom,Commercial farms
+CART,"Balanced class weights, unrestricted depth and random state 0; fold-specific settings selected by inner validation.",Minimum leaf size 300; other settings as for GEFCom.
+LinUCB,Fold-specific settings selected by inner validation.,Exploration coefficient 1; regularization 10.
+TSC,SAOCP-style delayed-feedback multi-window mixture in all folds.,"Selected by farm and price, as shown below."

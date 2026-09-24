@@ -1,0 +1,3 @@
+case_id,issue_timestamp,ramp_proxy,selected_action
+ordinary,2013-11-12 14:00:00+00:00,0.027306997575403308,Static
+ramp,2013-10-15 23:00:00+00:00,0.33784393140090896,EnbPI_RH

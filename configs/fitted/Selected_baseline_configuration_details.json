@@ -1,0 +1,145 @@
+{
+  "GEFCom_TSC": {
+    "TSC_FROZEN_FAMILY": "SAOCP",
+    "TSC_FROZEN_CONFIGURATION": {
+      "learning_rate": 0.05,
+      "temperature": 0.1,
+      "window_hours": [
+        24.0,
+        48.0,
+        96.0,
+        168.0
+      ]
+    }
+  },
+  "commercial_selector_config": {
+    "schema": "TEST_CLARA_MATCHED_SIX_ACTION_SELECTORS_PROTOCOL_V1",
+    "version": "1.0.0",
+    "status": "FROZEN_BEFORE_MATCHED_SELECTOR_PERFORMANCE_READ",
+    "purpose": "在与CLARA_6A_Local完全相同的六动作库上评价CART与LinUCB本地选择器",
+    "author_approval": "2026-09-02_confirmed_CART_6A_Local_and_LinUCB_6A_Local",
+    "scope": {
+      "farms": [
+        "FarmA",
+        "FarmB"
+      ],
+      "predictors": [
+        "Ridge",
+        "GBR",
+        "MLP",
+        "QRLSTM"
+      ],
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "horizon_steps": [
+        4,
+        24,
+        48,
+        96
+      ],
+      "target_coverages": [
+        0.1,
+        0.2,
+        0.3,
+        0.4,
+        0.5,
+        0.6,
+        0.7,
+        0.8,
+        0.9,
+        0.95,
+        0.99
+      ],
+      "methods": [
+        "CART_6A_Local",
+        "LinUCB_6A_Local"
+      ]
+    },
+    "action_library": [
+      "Static",
+      "ACI",
+      "AgACI",
+      "EnbPI_RH",
+      "TunedSingleConformal_Local",
+      "EqualEndpointEnsemble"
+    ],
+    "matching_contract": {
+      "same_target_farm_adaptation_split": true,
+      "same_final_test_split": true,
+      "same_state_fields": true,
+      "same_candidate_endpoints": true,
+      "same_ERRF_definition": true,
+      "same_strict_delayed_feedback": true,
+      "base_predictor_retraining_allowed": false,
+      "original_four_candidate_rebuild_allowed": false,
+      "target_oracle_tuning_allowed": false,
+      "direct_transfer_variants_in_scope": false
+    },
+    "cart": {
+      "fit_unit": "one_target_farm_and_seed_pooling_predictors_horizons_and_coverages",
+      "class_weight": "balanced",
+      "max_depth": null,
+      "min_samples_leaf": 300,
+      "random_state": 0
+    },
+    "linucb": {
+      "fit_unit": "prewarm_on_target_adaptation_then_continue_on_final_test",
+      "exploration_alpha": 1.0,
+      "l2_regularization": 10.0,
+      "final_feedback_drain": false
+    },
+    "preflight_regression": {
+      "unit": "FarmA-S0",
+      "four_action_CART_action_mismatch_allowed": 0,
+      "four_action_CART_metric_tolerance": 1e-12,
+      "four_action_LinUCB_metric_tolerance": 1e-12,
+      "must_pass_before_full_run": true
+    },
+    "evaluation": {
+      "primary_metric": "equal_farm_weighted_overall_mean_ERRF",
+      "report_regimes": [
+        "overall",
+        "ordinary",
+        "ramp"
+      ],
+      "report_secondary_metrics": [
+        "empirical_coverage",
+        "coverage_gap",
+        "average_width",
+        "TOWR",
+        "TUWR",
+        "ARD"
+      ],
+      "comparison_set": [
+        "CLARA_6A_Local",
+        "CART_6A_Local",
+        "LinUCB_6A_Local"
+      ],
+      "no_posthoc_tuning": true
+    },
+    "execution": {
+      "max_workers": 2,
+      "minimum_free_disk_gib": 20,
+      "checkpoint_unit": "target_farm_and_seed",
+      "preserve_failed_unit": true
+    },
+    "inputs": {
+      "extended_action_protocol": "configs/test_clara_extended_action_external_v1.json",
+      "s09_evaluation_config": "../09_商业场站外部验证/configs/s09_minimum_external_evaluation_v1.json",
+      "s09_external_protocol": "../09_商业场站外部验证/configs/s09_external_validation_v1.json",
+      "s09_local_conformal_selection": "../09_商业场站外部验证/results_raw/local_conformal_selection_v1/selected_configurations.json"
+    }
+  },
+  "commercial_selector_source_sha256": "dcc6607b7872a82d3f10f48d1c8c941fb103871c6135d4e1668ec0be8b471544",
+  "GEFCom_TSC_source_sha256": "4fe4ab7cb7ccafa076adf124e87ff3eb6da5e66d1846b360132f09ffc0d2c060",
+  "GEFCom_CART_common": {
+    "max_depth": null,
+    "class_weight": "balanced",
+    "random_state": 0,
+    "min_samples_leaf": "see GEFCom_selected_CART_LinUCB_parameters.csv"
+  },
+  "GEFCom_note": "CART and LinUCB fold-specific choices are held across seeds and prices. CART is refitted at each price; fitted state parameters for CLARA are supplied separately."
+}

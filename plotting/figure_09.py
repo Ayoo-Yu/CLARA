@@ -1,0 +1,8 @@
+"""Run current manuscript Figure 9."""
+from pathlib import Path
+import runpy
+import sys
+
+directory = Path(__file__).resolve().parent / "current"
+sys.path.insert(0, str(directory))
+runpy.run_path(str(directory / "figure_09.py"), run_name="__main__")

@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "privacy_pattern_matches": [],
+  "parquet_unique_strings_scanned": 444,
+  "python_sources_ast_compiled": 7,
+  "query_correctness": {
+    "status": "PASS",
+    "state_mappings_checked": 6600,
+    "query_actions_checked": 220,
+    "selected_endpoints_checked": 440,
+    "measurement_performed": false
+  },
+  "ablation_summary_correctness": {
+    "status": "PASS",
+    "paired_summary_rows": 72,
+    "seed_metric_rows": 198000,
+    "pooled_condition_rows": 66000,
+    "bootstrap_replicates": 5000,
+    "event_replay_performed": false,
+    "policy_rebuild_performed": false
+  },
+  "fitted_GEFCom_rows": 990000,
+  "fitted_commercial_rows": 198000,
+  "current_main_and_selected_supplement_CSVs_byte_identical": true,
+  "current_supplement_table_exports": 12,
+  "MathType_transcription": "S2 category g and c +/- 0.05 visually checked against rendered current supplement",
+  "original_source_and_result_checksums": "PASS",
+  "full_fit_and_event_replay_performed": false,
+  "dependency_boundary": "Full fit/replay requires evaluated source caches and frozen receipts as documented."
+}

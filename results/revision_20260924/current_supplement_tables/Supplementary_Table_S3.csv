@@ -1,0 +1,8 @@
+﻿Level,Retained state fields
+0,"Forecaster, horizon group, exact target coverage, ramp, recent coverage, raw width"
+1,"Forecaster, horizon group, exact target coverage, ramp, raw width"
+2,"Forecaster, horizon group, exact target coverage, ramp"
+3,"Forecaster, horizon group, exact target coverage"
+4,"Horizon group, exact target coverage"
+5,Exact target coverage
+6,Global group

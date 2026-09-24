@@ -1,0 +1,5 @@
+﻿Forecaster,Forecast construction,Model settings
+Ridge,Mean forecast plus empirical training-residual quantiles; separate target for each horizon.,Ridge regression; alpha = 1.0; random_state = seed.
+GBR,"One LightGBM model per quantile, using the common input vector, chronological split and quantile grid.",Quantile objective; 200 estimators; depth 4; learning rate 0.05; n_jobs = 1; random_state = seed.
+MLP,Mean forecast plus empirical training-residual quantiles for each horizon.,"Hidden layers (64, 32); ReLU; 300 iterations; early stopping; random_state = seed."
+QRLSTM,Shared recurrent representation of 24 consecutive input vectors outputs all required quantiles.,One LSTM layer; hidden dimension 32; learning rate 1e-3; batch size 64; 15 epochs; CPU; quantile loss plus a 0.2 crossing penalty.

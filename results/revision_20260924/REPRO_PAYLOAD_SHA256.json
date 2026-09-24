@@ -1,0 +1,266 @@
+{
+  "analysis/exact_state_no_backoff/PROTOCOL.md": {
+    "sha256": "358a47aecf9559e7ed1af75310c5ced372eeb8246696f7a6b856a868ac859d89",
+    "bytes": 3927
+  },
+  "analysis/exact_state_no_backoff/README.md": {
+    "sha256": "0c8611cebd0fd7485231b69b58966ceb7e18b4d0cee70a96ebfc07b518658925",
+    "bytes": 2099
+  },
+  "analysis/exact_state_no_backoff/source_snapshot/analyze_exact.py": {
+    "sha256": "11b9aa504c0922558ac5a6cb8a61ffa24e21caa17b5a81e9fbf421fe6e18cd84",
+    "bytes": 10064
+  },
+  "analysis/exact_state_no_backoff/source_snapshot/audit_support.py": {
+    "sha256": "fa6f466af50a91c12b13dcb6b8ebbcdc4f73f497a87928c6de2a856dab439af2",
+    "bytes": 5435
+  },
+  "analysis/exact_state_no_backoff/source_snapshot/build_policies.py": {
+    "sha256": "cd44eb208f087f5b969b01a4e8d1c04958524f3b2c3f876c5911350085686387",
+    "bytes": 12045
+  },
+  "analysis/exact_state_no_backoff/source_snapshot/evaluate_exact.py": {
+    "sha256": "a2dfc73120fb9a800250b0c3b9107ed7b8d1b64ca84e665e9871ee90ea35fad3",
+    "bytes": 10252
+  },
+  "analysis/exact_state_no_backoff/source_snapshot/qa_policies.py": {
+    "sha256": "199a2e7d1d9ff123be874666d042c23c7b77430a429d20c50ff7bd24d3047562",
+    "bytes": 5621
+  },
+  "analysis/exact_state_no_backoff/source_snapshot/SOURCE_HASHES.json": {
+    "sha256": "a9083b979eb7ddd8520cec28e99a4316387533a80be65bcbe299c2622a09e5a6",
+    "bytes": 460
+  },
+  "analysis/exact_state_no_backoff/verify_results.py": {
+    "sha256": "6777969a3afb39b4e6c8bd901422b3eaeb2578796fe225f12babb83a5699ae18",
+    "bytes": 2629
+  },
+  "benchmarks/query/benchmark_query.py": {
+    "sha256": "bcb2439cb8593456e269f64ce55ecad1aaa5a72c2baf01ce11f2f6ff986e18eb",
+    "bytes": 5867
+  },
+  "benchmarks/query/current_lookup_mapping.parquet": {
+    "sha256": "2bbeb1922e227ad749b3b01c0a8bec4a4738a5ac9052e9c4b624fe81e4de6b87",
+    "bytes": 45294
+  },
+  "benchmarks/query/Current_Table_S6_runtime.csv": {
+    "sha256": "1cb5acb159b71785fb8e1f112167ee3070b241c45d2c071bfb83dc5b2aa7304b",
+    "bytes": 349
+  },
+  "benchmarks/query/metadata.json": {
+    "sha256": "cb3990e6b0b0ea74890e1e31b533252262297e12a02b92029ae0ede6174dcd1a",
+    "bytes": 7912
+  },
+  "benchmarks/query/pooled_query_measurements.csv": {
+    "sha256": "09e48dc029eee41b751b9a231344c78c5d5245f263eca22142596220f9f8b3e4",
+    "bytes": 99947
+  },
+  "benchmarks/query/query_summary_full_precision.csv": {
+    "sha256": "806f9eaa0175fe118fe6bc6689b32ec51267e84902fe6044628ae4ff54aeacd9",
+    "bytes": 947
+  },
+  "benchmarks/query/README.md": {
+    "sha256": "c6af5317a4bfa939e65516f3a5d8d14464b1684034a599391f7b204322c38d0f",
+    "bytes": 3190
+  },
+  "benchmarks/query/resident_query_fixture.parquet": {
+    "sha256": "ab08468d0ffb6f2730ee2f39ca07bf3424bc96fdb912f6b84148f01385752178",
+    "bytes": 53718
+  },
+  "benchmarks/query/width_thresholds.parquet": {
+    "sha256": "dd612e05b4d0658a91fe80104f0bad49f5362b33c69027f6f9ab240b7bad5d1f",
+    "bytes": 10798
+  },
+  "configs/fitted/Commercial_fitted_CLARA_parameters.parquet": {
+    "sha256": "00689cfcb5d447393f0a4c87f41ab85405e7b55582e460617fdfd3b4da06c49b",
+    "bytes": 78283
+  },
+  "configs/fitted/Commercial_parameter_frequencies.csv": {
+    "sha256": "6904e967ac58ba098605a104019dacb15cafb4cab5492ed330a549d976d6e2d0",
+    "bytes": 16186
+  },
+  "configs/fitted/Commercial_price_and_TSC_configurations.json": {
+    "sha256": "e17f37e930234d798a43a172d976fc42e327ef56d0263b56a781595aad5f682b",
+    "bytes": 8964
+  },
+  "configs/fitted/Commercial_state_definitions.parquet": {
+    "sha256": "9452b6c8a5a57b1eb7179094ab4b4b245fcb63ae7d7636534119cd492a61f588",
+    "bytes": 24583
+  },
+  "configs/fitted/GEFCom_fitted_CLARA_parameters.parquet": {
+    "sha256": "f0126ba080ba26e16edef418f780d6bb8c6c5b519c88342f08700cc5ed7b4a25",
+    "bytes": 347462
+  },
+  "configs/fitted/GEFCom_parameter_frequencies.csv": {
+    "sha256": "d3a556ca48df1fb7001ea80a5adbeb97850a687b9061b64206e091c42c7a244e",
+    "bytes": 57826
+  },
+  "configs/fitted/GEFCom_price_and_coverage_thresholds.json": {
+    "sha256": "3a77307aee7c761ad3f7884e39c4c5be7856c32f81b305198132af18da5d8aa6",
+    "bytes": 1535
+  },
+  "configs/fitted/GEFCom_selected_CART_LinUCB_parameters.csv": {
+    "sha256": "aa8ea9008670a4c8e7be66bde9ef994f54f99b85054a56d432b9dc8fec933431",
+    "bytes": 275
+  },
+  "configs/fitted/GEFCom_state_definitions.parquet": {
+    "sha256": "38e018e0956f8fdda6ebbb7e176e24d67b2ce4bed0df4cbe04357112fd5af40f",
+    "bytes": 22932
+  },
+  "configs/fitted/Parameter_source_manifest.json": {
+    "sha256": "0cb548978d80b4e1232ea08f085c395d754599147482739da5059e5d3d4a758a",
+    "bytes": 62139
+  },
+  "configs/fitted/README.md": {
+    "sha256": "e91d372a210a77275d46ebac344615181186f0a9b4f83be7577d6cb496c8a32e",
+    "bytes": 950
+  },
+  "configs/fitted/Selected_baseline_configuration_details.json": {
+    "sha256": "bd583b4e671fb64db256ba96e94a19e6c1afe442f9441e321f96c96eff76c913",
+    "bytes": 4360
+  },
+  "results/revision_20260924/current_supplement_tables/INDEX.json": {
+    "sha256": "9d409bd479d92c6e17765fc40010883457cf8745decb5b8ac7bf0b94db0332d7",
+    "bytes": 1301
+  },
+  "results/revision_20260924/current_supplement_tables/Supplementary_Table_S1.csv": {
+    "sha256": "a1ab2b94b9b83e51ee565ecc134cd4f87ed766423d37ec69822684d645c4a168",
+    "bytes": 811
+  },
+  "results/revision_20260924/current_supplement_tables/Supplementary_Table_S10.csv": {
+    "sha256": "1938adba7dc66714493a98d6360380730cc94066123006f53083230b087b7097",
+    "bytes": 478
+  },
+  "results/revision_20260924/current_supplement_tables/Supplementary_Table_S2.csv": {
+    "sha256": "d4999469c88eada754a099ef345c7f9dc52c467231f93afe1e61da6fcc3e7190",
+    "bytes": 375
+  },
+  "results/revision_20260924/current_supplement_tables/Supplementary_Table_S3.csv": {
+    "sha256": "e60596578171b3e09e35cdf636abb0fd1d2ce63c9eebb302eda32e936920d618",
+    "bytes": 388
+  },
+  "results/revision_20260924/current_supplement_tables/Supplementary_Table_S4.csv": {
+    "sha256": "42f4bc3c45ddc603d6216eb262b6cc56bdfd9f820795f7e624f3537929caaee0",
+    "bytes": 111
+  },
+  "results/revision_20260924/current_supplement_tables/Supplementary_Table_S5a.csv": {
+    "sha256": "3b2cd85f143ade0e117b99f43d28cf86cc38796c53af1abd588aa0c72121fb17",
+    "bytes": 434
+  },
+  "results/revision_20260924/current_supplement_tables/Supplementary_Table_S5b.csv": {
+    "sha256": "feec9053bc726a8981acc5b4c145f6524223b118a03a7a7bef4b3174a21378d3",
+    "bytes": 114
+  },
+  "results/revision_20260924/current_supplement_tables/Supplementary_Table_S6.csv": {
+    "sha256": "7bcce7e58b17760905c20353a0f583ff9ab1057289c07715a4c4e45cb1c47c6b",
+    "bytes": 349
+  },
+  "results/revision_20260924/current_supplement_tables/Supplementary_Table_S7a.csv": {
+    "sha256": "27ce108165ea6eab839216e26f38edda2792a7bd05e44f732f6747987fcbeecd",
+    "bytes": 749
+  },
+  "results/revision_20260924/current_supplement_tables/Supplementary_Table_S7b.csv": {
+    "sha256": "2b6d032bff39228a7ece58c16c5bb31675e4ad489f819b148c99343eed69d71b",
+    "bytes": 267
+  },
+  "results/revision_20260924/current_supplement_tables/Supplementary_Table_S8.csv": {
+    "sha256": "2fb1bceb6208821155c09f8914bba8358f8c81036ccb20ff986f4dafb87f903e",
+    "bytes": 535
+  },
+  "results/revision_20260924/current_supplement_tables/Supplementary_Table_S9.csv": {
+    "sha256": "17660f3fd6e59c5bf44287cca719d6ef7eb9ca9deb3d1c905701b3ef87813535",
+    "bytes": 1069
+  },
+  "results/revision_20260924/Current_Table_S10_ramp_counts.csv": {
+    "sha256": "b59898827b9ddab257d21f07eed33789f9bccfb68d62d59482f51c2df1b5ab03",
+    "bytes": 484
+  },
+  "results/revision_20260924/Current_Table_S6_runtime.csv": {
+    "sha256": "1cb5acb159b71785fb8e1f112167ee3070b241c45d2c071bfb83dc5b2aa7304b",
+    "bytes": 349
+  },
+  "results/revision_20260924/Current_Table_S9_farm_intervals.csv": {
+    "sha256": "4211da226f0b9738a582221b0ad7851b27d66a6f2a125624a31eae47165d16db",
+    "bytes": 1071
+  },
+  "results/revision_20260924/exact_state_no_backoff/analysis_manifest.json": {
+    "sha256": "d0c83dc0be1f7c8090864344d43299145699446d24ea71389a5baa0531ed6ab3",
+    "bytes": 4308
+  },
+  "results/revision_20260924/exact_state_no_backoff/condition_cost_attribution.parquet": {
+    "sha256": "5dceea393683fe60e8441721fdf8353fe6bf725ccd81d8c644a86a19c8345bc6",
+    "bytes": 144631
+  },
+  "results/revision_20260924/exact_state_no_backoff/condition_decision_changes.parquet": {
+    "sha256": "ec5a9966bf760cfc48305693ce74356ee88d1c43f3938b5fef299dbce090359f",
+    "bytes": 324378
+  },
+  "results/revision_20260924/exact_state_no_backoff/condition_metrics.parquet": {
+    "sha256": "e9ffa7c63a77448431a403a663ab16e24f4ec673294d3be5aec5c53610b471e5",
+    "bytes": 4008795
+  },
+  "results/revision_20260924/exact_state_no_backoff/cost_attribution.csv": {
+    "sha256": "72df611b3729c0023948898471cd018df8caedb0dd7e258ee4e0b99be278bb41",
+    "bytes": 2156
+  },
+  "results/revision_20260924/exact_state_no_backoff/decision_changes.csv": {
+    "sha256": "dfec3f592685e1a505dda0ebd46fd5329f015fa4cf44b025e6b5e453575a5167",
+    "bytes": 635
+  },
+  "results/revision_20260924/exact_state_no_backoff/paired_summary.csv": {
+    "sha256": "fabc2e793e964d24a54926e208670d499614cb508014e4277389b376add369f5",
+    "bytes": 25847
+  },
+  "results/revision_20260924/exact_state_no_backoff/regime_means.csv": {
+    "sha256": "3f616aff557d5ac1ca94241bec86ef6fae3e866f4a5100a8128912cd46dcfd8d",
+    "bytes": 6880
+  },
+  "results/revision_20260924/exact_state_no_backoff/seed_condition_metrics.parquet": {
+    "sha256": "d82d1d35ec857d9dd8db071125e426421fcf4588c580fc43df4e8dea825cb6b0",
+    "bytes": 8329947
+  },
+  "results/revision_20260924/exact_state_no_backoff/subset_condition_metrics.parquet": {
+    "sha256": "a95d4c06af228dc2edd1a6a16d5018cf4cbe3420b86d24aac974e4f844a403a8",
+    "bytes": 2753600
+  },
+  "results/revision_20260924/exact_state_no_backoff/subset_event_weighted_metrics.csv": {
+    "sha256": "672196073124b337a59fc468318a3150003c228888f58d3eeaa00fbc6c3bd5ac",
+    "bytes": 12435
+  },
+  "results/revision_20260924/GEFCom_price_cost_reliability_full_precision.csv": {
+    "sha256": "31a93f04d08459ac02d63579407d807e28e09f43444dc209d00571af04512310",
+    "bytes": 4014
+  },
+  "results/revision_20260924/GEFCom_price_coverage_groups.csv": {
+    "sha256": "deaaedf084002f0ad895a4cd05dcff032ae45f709eaf758103a646bb990ff801",
+    "bytes": 863
+  },
+  "results/revision_20260924/Main_Table_5.csv": {
+    "sha256": "eaf1f14fc2049f70d430a95a328e4683211e58e2b2a5955a79c2da2ae0298dca",
+    "bytes": 581
+  },
+  "results/revision_20260924/Main_Table_6.csv": {
+    "sha256": "75a15aadec8602091fa89a4293f4a1c4ef1af12ca122b30f258c1f3333c0b372",
+    "bytes": 747
+  },
+  "results/revision_20260924/Main_Table_7.csv": {
+    "sha256": "a13fee86a151d28c0d03a9b6c9df61da3e7259632177f67bf1c49f1bff887741",
+    "bytes": 386
+  },
+  "results/revision_20260924/Price_adaptation_ablation.csv": {
+    "sha256": "3603e01c52a60453a1969e574b04dbc87bb102049e3168a1bf3a59adb3143fa9",
+    "bytes": 609
+  },
+  "results/revision_20260924/Price_adaptation_cost_reliability.csv": {
+    "sha256": "4b77270e66b54f5b065e6d30cf6679770029bbd2258cad6a74f82bdfee26e965",
+    "bytes": 569
+  },
+  "results/revision_20260924/README.md": {
+    "sha256": "75ccfe939eac8d3c0d07bb8fe5d74b62248b5981895935138cd24f01a8aa5272",
+    "bytes": 1628
+  },
+  "results/revision_20260924/REPRO_CHECKS.json": {
+    "sha256": "53445d8c4c2662d3f96c0371cf22a75589d3c6787dea474884efd9fd890b7fc5",
+    "bytes": 1131
+  }
+}

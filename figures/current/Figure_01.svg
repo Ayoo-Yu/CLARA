@@ -1,0 +1,327 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="558" viewBox="0 0 1024 558" role="img" aria-labelledby="diagram-title diagram-desc">
+  <title id="diagram-title">CLARA interval selection and full-information feedback</title>
+  <desc id="diagram-desc">Forecast context supplies six candidate calibration intervals and the state used by CLARA. Historical coverage determines candidate eligibility; uncertainty-adjusted conditional costs rank the retained candidates. All six intervals are saved at release and evaluated when their observations become available. The contextual calibration landscape stores cost, uncertainty, support, and coverage evidence. Fitted cost and coverage estimates remain fixed in GEFCom testing and are updated with eligible local feedback in local operation.</desc>
+  <defs>
+    <style>
+      text { font-family: "Times New Roman", Tinos, "Liberation Serif", serif; fill: #080808; font-size: 16px; }
+      .section { font-size: 18px; font-weight: 700; }
+      .lower-section { font-size: 20px; font-weight: 700; }
+      .card-heading { font-size: 17px; font-weight: 700; }
+      .small { font-size: 16px; }
+      .math { font-style: italic; }
+      .bold { font-weight: 700; }
+      .panel { fill: #fff; stroke: #353535; stroke-width: 1; }
+      .axis { fill: none; stroke: #151515; stroke-width: .95; }
+      .thin { fill: none; stroke: #151515; stroke-width: .8; }
+      .connector { fill: none; stroke: #151515; stroke-width: .85; marker-end: url(#arrow); }
+      .mini-guide { fill: none; stroke-width: .65; stroke-dasharray: 2.5 2; }
+      .mini-mean { fill: none; stroke-width: .8; }
+      .teal-box { fill: #e7f1f0; stroke: #285c60; stroke-width: 1; }
+      .table-rule { fill: none; stroke: #858585; stroke-width: .9; }
+    </style>
+    <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L8 4 L0 8 L2.3 4 Z" fill="#111"/>
+    </marker>
+    <marker id="mini-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="4.5" markerHeight="4.5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L8 4 L0 8 L2.2 4 Z" fill="#111"/>
+    </marker>
+    <marker id="teal-arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L8 4 L0 8 L2.1 4 Z" fill="#285b60"/>
+    </marker>
+    <linearGradient id="forecast-band" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c9d7f6"/>
+      <stop offset="1" stop-color="#cbd9f4"/>
+    </linearGradient>
+    <linearGradient id="selected-band" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#b0d1d0" stop-opacity=".58"/>
+      <stop offset=".48" stop-color="#71b1b3" stop-opacity=".65"/>
+      <stop offset="1" stop-color="#b8d6d4" stop-opacity=".6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- The canvas contains only editable vector primitives and live text. -->
+  <rect width="1024" height="558" fill="#fff"/>
+
+  <!-- Inter-panel information flow: deliberately behind the panels. -->
+  <g id="information-flow">
+    <path id="raw-forecast-to-library" d="M201.5 153.9 H210.4" class="connector"/><path id="library-to-selection" d="M607.4 153.9 H622" class="connector"/><path id="state-to-selection" d="M185 37.2 V31.5 H615.2 V89 H622" class="connector"/><path id="all-saved-to-evaluation" d="M410.5 296 V327.5" class="connector" stroke-dasharray="3 2"/><path id="observation-to-evaluation" d="M187.4 444.6 H211.5" class="connector"/><path id="evaluation-to-landscape" d="M507.3 444.6 H531.5" class="connector"/><path id="landscape-to-selection" d="M700 329 V295.6" class="connector"/><path id="selection-to-release" d="M990 294.1 V327.5" class="connector" style="stroke:#35656a;stroke-width:1;marker-end:url(#teal-arrow)"/><text x="547" y="27.1" text-anchor="middle" style="font-size:13px">State <tspan class="math">s</tspan></text></g>
+
+  <!-- 1. Forecast context. -->
+  <g id="forecast-context">
+    <text x="10" y="24" class="section">Forecast context</text>
+    <rect x="10" y="37.7" width="191.5" height="232" rx="3" class="panel"/>
+    <text x="105.8" y="59.7" text-anchor="middle" class="math" style="font-size:16.5px">s = (p, c, h<tspan font-size="12" baseline-shift="-3.2px">g</tspan>, r, w, g)</text>
+    <text x="110.0" y="77.7" text-anchor="middle" style="font-size:15.5px">Power (MW)</text>
+
+    <g id="context-plot">
+      <path d="M56.6 86.4 V189.5 H160.2" class="axis"/>
+      <path d="M53.2 86.4 H56.6 M53.2 138 H56.6 M53.2 189.5 H56.6 M56.6 189.5 V194 M107 189.5 V194 M160.2 189.5 V194" class="thin"/>
+      <text x="52.2" y="92.3" text-anchor="end">200</text>
+      <text x="52.2" y="143.7" text-anchor="end">100</text>
+      <text x="52.2" y="195.1" text-anchor="end">0</text>
+      <text x="56.6" y="209.7" text-anchor="middle" textLength="15.8" lengthAdjust="spacingAndGlyphs" style="font-size:16.5px">-6</text>
+      <text x="107" y="209.7" text-anchor="middle">0</text>
+      <text x="160.2" y="209.7" text-anchor="middle">6</text>
+      <text x="108.2" y="227.7" text-anchor="middle" style="font-size:16px" textLength="53.8" lengthAdjust="spacingAndGlyphs">Time (h)</text>
+
+      <path d="M107 130.7 L112.1 126.4 L117.4 126.8 L122.5 123.7 L127.7 118.3 L133.1 114.9 L138.6 108.3 L144.4 110.1 L149.8 103.9 L155 98.2 L160.2 94.4 L160.2 130.4 L155 133.5 L149.8 136.3 L144.4 138.2 L138.6 137.2 L133.1 137.3 L127.7 139.5 L122.5 141.1 L117.4 141.2 L112.1 142.2 L107 143.1 Z" fill="url(#forecast-band)"/>
+      <path d="M107 130.7 V189.5" fill="none" stroke="#8e8e8e" stroke-width=".9" stroke-dasharray="3 2"/>
+      <path d="M56.7 165.1 L62.2 160.9 L67.2 159.7 L73.1 151.7 L79.5 157.6 L86.7 146.6 L93.2 151.5 L99.1 141.1 L103.1 141.6 L107 139.1" fill="none" stroke="#4e4e4e" stroke-width="1.05" stroke-linejoin="round"/>
+      <path d="M107 139.1 C112 138.2 117 136.9 122 134.6 S131.4 128.7 135.5 127.8 S142 130.2 145.4 128.9 S154.5 126.4 160.2 120.9" fill="none" stroke="#131958" stroke-width="1.1" stroke-linejoin="round"/>
+    </g>
+
+    <path d="M19.5 240.8 H32.8" stroke="#15175e" stroke-width="1.1"/>
+    <text x="37" y="246" style="font-size:16px" textLength="51.5" lengthAdjust="spacingAndGlyphs">Forecast</text>
+    <path d="M113 240.8 H127" stroke="#4b4b4b" stroke-width="1"/>
+    <text x="130" y="246" style="font-size:16px" textLength="58.8" lengthAdjust="spacingAndGlyphs">Observed</text>
+    <rect x="47.1" y="254.8" width="16.4" height="9.8" fill="#cbdafa"/>
+    <text x="69.2" y="264.1" style="font-size:16px" textLength="78.9" lengthAdjust="spacingAndGlyphs">95% interval</text>
+  </g>
+
+  <!-- 2. Six candidate intervals. -->
+  <g id="candidate-library">
+    <text x="342.8" y="24" class="section" textLength="137.8" lengthAdjust="spacingAndGlyphs">Candidate library</text>
+
+    <g id="candidate-static">
+      <rect x="211.3" y="37.7" width="127.3" height="112.1" rx="2" fill="#fff" stroke="#D99B68" stroke-width="1"/>
+      <text x="274.9" y="58.3" text-anchor="middle" class="card-heading" style="fill:#945A2D">Static</text>
+      <text x="274.9" y="78.7" text-anchor="middle" class="small" textLength="82.8" lengthAdjust="spacingAndGlyphs">Fixed margin</text>
+      <text x="227.2" y="118.3" transform="rotate(-90 227.2 118.3)" text-anchor="middle" class="small">Margin <tspan class="math">q</tspan></text>
+      <path d="M241.6 130.6 V101.9 M241.6 130.6 H330" fill="none" stroke="#1b1b1b" stroke-width=".6" marker-end="url(#mini-arrow)"/>
+      <path d="M241.6 111 V101.9" fill="none" stroke="#1b1b1b" stroke-width=".6" marker-end="url(#mini-arrow)"/>
+      <path d="M242 116.6 H327.9" stroke="#D99B68" stroke-width=".8"/>
+      <text x="285.5" y="143.3" text-anchor="middle" class="small" textLength="83.94" lengthAdjust="spacingAndGlyphs">Forecast time</text>
+    </g>
+
+    <g id="candidate-aci">
+      <rect x="346.8" y="37.7" width="127.3" height="112.1" rx="2" fill="#fff" stroke="#87B79D" stroke-width="1"/>
+      <text x="410.5" y="58.3" text-anchor="middle" class="card-heading" style="fill:#58716c">ACI</text>
+      <text x="410.5" y="78.7" text-anchor="middle" class="small" textLength="118.1" lengthAdjust="spacingAndGlyphs">Coverage feedback</text>
+      <text x="410.5" y="97.1" text-anchor="middle" class="small" textLength="96.2" lengthAdjust="spacingAndGlyphs">Uncovered obs.</text>
+      <rect x="363.7" y="112.4" width="32.2" height="11.1" fill="#d7e6d9"/>
+      <path d="M363.7 112.4 H395.9 M363.7 123.5 H395.9" class="mini-guide" stroke="#87B79D"/>
+      <path d="M363.7 118 H395.9" class="mini-mean" stroke="#87B79D"/>
+      <text x="383.5" y="108.5" text-anchor="middle" style="font-size:11.3px;fill:#965a63">x</text>
+      <path d="M402.5 118 H422.3" class="thin" marker-end="url(#arrow)"/>
+      <rect x="428.7" y="109.1" width="29.1" height="17.5" fill="#d7e6d9"/>
+      <path d="M428.7 109.1 H457.8 M428.7 126.6 H457.8" class="mini-guide" stroke="#87B79D"/>
+      <path d="M428.7 118 H457.8" class="mini-mean" stroke="#87B79D"/>
+      <text x="381" y="145.4" text-anchor="middle">Issued</text>
+      <text x="443.7" y="145.4" text-anchor="middle">Next</text>
+    </g>
+
+    <g id="candidate-agaci">
+      <rect x="482.1" y="37.7" width="125.3" height="112.1" rx="2" fill="#fff" stroke="#7EACC7" stroke-width="1"/>
+      <text x="544.8" y="58.3" text-anchor="middle" class="card-heading" style="fill:#526a70">AgACI</text>
+      <text x="544.8" y="78.7" text-anchor="middle" class="small" textLength="53.0" lengthAdjust="spacingAndGlyphs">Multiple</text>
+      <text x="544.8" y="97.1" text-anchor="middle" class="small" textLength="74.4" lengthAdjust="spacingAndGlyphs">update rates</text>
+      <g stroke="#7EACC7" class="mini-guide">
+        <path d="M490.7 110 L519.8 119.1"/>
+        <path d="M490.7 125 L519.8 135.1"/>
+        <path d="M490.7 128.9 L519.8 138.2"/>
+        <path d="M490.7 138.5 L519.8 143.1"/>
+      </g>
+      <path d="M526.7 109.5 C530.2 109.5 530 112.5 530 115.5 V121.3 C530 124.3 531.2 125.2 533.4 125.5 C531.2 125.9 530 126.9 530 129.6 V136.5 C530 139.4 530.2 142.1 526.7 142.1" class="thin"/>
+      <path d="M538.2 125.8 H550.2" stroke="#111" stroke-width="1.1" marker-end="url(#arrow)"/>
+      <path d="M558.1 120 L597.9 113.8 L597.9 132.3 L558.1 127.1 Z" fill="#d4e4eb"/>
+      <path d="M558.1 116.8 L597.9 110.9 M558.1 128.9 L597.9 136.2" class="mini-guide" stroke="#7EACC7"/>
+      <path d="M558.1 123.2 L597.9 117.4" class="mini-mean" stroke="#7EACC7"/>
+    </g>
+
+    <g id="candidate-enbpi">
+      <rect x="211.3" y="158" width="127.3" height="111.8" rx="2" fill="#fff" stroke="#ACB5BD" stroke-width="1"/>
+      <text x="274.9" y="178.5" text-anchor="middle" class="card-heading" style="fill:#606060">EnbPI-RH</text>
+      <text x="274.9" y="199.1" text-anchor="middle" class="small" textLength="85.4" lengthAdjust="spacingAndGlyphs">Recent scores</text>
+      <text x="274.9" y="217.7" text-anchor="middle" class="small"><tspan class="math">c</tspan>-quantile</text>
+      <g fill="#dfe3e3" stroke="#ACB5BD" stroke-width=".55">
+        <rect x="226.7" y="250.1" width="5.6" height="3.7"/><rect x="232.3" y="239.1" width="5.3" height="14.7"/><rect x="237.6" y="226.6" width="5.3" height="27.2"/><rect x="242.9" y="235.2" width="5" height="18.6"/><rect x="247.9" y="242.3" width="4.5" height="11.5"/><rect x="252.4" y="247.0" width="4.5" height="6.8"/><rect x="256.9" y="250.6" width="4.4" height="3.2"/></g>
+      <path d="M226.6 253.8 H282.2" class="thin" marker-end="url(#mini-arrow)"/>
+      <text x="224.5" y="259.3" text-anchor="end" class="small">0</text>
+      <path d="M254.8 232.2 V253.6" fill="none" stroke="#757575" stroke-width=".8" stroke-dasharray="2 1.7"/>
+      <path d="M276.1 243.7 H287.8" class="thin" marker-end="url(#arrow)"/>
+      <path d="M295.7 240.1 L330.8 235.1 L330.8 251.9 L295.7 246.7 Z" fill="#e0e0e1"/>
+      <path d="M295.7 237.4 L330.8 232.8 M295.7 249.1 L330.8 256.4" class="mini-guide" stroke="#ACB5BD"/>
+      <path d="M295.7 243.6 L330.8 239.1" class="mini-mean" stroke="#ACB5BD"/>
+      <path d="M295.7 236.6 V251.9" class="mini-guide" stroke="#ACB5BD"/>
+    </g>
+
+    <g id="candidate-tsc">
+      <rect x="346.8" y="158" width="127.3" height="111.8" rx="2" fill="#fff" stroke="#B29DC3" stroke-width="1"/>
+      <text x="410.5" y="178.5" text-anchor="middle" class="card-heading" style="fill:#756187">TSC</text>
+      <text x="410.5" y="199.1" text-anchor="middle" class="small" textLength="82.5" lengthAdjust="spacingAndGlyphs">Tuned before</text>
+      <text x="410.5" y="217.7" text-anchor="middle" class="small" textLength="41.6" lengthAdjust="spacingAndGlyphs">testing</text>
+      <g fill="none" stroke="#B29DC3" stroke-width=".75">
+        <circle cx="357.6" cy="244.8" r="3.6"/>
+        <circle cx="371.5" cy="244.8" r="3.6"/>
+        <circle cx="389.6" cy="244.8" r="6.5"/>
+        <path d="M386 244.5 L388.8 249 L393.7 239.7" stroke-width=".8"/>
+      </g>
+      <text x="400.8" y="248.6" style="font-size:15px">…</text>
+      <path d="M417.2 244.1 H428.8" class="thin" marker-end="url(#arrow)"/>
+      <path d="M433.8 240.2 L466.8 233.5 L466.8 253.3 L433.8 247.3 Z" fill="#e3daea"/>
+      <path d="M433.8 237 L466.8 230.9 M433.8 249.4 L466.8 257.8" class="mini-guide" stroke="#B29DC3"/>
+      <path d="M433.8 242.8 L466.8 236.6" class="mini-mean" stroke="#B29DC3"/>
+      <path d="M433.8 235.8 V251.8" class="mini-guide" stroke="#B29DC3"/>
+    </g>
+
+    <g id="candidate-eee">
+      <rect x="482.1" y="158" width="125.3" height="111.8" rx="2" fill="#fff" stroke="#DDC47E" stroke-width="1"/>
+      <text x="544.8" y="178.5" text-anchor="middle" class="card-heading" style="fill:#7a6941">EEE</text>
+      <text x="544.8" y="199.1" text-anchor="middle" class="small" textLength="99.45" lengthAdjust="spacingAndGlyphs">Mean endpoints</text>
+      <text x="499" y="217.2" text-anchor="middle" class="math">l</text>
+      <text x="515" y="217.2" text-anchor="middle" class="math">u</text>
+      <text x="565.3" y="217.2" text-anchor="middle" class="math">l</text>
+      <path d="M563.3 205 H568" stroke="#111" stroke-width=".7"/>
+      <text x="590.3" y="217.2" text-anchor="middle" class="math">u</text>
+      <path d="M587.9 205 H593.6" stroke="#111" stroke-width=".7"/>
+      <g fill="none" stroke="#DDC47E" stroke-width=".65">
+        <path d="M499 227.2 H515 M499 225.4 V229 M515 225.4 V229"/>
+        <path d="M499 238.9 H515 M499 237.1 V240.7 M515 237.1 V240.7"/>
+        <path d="M499 250.6 H515 M499 248.8 V252.4 M515 248.8 V252.4"/>
+        <path d="M499 262.3 H515 M499 260.5 V264.1 M515 260.5 V264.1"/>
+      </g>
+      <path d="M527.8 225.3 C531.2 225.3 530.9 228.5 530.9 232 V239.4 C530.9 242.8 532 244.6 534.1 245.5 C532 246.4 530.9 248 530.9 251.4 V259 C530.9 262.6 531.2 266 527.8 266" class="thin"/>
+      <path d="M538.7 253.6 H554.2" stroke="#111" stroke-width="1" marker-end="url(#arrow)"/>
+      <path d="M565.2 243.2 C573.5 245.7 581.8 245.0 590.1 243.1 V253.3 C581.6 250.8 573.4 251.1 565.2 253.3 Z" fill="#eee4c7"/>
+      <path d="M565.2 240.8 C573.5 243.8 581.8 242.8 590.1 240.6 M565.2 255.0 C573.5 252.9 581.8 253.3 590.1 255.7" class="mini-guide" stroke="#DDC47E"/>
+      <path d="M565.2 247.8 H590.1" class="mini-mean" stroke="#DDC47E"/>
+      <path d="M565.2 239.6 V256.2" class="mini-guide" stroke="#DDC47E"/>
+    </g>
+
+    <text x="410.5" y="289.7" text-anchor="middle">Save all six intervals</text>
+  </g>
+
+  <!-- 3. CLARA selection. -->
+  <g id="clara-selection">
+    <text x="622.8" y="24" class="section" style="font-size:18.5px;fill:#07555b" textLength="139.5" lengthAdjust="spacingAndGlyphs">CLARA selection</text>
+    <rect x="623" y="37.7" width="391.1" height="256.4" rx="3.5" fill="#ffffff" stroke="#396970" stroke-width="1"/>
+    <rect x="633.9" y="48.7" width="369.4" height="33.8" rx="2.5" class="teal-box"/>
+    <text x="818.6" y="71.2" text-anchor="middle">Price scenario <tspan class="math">θ</tspan>: <tspan class="math">ρ = κ/π</tspan> (symmetric prices)</text>
+    <path d="M717.7 82.5 V92.8" class="connector"/><path d="M911.9 82.5 V92.8" class="connector"/><rect x="633.9" y="95.2" width="167.7" height="76.3" rx="2.5" class="teal-box"/>
+    <text x="717.8" y="116.9" text-anchor="middle" class="card-heading" textLength="118.8" lengthAdjust="spacingAndGlyphs">Conditional cost</text>
+    <text x="717.8" y="139.1" text-anchor="middle">Estimate + uncertainty</text>
+    <text x="717.8" y="161.5" text-anchor="middle" style="font-size:17px">Score <tspan class="math">Q</tspan></text>
+
+    <rect x="820.5" y="95.2" width="182.8" height="76.3" rx="2.5" class="teal-box"/>
+    <text x="911.9" y="116.9" text-anchor="middle" class="card-heading">Historical coverage</text>
+    <text x="911.9" y="138.6" text-anchor="middle" style="font-size:16.5px">Coverage ≥ <tspan class="math" style="font-size:17px">c − ε<tspan font-size="11.7" baseline-shift="-2.6px">c</tspan>(ρ)</tspan></text>
+    <text x="911.9" y="161.6" text-anchor="middle" style="font-size:16.5px">TUWR ≤ <tspan class="math">τ<tspan font-size="11.7" baseline-shift="-2.6px">U</tspan>(ρ)</tspan></text>
+    <!-- Cost scores bypass coverage screening and enter the final ranking. -->
+    <path id="cost-to-ranking" d="M717.7 171.5 V251.2" class="connector"/><path d="M911.9 171.5 V183.3" class="connector"/><rect x="820.5" y="185.3" width="182.8" height="52.1" rx="2.5" class="teal-box"/>
+    <text x="911.9" y="207" text-anchor="middle" style="font-size:15.5px">Pass → retain candidates</text>
+    <text x="911.9" y="227.5" text-anchor="middle" style="font-size:15.5px">None pass → min. violation</text>
+    <path d="M911.9 237.4 V251.2" class="connector"/>
+    <rect x="633.9" y="252.7" width="369.4" height="32.5" rx="2.2" fill="#d2e8e5" stroke="#285c60" stroke-width="1"/>
+    <text x="818.6" y="274.3" text-anchor="middle" class="card-heading" style="font-size:16.5px">Select lowest <tspan class="math">Q</tspan> among retained candidates</text>
+  </g>
+
+  <!-- 4. Selected interval and its endpoint display. -->
+  <g id="selected-interval" transform="translate(804.7 0)">
+    <text x="10" y="316.4" class="lower-section" textLength="138.0" lengthAdjust="spacingAndGlyphs">Selected interval</text>
+    <rect x="10" y="329" width="199.4" height="219.4" rx="3" class="panel"/>
+    <text x="109.7" y="351" text-anchor="middle" style="font-size:17px">[<tspan class="math">l, u</tspan>] (action <tspan class="math bold">m<tspan font-size="11.5" baseline-shift="super">*</tspan></tspan>)</text>
+    <path d="M70.8 372.8 H77.2 V370.8 L84.4 373.4 L77.2 376 V374 H70.8 Z" fill="#111"/>
+    <text x="93.1" y="379.1" style="font-size:16.5px">Forecast</text>
+
+    <g id="selected-plot">
+      <path d="M69.4 396.2 V517.7 H173" class="axis"/>
+      <path d="M66 396.2 H69.4 M66 426.575 H69.4 M66 456.95 H69.4 M66 487.325 H69.4 M66 517.7 H69.4 M69.4 517.7 V522 M118.2 517.7 V522 M167.5 517.7 V522" class="thin"/>
+      <text x="64" y="402" text-anchor="end" style="font-size:16.5px">200</text>
+      <text x="64" y="432.375" text-anchor="end" style="font-size:16.5px">150</text>
+      <text x="64" y="462.75" text-anchor="end" style="font-size:16.5px">100</text>
+      <text x="64" y="493.125" text-anchor="end" style="font-size:16.5px">50</text>
+      <text x="64" y="523.5" text-anchor="end" style="font-size:16.5px">0</text>
+      <text x="69.4" y="539.1" text-anchor="middle" textLength="15.8" lengthAdjust="spacingAndGlyphs" style="font-size:16.5px">-6</text>
+      <text x="118.2" y="539.1" text-anchor="middle">0</text>
+      <text x="167.5" y="539.1" text-anchor="middle" style="font-size:16.5px">6</text>
+      <text x="177.5" y="539.1" style="font-size:16.5px">h</text>
+      <text x="30.5" y="448" transform="rotate(-90 30.5 448)" text-anchor="middle" style="font-size:16.5px" textLength="87.2" lengthAdjust="spacingAndGlyphs">Power (MW)</text>
+      <text x="154.5" y="510" text-anchor="middle" class="math" style="font-size:17px" textLength="36.8" lengthAdjust="spacingAndGlyphs">h = 6</text>
+
+      <path d="M 118.2 448.4061 L 122.9261 443.3387 L 127.8376 443.8101 L 132.5637 440.1568 L 137.3825 433.7931 L 142.3867 429.7863 L 147.4835 422.0084 L 152.8583 424.1297 L 157.8624 416.8232 L 162.6812 410.1059 L 167.5 405.6277 L 167.5 448.0526 L 162.6812 451.7058 L 157.8624 455.0055 L 152.8583 457.2446 L 147.4835 456.0661 L 142.3867 456.184 L 137.3825 458.7766 L 132.5637 460.6622 L 127.8376 460.78 L 122.9261 461.9585 L 118.2 463.0191 Z" fill="url(#forecast-band)"/>
+      <path d="M 118.2 448.4061 V 517.7" stroke="#909090" stroke-width=".9" stroke-dasharray="3 2" fill="none"/>
+      <path d="M 69.4968 488.9454 L 74.8222 483.9958 L 79.6635 482.5817 L 85.3762 473.1539 L 91.573 480.1069 L 98.5444 467.1437 L 104.8381 472.9182 L 110.5508 460.6622 L 114.4238 461.2514 L 118.2 458.3052" fill="none" stroke="#4d4d4d" stroke-width="1.05" stroke-linejoin="round"/>
+      <rect x="159.7" y="401.7" width="17.5" height="65.2" fill="url(#selected-band)"/>
+      <path d="M 118.2 458.3052 C 122.8335 457.2446 127.4669 455.7126 132.1004 453.0021 S 140.8113 446.0492 144.6107 444.9886 S 150.6342 447.8169 153.785 446.2849 S 162.2179 443.3387 167.5 436.8571" fill="none" stroke="#171959" stroke-width="1.15"/>
+      <path d="M167.5 401.7 V466.9 M158.6 401.7 H177.3 M158.6 466.9 H177.3" fill="none" stroke="#4b8589" stroke-width="1.4"/>
+      <text x="178.6" y="405.9" class="math" style="font-size:17px">u</text>
+      <text x="178.6" y="471.7" class="math" style="font-size:17px">l</text>
+    </g>
+  </g>
+
+  <!-- 5. Full-information feedback, evaluating every candidate. -->
+  <g id="full-information-feedback">
+    <text x="10" y="316.4" class="lower-section" textLength="219" lengthAdjust="spacingAndGlyphs">Full-information feedback</text>
+
+    <g id="realized-timeline" transform="translate(-248.6 -13.6)">
+      <rect x="258.6" y="342.6" width="177.4" height="219.4" rx="3" class="panel"/>
+      <text x="344.8" y="365.2" text-anchor="middle" class="card-heading">Realized</text>
+      <text x="344.8" y="383.8" text-anchor="middle" class="card-heading">timeline</text>
+      <text x="379.3" y="429.3" text-anchor="middle" class="math" style="font-size:18px">Y<tspan font-size="13" baseline-shift="-2.6px">t+h</tspan></text>
+      <text x="379.3" y="452.8" text-anchor="middle" style="font-size:16.5px">arrives</text>
+      <path d="M379.5 458.1 V477" class="connector"/>
+      <path d="M279.9 483.5 H409.3" class="connector"/>
+      <path d="M288.3 478 V489" class="axis"/>
+      <circle cx="379.5" cy="483.5" r="3.4" fill="#080808"/>
+      <text x="288.2" y="510" text-anchor="middle" class="math" style="font-size:17px">t</text>
+      <text x="379.5" y="510" text-anchor="middle" class="math" style="font-size:17px" textLength="31.5" lengthAdjust="spacingAndGlyphs">t + h</text>
+    <circle cx="327.2" cy="486.2" r=".6" fill="#111"/><circle cx="333.4" cy="486.2" r=".6" fill="#111"/><circle cx="339.6" cy="486.2" r=".6" fill="#111"/></g>
+
+    <g id="evaluation-table" transform="translate(-238 -13.6)">
+      <rect x="451" y="342.6" width="294.3" height="219.4" rx="3" class="panel"/>
+      <text x="599.5" y="365.2" text-anchor="middle" class="card-heading">Evaluate all six intervals</text>
+      <rect x="468" y="376.6" width="267.3" height="28.7" fill="#cae1ee"/>
+      <rect x="468" y="376.6" width="267.3" height="161.7" class="table-rule"/>
+      <path d="M576.8 376.6 V538.3 M653.7 376.6 V538.3 M468 405.3 H735.3 M468 427.5 H735.3 M468 449.7 H735.3 M468 471.8 H735.3 M468 494 H735.3 M468 516.2 H735.3" class="table-rule"/>
+      <text x="522.4" y="397.0" text-anchor="middle" class="card-heading" textLength="73.7" lengthAdjust="spacingAndGlyphs">Candidate</text>
+      <text x="615.2" y="397.0" text-anchor="middle" class="card-heading">ERRF <tspan class="math">f</tspan></text>
+      <text x="694.5" y="397.0" text-anchor="middle" class="card-heading" textLength="59.7" lengthAdjust="spacingAndGlyphs">Covered</text>
+
+      <g text-anchor="middle">
+        <text x="522.4" y="421.3" style="fill:#945A2D;font-size:16.5px">Static</text>
+        <text x="522.4" y="443.4" style="fill:#58716c;font-size:16.5px">ACI</text>
+        <text x="522.4" y="465.5" style="fill:#526a70;font-size:16.5px">AgACI</text>
+        <text x="522.4" y="487.6" style="fill:#606060;font-size:16.5px">EnbPI-RH</text>
+        <text x="522.4" y="509.8" style="fill:#756187;font-size:16.5px">TSC</text>
+        <text x="522.4" y="532" style="fill:#7a6941;font-size:16.5px">EEE</text>
+        <text x="615.2" y="421.3" class="math" style="font-size:19px">ℓ<tspan font-size="13.3" baseline-shift="-2.8px">1</tspan></text>
+        <text x="615.2" y="443.4" class="math" style="font-size:19px">ℓ<tspan font-size="13.3" baseline-shift="-2.8px">2</tspan></text>
+        <text x="615.2" y="465.5" class="math" style="font-size:19px">ℓ<tspan font-size="13.3" baseline-shift="-2.8px">3</tspan></text>
+        <text x="615.2" y="487.6" class="math" style="font-size:19px">ℓ<tspan font-size="13.3" baseline-shift="-2.8px">4</tspan></text>
+        <text x="615.2" y="509.8" class="math" style="font-size:19px">ℓ<tspan font-size="13.3" baseline-shift="-2.8px">5</tspan></text>
+        <text x="615.2" y="532" class="math" style="font-size:19px">ℓ<tspan font-size="13.3" baseline-shift="-2.8px">6</tspan></text>
+        <text x="694.5" y="421.3" style="font-size:16.5px">0 or 1</text>
+        <text x="694.5" y="443.4" style="font-size:16.5px">0 or 1</text>
+        <text x="694.5" y="465.5" style="font-size:16.5px">0 or 1</text>
+        <text x="694.5" y="487.6" style="font-size:16.5px">0 or 1</text>
+        <text x="694.5" y="509.8" style="font-size:16.5px">0 or 1</text>
+        <text x="694.5" y="532" style="font-size:16.5px">0 or 1</text>
+      </g>
+    </g>
+
+    <g id="historical-evidence" transform="translate(-226.9 -13.6)">
+      <rect x="759.9" y="342.6" width="254.2" height="219.4" rx="3" class="panel"/>
+      <text x="887" y="361.8" text-anchor="middle" class="card-heading">Contextual calibration</text>
+      <text x="887" y="379.8" text-anchor="middle" class="card-heading">landscape</text>
+      <text x="903" y="397.6" text-anchor="middle" class="math" style="font-size:16px" textLength="67.3" lengthAdjust="spacingAndGlyphs">Action (m)</text>
+      <g text-anchor="middle" class="small">
+        <text x="818.9" y="413.2">1</text><text x="852.2" y="413.2">2</text>
+        <text x="885.5" y="413.2">3</text><text x="918.8" y="413.2">4</text>
+        <text x="952.1" y="413.2">5</text><text x="985.4" y="413.2">6</text>
+      </g>
+      <text x="779" y="465.5" transform="rotate(-90 779 465.5)" text-anchor="middle" style="font-size:16.5px">State (<tspan class="math">s</tspan>)</text>
+      <g text-anchor="end">
+        <text x="797.2" y="434.1">1</text><text x="797.2" y="452.7">2</text>
+        <text x="797.2" y="471.4">3</text><text x="797.2" y="509.1">N</text>
+      </g>
+      <rect x="802.3" y="419.1" width="199.8" height="93" class="table-rule"/>
+      <path d="M835.6 419.1 V512.1 M868.9 419.1 V512.1 M902.2 419.1 V512.1 M935.5 419.1 V512.1 M968.8 419.1 V512.1 M802.3 437.7 H1002.1 M802.3 456.3 H1002.1 M802.3 474.9 H1002.1 M802.3 493.5 H1002.1" class="table-rule"/>
+      <rect x="868.9" y="456.3" width="33.3" height="18.6" fill="#fff" stroke="#2fb7bf" stroke-width="4.2"/>
+      <rect x="868.9" y="456.3" width="33.3" height="18.6" fill="none" stroke="#239fa7" stroke-width="1.3"/>
+      <text x="909" y="471.5" class="math bold" style="font-size:17px">m<tspan font-size="11.5" baseline-shift="super">*</tspan></text>
+      <text x="887" y="537.3" text-anchor="middle" style="font-size:16.5px" textLength="184" lengthAdjust="spacingAndGlyphs">Cost, SE, support, coverage</text>
+    <circle cx="794.8" cy="479.3" r=".65" fill="#111"/><circle cx="794.8" cy="483.8" r=".65" fill="#111"/><circle cx="794.8" cy="488.3" r=".65" fill="#111"/></g>
+
+    </g>
+</svg>
