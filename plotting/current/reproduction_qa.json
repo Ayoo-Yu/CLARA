@@ -1,46 +1,44 @@
 {
   "04": {
-    "bytes_identical": true,
+    "exit_code": 0,
     "dimensions_match": true,
     "pixels_identical": true,
+    "bytes_identical": true,
     "different_pixels": 0
   },
   "05": {
-    "bytes_identical": false,
-    "dimensions_match": true,
-    "pixels_identical": false,
-    "different_pixels": 144059,
-    "all_visible_text_identical": true,
-    "note": "Numeric text, marker positions and axes geometry retained; font version changes small glyph metrics. Authoritative published artwork is unchanged."
-  },
-  "06": {
-    "bytes_identical": true,
+    "exit_code": 0,
     "dimensions_match": true,
     "pixels_identical": true,
+    "bytes_identical": true,
+    "different_pixels": 0
+  },
+  "06": {
+    "exit_code": 0,
+    "dimensions_match": true,
+    "pixels_identical": true,
+    "bytes_identical": true,
     "different_pixels": 0
   },
   "07": {
-    "bytes_identical": true,
+    "exit_code": 0,
     "dimensions_match": true,
     "pixels_identical": true,
+    "bytes_identical": true,
     "different_pixels": 0
   },
   "08": {
-    "bytes_identical": true,
+    "exit_code": 0,
     "dimensions_match": true,
     "pixels_identical": true,
-    "different_pixels": 0
-  },
-  "09": {
     "bytes_identical": true,
-    "dimensions_match": true,
-    "pixels_identical": true,
     "different_pixels": 0
   },
   "S1": {
-    "bytes_identical": true,
+    "exit_code": 0,
     "dimensions_match": true,
     "pixels_identical": true,
+    "bytes_identical": true,
     "different_pixels": 0
   }
 }

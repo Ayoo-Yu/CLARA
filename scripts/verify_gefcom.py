@@ -18,7 +18,7 @@ def main():
     parser.add_argument("--policy-root", type=Path, help="Extracted full policy evidence; otherwise discover assets or use the bundled single-fold fixture")
     parser.add_argument("--output", type=Path, default=REPOSITORY / "results/recomputed/gefcom")
     args = parser.parse_args()
-    locations = [REPOSITORY / "assets/gefcom_policy_evidence_v1", REPOSITORY.parent / "assets/gefcom_policy_evidence_v1", args.input]
+    locations = [args.input]
     policy_root = args.policy_root or next(p for p in locations if (p / "policy_index.json").is_file())
     manifest = json.loads((policy_root / "policy_index.json").read_text(encoding="utf-8"))
     checked = 0
@@ -45,9 +45,9 @@ def main():
     zones = frame.groupby(["zone_or_farm", "method"], observed=True)[metrics].mean()
     overall = zones.groupby("method", observed=True).mean().sort_values("ERRF")
     by_price = frame.groupby(["price_id", "zone_or_farm", "method"], observed=True)[metrics].mean().groupby(["price_id", "method"], observed=True).mean()
-    np.testing.assert_allclose(overall.loc["CLARA", "ERRF"], 2.8452, atol=0.00005, rtol=0)
-    np.testing.assert_allclose(overall.loc["CLARA", "mean_rank"], 2.66, atol=0.005, rtol=0)
-    np.testing.assert_allclose(overall.loc["CLARA", "relative_excess_pct"], 1.65, atol=0.005, rtol=0)
+    np.testing.assert_allclose(overall.loc["CLARA", "ERRF"], 2.853115784150112, atol=1e-12, rtol=0)
+    np.testing.assert_allclose(overall.loc["CLARA", "mean_rank"], 3.2717727272727277, atol=1e-12, rtol=0)
+    np.testing.assert_allclose(overall.loc["CLARA", "relative_excess_pct"], 2.4130547869879093, atol=1e-12, rtol=0)
     args.output.mkdir(parents=True, exist_ok=True)
     overall.to_csv(args.output / "overall.csv")
     by_price.to_csv(args.output / "by_price.csv")

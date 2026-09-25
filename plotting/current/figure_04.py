@@ -6,14 +6,17 @@ import pandas as pd
 import matplotlib as mpl
 mpl.use('Agg')
 import matplotlib.pyplot as plt
-from matplotlib.colors import LinearSegmentedColormap, LogNorm
+from matplotlib.colors import LinearSegmentedColormap, LogNorm, TwoSlopeNorm
 from matplotlib.patches import Rectangle
 from matplotlib import font_manager
 
-HERE = Path(__file__).resolve().parent
-REPO = HERE.parents[1]
-DATA = REPO / 'results/current_figure_data/figure04'
-OUT = REPO / 'outputs/current/figure04'
+SCRIPT_DIR=Path(__file__).resolve().parent
+REPO=SCRIPT_DIR.parents[1]
+HERE=REPO/'results/current_figure_data/figure04'
+OUTPUT=REPO/'outputs/current/figure04'
+OUTPUT.mkdir(exist_ok=True,parents=True)
+DATA = HERE
+OUT = OUTPUT
 OUT.mkdir(parents=True, exist_ok=True)
 
 mpl.rcParams.update({
@@ -105,12 +108,12 @@ style(ax_b, 'b', 'Cost of retaining one candidate', grid='x')
 
 t = pd.read_csv(DATA / 'conditional_forecaster_transfer_all_prices.csv')
 t = t.loc[t.price_id.eq('ALL')].pivot(index='target_predictor', columns='source_predictor', values='change_pct').reindex(index=FORECASTERS, columns=FORECASTERS)
-cmap_transfer = LinearSegmentedColormap.from_list('transfer_cost', ['#FFFFFF', '#B76453'])
-im = ax_c.imshow(t, vmin=0, vmax=.4, cmap=cmap_transfer, aspect='auto', interpolation='nearest')
+cmap_transfer = LinearSegmentedColormap.from_list('transfer_cost', ['#77A3BE', '#FFFFFF', '#B76453'])
+im = ax_c.imshow(t, norm=TwoSlopeNorm(vmin=-.4, vcenter=0, vmax=.8), cmap=cmap_transfer, aspect='auto', interpolation='nearest')
 for i in range(4):
     for j in range(4):
         value = float(t.iloc[i, j])
-        ax_c.text(j, i, '0' if i == j else f'+{value:.2f}', ha='center', va='center', fontsize=9)
+        ax_c.text(j, i, '0' if i == j else f'{value:+.2f}', ha='center', va='center', fontsize=9)
 ax_c.set_xticks(range(4), FORECASTERS, rotation=32, ha='right', rotation_mode='anchor')
 ax_c.set_yticks(range(4), FORECASTERS)
 ax_c.set(xlabel='Source forecaster', ylabel='Actual forecaster')
@@ -120,13 +123,13 @@ ax_c.grid(which='minor', color='white', linewidth=.7)
 ax_c.tick_params(which='minor', length=0)
 style(ax_c, 'c', 'Transferring a conditional rule')
 cax_c = fig.add_axes([.452, .13, .012, .37])
-cb_c = fig.colorbar(im, cax=cax_c, ticks=[0, .1, .2, .3, .4])
-cb_c.set_label('ERRF increase (%)', labelpad=5)
+cb_c = fig.colorbar(im, cax=cax_c, ticks=[-.4, 0, .4, .8])
+cb_c.set_label('ERRF change (%)', labelpad=5)
 cb_c.ax.tick_params(labelsize=8, length=2)
 
 r = pd.read_csv(DATA / 'all_candidate_overall_and_rolling_reliability.csv')
 assert len(r) == 13200
-xmin, xmax, ymin, ymax = -15, 30, 0, 70
+xmin, xmax, ymin, ymax = -15, 30, 0, 80
 assert r.overall_gap_pp.between(xmin, xmax).all() and r.TUWR_pct.between(ymin, ymax).all()
 cmap_counts = LinearSegmentedColormap.from_list('condition_count', ['#D8E5EB', '#6795AC', '#16415D'])
 hb = ax_d.hexbin(r.overall_gap_pp, r.TUWR_pct, gridsize=(32, 25),
@@ -137,7 +140,7 @@ ax_d.axvline(0, color='black', lw=.8, ls='--')
 ax_d.set(xlim=(xmin, xmax), ylim=(ymin, ymax),
          xlabel='Overall coverage − target (pp)', ylabel='TUWR (%)')
 ax_d.set_xticks([-10, 0, 10, 20, 30])
-ax_d.set_yticks([0, 20, 40, 60])
+ax_d.set_yticks([0, 20, 40, 60, 80])
 style(ax_d, 'd', 'Overall versus rolling coverage', grid='both')
 cax_d = fig.add_axes([.95, .13, .012, .37])
 count_ticks = [10 ** k for k in range(5) if 10 ** k <= hb.get_array().max()]
@@ -188,7 +191,7 @@ manifest = {
                'previous_lower_axes_horizontal_gap_mm': (.625 - .415) * 188},
     'a': {'candidate_count': 6, 'price_coverage_cells': 55, 'conditions_per_candidate_cell': 200},
     'b': {'conditions_per_candidate': 11000, 'box': 'quartiles and median', 'whiskers': 'minimum and maximum'},
-    'c': {'forecaster_pairs': 16, 'price_aggregation': 'all five', 'CI_location': 'source comparison table'},
+    'c': {'forecaster_pairs': 16, 'price_aggregation': 'all five', 'source_period': 'available outcomes before 2013-09-05; target zone excluded'},
     'd': {'unique_candidate_conditions': len(r), 'hexbin_count_sum': int(hb.get_array().sum()),
           'price_copies_removed_after_exact_invariance_check': True},
     'outside_canvas_text': outside,

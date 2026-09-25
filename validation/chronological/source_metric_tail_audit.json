@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "primary_max_price_excess_definition": "For each method: maximum across five price settings of (method price-mean ERRF / lowest of nine methods price-mean ERRF - 1) * 100.",
+  "max_price_excess_pct": {
+    "CLARA": 3.8438972409368555,
+    "LinUCB": 4.139660879565477,
+    "CART": 9.030313636354181,
+    "EEE": 9.769064540455119,
+    "TSC": 12.57620614287287,
+    "ACI": 15.783207598091732,
+    "EnbPI-RH": 18.12336029032955,
+    "AgACI": 21.52023657749158,
+    "Static": 23.571426262995267
+  },
+  "CLARA_max_price": "R01",
+  "CLARA_rank": 3.2717727272727273,
+  "CLARA_condition_excess_pct": 2.4130547869879093,
+  "original_transfer_definition_matches": true,
+  "all_state_lookup_checks": 26400,
+  "source_rule_action_checks": 990000,
+  "definition": "Six-candidate event-weighted source-state mean costs; source-forecaster mean fallback for empty states; change only source predictor while retaining target context categories and candidate intervals; denominator is the target forecaster matched rule, not CLARA.",
+  "intended_protocol_differences": [
+    "Source labels available by T0 only, held-out zone excluded",
+    "Same post-T0 target subset as the main comparison",
+    "10000 rather than original 5000 zone bootstrap draws"
+  ],
+  "transfer_seed_rows": 132000,
+  "transfer_pooled_cells": 44000,
+  "transfer_all_price_increases": 9,
+  "transfer_all_price_decreases": 3,
+  "transfer_min_pct": -0.3269938527086347,
+  "transfer_max_pct": 0.706944760014605
+}

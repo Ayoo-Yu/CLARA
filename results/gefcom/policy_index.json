@@ -124,5 +124,7 @@
   ],
   "selection_family": "DIRECTIONAL_REPAIR",
   "scale": 1.0,
-  "scope": "One held-out fold and seed, all five prices; full 150-policy evidence is supplied separately."
+  "scope": "One held-out fold and seed, all five prices; full 150-policy evidence is supplied separately.",
+  "protocol": "GEFCom source prefix available before 2013-09-05 UTC; frozen post-cutoff transfer",
+  "version": "1.1.0"
 }

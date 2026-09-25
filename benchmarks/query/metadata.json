@@ -1,197 +1,72 @@
 {
-  "status": "PASS_SOURCE_AND_NUMERICAL_CHECKS_BACKGROUND_LOAD_DESCRIPTIVE",
-  "idle_gate_passed": false,
-  "old_idle_receipts_preserved": true,
-  "raw_calls_retained": 1920,
+  "status": "PASS",
+  "runs": 2,
+  "raw_calls": 1920,
   "slow_calls_removed": 0,
-  "complete_attempts": [
-    "attempt_02",
-    "attempt_03"
+  "cpu_load_range": [
+    17.0,
+    35.5
   ],
-  "warmup_per_workload_per_attempt": 5,
-  "source_identity_checked": true,
-  "policy": "DIRECTIONAL_REPAIR_S10",
-  "fitted_states": 6600,
-  "candidate_count": 6,
-  "fixture_queries": 220,
-  "correctness_checks_per_attempt": {
-    "state_mappings": 6600,
-    "query_actions": 220,
-    "selected_endpoints": 440
-  },
-  "cpu_load_percent": {
-    "minimum": 10.3,
-    "maximum": 22.2,
-    "maximum_competing_python_one_core_percent": 0.0
-  },
-  "rows": [
+  "receipts": [
     {
-      "workload": "lookup_only",
-      "operation": "Lookup only",
-      "batch": 1,
-      "repeats": 440,
-      "median_ms": 6.80665,
-      "p95_ms": 7.6529799999999994,
-      "p99_ms": 15.356007000000004,
-      "mean_ms": 7.086893409090909,
-      "minimum_ms": 6.3887,
-      "maximum_ms": 32.1448,
-      "amortized_median_us_per_query": 6806.650000000001
-    },
-    {
-      "workload": "lookup_only",
-      "operation": "Lookup only",
-      "batch": 220,
-      "repeats": 200,
-      "median_ms": 7.8001000000000005,
-      "p95_ms": 9.546079999999995,
-      "p99_ms": 16.135771,
-      "mean_ms": 8.1052815,
-      "minimum_ms": 7.3006,
-      "maximum_ms": 16.4871,
-      "amortized_median_us_per_query": 35.455
-    },
-    {
-      "workload": "lookup_interval",
-      "operation": "Lookup + interval",
-      "batch": 1,
-      "repeats": 440,
-      "median_ms": 6.9975000000000005,
-      "p95_ms": 7.663329999999999,
-      "p99_ms": 14.840433000000003,
-      "mean_ms": 7.185260227272726,
-      "minimum_ms": 6.5404,
-      "maximum_ms": 15.3567,
-      "amortized_median_us_per_query": 6997.500000000001
-    },
-    {
-      "workload": "lookup_interval",
-      "operation": "Lookup + interval",
-      "batch": 220,
-      "repeats": 200,
-      "median_ms": 8.8538,
-      "p95_ms": 9.783304999999999,
-      "p99_ms": 17.139015,
-      "mean_ms": 9.0941065,
-      "minimum_ms": 8.2749,
-      "maximum_ms": 24.455,
-      "amortized_median_us_per_query": 40.24454545454545
-    },
-    {
-      "workload": "width_encoding_lookup_interval",
-      "operation": "Width encoding + lookup + interval",
-      "batch": 1,
-      "repeats": 440,
-      "median_ms": 11.43375,
-      "p95_ms": 12.640869999999996,
-      "p99_ms": 20.436779,
-      "mean_ms": 11.809435909090908,
-      "minimum_ms": 10.6323,
-      "maximum_ms": 38.4298,
-      "amortized_median_us_per_query": 11433.75
-    },
-    {
-      "workload": "width_encoding_lookup_interval",
-      "operation": "Width encoding + lookup + interval",
-      "batch": 220,
-      "repeats": 200,
-      "median_ms": 13.7289,
-      "p95_ms": 14.773714999999997,
-      "p99_ms": 22.038188999999996,
-      "mean_ms": 14.083586,
-      "minimum_ms": 12.9624,
-      "maximum_ms": 22.9903,
-      "amortized_median_us_per_query": 62.404090909090904
-    }
-  ],
-  "source_receipts": {
-    "attempt_02": {
-      "timing_receipt.json": "0c880dbdb6cfc193b33d664bceb4199985014a93ff4950928cb37e8a9619162a",
-      "correctness_receipt.json": "6b05edf1c2f85a7615ccb8fdd1ae82ba1cffe5557dcdc3c13393fe8b2143e49c",
-      "source_manifest.json": "6832d5710dd6edfbeebba0335e7138fcb26a85d2425bbbbf098d78bf39e910ee",
-      "environment.json": "2dee37bcc3388f69605ca0f8ec6b8c03bb070bf1ae951db91ed2a7b357040aa5",
-      "load_telemetry.json": "cff69065b7f3c384e576326a7b55ce8440dafa3e765cbca7dd670296dbdffc98",
-      "query_measurements.csv": "95144f88e21d98679756497d304b3e704ac43637c1ba273cf16bd383603f3be4"
-    },
-    "attempt_03": {
-      "timing_receipt.json": "24001b18ea30f9347a59b591e28f190dab6b7abb3994e1c65c8f7953d97cdbbe",
-      "correctness_receipt.json": "6b05edf1c2f85a7615ccb8fdd1ae82ba1cffe5557dcdc3c13393fe8b2143e49c",
-      "source_manifest.json": "6832d5710dd6edfbeebba0335e7138fcb26a85d2425bbbbf098d78bf39e910ee",
-      "environment.json": "722075a5e47f530962de698fa26f046260466c9bd15b317137ab7fe30868cfa0",
-      "load_telemetry.json": "b9a826cfd4df36b9222fcdae11ce73828808e50bed985bb7638bd1ae115b6aee",
-      "query_measurements.csv": "9880adb391dc68a4a78e989f47c806c2ac4d4ade31f6638262f97393bd86348b"
-    }
-  },
-  "reporting_scope_change": "All complete current-policy trials are summarized as descriptive timings under observed background load, following parent approval; they are not reclassified as passing the earlier <=15% idle gate.",
-  "scope_exclusions": "Base predictor inference; all six candidate generation/calibrator updates; full rolling-state/history maintenance; sequential evidence updates; policy fitting; file reads; diagnostic audit wrapper.",
-  "batch_interpretation": "220 distinct real events at multiple issue times; per-call latency, amortized value is throughput only.",
-  "environment": {
-    "utc": "2026-09-24T15:28:44.661972+00:00",
-    "platform": "Windows-10-10.0.19045-SP0",
-    "python": "3.12.12 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 20:05:38) [MSC v.1929 64 bit (AMD64)]",
-    "physical_cores": 14,
-    "logical_cores": 20,
-    "ram_bytes": 34188513280,
-    "thread_environment": {
-      "OPENBLAS_NUM_THREADS": "1",
-      "OMP_NUM_THREADS": "1",
-      "MKL_NUM_THREADS": "1",
-      "NUMEXPR_NUM_THREADS": "1",
-      "ARROW_NUM_THREADS": "1"
-    },
-    "packages": {
-      "numpy": "1.26.4",
-      "pandas": "3.0.3",
-      "pyarrow": "21.0.0",
-      "psutil": "5.9.0"
-    },
-    "gc_enabled": true,
-    "clock": "namespace(implementation='QueryPerformanceCounter()', monotonic=True, adjustable=False, resolution=1e-07)",
-    "cpu": {
-      "Name": "13th Gen Intel(R) Core(TM) i5-13600KF",
-      "NumberOfCores": 14,
-      "NumberOfLogicalProcessors": 20,
-      "MaxClockSpeed": 3500
-    },
-    "threadpools": [
-      {
-        "user_api": "blas",
-        "internal_api": "mkl",
-        "num_threads": 1,
-        "prefix": "mkl_rt",
-        "version": "2025.0-Product",
-        "threading_layer": "intel"
-      },
-      {
-        "user_api": "openmp",
-        "internal_api": "openmp",
-        "num_threads": 1,
-        "prefix": "vcomp",
-        "version": null
+      "status": "BACKGROUND_LOAD_DESCRIPTIVE",
+      "raw_calls": 960,
+      "slow_calls_removed": 0,
+      "system_cpu_load_percent": [
+        23.9,
+        27.9,
+        22.6,
+        35.5,
+        26.2,
+        28.8,
+        22.1,
+        30.6,
+        23.4,
+        26.5,
+        21.2,
+        27.3,
+        22.1,
+        27.8,
+        17.0
+      ],
+      "idle_gate_passed": null,
+      "scope": "Preloaded state lookup and selected interval retrieval; optional width classification. No forecasting, candidate generation, full history maintenance, sequential updates or policy fitting.",
+      "batch_scope": "Per-call total for 220 distinct resident queries, not standalone latency.",
+      "input_sha256": {
+        "fixture": "b6da30d8f38e80564e7c5453a768595e60f2685b6aa53bef5d42c40002702b03",
+        "mapping": "f153f16fbb3868440a7d0b6ddf63f6a8662c1e8246dc676dd4c5bc5979821468",
+        "thresholds": "fe9b1060b03f876605e543a7ca8768c76c6857f36866b1334c236e5018c1e231"
       }
-    ]
-  },
-  "source_provenance": {
-    "release_source": "CLARA repository prepared 2026-09-12",
-    "fitted_policy": "GEFCom, zone1, seed0, reference price, DIRECTIONAL_REPAIR_S10, frozen 2026-09-08",
-    "query_api": "src/evaluated/workspace/0427/0620/提交版本0703 Energy/一审/一审修订实验/测试CLARA/scripts/gefcom_six_action_selector_core_v1.py::predict_clara_actions",
-    "fixture_sampling": "Four forecasters x eleven coverages x five prespecified temporal positions, 1 h lead time."
-  },
-  "artifact_sha256": {
-    "benchmark_query.py": "bcb2439cb8593456e269f64ce55ecad1aaa5a72c2baf01ce11f2f6ff986e18eb",
-    "current_lookup_mapping.parquet": "2bbeb1922e227ad749b3b01c0a8bec4a4738a5ac9052e9c4b624fe81e4de6b87",
-    "Current_Table_S6_runtime.csv": "1cb5acb159b71785fb8e1f112167ee3070b241c45d2c071bfb83dc5b2aa7304b",
-    "pooled_query_measurements.csv": "09e48dc029eee41b751b9a231344c78c5d5245f263eca22142596220f9f8b3e4",
-    "query_summary_full_precision.csv": "806f9eaa0175fe118fe6bc6689b32ec51267e84902fe6044628ae4ff54aeacd9",
-    "README.md": "c6af5317a4bfa939e65516f3a5d8d14464b1684034a599391f7b204322c38d0f",
-    "resident_query_fixture.parquet": "ab08468d0ffb6f2730ee2f39ca07bf3424bc96fdb912f6b84148f01385752178",
-    "width_thresholds.parquet": "dd612e05b4d0658a91fe80104f0bad49f5362b33c69027f6f9ab240b7bad5d1f"
-  },
-  "portable_correctness_check": {
-    "status": "PASS",
-    "state_mappings_checked": 6600,
-    "query_actions_checked": 220,
-    "selected_endpoints_checked": 440,
-    "measurement_performed": false
-  }
+    },
+    {
+      "status": "BACKGROUND_LOAD_DESCRIPTIVE",
+      "raw_calls": 960,
+      "slow_calls_removed": 0,
+      "system_cpu_load_percent": [
+        21.4,
+        21.8,
+        29.1,
+        21.7,
+        28.1,
+        25.0,
+        31.7,
+        26.9,
+        23.6,
+        30.2,
+        31.9,
+        30.7,
+        28.5,
+        22.2,
+        32.0
+      ],
+      "idle_gate_passed": null,
+      "scope": "Preloaded state lookup and selected interval retrieval; optional width classification. No forecasting, candidate generation, full history maintenance, sequential updates or policy fitting.",
+      "batch_scope": "Per-call total for 220 distinct resident queries, not standalone latency.",
+      "input_sha256": {
+        "fixture": "b6da30d8f38e80564e7c5453a768595e60f2685b6aa53bef5d42c40002702b03",
+        "mapping": "f153f16fbb3868440a7d0b6ddf63f6a8662c1e8246dc676dd4c5bc5979821468",
+        "thresholds": "fe9b1060b03f876605e543a7ca8768c76c6857f36866b1334c236e5018c1e231"
+      }
+    }
+  ]
 }

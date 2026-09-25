@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "direct_endpoint_metric_rows": 45,
+  "pooled_warm_conditions": 11000,
+  "matched_target_events_per_price": 18530160,
+  "paired_contrasts_checked": 108,
+  "Holm_baselines_per_family": 9,
+  "note": "Sensitivity retains both zero-init and warm-init versions; no replacement chosen after viewing performance."
+}

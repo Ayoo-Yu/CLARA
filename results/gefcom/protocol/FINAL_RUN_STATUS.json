@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "completed_at": "2026-09-25T13:38:12.724975+08:00",
+  "run_id": "20260925-124953_renewable-experiment-log_gefcom-chronological-frozen",
+  "author_report": "时间隔离验证结果.md",
+  "registered_protocol_sha256": "9254223cf47205a31cf66f12e3b91b550cf7d276ee2d2f8678c2b4afaf51e633",
+  "validators": {
+    "DATA_READY.json": "c4c4225f5fbc5c95384dc181e0fcdce01cbd1f653410fa1d937275cfafc3a3c7",
+    "PREFIX_PENDING_READY.json": "a7931831aa6595834b4b04667f90d3d9e8795def977c2f10c66c58a3b18dbb80",
+    "audit_all_timestamps.json": "429e8058ed758b256143171a2bfaf23007e6e4337d5461f335e68c965141e0e1",
+    "audit_clara_batch.json": "ec52c7340344a11063b6913a8de0c0c12586ab47761d3859c79221bc7d778e60",
+    "baseline_outputs_audit.json": "f204e94bf5089026db8f68c3cf19345f5601bdfb2421c60ded8b230531134ef2",
+    "audit_warmstart_batch.json": "190064234d423c27650598737df3cf42c1a42158cc0f0aaab8ef93d0b116b1ad",
+    "audit_final_summary.json": "78ce25cd5157fd14cc745dc61b9e8b9f3eda47b818b186ea20997dbeb9755b05",
+    "audit_warm_summary.json": "ef60b54548d08f60e6a1500c060036b4d1e0cd278490272c80096bd49bb08fb3",
+    "audit_original_summary.json": "f5a6c78d1b7bd480dd9ed9a8db4666b26b81059b121b472c53761f6b14f2ec2c",
+    "summary/summary_validation.json": "716ad79b5a0295940d8b3fa89d0813a0c1d4bfcce0b5ea7511f41dba19539722",
+    "summary/warm_initialization/validation.json": "08ac6bd47196571b26e468d272bc24427d9ee5f66e56377646a0d291e3ca9004",
+    "original_matched/ORIGINAL_MATCHED_READY.json": "c91f7f6cc56ace24d43fa453f64d04f90ee647f4eb082e2f60d52990b50b9c46",
+    "original_matched/COMPARISON_COMPLETE.json": "814367543a76e230ed9bbe5cd84c29a7a4a959d1e6ea40987a410197a30bd9f4",
+    "protocol_counts.json": "70ee5df6bc55a24d42afbc3b7264ca96ca58ca415c460e4662e69305ec720275"
+  },
+  "main_methods": 9,
+  "warm_initialization_sensitivities": 1,
+  "outer_zones": 10,
+  "seeds": 3,
+  "prices": 5,
+  "predictors": 4,
+  "horizons": 5,
+  "coverage_levels": 11,
+  "matched_target_coverage_events_per_method_price": 18530160,
+  "main_seed_metric_rows": 297000,
+  "main_pooled_condition_rows": 99000,
+  "original_results_reproduced": true,
+  "old_new_comparison_has_identical_target_events": true,
+  "model_and_primary_metric_code_matches_pre_fit_snapshot": true,
+  "post_registration_code_differences": {
+    "summarize_warmstart.py": {
+      "registered": "13877f2da2ec33935956342f55ba5118d289669ea22ab5c26f69796a666507f9",
+      "final": "768e8e799d2e7f50e8857fc14e144ab3d756c37b4e67df4731e9e24e86d811d4"
+    }
+  },
+  "post_registration_code_note": "Warm summary/CLI script changed after the snapshot; model algorithms, data preparation and primary metric code did not. Final warm pooling, endpoint metrics, paired intervals and Holm tests were independently reproduced. Both LinUCB versions remain reported.",
+  "immutable_documents": "No manuscript, supplementary Word document, public repository or release changed by this isolated run.",
+  "interpretation": "Retrospective chronological-information check; not an untouched prospective trial. Old/new difference includes source truncation and refitting.",
+  "final_artifact_manifest_sha256": "7f260d71471e546e12bbf6e687bde7f45ca54ac7ca4ee1175d0104a376a69170",
+  "final_code_manifest_sha256": "297fec3854630a8c38134b9ac5d9c52debbc091f29ed1ae86d61ebb3b15c2edd"
+}

@@ -1,0 +1,13 @@
+{
+  "schema": "CLARA_CHRONO_PREFIX28_LINUCB_WARM_ADDENDUM_V1",
+  "registered_at": "2026-09-25T13:03:25.110118+08:00",
+  "registered_before_any_formal_selector_performance": true,
+  "reason": "Separate the target-time cold start of LinUCB from the restriction on source information; retain both protocols regardless of outcome.",
+  "primary_protocol_unchanged": "protocol.json defines T0 deployment of a zero-initialized LinUCB selector, not whole-system shared burn-in.",
+  "sensitivity": "LinUCB with pre-period initialization on the held-out zone, using source-prefix-selected hyperparameters, width edges and TSC configuration.",
+  "trajectory": "Join source matured prefix, separately reconstructed prefix_pending records, and the original target suffix. Replay each price continuously in issue order with the original selected-action feedback rule and a continuous pending queue.",
+  "evaluation": "Store and evaluate only actions issued at or after T0; use the identical target records and complete post-T0 168-hour windows as primary results.",
+  "temporal_interpretation": "Hyperparameters are selected at T0; the prefix is a historical replay used for initialization, not a claim of actual historical deployment of those choices.",
+  "no_target_tuning": "Neither prefix nor suffix of the outer held-out zone is used to choose hyperparameters or select the preferred report version.",
+  "reporting": "Always report cold and pre-period-initialized LinUCB. Extra local training information of warm version is explicit. No new forecaster training."
+}

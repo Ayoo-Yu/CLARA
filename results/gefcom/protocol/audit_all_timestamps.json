@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "streams_checked": 600,
+  "expected_streams": 600,
+  "cutoff": "2013-09-05 00:00:00",
+  "source_record_count": 403080,
+  "target_record_count": 1684560,
+  "maximum_source_availability": "2013-09-05 00:00:00",
+  "earliest_target_issue": "2013-09-05 00:00:00",
+  "all_source_labels_strictly_before_cutoff": true,
+  "all_source_feedback_available_by_cutoff": true,
+  "all_target_issues_at_or_after_cutoff": true,
+  "metadata_original_endpoint_validation": "four actions, all streams checked",
+  "limitations": "Does not independently regenerate all candidate histories or evaluate performance."
+}

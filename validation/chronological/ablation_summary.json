@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "table_rows": 7,
+  "all_condition_rows": 396000,
+  "zone_bootstrap_resamples": 10000,
+  "bootstrap_seed": 20260911,
+  "scope": "Released condition summaries and paired zone-bootstrap intervals; no model retraining"
+}

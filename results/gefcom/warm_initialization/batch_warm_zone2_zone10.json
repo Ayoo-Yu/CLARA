@@ -1,0 +1,445 @@
+{
+  "mode": "warm",
+  "zones": [
+    "zone2",
+    "zone3",
+    "zone4",
+    "zone5",
+    "zone6",
+    "zone7",
+    "zone8",
+    "zone9",
+    "zone10"
+  ],
+  "workers": 2,
+  "threads": 1,
+  "started_utc": "2026-09-25T05:19:26.042260+00:00",
+  "completed": [
+    {
+      "mode": "warm",
+      "zone": "zone2",
+      "status": "complete",
+      "seconds": 28.25405420002062,
+      "phases": [
+        {
+          "command": [
+            "linucb_warmstart.py",
+            "--zone",
+            "zone2",
+            "--seed",
+            "0",
+            "--threads",
+            "1"
+          ],
+          "returncode": 0,
+          "log": "D:\\workspace\\paper\\Energy\u4e00\u5ba1\u4fee\u8ba2\u8fc1\u79fb\u5305_20260902\\0919\u91cd\u4fee\\skill_runs\\20260925-124953_renewable-experiment-log_gefcom-chronological-frozen\\logs\\warm_zone2_phase0.log"
+        },
+        {
+          "command": [
+            "linucb_warmstart.py",
+            "--zone",
+            "zone2",
+            "--seed",
+            "1",
+            "--threads",
+            "1"
+          ],
+          "returncode": 0,
+          "log": "D:\\workspace\\paper\\Energy\u4e00\u5ba1\u4fee\u8ba2\u8fc1\u79fb\u5305_20260902\\0919\u91cd\u4fee\\skill_runs\\20260925-124953_renewable-experiment-log_gefcom-chronological-frozen\\logs\\warm_zone2_phase1.log"
+        },
+        {
+          "command": [
+            "linucb_warmstart.py",
+            "--zone",
+            "zone2",
+            "--seed",
+            "2",
+            "--threads",
+            "1"
+          ],
+          "returncode": 0,
+          "log": "D:\\workspace\\paper\\Energy\u4e00\u5ba1\u4fee\u8ba2\u8fc1\u79fb\u5305_20260902\\0919\u91cd\u4fee\\skill_runs\\20260925-124953_renewable-experiment-log_gefcom-chronological-frozen\\logs\\warm_zone2_phase2.log"
+        }
+      ]
+    },
+    {
+      "mode": "warm",
+      "zone": "zone3",
+      "status": "complete",
+      "seconds": 28.361450399970636,
+      "phases": [
+        {
+          "command": [
+            "linucb_warmstart.py",
+            "--zone",
+            "zone3",
+            "--seed",
+            "0",
+            "--threads",
+            "1"
+          ],
+          "returncode": 0,
+          "log": "D:\\workspace\\paper\\Energy\u4e00\u5ba1\u4fee\u8ba2\u8fc1\u79fb\u5305_20260902\\0919\u91cd\u4fee\\skill_runs\\20260925-124953_renewable-experiment-log_gefcom-chronological-frozen\\logs\\warm_zone3_phase0.log"
+        },
+        {
+          "command": [
+            "linucb_warmstart.py",
+            "--zone",
+            "zone3",
+            "--seed",
+            "1",
+            "--threads",
+            "1"
+          ],
+          "returncode": 0,
+          "log": "D:\\workspace\\paper\\Energy\u4e00\u5ba1\u4fee\u8ba2\u8fc1\u79fb\u5305_20260902\\0919\u91cd\u4fee\\skill_runs\\20260925-124953_renewable-experiment-log_gefcom-chronological-frozen\\logs\\warm_zone3_phase1.log"
+        },
+        {
+          "command": [
+            "linucb_warmstart.py",
+            "--zone",
+            "zone3",
+            "--seed",
+            "2",
+            "--threads",
+            "1"
+          ],
+          "returncode": 0,
+          "log": "D:\\workspace\\paper\\Energy\u4e00\u5ba1\u4fee\u8ba2\u8fc1\u79fb\u5305_20260902\\0919\u91cd\u4fee\\skill_runs\\20260925-124953_renewable-experiment-log_gefcom-chronological-frozen\\logs\\warm_zone3_phase2.log"
+        }
+      ]
+    },
+    {
+      "mode": "warm",
+      "zone": "zone4",
+      "status": "complete",
+      "seconds": 28.379836600041017,
+      "phases": [
+        {
+          "command": [
+            "linucb_warmstart.py",
+            "--zone",
+            "zone4",
+            "--seed",
+            "0",
+            "--threads",
+            "1"
+          ],
+          "returncode": 0,
+          "log": "D:\\workspace\\paper\\Energy\u4e00\u5ba1\u4fee\u8ba2\u8fc1\u79fb\u5305_20260902\\0919\u91cd\u4fee\\skill_runs\\20260925-124953_renewable-experiment-log_gefcom-chronological-frozen\\logs\\warm_zone4_phase0.log"
+        },
+        {
+          "command": [
+            "linucb_warmstart.py",
+            "--zone",
+            "zone4",
+            "--seed",
+            "1",
+            "--threads",
+            "1"
+          ],
+          "returncode": 0,
+          "log": "D:\\workspace\\paper\\Energy\u4e00\u5ba1\u4fee\u8ba2\u8fc1\u79fb\u5305_20260902\\0919\u91cd\u4fee\\skill_runs\\20260925-124953_renewable-experiment-log_gefcom-chronological-frozen\\logs\\warm_zone4_phase1.log"
+        },
+        {
+          "command": [
+            "linucb_warmstart.py",
+            "--zone",
+            "zone4",
+            "--seed",
+            "2",
+            "--threads",
+            "1"
+          ],
+          "returncode": 0,
+          "log": "D:\\workspace\\paper\\Energy\u4e00\u5ba1\u4fee\u8ba2\u8fc1\u79fb\u5305_20260902\\0919\u91cd\u4fee\\skill_runs\\20260925-124953_renewable-experiment-log_gefcom-chronological-frozen\\logs\\warm_zone4_phase2.log"
+        }
+      ]
+    },
+    {
+      "mode": "warm",
+      "zone": "zone5",
+      "status": "complete",
+      "seconds": 28.334759399993345,
+      "phases": [
+        {
+          "command": [
+            "linucb_warmstart.py",
+            "--zone",
+            "zone5",
+            "--seed",
+            "0",
+            "--threads",
+            "1"
+          ],
+          "returncode": 0,
+          "log": "D:\\workspace\\paper\\Energy\u4e00\u5ba1\u4fee\u8ba2\u8fc1\u79fb\u5305_20260902\\0919\u91cd\u4fee\\skill_runs\\20260925-124953_renewable-experiment-log_gefcom-chronological-frozen\\logs\\warm_zone5_phase0.log"
+        },
+        {
+          "command": [
+            "linucb_warmstart.py",
+            "--zone",
+            "zone5",
+            "--seed",
+            "1",
+            "--threads",
+            "1"
+          ],
+          "returncode": 0,
+          "log": "D:\\workspace\\paper\\Energy\u4e00\u5ba1\u4fee\u8ba2\u8fc1\u79fb\u5305_20260902\\0919\u91cd\u4fee\\skill_runs\\20260925-124953_renewable-experiment-log_gefcom-chronological-frozen\\logs\\warm_zone5_phase1.log"
+        },
+        {
+          "command": [
+            "linucb_warmstart.py",
+            "--zone",
+            "zone5",
+            "--seed",
+            "2",
+            "--threads",
+            "1"
+          ],
+          "returncode": 0,
+          "log": "D:\\workspace\\paper\\Energy\u4e00\u5ba1\u4fee\u8ba2\u8fc1\u79fb\u5305_20260902\\0919\u91cd\u4fee\\skill_runs\\20260925-124953_renewable-experiment-log_gefcom-chronological-frozen\\logs\\warm_zone5_phase2.log"
+        }
+      ]
+    },
+    {
+      "mode": "warm",
+      "zone": "zone6",
+      "status": "complete",
+      "seconds": 28.243089199997485,
+      "phases": [
+        {
+          "command": [
+            "linucb_warmstart.py",
+            "--zone",
+            "zone6",
+            "--seed",
+            "0",
+            "--threads",
+            "1"
+          ],
+          "returncode": 0,
+          "log": "D:\\workspace\\paper\\Energy\u4e00\u5ba1\u4fee\u8ba2\u8fc1\u79fb\u5305_20260902\\0919\u91cd\u4fee\\skill_runs\\20260925-124953_renewable-experiment-log_gefcom-chronological-frozen\\logs\\warm_zone6_phase0.log"
+        },
+        {
+          "command": [
+            "linucb_warmstart.py",
+            "--zone",
+            "zone6",
+            "--seed",
+            "1",
+            "--threads",
+            "1"
+          ],
+          "returncode": 0,
+          "log": "D:\\workspace\\paper\\Energy\u4e00\u5ba1\u4fee\u8ba2\u8fc1\u79fb\u5305_20260902\\0919\u91cd\u4fee\\skill_runs\\20260925-124953_renewable-experiment-log_gefcom-chronological-frozen\\logs\\warm_zone6_phase1.log"
+        },
+        {
+          "command": [
+            "linucb_warmstart.py",
+            "--zone",
+            "zone6",
+            "--seed",
+            "2",
+            "--threads",
+            "1"
+          ],
+          "returncode": 0,
+          "log": "D:\\workspace\\paper\\Energy\u4e00\u5ba1\u4fee\u8ba2\u8fc1\u79fb\u5305_20260902\\0919\u91cd\u4fee\\skill_runs\\20260925-124953_renewable-experiment-log_gefcom-chronological-frozen\\logs\\warm_zone6_phase2.log"
+        }
+      ]
+    },
+    {
+      "mode": "warm",
+      "zone": "zone7",
+      "status": "complete",
+      "seconds": 28.496065400075167,
+      "phases": [
+        {
+          "command": [
+            "linucb_warmstart.py",
+            "--zone",
+            "zone7",
+            "--seed",
+            "0",
+            "--threads",
+            "1"
+          ],
+          "returncode": 0,
+          "log": "D:\\workspace\\paper\\Energy\u4e00\u5ba1\u4fee\u8ba2\u8fc1\u79fb\u5305_20260902\\0919\u91cd\u4fee\\skill_runs\\20260925-124953_renewable-experiment-log_gefcom-chronological-frozen\\logs\\warm_zone7_phase0.log"
+        },
+        {
+          "command": [
+            "linucb_warmstart.py",
+            "--zone",
+            "zone7",
+            "--seed",
+            "1",
+            "--threads",
+            "1"
+          ],
+          "returncode": 0,
+          "log": "D:\\workspace\\paper\\Energy\u4e00\u5ba1\u4fee\u8ba2\u8fc1\u79fb\u5305_20260902\\0919\u91cd\u4fee\\skill_runs\\20260925-124953_renewable-experiment-log_gefcom-chronological-frozen\\logs\\warm_zone7_phase1.log"
+        },
+        {
+          "command": [
+            "linucb_warmstart.py",
+            "--zone",
+            "zone7",
+            "--seed",
+            "2",
+            "--threads",
+            "1"
+          ],
+          "returncode": 0,
+          "log": "D:\\workspace\\paper\\Energy\u4e00\u5ba1\u4fee\u8ba2\u8fc1\u79fb\u5305_20260902\\0919\u91cd\u4fee\\skill_runs\\20260925-124953_renewable-experiment-log_gefcom-chronological-frozen\\logs\\warm_zone7_phase2.log"
+        }
+      ]
+    },
+    {
+      "mode": "warm",
+      "zone": "zone8",
+      "status": "complete",
+      "seconds": 29.683665700023994,
+      "phases": [
+        {
+          "command": [
+            "linucb_warmstart.py",
+            "--zone",
+            "zone8",
+            "--seed",
+            "0",
+            "--threads",
+            "1"
+          ],
+          "returncode": 0,
+          "log": "D:\\workspace\\paper\\Energy\u4e00\u5ba1\u4fee\u8ba2\u8fc1\u79fb\u5305_20260902\\0919\u91cd\u4fee\\skill_runs\\20260925-124953_renewable-experiment-log_gefcom-chronological-frozen\\logs\\warm_zone8_phase0.log"
+        },
+        {
+          "command": [
+            "linucb_warmstart.py",
+            "--zone",
+            "zone8",
+            "--seed",
+            "1",
+            "--threads",
+            "1"
+          ],
+          "returncode": 0,
+          "log": "D:\\workspace\\paper\\Energy\u4e00\u5ba1\u4fee\u8ba2\u8fc1\u79fb\u5305_20260902\\0919\u91cd\u4fee\\skill_runs\\20260925-124953_renewable-experiment-log_gefcom-chronological-frozen\\logs\\warm_zone8_phase1.log"
+        },
+        {
+          "command": [
+            "linucb_warmstart.py",
+            "--zone",
+            "zone8",
+            "--seed",
+            "2",
+            "--threads",
+            "1"
+          ],
+          "returncode": 0,
+          "log": "D:\\workspace\\paper\\Energy\u4e00\u5ba1\u4fee\u8ba2\u8fc1\u79fb\u5305_20260902\\0919\u91cd\u4fee\\skill_runs\\20260925-124953_renewable-experiment-log_gefcom-chronological-frozen\\logs\\warm_zone8_phase2.log"
+        }
+      ]
+    },
+    {
+      "mode": "warm",
+      "zone": "zone9",
+      "status": "complete",
+      "seconds": 29.53716850001365,
+      "phases": [
+        {
+          "command": [
+            "linucb_warmstart.py",
+            "--zone",
+            "zone9",
+            "--seed",
+            "0",
+            "--threads",
+            "1"
+          ],
+          "returncode": 0,
+          "log": "D:\\workspace\\paper\\Energy\u4e00\u5ba1\u4fee\u8ba2\u8fc1\u79fb\u5305_20260902\\0919\u91cd\u4fee\\skill_runs\\20260925-124953_renewable-experiment-log_gefcom-chronological-frozen\\logs\\warm_zone9_phase0.log"
+        },
+        {
+          "command": [
+            "linucb_warmstart.py",
+            "--zone",
+            "zone9",
+            "--seed",
+            "1",
+            "--threads",
+            "1"
+          ],
+          "returncode": 0,
+          "log": "D:\\workspace\\paper\\Energy\u4e00\u5ba1\u4fee\u8ba2\u8fc1\u79fb\u5305_20260902\\0919\u91cd\u4fee\\skill_runs\\20260925-124953_renewable-experiment-log_gefcom-chronological-frozen\\logs\\warm_zone9_phase1.log"
+        },
+        {
+          "command": [
+            "linucb_warmstart.py",
+            "--zone",
+            "zone9",
+            "--seed",
+            "2",
+            "--threads",
+            "1"
+          ],
+          "returncode": 0,
+          "log": "D:\\workspace\\paper\\Energy\u4e00\u5ba1\u4fee\u8ba2\u8fc1\u79fb\u5305_20260902\\0919\u91cd\u4fee\\skill_runs\\20260925-124953_renewable-experiment-log_gefcom-chronological-frozen\\logs\\warm_zone9_phase2.log"
+        }
+      ]
+    },
+    {
+      "mode": "warm",
+      "zone": "zone10",
+      "status": "complete",
+      "seconds": 26.401799900108017,
+      "phases": [
+        {
+          "command": [
+            "linucb_warmstart.py",
+            "--zone",
+            "zone10",
+            "--seed",
+            "0",
+            "--threads",
+            "1"
+          ],
+          "returncode": 0,
+          "log": "D:\\workspace\\paper\\Energy\u4e00\u5ba1\u4fee\u8ba2\u8fc1\u79fb\u5305_20260902\\0919\u91cd\u4fee\\skill_runs\\20260925-124953_renewable-experiment-log_gefcom-chronological-frozen\\logs\\warm_zone10_phase0.log"
+        },
+        {
+          "command": [
+            "linucb_warmstart.py",
+            "--zone",
+            "zone10",
+            "--seed",
+            "1",
+            "--threads",
+            "1"
+          ],
+          "returncode": 0,
+          "log": "D:\\workspace\\paper\\Energy\u4e00\u5ba1\u4fee\u8ba2\u8fc1\u79fb\u5305_20260902\\0919\u91cd\u4fee\\skill_runs\\20260925-124953_renewable-experiment-log_gefcom-chronological-frozen\\logs\\warm_zone10_phase1.log"
+        },
+        {
+          "command": [
+            "linucb_warmstart.py",
+            "--zone",
+            "zone10",
+            "--seed",
+            "2",
+            "--threads",
+            "1"
+          ],
+          "returncode": 0,
+          "log": "D:\\workspace\\paper\\Energy\u4e00\u5ba1\u4fee\u8ba2\u8fc1\u79fb\u5305_20260902\\0919\u91cd\u4fee\\skill_runs\\20260925-124953_renewable-experiment-log_gefcom-chronological-frozen\\logs\\warm_zone10_phase2.log"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "status": "PASS",
+  "finished_utc": "2026-09-25T05:21:47.008933+00:00"
+}

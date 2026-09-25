@@ -1,0 +1,13 @@
+{
+  "source_cutoff": "2013-09-05 00:00 UTC",
+  "policy": "zone1 seed0 reference price, source-prefix frozen",
+  "query_times": [
+    "2013-09-05 00:00:00",
+    "2013-09-05 01:00:00",
+    "2013-09-05 02:00:00",
+    "2013-09-05 03:00:00",
+    "2013-09-05 04:00:00"
+  ],
+  "query_count": 220,
+  "state_count": 6600
+}

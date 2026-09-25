@@ -11,12 +11,13 @@ import pandas as pd
 import numpy as np
 import fitz
 
-HERE = Path(__file__).resolve().parent
-REPO = HERE.parents[1]
-DATA = REPO / 'results/current_figure_data/figure07/decision_records.csv'
-META = REPO / 'results/current_figure_data/figure07/case_metadata.csv'
-OUTPUT = REPO / 'outputs/current/figure07'
-OUTPUT.mkdir(parents=True, exist_ok=True)
+SCRIPT_DIR=Path(__file__).resolve().parent
+REPO=SCRIPT_DIR.parents[1]
+HERE=REPO/'results/current_figure_data/figure07'
+OUTPUT=REPO/'outputs/current/figure07'
+OUTPUT.mkdir(exist_ok=True,parents=True)
+DATA = HERE / 'figure7_source_data.csv'
+META = HERE / 'figure7_case_metadata.csv'
 OUT = OUTPUT / 'Figure_07'
 width_mm = 190
 height_mm = 100
@@ -81,9 +82,9 @@ def main():
         for spine in ax.spines.values():
             spine.set_color('black'); spine.set_linewidth(.55)
     # A narrow white gutter separates the two independent scales, as in the reference.
-    cost.set_xlim(3.5,0)
-    cost.set_xticks([3.5,3,2.5,2,1.5,1,.5,0])
-    cost.set_xticklabels(['3.5','3','2.5','2','1.5','1','0.5','0'])
+    cost.set_xlim(2.5,0)
+    cost.set_xticks([2.5,2,1.5,1,.5,0])
+    cost.set_xticklabels(['2.5','2','1.5','1','0.5','0'])
     interval.set_xlim(0,1)
     interval.set_xticks([.2,.4,.6,.8,1])
     interval.set_xticklabels(['0.2','0.4','0.6','0.8','1.0'])
@@ -146,7 +147,7 @@ def main():
     handles = [Patch(facecolor='white',edgecolor='black',linewidth=1.1),
                Patch(facecolor=COLORS['Static'],edgecolor='black',hatch='///',linewidth=.25),
                Line2D([],[],color=ORANGE,linewidth=.8)]
-    labels = ['Selected', 'Fails coverage', 'Later observation: 0.403 / 0.871 p.u.']
+    labels = ['Selected', 'Fails coverage', 'Later observation: 0.403 / 0.087 p.u.']
     fig.legend(handles,labels,loc='lower center',bbox_to_anchor=(.51,.038),ncol=3,
                frameon=False,fontsize=8.7,handlelength=1.6,handletextpad=.5,columnspacing=1.6)
     fig.canvas.draw()

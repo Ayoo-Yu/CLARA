@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "streams": 600,
+  "earliest_first_issue": "2013-08-07 15:00:00",
+  "latest_first_issue": "2013-08-07 15:00:00",
+  "t0": "2013-09-05 00:00:00",
+  "t0_ns": 1378339200000000000,
+  "rule": "ceil_UTC_day(max(first_available_test_issue_across_600_streams))+28_days",
+  "seconds": 1.53738999995403
+}

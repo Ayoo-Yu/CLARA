@@ -7,10 +7,13 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from matplotlib.colors import LinearSegmentedColormap
-HERE=Path(__file__).resolve().parent
-REPO=HERE.parents[1]
-DATA=REPO/'results/current_figure_data/figureS1'
-OUT=REPO/'outputs/current/figureS1'
+SCRIPT_DIR=Path(__file__).resolve().parent
+REPO=SCRIPT_DIR.parents[1]
+HERE=REPO/'results/current_figure_data/figureS1'
+OUTPUT=REPO/'outputs/current/figureS1'
+OUTPUT.mkdir(exist_ok=True,parents=True)
+DATA = HERE
+OUT = OUTPUT
 OUT.mkdir(parents=True, exist_ok=True)
 plt.rcParams.update({'font.family':'Times New Roman','font.size':10,'axes.labelsize':11,'axes.titlesize':11,'axes.labelcolor':'black','xtick.color':'black','ytick.color':'black','text.color':'black','axes.edgecolor':'black','axes.linewidth':.8,'xtick.direction':'in','ytick.direction':'in','xtick.top':True,'ytick.right':True,'pdf.fonttype':42,'ps.fonttype':42,'svg.fonttype':'none','legend.frameon':True,'legend.fancybox':False,'legend.edgecolor':'black','legend.framealpha':1,'savefig.facecolor':'white'})
 ORDER=['CLARA','LinUCB','CART','TSC','EEE','Static','ACI','AgACI','EnbPI-RH','WIDTH_ONLY']
@@ -30,7 +33,7 @@ def save(fig,num):
  fig.savefig(OUT/f'Figure_{num}_preview.png',dpi=150,bbox_inches='tight',pad_inches=.04)
  plt.close(fig);saved.append(str(num))
 def labels(ax,methods):ax.set_xticks(range(len(methods)),[lab(m) for m in methods],rotation=48,ha='right',rotation_mode='anchor',fontsize=9)
-# Original Fig. 7: global coverage, rolling coverage, TUWR.
+# Three complementary coverage summaries on the post-cutoff evaluation period.
 c=pd.read_csv(DATA/'chronology.csv');c.issue_timestamp=pd.to_datetime(c.issue_timestamp)
 methods=['Static','EnbPI-RH','CLARA'];summary=c[c.method.isin(methods)].groupby('method')[['covered','TUWR']].mean().reindex(methods)
 fig=plt.figure(figsize=(7.5,3.9));gs=fig.add_gridspec(2,2,width_ratios=[1,2.1],hspace=.7,wspace=.35)

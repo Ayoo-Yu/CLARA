@@ -6,7 +6,7 @@ The MIT license applies to the authors' software and accompanying software docum
 
 Obtain the wind-track data from the original GEFCom 2014 distribution associated with [Hong et al. (2016)](https://doi.org/10.1016/j.ijforecast.2016.02.001). The [IEEE PES dataset index](https://ieee-pes-data-sharing.org/datasets/detail/0e87366e-2e91-4024-b658-43f6b22faa69) identifies the dataset and its access source. Original benchmark files are not redistributed here. Follow the source's applicable access and reuse terms, and cite the dataset paper.
 
-The repository contains derived condition-level performance summaries. The separate GEFCom policy-evidence archive contains the fitted candidate evidence and selections used to verify CLARA's final state decisions. Neither should be described as raw weather or power measurements.
+The repository contains derived condition-level performance summaries. Version 1.1.0 candidate archives contain normalized forecast/candidate outputs and the observed targets needed to reproduce scoring; the evidence archive contains fitted sufficient statistics and decisions. They do not reproduce the original weather-input files. The original dataset access and reuse terms still apply to underlying observations.
 
 ## Commercial wind farms
 

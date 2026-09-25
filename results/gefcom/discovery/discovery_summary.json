@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "fit_source": "Chronological prefix only; outer target excluded",
+  "transfer_rule": "Event-weighted six-action mean ERRF within exact state; empty state falls back to that source forecaster mean; no CLARA screening/shrinkage",
+  "retained_target_state_categories": true,
+  "primary_clara_metrics_verified": true,
+  "seed_rows": 132000,
+  "pooled_cells": 44000,
+  "transfer_min_pct": -0.3269938527086347,
+  "transfer_max_pct": 0.706944760014605,
+  "increase_cells": 9,
+  "negative_cells": 3,
+  "candidate_reliability_cells": 13200
+}

@@ -1,0 +1,16 @@
+{
+  "status": "PRESPECIFIED_BEFORE_NEW_SENSITIVITY_RESULTS",
+  "purpose": "Replace old Figure 8 and sensitivity evidence with the adopted chronological source-prefix protocol",
+  "source_cutoff": "2013-09-05 00:00 UTC",
+  "estimation_grid": {"n_min": [10,20,30,50], "nu": [0,10,30,60,100], "beta": 1},
+  "screening_tolerance_multipliers": [0.5,1,2],
+  "threshold_grid": [0.08,0.10,0.12,0.14,0.16,0.18],
+  "source": "Sealed chronological run; no original full-source landscape reuse",
+  "estimation_evaluation": "Each fixed parameter variant refits the same source statistics; the other parameter remains adaptive. Coverage and TUWR tolerances are multiplied jointly; ARD remains only tie-breaking. Same held-out target suffix as the new main run.",
+  "ramp_validation": "Original 3-fold source-zone validation within each 9-zone outer source set: sources[inner::3] validate, remaining 6 fit. Only records with issue<T0, label<T0, availability<=T0. Outer source width/TSC settings are held common as in the original threshold sensitivity design; conditional cost/coverage estimates exclude the 3 inner validation zones.",
+  "ramp_definition": "abs(base_center-feature_target_lag1)>=tau, using original issue-aligned base forecasts",
+  "threshold_decision": "Main tau remains 0.12. All 6 source-validation grid points are reported; no target-driven selection or new cutoff.",
+  "aggregation": "Pool seeds with forecast/window denominators, then equal conditions. Threshold curves equal-average source validation conditions and outer folds; overlapping folds are not independent replicates.",
+  "inference": "Estimation/screening sensitivity pointwise 95% paired bootstrap over the 10 outer zones, 10000 draws, seed 20260925. No multiplicity-adjusted confirmatory sensitivity claim.",
+  "immutability": "No writes to sealed CHRONO, original data, manuscript, supplement or public repository. All artifacts remain in analysis_sensitivity."
+}

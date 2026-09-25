@@ -1,0 +1,128 @@
+{
+  "actions": [
+    "Static",
+    "ACI",
+    "AgACI",
+    "EnbPI_RH",
+    "TunedSingleConformal",
+    "EqualEndpointEnsemble"
+  ],
+  "state_fields": [
+    "predictor",
+    "horizon_group",
+    "target_coverage",
+    "ramp_state",
+    "rolling_state",
+    "raw_width_state"
+  ],
+  "records": [
+    {
+      "unit": "zone1__seed0",
+      "price_id": "R01",
+      "thresholds": {
+        "ard_upper": 0.2,
+        "coverage_shortfall_epsilon": 0.05,
+        "tuwr_upper": 0.45
+      },
+      "price": {
+        "base_submission_price": false,
+        "miss_to_capacity_ratio": 1.0,
+        "price_id": "R01",
+        "theta": [
+          3.56,
+          3.56,
+          3.56,
+          3.56
+        ]
+      },
+      "n_states": 6600
+    },
+    {
+      "unit": "zone1__seed0",
+      "price_id": "R02",
+      "thresholds": {
+        "ard_upper": 0.17992008881033947,
+        "coverage_shortfall_epsilon": 0.03795205328620368,
+        "tuwr_upper": 0.4098401776206789
+      },
+      "price": {
+        "base_submission_price": false,
+        "miss_to_capacity_ratio": 2.0,
+        "price_id": "R02",
+        "theta": [
+          3.56,
+          3.56,
+          7.12,
+          7.12
+        ]
+      },
+      "n_states": 6600
+    },
+    {
+      "unit": "zone1__seed0",
+      "price_id": "R05P6179775281",
+      "thresholds": {
+        "ard_upper": 0.15,
+        "coverage_shortfall_epsilon": 0.02,
+        "tuwr_upper": 0.35
+      },
+      "price": {
+        "base_submission_price": true,
+        "miss_to_capacity_ratio": 5.6179775281,
+        "price_id": "R05P6179775281",
+        "theta": [
+          3.56,
+          3.56,
+          20.0,
+          20.0
+        ]
+      },
+      "n_states": 6600
+    },
+    {
+      "unit": "zone1__seed0",
+      "price_id": "R10",
+      "thresholds": {
+        "ard_upper": 0.12729440536503683,
+        "coverage_shortfall_epsilon": 0.015458881073007365,
+        "tuwr_upper": 0.30458881073007366
+      },
+      "price": {
+        "base_submission_price": false,
+        "miss_to_capacity_ratio": 10.0,
+        "price_id": "R10",
+        "theta": [
+          3.56,
+          3.56,
+          35.6,
+          35.6
+        ]
+      },
+      "n_states": 6600
+    },
+    {
+      "unit": "zone1__seed0",
+      "price_id": "R20",
+      "thresholds": {
+        "ard_upper": 0.1,
+        "coverage_shortfall_epsilon": 0.01,
+        "tuwr_upper": 0.25
+      },
+      "price": {
+        "base_submission_price": false,
+        "miss_to_capacity_ratio": 20.0,
+        "price_id": "R20",
+        "theta": [
+          3.56,
+          3.56,
+          71.2,
+          71.2
+        ]
+      },
+      "n_states": 6600
+    }
+  ],
+  "selection_family": "DIRECTIONAL_REPAIR",
+  "scale": 1.0,
+  "scope": "One held-out fold and seed, all five prices; full 150-policy evidence is supplied separately."
+}

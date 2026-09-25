@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "fits": 30,
+  "target_events_per_price": 18530160,
+  "prefix_events_per_price": 4494600,
+  "pending_prefix_events_per_price": 60720,
+  "source_width_and_TSC_match_CLARA": true,
+  "target_coordinates_match_main": true,
+  "note": "Availability/coordinates and code/output identity audit, not a performance claim."
+}

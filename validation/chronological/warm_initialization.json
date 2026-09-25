@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "synthetic_events": 52800,
+  "target_events": 36960,
+  "stream_count": 20,
+  "full_timeline_matches_eventwise_reference": true,
+  "target_projection_matches_main_coordinates": true,
+  "future_outcome_perturbation_invariant": true,
+  "unselected_outcome_perturbation_invariant": true,
+  "pending_prefix_events": 2024,
+  "all_pending_prefix_feedback_processed": true,
+  "pending_feedback_changes_only_post_availability_decisions": true,
+  "original_linucb_kernel_reused": true,
+  "scope": "Synthetic equivalence and time-boundary tests; not formal experimental performance"
+}

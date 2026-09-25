@@ -1,0 +1,5 @@
+# Candidate diagnostics and forecaster-rule transfer
+
+`run.py` preserves the original diagnostic definition under the chronological source cutoff. It fits six-action event-weighted mean losses within source states, with source-forecaster mean fallback for empty states. Transfer changes only the source forecaster of the rule while retaining the target state categories and candidate intervals. Costs are compared with the target forecaster matched rule, not with CLARA. This diagnostic intentionally does not apply CLARA shrinkage or screening.
+
+Inputs use `CLARA_CHRONO_ROOT`; all outputs go to `outputs/chronological_discovery/` or `CLARA_DISCOVERY_OUTPUT`. The source rule arrays are saved and sealed before target replay. The original and portable rule definitions were audited over 990,000 source choices and 26,400 named-state mappings. Main prediction/metric replay is checked against the chronological primary summaries. Run `python analysis/chronological_discovery/run.py` after extracting the full candidate/evidence assets.

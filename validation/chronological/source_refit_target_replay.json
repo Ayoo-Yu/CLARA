@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "zone": "zone1",
+  "seed": 0,
+  "predictor": "GBR",
+  "horizon": 1,
+  "state_price_choices": 33000,
+  "target_stream_choices": 155320,
+  "target_forecasts": 2824,
+  "source_sufficient_statistics_checksum": "PASS",
+  "outer_zone_excluded": true,
+  "target_after_cutoff": true,
+  "maximum_metric_difference": 0.0,
+  "refitted_from_source_statistics": true,
+  "scope": "Fitted-policy reconstruction and target replay; this does not retrain base forecasts."
+}

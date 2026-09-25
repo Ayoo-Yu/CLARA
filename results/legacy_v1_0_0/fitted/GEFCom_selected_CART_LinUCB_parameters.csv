@@ -1,0 +1,11 @@
+﻿Held-out zone,CART minimum leaf,LinUCB exploration,LinUCB regularization
+zone1,300,2.0,1.0
+zone2,300,1.0,10.0
+zone3,300,1.0,10.0
+zone4,300,1.0,10.0
+zone5,100,1.0,10.0
+zone6,300,1.0,1.0
+zone7,300,1.0,10.0
+zone8,300,1.0,10.0
+zone9,100,0.1,1.0
+zone10,100,2.0,10.0

@@ -1,0 +1,13 @@
+{
+  "eventwise_reference_equal": true,
+  "future_outcome_perturbation_equal": true,
+  "unselected_outcome_perturbation_equal": true,
+  "tested_configurations": 3,
+  "event_count": 2200,
+  "real_source": {
+    "real_source_state_codes_equal": true,
+    "real_source_decisions_equal": true,
+    "event_count": 7480,
+    "source_feedback_precedes_test": true
+  }
+}

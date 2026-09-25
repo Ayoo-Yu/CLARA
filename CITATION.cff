@@ -2,9 +2,9 @@ cff-version: 1.2.0
 message: "If you use this software or its accompanying analysis, please cite the CLARA manuscript and the source datasets used in your work."
 title: "CLARA: An Interpretable Contextual Decision Agent for Cost- and Reliability-Aware Calibration of Wind Power Prediction Intervals"
 type: software
-version: 1.0.0
+version: 1.1.0
 repository-code: "https://github.com/Ayoo-Yu/CLARA"
-url: "https://github.com/Ayoo-Yu/CLARA/releases/tag/v1.0.0"
+url: "https://github.com/Ayoo-Yu/CLARA/releases/tag/v1.1.0"
 license: MIT
 authors:
   - family-names: Yu

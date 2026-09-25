@@ -1,0 +1,107 @@
+[
+  {
+    "path": "src/chronological/forward_common.py",
+    "source_file": "forward_common.py",
+    "source_sha256": "04eb9135ae11fe23544b25332169ffacfc049488c26645328d2a439fe4f10c89",
+    "packaged_sha256": "c4b965cc1fea4672f777cd32f3218c38a79bdb17a0dea12ee4ec0d12cce208fc",
+    "adaptation": "Portable data/evaluated-source roots and code-hash locations only"
+  },
+  {
+    "path": "src/chronological/conformal_forward_v2.py",
+    "source_file": "conformal_forward_v2.py",
+    "source_sha256": "833f5b3b800e48a91d11275d006dc790315839fb792c40c4491079256b1c83fe",
+    "packaged_sha256": "8858f76f917edec4c17ecee383b19f9450d8dd5665b0e575dcf82f4236a08f29",
+    "adaptation": "Portable data/evaluated-source roots and code-hash locations only"
+  },
+  {
+    "path": "src/chronological/prepare_chrono.py",
+    "source_file": "prepare_chrono.py",
+    "source_sha256": "872eb5223724f2940b3db34873e7ad3d51ce97d490f8b031dfd4fab778aadc73",
+    "packaged_sha256": "3f1993c5f93d801f2044f40d6e899972e76e26aa20b38d820426276e06f479e9",
+    "adaptation": "Portable data/evaluated-source roots and code-hash locations only"
+  },
+  {
+    "path": "src/chronological/prepare_pending.py",
+    "source_file": "prepare_pending.py",
+    "source_sha256": "28e70828f137da8ae49038c6fccad2199d02186094f74cdd2fb2f9b5a7d3610c",
+    "packaged_sha256": "4a07da5d3e3f3fed227b3be03266534909e72a75ada4be03ba6a317319d35059",
+    "adaptation": "Portable data/evaluated-source roots and code-hash locations only"
+  },
+  {
+    "path": "src/chronological/clara_forward.py",
+    "source_file": "clara_forward.py",
+    "source_sha256": "7b686b3c7daa0ad2c4df2b6906491cd58a3e50466ccc3a9256350c1504da5af6",
+    "packaged_sha256": "e3369f6dd1dfaf05db6e9f9718b4d64cc7ba4051c5b20c80e7a9f00a8ead9db6",
+    "adaptation": "Portable data/evaluated-source roots and code-hash locations only"
+  },
+  {
+    "path": "src/chronological/run_clara.py",
+    "source_file": "run_clara.py",
+    "source_sha256": "8b69758b7e751e9dc440544c0828010b0a7fbb12c96cbe33e82c853817f03991",
+    "packaged_sha256": "91f765adef880be07683378b9ff018b0568aef184eb2772c5842bfe5ec130f59",
+    "adaptation": "Portable data/evaluated-source roots and code-hash locations only"
+  },
+  {
+    "path": "src/chronological/cart_forward.py",
+    "source_file": "cart_forward.py",
+    "source_sha256": "079b85442598b9bc0366b80903acb50d185ff394045399c3ff32cd7f4a612da9",
+    "packaged_sha256": "e46aca477cff5fe63b50f55f6af3987c6aa1f1ebbae8f40414b12465c038b3fc",
+    "adaptation": "Portable data/evaluated-source roots and code-hash locations only"
+  },
+  {
+    "path": "src/chronological/cart_tests.py",
+    "source_file": "cart_tests.py",
+    "source_sha256": "2d15f515f8f5be1971d016237416a976d1f69ec5741a6f77a436490e31155df8",
+    "packaged_sha256": "2d15f515f8f5be1971d016237416a976d1f69ec5741a6f77a436490e31155df8",
+    "adaptation": "Portable data/evaluated-source roots and code-hash locations only"
+  },
+  {
+    "path": "src/chronological/linucb_forward.py",
+    "source_file": "linucb_forward.py",
+    "source_sha256": "43049d67b4a3c037daa8c3ab07bae4a751365d72be9fc45ed4cd9b58538cf731",
+    "packaged_sha256": "c41695d8071b16a3502ed6df808ce0bc2d83101e4dce239b7f201940d830bf05",
+    "adaptation": "Portable data/evaluated-source roots and code-hash locations only"
+  },
+  {
+    "path": "src/chronological/linucb_tests.py",
+    "source_file": "linucb_tests.py",
+    "source_sha256": "521dfccdefddd2b26e29d37f7ae595d60406d0c6d3b4d85f632e5f901fb6ca3a",
+    "packaged_sha256": "9d775c7a33d1d8a754c217814aa9f31e04da8a027111cab2080c47c0d751a711",
+    "adaptation": "Portable data/evaluated-source roots and code-hash locations only"
+  },
+  {
+    "path": "src/chronological/linucb_warmstart.py",
+    "source_file": "linucb_warmstart.py",
+    "source_sha256": "f4869a5179a40cc22b5b803dd1afda7279475793dbf147d725a78e0c5f6063cc",
+    "packaged_sha256": "ad0c2d0fb0f995cd2ee3a4d220db0e997961fff4b3171f1370ffaaa4c2aa8b1f",
+    "adaptation": "Portable data/evaluated-source roots and code-hash locations only"
+  },
+  {
+    "path": "src/chronological/baseline_batch.py",
+    "source_file": "baseline_batch.py",
+    "source_sha256": "30713a40ffc462cc6e616ff30e88a32b9bde29c57cd6b88ec53a1ba1887ce177",
+    "packaged_sha256": "56d876e301e1a094be3532d9242362a4be5c97989c24648828e73b247cf25619",
+    "adaptation": "Portable data/evaluated-source roots and code-hash locations only"
+  },
+  {
+    "path": "src/chronological/summarize_chrono.py",
+    "source_file": "summarize_chrono.py",
+    "source_sha256": "b026f1979847d8145f327a9a61c2502fd077797ff85fe4c752619e4fa35c9ae5",
+    "packaged_sha256": "ef0217aee694931195f4e2b2605f6ece888e0c4440e13d98beb2667d7c4f89b2",
+    "adaptation": "Portable data/evaluated-source roots and code-hash locations only"
+  },
+  {
+    "path": "src/chronological/summarize_warmstart.py",
+    "source_file": "summarize_warmstart.py",
+    "source_sha256": "768e8e799d2e7f50e8857fc14e144ab3d756c37b4e67df4731e9e24e86d811d4",
+    "packaged_sha256": "df7609f4cee89288593a2f125ae3befb3494a277f6f2f4ab47548c7c69cc30fa",
+    "adaptation": "Portable data/evaluated-source roots and code-hash locations only"
+  },
+  {
+    "path": "src/chronological/clara_verify.py",
+    "source_file": "clara_verify.py",
+    "source_sha256": "13b6915f689c5966e9aae3b1baf3c8b2ada42d3fd2b89236324b492eccc65821",
+    "packaged_sha256": "1eb5764047a9db1c765ad2fca296d7d85d549541f38d5fa1f60eeb91830b792a",
+    "adaptation": "Portable data/evaluated-source roots and code-hash locations only"
+  }
+]

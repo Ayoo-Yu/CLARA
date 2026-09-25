@@ -1,6 +1,5 @@
 """Reproduce manuscript Figure 6 from its numerical source data."""
-from _fonts import preferred_font
-FONT_FAMILY = preferred_font()
+FONT_FAMILY = 'Times New Roman'
 from pathlib import Path
 import json, hashlib
 import numpy as np
@@ -14,10 +13,14 @@ from matplotlib.ticker import FixedLocator, FuncFormatter
 from scipy.ndimage import gaussian_filter, gaussian_filter1d
 from matplotlib import font_manager as fm
 
-HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[1]
-FDATA=ROOT/'results'/'current_figure_data'
-SRC=FDATA/'figure06'
-DATA=FDATA/'figure06';FIG=ROOT/'outputs'/'current'/'figure06';FIG.mkdir(parents=True,exist_ok=True)
+SCRIPT_DIR=Path(__file__).resolve().parent
+REPO=SCRIPT_DIR.parents[1]
+HERE=REPO/'results/current_figure_data/figure06'
+OUTPUT=REPO/'outputs/current/figure06'
+OUTPUT.mkdir(exist_ok=True,parents=True)
+FDATA=HERE
+SRC=HERE
+DATA=HERE;FIG=OUTPUT
 mpl.rcParams.update({
     'font.family':FONT_FAMILY,'font.size':8,'text.color':'#000000',
     'axes.labelcolor':'#000000','axes.titlecolor':'#000000',
@@ -69,7 +72,7 @@ side=fig.add_axes([.485,.477,.054,.426],sharey=main)
 raw=pd.read_parquet(SRC/'condition_means.parquet')
 keys=['zone','price_id','predictor','horizon_steps','target_coverage']
 c=raw[raw.method.eq('CLARA')].set_index(keys)
-bins=np.arange(-50,30.00001,1)
+bins=np.arange(-50,40.00001,1)
 gridx=(bins[1:]+bins[:-1])/2;xx,yy=np.meshgrid(gridx,gridx)
 fixed_rows=[];marg_rows=[]
 for a in METHODS:
@@ -95,7 +98,7 @@ for a in METHODS:
     q=c.index.to_frame(index=False);q['baseline']=ALIASES[a];q['capacity_change_pct']=vx;q['exceedance_change_pct']=vy;fixed_rows.append(q)
     for k in range(len(gridx)):marg_rows.append(dict(method=ALIASES[a],bin_center=gridx[k],capacity_probability=hx[k],exceedance_probability=hy[k]))
 
-main.set(xlim=(-50,30),ylim=(-50,30),xticks=[-40,-20,0,20],yticks=[-40,-20,0,20])
+main.set(xlim=(-50,40),ylim=(-50,40),xticks=[-40,-20,0,20,40],yticks=[-40,-20,0,20,40])
 main.xaxis.set_major_formatter(FuncFormatter(fmt_tick));main.yaxis.set_major_formatter(FuncFormatter(fmt_tick))
 prettify(main)
 main.axhline(0,color='black',lw=.65,ls=(0,(3,3)),zorder=1)
@@ -192,11 +195,11 @@ qa.update({'status':'AWAITING_VISUAL_QA','width_mm':W,'height_mm':H,'font':'Time
     'statistics':'Descriptive distributions; no new significance claims. Exact means and RMSE use unsmoothed full data.',
     'no_random_subsampling':True,'all_text_black':all(t.get_color() in ['#000000','black',(0,0,0,1)] for t in fig.findobj(mpl.text.Text)),
 })
-fig.savefig(FIG/'Figure_6_Mechanism.png',dpi=400)
-fig.savefig(FIG/'Figure_6_Mechanism_preview.png',dpi=300)
-fig.savefig(FIG/'Figure_6_Mechanism.pdf')
-fig.savefig(FIG/'Figure_6_Mechanism.svg')
-fig.savefig(FIG/'Figure_6_Mechanism.tiff',dpi=600,pil_kwargs={'compression':'tiff_lzw'})
+fig.savefig(FIG/'Figure_06.png',dpi=400)
+fig.savefig(FIG/'Figure_06_preview.png',dpi=300)
+fig.savefig(FIG/'Figure_06.pdf',dpi=600)
+fig.savefig(FIG/'Figure_06.svg',dpi=600)
+fig.savefig(FIG/'Figure_06.tiff',dpi=600,pil_kwargs={'compression':'tiff_lzw'})
 (FIG/'figure_qa.json').write_text(json.dumps(qa,ensure_ascii=False,indent=2),encoding='utf-8')
 plt.close(fig)
-print(FIG/'Figure_6_Mechanism_preview.png')
+print(FIG/'Figure_06_preview.png')

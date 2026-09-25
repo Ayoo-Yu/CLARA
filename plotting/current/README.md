@@ -16,4 +16,4 @@ Scripts read repository-relative saved data and export to `outputs/current/figur
 
 Figures 1–3 are editable mechanism artwork in `figures/current/`, not experimental-data plots. Current file numbering and legacy mappings are listed in `figures/current/figure_index.csv`. The legacy `plotting/figure_0N.py` entries refer to the older release.
 
-`reproduction_qa.json` records comparison with the approved raster assets. Figure 5 has minor font-version differences when rerendered; data labels, plotting geometry and the authoritative published assets are preserved.
+`reproduction_qa.json` records comparison with the approved raster assets. It records the current chronological plot reruns; authoritative approved assets are preserved separately.

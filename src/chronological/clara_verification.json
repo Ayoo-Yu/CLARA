@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "synthetic_structural_test": true,
+  "accumulator": {
+    "all_sufficient_statistics_bitwise_equal": true,
+    "cart_five_price_labels_bitwise_equal": true,
+    "tested_events": 23100
+  },
+  "guardrail": {
+    "current_directional_repair_all_five_prices_exact": true,
+    "states_per_price": 6600
+  },
+  "timing": {
+    "feedback_available_at_cutoff_accepted_with_earlier_label": true,
+    "feedback_after_cutoff_rejected": true
+  },
+  "fit_finite": true,
+  "actual_source_stream_checks": [],
+  "seconds": 3.1486697000218555
+}

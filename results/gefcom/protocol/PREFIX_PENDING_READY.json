@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "streams": 600,
+  "pending_time_records": 5520,
+  "pending_events": 60720,
+  "source_recomputed_bitwise_equal": true,
+  "original_four_pending_max_error": 0.0,
+  "complete_timeline_unique_and_contiguous": true,
+  "code_sha256": "28e70828f137da8ae49038c6fccad2199d02186094f74cdd2fb2f9b5a7d3610c",
+  "main_data_ready_sha256": "c4c4225f5fbc5c95384dc181e0fcdce01cbd1f653410fa1d937275cfafc3a3c7",
+  "metadata_identity": "2ed0aad0e569b860c4842ce34379de53dc4489f2dc31390d40693ebdab4e8dbc"
+}

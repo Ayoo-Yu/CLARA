@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "per_method_forecasts": 2814,
+  "coverage": 0.9,
+  "first_issue": "2013-09-05 00:00:00",
+  "first_complete_168h_window": "2013-09-11 23:00:00",
+  "post_cutoff_only": true
+}

@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "streams_per_split": 600,
+  "target_cutoff": "2013-09-05 00:00:00",
+  "source_events_total": 4433880,
+  "target_events_per_method_price": 18530160,
+  "latest_source_feedback": "2013-09-05 00:00:00",
+  "source_admission": "issue<T0, label<T0, available<=T0",
+  "target_admission": "issue>=T0; original matched complete-feedback tail",
+  "maximum_original_endpoint_difference": 0.0,
+  "original_candidate_nonbitwise_streams": 0,
+  "original_candidate_coverage_changes": 0,
+  "independent_diagnostic_pilot": "PASS",
+  "source_prefix_invariance": "PASS",
+  "metadata_identity": "873a441555155ff1a53070909bbc5785683a8a15a957b4001a47be40f7374df4",
+  "tsc_score_sha256": "cf3cabf8d1f465b48bc76a38a6ce7581dc6e86742993d6f246f055dded8567fd",
+  "seconds": 19.073032699991018,
+  "code_hashes": {
+    "prepare_chrono.py": "872eb5223724f2940b3db34873e7ad3d51ce97d490f8b031dfd4fab778aadc73",
+    "conformal_forward_v2.py": "833f5b3b800e48a91d11275d006dc790315839fb792c40c4491079256b1c83fe",
+    "forward_common.py": "04eb9135ae11fe23544b25332169ffacfc049488c26645328d2a439fe4f10c89",
+    "audit_chrono_candidates.py": "94d4d89cdfe5ed40e2c96d90bbfeee864e5a9c8dbbb24a4b346934c0899c65d4"
+  }
+}

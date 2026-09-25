@@ -1,0 +1,138 @@
+{
+  "status": "PASS",
+  "zone": "zone1",
+  "seed": 0,
+  "prefix_events": 149820,
+  "target_events": 617672,
+  "pending_prefix_events": 2024,
+  "all_pending_arrivals_strictly_after_cutoff": true,
+  "all_pending_feedback_matures_during_target": true,
+  "target_output_coordinates_match_main": true,
+  "source_width_edges_equal_CLARA": true,
+  "TSC_equal_CLARA": true,
+  "kernel_hash_verified": true,
+  "selected_feedback_rule": "Verified in reused kernel; functional invariance smoke also passes",
+  "scope": "Coordinate/availability and artifact identity audit, without performance selection.",
+  "stream_checks": [
+    {
+      "predictor": "Ridge",
+      "horizon": 1,
+      "pending_forecast_origins": 1,
+      "target_forecast_origins": 2824
+    },
+    {
+      "predictor": "Ridge",
+      "horizon": 3,
+      "pending_forecast_origins": 3,
+      "target_forecast_origins": 2820
+    },
+    {
+      "predictor": "Ridge",
+      "horizon": 6,
+      "pending_forecast_origins": 6,
+      "target_forecast_origins": 2814
+    },
+    {
+      "predictor": "Ridge",
+      "horizon": 12,
+      "pending_forecast_origins": 12,
+      "target_forecast_origins": 2802
+    },
+    {
+      "predictor": "Ridge",
+      "horizon": 24,
+      "pending_forecast_origins": 24,
+      "target_forecast_origins": 2778
+    },
+    {
+      "predictor": "GBR",
+      "horizon": 1,
+      "pending_forecast_origins": 1,
+      "target_forecast_origins": 2824
+    },
+    {
+      "predictor": "GBR",
+      "horizon": 3,
+      "pending_forecast_origins": 3,
+      "target_forecast_origins": 2820
+    },
+    {
+      "predictor": "GBR",
+      "horizon": 6,
+      "pending_forecast_origins": 6,
+      "target_forecast_origins": 2814
+    },
+    {
+      "predictor": "GBR",
+      "horizon": 12,
+      "pending_forecast_origins": 12,
+      "target_forecast_origins": 2802
+    },
+    {
+      "predictor": "GBR",
+      "horizon": 24,
+      "pending_forecast_origins": 24,
+      "target_forecast_origins": 2778
+    },
+    {
+      "predictor": "MLP",
+      "horizon": 1,
+      "pending_forecast_origins": 1,
+      "target_forecast_origins": 2824
+    },
+    {
+      "predictor": "MLP",
+      "horizon": 3,
+      "pending_forecast_origins": 3,
+      "target_forecast_origins": 2820
+    },
+    {
+      "predictor": "MLP",
+      "horizon": 6,
+      "pending_forecast_origins": 6,
+      "target_forecast_origins": 2814
+    },
+    {
+      "predictor": "MLP",
+      "horizon": 12,
+      "pending_forecast_origins": 12,
+      "target_forecast_origins": 2802
+    },
+    {
+      "predictor": "MLP",
+      "horizon": 24,
+      "pending_forecast_origins": 24,
+      "target_forecast_origins": 2778
+    },
+    {
+      "predictor": "QRLSTM",
+      "horizon": 1,
+      "pending_forecast_origins": 1,
+      "target_forecast_origins": 2824
+    },
+    {
+      "predictor": "QRLSTM",
+      "horizon": 3,
+      "pending_forecast_origins": 3,
+      "target_forecast_origins": 2820
+    },
+    {
+      "predictor": "QRLSTM",
+      "horizon": 6,
+      "pending_forecast_origins": 6,
+      "target_forecast_origins": 2814
+    },
+    {
+      "predictor": "QRLSTM",
+      "horizon": 12,
+      "pending_forecast_origins": 12,
+      "target_forecast_origins": 2802
+    },
+    {
+      "predictor": "QRLSTM",
+      "horizon": 24,
+      "pending_forecast_origins": 24,
+      "target_forecast_origins": 2778
+    }
+  ]
+}

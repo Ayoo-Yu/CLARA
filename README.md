@@ -2,13 +2,13 @@
 
 CLARA selects a complete wind-power prediction interval from six calibration methods using historical cost estimates and coverage requirements. This repository accompanies **CLARA: An Interpretable Contextual Decision Agent for Cost- and Reliability-Aware Calibration of Wind Power Prediction Intervals**, by Zhongze Yu and Zhenqing Liu.
 
-[Repository](https://github.com/Ayoo-Yu/CLARA) · [Version 1.0.0 and data downloads](https://github.com/Ayoo-Yu/CLARA/releases/tag/v1.0.0)
+[Repository](https://github.com/Ayoo-Yu/CLARA) · [Version 1.1.0 and data downloads](https://github.com/Ayoo-Yu/CLARA/releases/tag/v1.1.0)
 
 The evaluated candidates are Static, ACI, AgACI, EnbPI-RH, TSC and EEE. The principal comparison includes these six standalone methods, CLARA, CART and LinUCB. The experiments use five exceedance-to-capacity price ratios: 1, 2, 20/3.56, 10 and 20.
 
-Two evaluation protocols are kept distinct. In the GEFCom cross-zone experiment, CLARA's risk estimates and selection mapping are fitted on nine zones and retained when evaluating the excluded zone. In the commercial-farm experiment, an initial local adaptation history is followed by causal updating of all six candidates' cost and coverage estimates. Forecasting and candidate calibration histories follow their specified availability rules in both experiments.
+Two evaluation protocols are kept distinct. In the GEFCom cross-zone experiment, all selector fitting and tuning use feedback available by 2013-09-05 00:00 UTC from the other nine zones. Evaluation uses only later forecasts in the excluded zone; CLARA's risk estimates and selection mapping remain fixed. In the commercial-farm experiment, an initial local adaptation history is followed by causal updating of all six candidates' cost and coverage estimates. Forecasting and candidate calibration histories follow their specified availability rules in both experiments.
 
-Version 1.0.0 provides the evaluated implementation, exact fitted settings, query timings, the exact-state no-backoff ablation, and the current manuscript figures and tables. The repository and versioned release assets are publicly accessible. See `DATA_ACCESS.md` for software and dataset reuse terms.
+Version 1.1.0 updates all GEFCom policy analyses to this chronological split, including baselines, ablations, oracle comparisons and the pre-period initialization sensitivity. Version 1.0.0 preserves the earlier full-period source analysis. Commercial-farm results are unchanged. See `DATA_ACCESS.md` for software and dataset reuse terms.
 
 ## Contents
 
@@ -20,17 +20,18 @@ Version 1.0.0 provides the evaluated implementation, exact fitted settings, quer
 | `results/gefcom/` | Complete condition-level main-comparison summaries and a fitted-policy example. |
 | `data/commercial/` | Anonymous summaries, data dictionary and metric-recomputation program. |
 | `benchmarks/query/` | All measured current-policy query calls, fixtures and a portable correctness check. |
-| `analysis/exact_state_no_backoff/` | Ablation source snapshot, protocol and portable summary verification. |
-| `results/revision_20260924/` | Current Tables 5–7, supplementary tables S1–S10 and full-precision ablation results. |
+| `analysis/chronological_ablation/` | Current ablation, oracle and price-reselection code and condition summaries. |
+| `src/chronological/` | Chronological preparation, fitting, delayed-feedback replay and warm initialization. |
+| `results/gefcom/summary/` | Current chronological main-comparison tables; current ablations are in `analysis/chronological_ablation/summary/`. |
 | `figures/current/` | Current main Figures 1–9 and Supplementary Figure S1, with an authoritative asset index. |
 | `plotting/current/` and `results/current_figure_data/` | Current result-figure programs and their numerical inputs. |
 
 Earlier presentation exports remain in legacy folders for traceability. They
 use older numbering; follow the current paths above for the revised manuscript.
 
-Large candidate records and the full fitted-policy evidence are separate release assets. Extract all six commercial shards into the same directory; each contains a different `commercial_candidate_archive/FarmA|FarmB/seed0|seed1|seed2` subtree. Do not concatenate their files or alter the relative time indices.
+The current GEFCom candidate records and fitted evidence are separate v1.1.0 release assets; see `src/chronological/README.md`. Commercial assets remain in v1.0.0 and are unchanged. Extract all six commercial shards into the same directory; each contains a different `commercial_candidate_archive/FarmA|FarmB/seed0|seed1|seed2` subtree. Do not concatenate their files or alter the relative time indices.
 
-Download the seven data archives from the versioned release. `SHA256SUMS.txt` records each archive's digest. The commercial archive names identify the farm and seed; `gefcom_policy_evidence_v1.zip` contains all 150 fitted GEFCom policies. The accompanying `CLARA_Code_and_Summaries_v1.zip` is a standalone source snapshot for the same release.
+Download the v1.1.0 chronological archives described below and keep the commercial archives from v1.0.0. `SHA256SUMS.txt` records archive digests. The ten GEFCom zone archives merge with the evidence archive into one dataset directory. The optional ablation archive contains the complete per-fold records used for its published summaries.
 
 ## Environment
 
@@ -67,15 +68,15 @@ The archived preprocessing linearly interpolates 115 missing targets in zones 1�
 python scripts/verify_gefcom.py
 ```
 
-This recomputes the nine-method mean costs, economic ranks and relative excess costs from all 11,000 released forecasting conditions and checks the included five-price, single-fold policy example. To check all 150 fitted policies, extract `gefcom_policy_evidence_v1.zip` below `assets/`, or supply its extracted directory explicitly:
+This checks all 11,000 price-specific forecasting conditions and 33,000 state choices in the bundled chronological policy example. Current CLARA means are ERRF **2.8531**, economic rank **3.27**, relative excess cost **2.41%**, and TUWR **10.23%**. Seeds are pooled within conditions; conditions and zones receive equal weight.
+
+After extracting the v1.1.0 GEFCom evidence and zone1 candidate archives:
 
 ```bash
-python scripts/verify_gefcom.py --policy-root assets/gefcom_policy_evidence_v1
+python scripts/verify_chronological.py --data-root assets/gefcom_chronological_v1_1_0 --refit-source
 ```
 
-This verification starts from fitted evidence and recorded condition metrics; it does not retrain the base forecasters.
-
-The expected main CLARA values, at publication precision, are mean ERRF **2.8452**, mean economic rank **2.66**, and mean relative excess cost **1.65%**. Equal-condition and equal-zone averaging is applied after the recorded seed aggregation; forecasts are not treated as independent zones.
+This independently reconstructs the fitted selector and checks its target actions and metrics against recorded outputs. Full fitting, candidate regeneration and delayed-feedback replay entry points are documented in `src/chronological/README.md`. The checks do not retrain all base forecasters.
 
 For commercial data, extract the six candidate archives, then run:
 
@@ -101,22 +102,17 @@ baseline settings. These are the fitted settings used in the reported results.
 
 ```bash
 python benchmarks/query/benchmark_query.py --repository-root .
-python analysis/exact_state_no_backoff/verify_results.py
+python analysis/chronological_ablation/verify_results.py
 ```
 
 The first command checks 6,600 state mappings, 220 choices and 440 interval
 endpoints without collecting new timings. The archived 1,920 calls support
-the current Table S6; the median single-query time is 7.00 ms for lookup and
-interval retrieval, or 11.43 ms including width classification. Hardware,
+the current Table S6; the median single-query time is 6.14 ms for lookup and
+interval retrieval, or 9.01 ms including width classification. Hardware,
 background load, measurement scope and a command for new measurements are
 documented in `benchmarks/query/README.md`.
 
-The second command verifies the no-backoff paired summaries and bootstrap
-intervals from the supplied condition-level data. The ablation uses nonempty
-exact-state histories directly and chooses Static only for empty histories.
-Its source snapshot is included, but a complete policy rebuild and event replay
-also require the original statistics caches and fit receipts listed in its
-README. Summary verification is not a new experiment or a complete rebuild.
+The second command checks the current chronological ablation summaries. The no-backoff variant uses nonempty exact-state histories and chooses Static only when that history is empty. All current GEFCom uncertainty intervals use 10,000 zone-bootstrap draws. Historical v1.0.0 ablation files are retained under their explicit legacy path.
 
 ## Reproduce the current result figures
 
@@ -130,13 +126,7 @@ python plotting/current/figure_09.py
 python plotting/current/figure_S1.py
 ```
 
-These programs write to `outputs/current/`. All seven were executed against the
-included inputs. Figures 4 and 6–9 and Supplementary Figure S1 matched the
-authoritative PNGs exactly in the checked environment. Figure 5 retained all
-visible text and numeric labels but differed slightly in font rendering; its
-approved source artwork is supplied unchanged. Figures 1–3 are supplied as
-mechanism illustrations. See `figures/current/figure_index.csv` for current and
-previous numbering, formats and checksums.
+These programs write to `outputs/current/`. All six updated plots (Figures 4–8 and S1) were executed with the included inputs and matched the approved PNGs byte for byte. Figure 9 is unchanged. Figures 1–3 are editable mechanism artwork. See `figures/current/figure_index.csv` and `plotting/current/reproduction_qa.json` for current paths and checksums.
 
 ## Scope and interpretation
 

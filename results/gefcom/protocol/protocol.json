@@ -1,0 +1,78 @@
+{
+  "schema": "CLARA_CHRONO_PREFIX28_FROZEN_V1",
+  "registered_at": "2026-09-25T12:52:57.646881+08:00",
+  "purpose": "Evaluate frozen cross-zone selection when source outcomes and all fitted settings precede target evaluation.",
+  "data_origin": "Current authoritative 60/20/20 forecast/candidate experiment; no use of 20260917 alternate-split candidate datasets.",
+  "cutoff_utc": "2013-09-05T00:00:00Z",
+  "cutoff_ns": 1378339200000000000,
+  "cutoff_rule": "ceil_UTC_day(max first original-test issue across all 600 streams)) + 28 days",
+  "source_rule": "Original test issues < cutoff, label_timestamp < cutoff, feedback_available_timestamp <= cutoff; exclude outer held-out zone.",
+  "target_rule": "Original test issues >= cutoff; identical eligible event set for all nine methods within each stream.",
+  "fit_width_and_statistics": "Only source-prefix data; 33/67 percentiles re-estimated per outer fold and seed.",
+  "fit_support_and_shrinkage": "Recompute original adaptive n_min and nu rules from source-prefix sufficient statistics.",
+  "fit_TSC": "Re-select original 19-configuration family using source-prefix data, excluding outer (and inner validation zones where applicable); replay causal endpoints with original calibration initialization.",
+  "fit_Cart_LinUCB": "Repeat existing source-zone tuning within source-prefix; LinUCB retains zero initialization and selected-action delayed feedback.",
+  "fixed_algorithm_constants": {
+    "ramp_threshold": 0.12,
+    "uncertainty_coefficient": 1.0,
+    "guardrails": "Original fixed five-price rule; no outcome-driven change during this check"
+  },
+  "policy_evaluation": "CLARA and CART frozen after prefix fitting. Standalone adaptive calibrators and g keep causal histories. LinUCB updates chosen actions during target replay.",
+  "grid": {
+    "zones": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "predictors": [
+      "Ridge",
+      "GBR",
+      "MLP",
+      "QRLSTM"
+    ],
+    "horizons_hours": [
+      1,
+      3,
+      6,
+      12,
+      24
+    ],
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "coverage": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.7,
+      0.8,
+      0.9,
+      0.95,
+      0.99
+    ],
+    "price_ratios": [
+      1,
+      2,
+      5.617977528089887,
+      10,
+      20
+    ]
+  },
+  "metrics": "Single-forecast ERRF, TUWR, coverage, width, interval score, ARD, TOWR and one-sided rolling gaps; 168 hourly point evaluation windows wholly within post-cutoff period.",
+  "aggregation": "Pool seed numerators/denominators within zone/price/predictor/horizon/coverage, then equal-weight conditions and zones.",
+  "inference": "Paired zone bootstrap on common post-cutoff evaluation; compare all baseline methods, not only best-looking contrast.",
+  "scope": "A retrospective temporal-information sensitivity check using a prespecified cutoff; historical algorithm development is not an untouched prospective trial.",
+  "preservation": "No source artifacts, old paused rerun directory, published release, manuscript or supplementary Word file is overwritten."
+}

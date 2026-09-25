@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "units": 30,
+  "code_sha256": "674c7dc1f88ea3116f9a4ac2e810cbc4353528ed4f36dbcdb6152e3048d41981",
+  "chrono_DATA_READY_sha256": "c4c4225f5fbc5c95384dc181e0fcdce01cbd1f653410fa1d937275cfafc3a3c7",
+  "methods": [
+    "CLARA",
+    "GLOBAL_SCORE_SAME_SCREEN",
+    "WIDTH_SAME_SCREEN",
+    "NO_G",
+    "NO_RWG",
+    "NO_SCREEN",
+    "NO_BACKOFF_EXACT",
+    "FIX_REFERENCE_PRICE",
+    "WIDTH_ONLY",
+    "STATE_ORACLE",
+    "FEASIBLE_STATE_ORACLE",
+    "OUTCOME_ORACLE"
+  ]
+}

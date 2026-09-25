@@ -1,1355 +1,5 @@
 [
   {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone10",
-    "seed": 0,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "cbbb795150416b7219507b818cbad08ad466b051cd3419c8d2a4048b48c0fc60",
-    "fit_manifest_sha256": "e18a9b889ad4ee42d118ef6ebc7b3b37e447f32558d372140d4ae9eb62abdb64"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone10",
-    "seed": 0,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "da0034ad2d5af17d98b84039708cf5b32b977c2d10b05777394dc7f45aade5a0",
-    "fit_manifest_sha256": "532e256fa9fae51cfcbee86b924e93c383a58c8cbb432fa483eea4f2a12c0d06"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone10",
-    "seed": 0,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "5c5a2f5520a74e0ca03997c964d4ba25433650eb14eaada12fded4106804786a",
-    "fit_manifest_sha256": "5e7736a2d2011351c3990ce13c8d3f10ad78612b61f600bff8c42a9050a15fa5"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone10",
-    "seed": 0,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "236f14e09a89cfc5311f1bacfa12b1331d7a61611caae39918b1df600b9e8ec5",
-    "fit_manifest_sha256": "c74aca25eb6b722e6e30c71173f57c3096016aa37520173256c3824ed8515ff0"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone10",
-    "seed": 0,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "b4e5945d19110f475af1808440cf2dc45fcb5b432e47d6e34a55b626a3e7acce",
-    "fit_manifest_sha256": "665ac0a60410cf0bc42291c475d0794af68f17d03f322101ea2b2bad3b656218"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone10",
-    "seed": 1,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "f1d4184c885f7852b3147c8878a92faa94c6dcbe5ddae54b60f41efb6153db3c",
-    "fit_manifest_sha256": "a573b4edeef793dc9233089f2ba9741fd0daec2a0547e086972f9f59f6f7cecc"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone10",
-    "seed": 1,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "9e11864166e422ddaf8b45fbe5bd0078cfdde857dd7e4399a92f76d625006f13",
-    "fit_manifest_sha256": "16e511891ba64767f9f1b477c2fc6fd0b51772310f0e8cf21f675d85c133ba70"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone10",
-    "seed": 1,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "7cffbb0ec04b111a89e940aada3feb4c59c8ca0b9378fbb96e3628317e3b6c15",
-    "fit_manifest_sha256": "450e88d1be685a8a6d500750a3ed1adb18efa1632c3cb97736a0cd8529401398"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone10",
-    "seed": 1,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "7e3126d43b9fe4cfe2b8b69e92d99953dc4c7ddc8deba43d3a9242c4e0b0c229",
-    "fit_manifest_sha256": "7ff5647907acb80f1246cf58774d1330c546914fda1985febcebdcf7b0a52e66"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone10",
-    "seed": 1,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "b6438c4dd5c86c5869c89d2ad0700f567d987076c572d431b9e1bb2e138d19ce",
-    "fit_manifest_sha256": "0632e9261c3bce8d83e0b0b1fdff148688f82b11f719b4d0ab6182ce38298a06"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone10",
-    "seed": 2,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "9f46064751fa0cf2b4e6f5ce0d39882505983330fb3308ca388e332868035002",
-    "fit_manifest_sha256": "377d5d274b39cfff452b5ed0a3ed04f2e969ede07e4bdc3ccd5f5d1105b080af"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone10",
-    "seed": 2,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "c471340cbb8d84cee53415056606a6db3f4399a7bf7648e6b1444919c090af23",
-    "fit_manifest_sha256": "3f840bf4bbeab3586e982191670cf33d440248c0d9f52671997301330250ba5c"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone10",
-    "seed": 2,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "ff95e1a89ed7a0cc744252ac79864ca3b65deca836c4d7a6ac3fa10ca5c2cb5e",
-    "fit_manifest_sha256": "53c9db40a835cbd817687ae034f1414fb116d0c9fead235626e313aea5770e0e"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone10",
-    "seed": 2,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "61be120330966c5f2266702427564c77643f377d5d23e2cfa8951bd6017a8cc9",
-    "fit_manifest_sha256": "a29330f0cf3844e2f187b8666735ee64f7598a18239a99e88fe18c77778d386a"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone10",
-    "seed": 2,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "f6d4c54421bb54ba580bff863ffd8ba53cc93fe4adccf416eb981c1cf65d53d7",
-    "fit_manifest_sha256": "9a05afaa17d41330b6d6837676444880dc12e08e80437808832adfeafd9d3ff5"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone1",
-    "seed": 0,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "b5ccc55de3ab56fbe2ea3ca8c15a856fa0b040abf8bd9a491a04044036889647",
-    "fit_manifest_sha256": "561b764d4c8330e608ec2054e349d8b11ee8690395a2cea638199baa041692ac"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone1",
-    "seed": 0,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "6c5823e473cea49cf21f7bf278c64be0ad3ab9a7326c1a22b99b8f367f664774",
-    "fit_manifest_sha256": "7bd1103234230f4cfb4fd13a95fdcf68c88d84ed2dd93b61c11e3586357cf7d5"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone1",
-    "seed": 0,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "54b344c1b8b1542533b5326120d5aef69f76ba51c3901ae583713386becd0430",
-    "fit_manifest_sha256": "53aa5bd5bb797562add2b94b82b048ce4ce20b0c47b5346739c94700e0347ad7"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone1",
-    "seed": 0,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "b42a6720e501188a63dba1e411e4a2a88436a5805c8711df8b380c23c307aa9f",
-    "fit_manifest_sha256": "e2025f750ec1f6d5dd9c3e985cc6d801bf6593ca97194b265df4d54db6e0687d"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone1",
-    "seed": 0,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "0ebfceea1553519ed556f023f0b79e530cb52693819b1be99267f0d163bd1471",
-    "fit_manifest_sha256": "7e58041163b53c21a79efab790e77a4c58156004b4d2d44ac00def6d0c494616"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone1",
-    "seed": 1,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "2a94ed7df92ee2d3c103c2d2c70b1e38fca1113e00aa9e49b8e5e25975a7bf52",
-    "fit_manifest_sha256": "049d5a10bb8173778f05d50ce127683cedb008bc2ca98228ef2e1f8fbca1bc03"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone1",
-    "seed": 1,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "5d99d4d83ed1ffe97300af9f61cdda667fcb7402f5d918b7269c2ebebf5a0e24",
-    "fit_manifest_sha256": "25922e6048bf3de3f25d3f911f052fc1514bfd71bfbb0c13c3e2c22c22d26f16"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone1",
-    "seed": 1,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "2dba5a107c0fbe417607b12b9177dcf103c135f4e66fdddd38ba83a8a8e97b3e",
-    "fit_manifest_sha256": "0f85469d2bc23ac77207b612542181602c92190ab6ecbf54e22ad8532f5589ab"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone1",
-    "seed": 1,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "0c0bf193ed60647515a2fbc79ccde4333ec4ac8f527d61013974a8ac91f53fa0",
-    "fit_manifest_sha256": "2275d4ba4d899fd754f74955a480d0d849915109a1d0e64ea5ea8806e5ea26dc"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone1",
-    "seed": 1,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "69365669c005feffc8c7304757e717f563b7bf89519fc4d62396979cd20eed05",
-    "fit_manifest_sha256": "658dc86c999bf9d97d7b3f765dc0d1bbc3177a5304bd847eca99a4096cd7dee1"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone1",
-    "seed": 2,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "cbe97b8d20ccb2732add328a712e4f71ad53bb044e4ba5fe204236c80ddaa855",
-    "fit_manifest_sha256": "2d5f6757dcdf51212db3b144e22a18c6e9fe8f648c083a8900d63d9721d1efa9"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone1",
-    "seed": 2,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "961969aa720efea27edf039f465e46416ef620e84aed149bd2bd40178ddd339f",
-    "fit_manifest_sha256": "96800750acfd9a989cdc8e1c5b1939aa2590df764d8d49c6bb2a136cfb0c7553"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone1",
-    "seed": 2,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "b6f137d7c961c11fceb8b3668e922ebda5460bef4aba6b300ae620ef34910391",
-    "fit_manifest_sha256": "c6ef8991146e4194f6c07677d8207de8e9baa6fae4282a1644c602921dc25d59"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone1",
-    "seed": 2,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "082a61b824ce344db488b29cbc97fb3a3a18f4dadeadd18cf6469ebfeee02594",
-    "fit_manifest_sha256": "cb4cd3b7229fcf251d6b5c2e7fd68158be0654bad20be9e0bd33340a7f62337d"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone1",
-    "seed": 2,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "3c470bf172ee605eee506f3b1388917490e955e1feb53b24f3074725014f5847",
-    "fit_manifest_sha256": "345259bc29cb4cb0f27464d7083e24b912037901b34de2e29b27fec1acbc33cb"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone2",
-    "seed": 0,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "ef8d0f5d1abf3dbb2206e6a1dd9ed5a1acf73bd1d526416988ef84bcba294bac",
-    "fit_manifest_sha256": "a388ffd38123f52e29eaaf265cb99afb871ac992c6c147597284a1ca1ff032bf"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone2",
-    "seed": 0,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "d77d94e60f43f30fd441f4ae14ee0aeb58d5f9a3113be422e36cbc9e93ecfb47",
-    "fit_manifest_sha256": "b06e085793d286d073339152a550289237d565d1e77465e47948a5e2d953d87f"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone2",
-    "seed": 0,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "913f8333b0f5947a60d6fdb6f7d0d13bc76e0f00bb8916a2a35bd33e813f56bf",
-    "fit_manifest_sha256": "3f2aaa4a4ede05c6d8dd4f64568beb170a541daac0cf58c5adffea8bb7d193c8"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone2",
-    "seed": 0,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "563c8b72397949884aa691821357a799b6e9c33c4854638d747c3a613158e87f",
-    "fit_manifest_sha256": "c4f44c2600d0f3144c980e54801a0ed178709cdeb96280a33133fb3dbac88597"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone2",
-    "seed": 0,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "9636d48d72803009ac8317856e1e95801dc43e3ce3727895a28f004f635b8a93",
-    "fit_manifest_sha256": "a87e6c0009b32cf1c297bf0623c8524aec01db82841f5ee58f99524eacd9a349"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone2",
-    "seed": 1,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "4792a27dded5f80d153cfd16b34dec53f27e4f9aab122089beae5635d3165232",
-    "fit_manifest_sha256": "d5a95cda612edb946ba7ff12fbda1a8da6d5c65416f8e335070a50b7fd0c5719"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone2",
-    "seed": 1,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "ea0759a8d24b20b15d29a52d97cb311250dda42862e66a8403acb939217f9b0f",
-    "fit_manifest_sha256": "ade03108fa184e35a016986d3f1acaded6b4f357bd47f6042c5ade0dfbec8dd4"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone2",
-    "seed": 1,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "d5636f3109cbdbef4cabd6f47755e4318de14b184c4e6ad48b71359c32b81299",
-    "fit_manifest_sha256": "1d2f1cb20854755729076811d5b78240f788935d014d1aac222f5d4ed0ac69d4"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone2",
-    "seed": 1,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "ff3fc75231068f6858d0381d1b54874cec22e253484f67109b85ecbecb32fd97",
-    "fit_manifest_sha256": "eee3f18db525c48f252638e18d2bb034d0dea89ab6cec9e9f7520c9a388e1c09"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone2",
-    "seed": 1,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "de3fb6092236813c70fb6af433c854b1149e4772c27b780f2c40a53a0797694c",
-    "fit_manifest_sha256": "1b24369d156b65ff7f2472fda2f5933c278de9f779d3935411312f8c0dbf3109"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone2",
-    "seed": 2,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "1388984cc696a9049a0f89be18bd0dae0a3ce8b3c8a0aedb8789c47ef9302593",
-    "fit_manifest_sha256": "c552f4b1a091f09df0a6b65e1c5be5f8d0b6418d5a36bf7c6d38bf7ba2ff0d96"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone2",
-    "seed": 2,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "8413bc00c285c7bf1ed992b080affa8b3a057f216e38d55d12fac9b6ddf0c37c",
-    "fit_manifest_sha256": "95d8bfa9ea9b94dd3990b97de6cba7e3b133a2150b9576ecd43d6445cd992d18"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone2",
-    "seed": 2,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "7df9e20cebb9e3427f9c7669cd6e043d6eab822eae93d5c08802ac58c8cdc8bf",
-    "fit_manifest_sha256": "e9ec89ecc817555dd95e8c2179ed235b5998a5214afdc75c67b04b5f5aba1ad1"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone2",
-    "seed": 2,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "0ead080431f34d6185c48dbe10d02604aacc7d1bc7e809389f741a13db6d0cf2",
-    "fit_manifest_sha256": "6c8900f1b2a5cfff1a44093b288f243ea8de71e753affbe12c1b0bf935e5758a"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone2",
-    "seed": 2,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "f37ad96ad3c6159499621b82a1bda3380609e65b60468c8c1bd8d315cd48098c",
-    "fit_manifest_sha256": "58c4e4dc8baf0067ebe4a80623b9dc02679def881134a7725b5a0b11e4dd811d"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone3",
-    "seed": 0,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "cdb0b46c5390754d8d78987524b8a686138c0329aebf9abc995c770b12279f00",
-    "fit_manifest_sha256": "b04a4c89fd6d9c95691c0098e49450193b58626be10fa8b199ea5ba83d52f0f8"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone3",
-    "seed": 0,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "2990612cf0d4e8500d9f46d3b7af70c843102a3f7ae6b40432e0ec33c9ed40c1",
-    "fit_manifest_sha256": "f9be8c3454ce9f4ee19160085b2d18c20f6550db49a4cdc385b3a6b7efd53072"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone3",
-    "seed": 0,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "6692305ce729e83d70782f0629448fcb89b6b7ef22c23ddbe31c9424b4736b82",
-    "fit_manifest_sha256": "a1dacf6ef1f917871068d5c3eca37bb60ae2475f54ca03a10bb0066f6a4f4141"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone3",
-    "seed": 0,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "bf63c65ddaeb01e5ec4aac040b9c68b9deee2407c873503d5142e2a69e9ba8b7",
-    "fit_manifest_sha256": "646d265ec0c02bf70da44af2ef4270781d8f3b996bf9314ca90fa58d5ed476cf"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone3",
-    "seed": 0,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "4dbbc210feed4b52c8e2712aa7dc28019d995e8eb3b53afbfc384a8d4af6ccb3",
-    "fit_manifest_sha256": "a58457fe44e8c17327600010c100c9513c6b160f071425af016bd70d8651e0ef"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone3",
-    "seed": 1,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "3d294ab645d3d702c7662d21232a2cd8961eb2c1b4b24ebc196db598861f1a19",
-    "fit_manifest_sha256": "931413cf7a7f3e1a900de0389862c6194506d193c32250c0d2048436ce20fb09"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone3",
-    "seed": 1,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "c008fe99a2561397f9c9d8f0db1d7746fe6447336387ce1e56b394e24e1adeeb",
-    "fit_manifest_sha256": "1ebc1f4dd1dd23237d43de6d5521206fea4c915746be26dd0b515528c36bab98"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone3",
-    "seed": 1,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "5141d204954ac64c2319330c09db9e706d46bb78c5760e97936cd988b6673dc2",
-    "fit_manifest_sha256": "998f53c2ea73ca16f243b423624ae06d8a715c867c7cfb417851b94a98fdebba"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone3",
-    "seed": 1,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "8cdd65e8d3a65458e979193575fc6d4a33b843dc66670e87eb60efdde4f69f5b",
-    "fit_manifest_sha256": "9bf676e7eab02d0ca82188cb0b25d36a59ee6ad88c747a23b786bec14b47e082"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone3",
-    "seed": 1,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "29191ae9d47f0f0e519b84f6a41acd29267a0e6ba430e5b76d7f251166d93433",
-    "fit_manifest_sha256": "25c29fe5d83183369768933defa9d9c42801d2aa43f88bdf50204262353753b4"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone3",
-    "seed": 2,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "1d4da1d74ff09ae11d6d03f94e42884af632934257d35cf41b315de36de20cee",
-    "fit_manifest_sha256": "8dea7cd2cccc842a54619ac18de7df2cbc53c0ec271bea7360fc3cafd6d27309"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone3",
-    "seed": 2,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "19f03d0ec1bb8e02adfe046d3bde4b6f1314e25233cfe3eca3c68f42bedc96a3",
-    "fit_manifest_sha256": "4f34b2a98c080dcb442fa03df52c136be7765652f7ff3dc5182e3981866838dc"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone3",
-    "seed": 2,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "be768985ba0de15b6612ec877c7bf6b38e68fae960def222cf4c7defdf35106b",
-    "fit_manifest_sha256": "76b83679051d3a3a742e5add30fd9e7247c0b0af522117d201aab50cdc3eaf55"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone3",
-    "seed": 2,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "2015d6e4cc424efc91bdbd5815f3ee8f210881428518aa382cd5e6d2c27592c7",
-    "fit_manifest_sha256": "143b2dcfdbd71e3d270ea1cbc6c63fc3de1175085f56624050df7a8e00626d19"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone3",
-    "seed": 2,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "087c5e9eb069edf515fe4d00a699cc294c46429f1bf0199721179d71167048dd",
-    "fit_manifest_sha256": "e1b6362fd307ed4f97e9cc995027b4edf6cce3e2142fe214d7cae2d8e8084216"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone4",
-    "seed": 0,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "f025c7a624d630e943dd6e4390aab4fdbdcfe49d942467040694d549ec325eb2",
-    "fit_manifest_sha256": "9a237d96dee72cfcdb5f81d72b01e231a65b0366406bb84a753313889d71284e"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone4",
-    "seed": 0,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "1bc361246d837a6817bee5025b2ce9ce4bca7a7c95e2ab4b51cf95bbd28b8f54",
-    "fit_manifest_sha256": "749e36154fe23090cdde9f38bf394765c155e36dbc974e2feb2b616cba900945"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone4",
-    "seed": 0,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "7b9600dbe52b99913a0384c776171c9a911933147aa9b54e51bd0a88f5bd7e7e",
-    "fit_manifest_sha256": "bcfc9ea027c9b00351cfe80f8b233b744635d533d3398e5c62034ebe6fbb0db9"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone4",
-    "seed": 0,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "2c6683cd889928ecdc64e44962290d379c2c7094cffb56e97f63a92c06aff29b",
-    "fit_manifest_sha256": "909888d774693a03bc5b58760add732a1b4ea7ef78edbac3108b5688915503e5"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone4",
-    "seed": 0,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "63ebed7d0be8a050df2502ffa8cf3a539ed4cbdf8e4f0f10643503cafd7095ca",
-    "fit_manifest_sha256": "57e2cd3c59c23a978ef17b536c28e3acae2d81bfdac140c3c55cfba0631ad876"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone4",
-    "seed": 1,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "aee2c72f6f6a20fb4ac2ca065115418e1cbe629303c9913bcc690ddc4a577a1e",
-    "fit_manifest_sha256": "445f3549d943e3549b69cbd144205d5d3160289874bea98700501971236dc198"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone4",
-    "seed": 1,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "c13d983cb45e4115cbb6df7c28770708f956d24f6ed089530c04b8704e58c8b0",
-    "fit_manifest_sha256": "e941d6849458fb0f9a8f19c0311df8b914675a4743cbe07272fb03b333c90c8e"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone4",
-    "seed": 1,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "1b17da7bb151376f6fe8095a59d5126dc74610e51bab13c4c6db23edff8001ea",
-    "fit_manifest_sha256": "9ddd7612bf4226fe56f8d0bfae8e8563cc4532012607a55fa550a2cabaa94bb9"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone4",
-    "seed": 1,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "ced420689c547aa8c888bf88fb03956604f4cdee114785bb89eae6e0885cb43f",
-    "fit_manifest_sha256": "76537203d61bd9e771129550ecf82d2679aef3d16101dbdbf835e33348813851"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone4",
-    "seed": 1,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "c1ce0c0b67007615297eb8e0c5074427aa40340d7c8d629531334750b24842c9",
-    "fit_manifest_sha256": "1299e68903fb7313cf5ad22d2a52c2740874006d11953474450a76057bdb4f7b"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone4",
-    "seed": 2,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "3817b64659345ca27a6077355888753454a1b15b074cac451c6f85e448fbaee1",
-    "fit_manifest_sha256": "37f2f52ee4a55b7028e2f69ac565875f5e390503b497fb2bb0989b2212e80bda"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone4",
-    "seed": 2,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "fb7f47a975138d65bbfa1e40417c24a034b5d27a00392ef5c840becee5886923",
-    "fit_manifest_sha256": "ef2f246da8a07e5705d71fe9affc8979f860d7d90b05766ef1b689061cee9db6"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone4",
-    "seed": 2,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "0a86e16ca835f1e7d25a6c8827628cf1f7433d196b55a62b7c8ced829f0d785d",
-    "fit_manifest_sha256": "186011642215b4e0ee1449fa0e88e440ff2802f1235a299a407c614f07236f44"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone4",
-    "seed": 2,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "cf3e037d6df2922e093056b94da29161349f0d74c3bcdc4e6e7ccdb614e59602",
-    "fit_manifest_sha256": "bae30430895c23c8781e063d714fdc654db72cad57bb8b835943f8fec28521f5"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone4",
-    "seed": 2,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "075c827ade16c3def9459ef0ba052a9871c6ec36c25bdfb36c18c6b1dcc8f9e5",
-    "fit_manifest_sha256": "1c83e5173c382bc419d42877c87a41525198c7054c8790a294a3ce2635a90514"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone5",
-    "seed": 0,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "014942db69ea7eb83fac5653cec3f69b2d19486859c66884df48ebd22d876358",
-    "fit_manifest_sha256": "c1d671690f2b2bb87c006874e69bb82deeef67962c934590ca5358bc9df23413"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone5",
-    "seed": 0,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "9999c13b22a791da5ffeaa71f9f1986ddc558fe13951cf552f6b6c7311de080c",
-    "fit_manifest_sha256": "b8d7664e6c48ac1c94fac9a5ffb2ed9ecc9852d6358c223b696276c149ddcd4a"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone5",
-    "seed": 0,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "160de97385020922f7a9d1b173630b742ed4ceecbca6ab45dc7bf35673cda884",
-    "fit_manifest_sha256": "7c9f48868d7c1514eec9e0c457307336fb440a078e0afb51453d96e706da1c05"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone5",
-    "seed": 0,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "f2acb892f07b510ed7d1531c1a2c892af310f0a9eca02a7508cf5853a1e77216",
-    "fit_manifest_sha256": "87b94b5648231f52004da61ae64d76dcec9563fc678c5cc8e383f79c81c9c3d9"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone5",
-    "seed": 0,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "6d908f293d83a5eecd2b8c00e7c3aa92e1e6523a9be73773cc73e4267f0a972a",
-    "fit_manifest_sha256": "80cced17bc47d021f01affef8312f0e966553f7d787c2f563e3f67af4b9771b6"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone5",
-    "seed": 1,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "5889740ec03360fbb4a7e045aa1dd9d8540d26de1fd3ea4c50b2d629b7a6239d",
-    "fit_manifest_sha256": "a5d8bdc23407df231d91a310fd9d74a1d577a2358f87510cbd8f3f17ef2713be"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone5",
-    "seed": 1,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "8c113d91f5d2b4595ee9552d0f63c5c63f061ac6b8ad4423e9f49a73a4871de5",
-    "fit_manifest_sha256": "bdd09b8c7f67270c6faf10335f752b8ba22c5dbdf258ca4ac00430938363b96b"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone5",
-    "seed": 1,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "d750025bc0635ff659e55ec02a857125bdfa22473b888173725401924557ed4a",
-    "fit_manifest_sha256": "2967e5a39d12d32ce9e4b057cd9939304f9a828bc1203c796a0f03fe1d39eeb4"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone5",
-    "seed": 1,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "55c27a9a4ade426de8536a7230db5fe707916e366bc48aae1e2cbbb2a66d51af",
-    "fit_manifest_sha256": "b80cb2be6c8cd0b53ac51968a825cdba59560880a998de9abfa2643271668b13"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone5",
-    "seed": 1,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "66c27310aa5f3dfc3203e50035f259d54b4e34b35d1e6c9904c1be8bfe15dd2d",
-    "fit_manifest_sha256": "3d6c1a6a6177512d7548732f7e5768aa037337cd8ade884c0c2655232628468b"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone5",
-    "seed": 2,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "d523683d8665eec81ca6e62928eed505027558b7959d616f3cd8e744766b67f6",
-    "fit_manifest_sha256": "aac603cb3ad77e4bbc4f9a291eee6cec2885600a56809ee8a6fa4997ab4f7544"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone5",
-    "seed": 2,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "dc24119af77ea2e4cce65c8c2a5468f8471097c991a77f98f70da70ac8d86c9e",
-    "fit_manifest_sha256": "cf8b6d96449c125e9af53d797f651f555363f2b481a961a3d66c06c2767e5e7a"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone5",
-    "seed": 2,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "29aa6003938708151e3ea5be83df9bb02de8611447d64fa450b16a0ede4e01a6",
-    "fit_manifest_sha256": "425e777d1737924a1310c1433eb94dab281dbe8d66dcd93f2c99505e52351317"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone5",
-    "seed": 2,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "18792b26d746e95666e151122d86a7e6cf2df79dc64edb5f9b2501be25f2f1f8",
-    "fit_manifest_sha256": "a8e22ece9102d243742938da6a336d58eff73b43e2f755f0bb53a1c44828a022"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone5",
-    "seed": 2,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "8999eadd64a378baaaa46a10c962397ba62ac466835a81c8c70901d367b002dd",
-    "fit_manifest_sha256": "de64e2e517893fcfc920da6628e9158a96194f6136a32817312840d5aed10913"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone6",
-    "seed": 0,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "79e127d1cb7aa8ef832d5d93fab4c1017beb6c0058ce5af86f8010e5b9ed630c",
-    "fit_manifest_sha256": "1785efde825ec2f599386021fe72093d0cab02c0f203d55fa3922edf848a8241"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone6",
-    "seed": 0,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "99a6a7d443a26c28469144568f5f9817b84ab7efb136786e30da2ad2fe77f100",
-    "fit_manifest_sha256": "fba4dd518dad1021dca7ca724cf5f23b78a57e54c0d459081eef1720ff47ce1f"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone6",
-    "seed": 0,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "720fba28325616ea63565f402ba7b95f854d3daa2adc14a654f178e85565034c",
-    "fit_manifest_sha256": "0c19e95ee0b0ef5c02474763e1e9ecb8cd90a51f363416edf73ae01f731cdecc"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone6",
-    "seed": 0,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "0a8adb58202c8442dcbda1cffb72c26d2e6cd6140a4617066f71c6146d3dc603",
-    "fit_manifest_sha256": "c1797f085946ed00760dd45e803faf648eb771317e5dac0a5c974175a4d03b46"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone6",
-    "seed": 0,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "81b17e8037a09c5dfb1371f2932373a33147160d41aceb6009a9e0840c9ef6cc",
-    "fit_manifest_sha256": "056009e132de58be56257213df5b81ad171b4a948ab6dea37bfa6088a37bb7f0"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone6",
-    "seed": 1,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "4051a395971a39599c96e2558e30e83349e0a6593036049e5f9ead34ceff8c9c",
-    "fit_manifest_sha256": "2332b6cc0ed3733d0d2b81772dad73b180b37b41117a1f913c9ac689a6b26c1b"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone6",
-    "seed": 1,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "c5fd8a53e01745f207cb6d4803f2f5337642d3a18be9c62958d34b4d515097e5",
-    "fit_manifest_sha256": "e7343369e20243263b3ba9cccc3474b371763201fb58fc06e72af74f1d782a63"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone6",
-    "seed": 1,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "20bd040b24717272a96d1542f66ab8fefe1855c90d17324630ada2e3a66284e5",
-    "fit_manifest_sha256": "b8dc518c2d8a21ceb17d99be9b20e5a7216a04216e96405462054582694317ea"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone6",
-    "seed": 1,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "adc8d32be686aa9874ffc049536fdd597f3007d53f801139ab2b7270b10ddb6f",
-    "fit_manifest_sha256": "cd9e6ecb0258dc34542fcd22818b81d51cf313b15f5dfd930c4b006a725383db"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone6",
-    "seed": 1,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "b30394b29aca3a40fe64668f3340b96b43a65d725389c6601957d3811c074634",
-    "fit_manifest_sha256": "2942c49432798fe11a0eba5a5aa330f8d0b27d18173da5e56ab1de2bc4c6d699"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone6",
-    "seed": 2,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "4ba94a0eb3d17d744683b385d3be59a18d537357f549a8feb03df6c372607eb9",
-    "fit_manifest_sha256": "bad01fcccc5ad0d22b376d15a880b841f5483270ccd259bf11eb7e88af18b658"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone6",
-    "seed": 2,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "21ba961da31ecd343dc5d5fdb258c17f1b3609dc43ab8f8092a604c741407523",
-    "fit_manifest_sha256": "057fbaf58e04a3985ac2c9fa3dd2295bda692413915f043de7a12251d3c8650e"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone6",
-    "seed": 2,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "44a0522f441fec382b057c36eb5feb23a5eedef997c250517df4bdf5b4c0a138",
-    "fit_manifest_sha256": "97aec72f52e6be38d1a88ba06de9e39cbcb6f222c6166b2aa343c30b5b933abf"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone6",
-    "seed": 2,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "d54f89cb256be2b8cf0c0429e72756407e72870852566537569ea45aef55b165",
-    "fit_manifest_sha256": "b967b606c74fbfc70fd6bd423734e5dfc4a992c18985c8472751f34f78cd7b61"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone6",
-    "seed": 2,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "4225d21c8f6e1e7e65c785d82318fea7e92c517e43320de65af1a3710df604ed",
-    "fit_manifest_sha256": "a0fcd9727433503e1e18c7a8209be6966b1c29589be29641f68d0b74757955a5"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone7",
-    "seed": 0,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "c7a4e9c79b070dc208b8abcfc0f15176280f8249a4d27f07515b7b58b434ef6d",
-    "fit_manifest_sha256": "1086ecba0f3d09dc4bae866a0df24648230a441b33c9599d3a14119ebd8ca160"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone7",
-    "seed": 0,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "12fd593eda208ca560d6d2bda69529751b4b84efce00a7fe526bf9d45ee43bca",
-    "fit_manifest_sha256": "1c96a327105b3cbec16f65f765822b520bbbaee8ca188af64c81e2f135a31b7c"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone7",
-    "seed": 0,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "c4048a8ef0eb3824152fafd7cd04fc3447626e229515faef9b37d2c472323f20",
-    "fit_manifest_sha256": "24d8dba38a670c9bb4a80e84ada5062f63034873563f1afcb527b2fe123d114e"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone7",
-    "seed": 0,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "f9355c30573805dc04fd4ecebceb574cf44099d4336fecf9b118a2041aa0f75d",
-    "fit_manifest_sha256": "5894342d72288f426c0cbbc31cf5df11d96c12341252cb4f93c98d8f19e1050e"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone7",
-    "seed": 0,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "c9cc5a2cc4ec99cc9808ec6c3b9b5c376b6a9a040dbcb00ef11343675e8a708a",
-    "fit_manifest_sha256": "37288dd9cb46c17cbdcf102dfa16e37cec0253e87fa0a06626ae2c4139573ca3"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone7",
-    "seed": 1,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "fca815963aadde2c405dd3569d2a1b492e08d1a45a08eee50e82c9099d8406d7",
-    "fit_manifest_sha256": "819e2acff9d5c8774af087889c7b79f73a278a226b0f17dfc9010da10346a4b2"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone7",
-    "seed": 1,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "1926180316a7b2622e0cb5e1b5f5ac113f92bcbb0c42d3858d1d2bae3308a285",
-    "fit_manifest_sha256": "ba120eb3098b62a61684bfed1464a2ddc3c3e2ee737b6483722cb5375faf2530"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone7",
-    "seed": 1,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "2da7ba9eed70be3f9c5df2c958e635a68d95207c726a6dec47f7a29f824c7bb8",
-    "fit_manifest_sha256": "c1292abe0e2990b4ef7bb23efa648123c63f5a5a35c18e5900236e082a313208"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone7",
-    "seed": 1,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "cc899fa1f9a0748367fa9ffaeb9eb0dff7c0351095739cb64f59cd8a08121f38",
-    "fit_manifest_sha256": "cbe551a6dbe5e1d26d8c28f47e4ab941064c1f620aadae1ff221540fc388af99"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone7",
-    "seed": 1,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "0b3fda848ad9e41ae82a3c7126c34ee851c7e6789dfe035bb3aa9023b59df4db",
-    "fit_manifest_sha256": "f8210f117c161c5f9e786820431f006d3340ef13e80b8d165b290313d2d3b0cd"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone7",
-    "seed": 2,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "2b53031220b73f94f0420977e1c177e2abb13f6292688460e435a0ba74529852",
-    "fit_manifest_sha256": "e44b77200823aad30c201f835abed05624616ed2d1ee9796a59e9729bc535cc5"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone7",
-    "seed": 2,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "62f54a5e3dbe3c5593a0ba8500e9f6835d908d7104814c2e36a910be4f634501",
-    "fit_manifest_sha256": "862e174ef43ac1e263f6f4feb53235c92912809e7786e180b429d4721a47bf33"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone7",
-    "seed": 2,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "b0284a6221ca9ef9162155ffd15a074621c6e719a8bad667a09ef05209ff27df",
-    "fit_manifest_sha256": "ccbf19dd17928820693b24c70feebed600bfe97be84b2fd03635554ad05cd838"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone7",
-    "seed": 2,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "0467ff0075ffe6cf5052fc01c8219b814b9b3722226f5349a9ab4b41a4f83dac",
-    "fit_manifest_sha256": "f2bbb6b2b0b66304e16da22430b5391e2de69304801971a1625cd78aa7595427"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone7",
-    "seed": 2,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "a6db0f8081927728888d2d2bc17e6a8d4fa2f9528636dafd8ffff45daed8bc45",
-    "fit_manifest_sha256": "e773698e14155c8dd82521be27c70b6e4ea798d1e09159e2551363f0259e1f3e"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone8",
-    "seed": 0,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "9b0cccf4094c8605c3ba6ef94e36b1c90c61558d71b550e08b74297412972adf",
-    "fit_manifest_sha256": "1334ba23507cb6700a2f4642e72d75b84b67eff6435024fe3e687b83884653c4"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone8",
-    "seed": 0,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "dbf477c262d31f9aed089679b3c4b525f4780544813061bd4e82fba4ac1fcd4d",
-    "fit_manifest_sha256": "4d8e0cfc4aa030807e0a98f8bf94989c66a2f0c9832618401c9a90c8214ea725"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone8",
-    "seed": 0,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "5a9621df33c3e9b5446ba40e466aa91127541c083130b4cd7d244215f759a3c4",
-    "fit_manifest_sha256": "7aa96114eac61d685a069eb546e8e50b93de9794f849bc0fa0e984322cf0a325"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone8",
-    "seed": 0,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "25041dd56c3703f791e09e28bf8fb235d3cd014c4160d0278094aef1eb91e53e",
-    "fit_manifest_sha256": "783cc44eb94f8893ab911e29db8be78b88ddb46775d83540f74a279d276eda7f"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone8",
-    "seed": 0,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "08a695690a132e33666c50757a5595483cefdf715a36dca2f8222b3d8b599655",
-    "fit_manifest_sha256": "7ef5ed4b9b36938f3e6e2ae6f2acde9a136b3dfd8d158c1fd3bc077df7222f6c"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone8",
-    "seed": 1,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "4191c42486577fff004c11d28d6f7226d68dbd840ca2367a2c4a47d423167a41",
-    "fit_manifest_sha256": "26c50989da0655d942ad65d6898091b44fd159bb019c42895b6389cafdd99a04"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone8",
-    "seed": 1,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "92aa8e32f8916dd08e794b654cf7925924f09a525cae2950529342daf744c813",
-    "fit_manifest_sha256": "029ff6a5037f1cd9d0e60f45ce3c3cd2ed65bf961f67044866b0786357406ffa"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone8",
-    "seed": 1,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "f7462bfb8c4ed85a0cb56c7e1678329f892968b44fc4eca069a46d9cd521e2b6",
-    "fit_manifest_sha256": "d897ea7d3563bb72ef83167304c1fc60edf8829c0c22f026735ada9b40d1b842"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone8",
-    "seed": 1,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "22d446a41e8ea6cafdec9de1fe2b7ce4c855d2c8ab8b99246d8c89dc2e342fe9",
-    "fit_manifest_sha256": "b11610cb0cf5a0e8915842f3fe406a55c42db61f4189d8db28858c052325a250"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone8",
-    "seed": 1,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "58ec3ba2284a8136e0078a2964d81262da84b7be11d9d8c3528b6c6e6bd55208",
-    "fit_manifest_sha256": "c79773506f9d250e3263025b2b02ba3d7d0ba4a3340d240c63846549905c0c2f"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone8",
-    "seed": 2,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "dbef86a376a467c8c235b26f68919d9c9f4360d892dc6bf47f73864c647b6fa9",
-    "fit_manifest_sha256": "b514f60d0f9b009039fe0f7f65b2dfd7cd300b756ed422d930d7af324f0ccffd"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone8",
-    "seed": 2,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "f6be3605fb1811847ab1fd04f71b5a53b831e01d82c24776233272a56905ef04",
-    "fit_manifest_sha256": "7759be6f3282c2e1368c5ff0220e1bf2113e095ee04e7da5e78a095776962d20"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone8",
-    "seed": 2,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "50f7fd3f1d686669da29a4fb1060ad702f4c298c43c5a5e45b9531c039a145ed",
-    "fit_manifest_sha256": "67e9ae28921108d39a67cdb3d1c4990ac946082b5a209fc02e185bd1fb691192"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone8",
-    "seed": 2,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "a0325d050fb2a4390bfe01e6df97b915dc049ec444062496ed1e69f97dcad41e",
-    "fit_manifest_sha256": "c99a9a32a4b7a4d9555f18e668c073bd0c13906724d54f6139d3a2f92b2ae975"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone8",
-    "seed": 2,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "cea5d0441fc7c3a5f34b1112a4e7cb8f9bf7934e0754b6922736e0d28760a9e8",
-    "fit_manifest_sha256": "d95657d9c516eed517bd9def1307ef55c2242477dbbad9756f2793dd247387a1"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone9",
-    "seed": 0,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "93e849fa70ab49c67927ca7bb327cf37129db183bd8882ea1e38582d390d4873",
-    "fit_manifest_sha256": "c950eb72c7eda158b4d37d005a1bc94edee4437c66a65c3ac4abac9c5c98a353"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone9",
-    "seed": 0,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "bf2f8caa6c5f6128ac29cd39dd215ad589ada4627681e48969eb7cdeb1c16322",
-    "fit_manifest_sha256": "57f24763cddf47e3e56572f1dc984328bcbf36abc2d05afd91bc6b2fae36810b"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone9",
-    "seed": 0,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "5d0ec61a131c6e24943b4fcc4252c5e4fc8c587d3563427d149743b44f243b5d",
-    "fit_manifest_sha256": "14ffa706d44669fe13c0f8665b791048446b5b17dbe8486b51f0aa476cbc0d14"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone9",
-    "seed": 0,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "92c6d7b832ffa1a1b72cfacbdb57658f4ab4b64af62680032ccb6e051e1af2ac",
-    "fit_manifest_sha256": "62dbcbc5c3f1a1c820909e243fec049a6d3ea7f9cf57e7f585d5d80ba6f6b6f7"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone9",
-    "seed": 0,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "cc38b015cbbd532d3f68aa9c253c86e2e472be4eeea509e3ffe2e210c8d4012c",
-    "fit_manifest_sha256": "a1c27060d76152659968117644010a15a2f616de49a8fa3a81a6ec97354c915a"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone9",
-    "seed": 1,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "1f4a7e8da379e36bbeeeedd577abaaba3c77b2b1a41525afe3f01917d9f03c59",
-    "fit_manifest_sha256": "0a333135cbc6ca4a69d141d861de4413ad512bbf5e4ae5ca6ad3702e040d516a"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone9",
-    "seed": 1,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "a20642d264b09830e66840c94da30e735806748bb242d67895789b43c520efcc",
-    "fit_manifest_sha256": "71bab1a53e5c44e2f235866f26444c77e843956e189a89de5eae53e56197942b"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone9",
-    "seed": 1,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "b39d3acc24c4ed1543683570861905fd5bb954a3f9ce6305c94db5542e269415",
-    "fit_manifest_sha256": "f593e00996559f7ff79e34c3d795d921243870dfff61d77b80613cce3bc62a19"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone9",
-    "seed": 1,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "4004cb50497bb074e8509d1b7073de7b6850061fb977947e05dc21d5cfa38edd",
-    "fit_manifest_sha256": "465bb6cb3c126bff75cea5dca6cafb4a0eb92a9cb914e3e4d420cd8147a03343"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone9",
-    "seed": 1,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "40f764b3faac2b1941c5ccbd77736bb060fa0648f35a2bf21ccc614255a04298",
-    "fit_manifest_sha256": "d43ab04dcccfbc3b436cbeccea0613b8bcda8b5fa78206412618d49293abdd9d"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone9",
-    "seed": 2,
-    "price_id": "R01",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "1ca5d514d45689b9100bbb8250736aeea4e7212b6cebda39c26e385df7d71f8b",
-    "fit_manifest_sha256": "553cfa3906442bce793004674f7f4782d00d35d172ef52d89e0ba20bbba86ae3"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone9",
-    "seed": 2,
-    "price_id": "R02",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "f499a2e4866239171526488b194d6046e3fcad04f296c58c826e182543d9e4a6",
-    "fit_manifest_sha256": "84a79bd0a7eff025f29dcd8e532c6d227764c51cdf989164f7b68c85fc0ad3a6"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone9",
-    "seed": 2,
-    "price_id": "R05P6179775281",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "f5e5f6f5c2262511b775fd8cc7ea14010c36ecf86e0700ea7821572fa7d08d98",
-    "fit_manifest_sha256": "c8ad7bcacb97f18abb38e66d6b0674e1aa50154b1cff2bc3c25245949fe7ba9d"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone9",
-    "seed": 2,
-    "price_id": "R10",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "d2914c941d42f097235a4200845ccdb795e9346040dcc8b346eac7d1a000ca73",
-    "fit_manifest_sha256": "dcf110f4d0f724a3867066415099f7bc2004cdc652f2ea035289d3610993c17e"
-  },
-  {
-    "dataset": "GEFCom",
-    "held_out_zone": "zone9",
-    "seed": 2,
-    "price_id": "R20",
-    "source": "clara_decisions.parquet",
-    "source_sha256": "685a37d9391d34f42aa4ca248339021e5129f2fca2884bd27f1099feccac8f15",
-    "fit_manifest_sha256": "3ba5846f4b9ff327cba5b17528cc54acb27f568142ee2b10d3606e5550f3f11e"
-  },
-  {
     "dataset": "Commercial",
     "farm_id": "FarmA",
     "seed": 0,
@@ -1621,44 +271,242 @@
   },
   {
     "dataset": "GEFCom",
-    "analysis": "exact_state_no_backoff_20260924",
-    "source": "audit_support.py",
-    "source_sha256": "fa6f466af50a91c12b13dcb6b8ebbcdc4f73f497a87928c6de2a856dab439af2",
-    "copied_without_code_changes": true
+    "held_out_zone": "zone1",
+    "seed": 0,
+    "source": "clara/zone1/seed0/clara_decisions.parquet",
+    "source_sha256": "33882702cf86f34aece1fa6b7a00ca2741a2412af25e0239d6b19839862a9c78",
+    "fit_manifest_sha256": "82e8420a10089ad6d21757574b6b8b1b20ffdd178b494a380293626fc3a80858"
   },
   {
     "dataset": "GEFCom",
-    "analysis": "exact_state_no_backoff_20260924",
-    "source": "build_policies.py",
-    "source_sha256": "cd44eb208f087f5b969b01a4e8d1c04958524f3b2c3f876c5911350085686387",
-    "copied_without_code_changes": true
+    "held_out_zone": "zone1",
+    "seed": 1,
+    "source": "clara/zone1/seed1/clara_decisions.parquet",
+    "source_sha256": "1c0c787fd551d50d82a654d45498de2d866eb719b87ecfe113119072691f9534",
+    "fit_manifest_sha256": "590fe3d10fdca290b9ec5c2d59d00c4e32b025917740fa2f053bddc7d0353db4"
   },
   {
     "dataset": "GEFCom",
-    "analysis": "exact_state_no_backoff_20260924",
-    "source": "evaluate_exact.py",
-    "source_sha256": "a2dfc73120fb9a800250b0c3b9107ed7b8d1b64ca84e665e9871ee90ea35fad3",
-    "copied_without_code_changes": true
+    "held_out_zone": "zone1",
+    "seed": 2,
+    "source": "clara/zone1/seed2/clara_decisions.parquet",
+    "source_sha256": "8bf393873eef928e6dc84cd4551cca578ecdeeac277ad9394056fa9e2db24833",
+    "fit_manifest_sha256": "782ae4774ffae4c1f91b2c0a7208ce6ca1c4e3d5ac5417b353dab554878c37fa"
   },
   {
     "dataset": "GEFCom",
-    "analysis": "exact_state_no_backoff_20260924",
-    "source": "analyze_exact.py",
-    "source_sha256": "11b9aa504c0922558ac5a6cb8a61ffa24e21caa17b5a81e9fbf421fe6e18cd84",
-    "copied_without_code_changes": true
+    "held_out_zone": "zone2",
+    "seed": 0,
+    "source": "clara/zone2/seed0/clara_decisions.parquet",
+    "source_sha256": "ce67dd3d56ff95ab89bb73280eaf5edf143b8e5fcdd845c7a100050ecd7a5353",
+    "fit_manifest_sha256": "f59a03e6f5fd7e65af51decd289b058a040f8e487139c84622bf36c998f0d1d1"
   },
   {
     "dataset": "GEFCom",
-    "analysis": "exact_state_no_backoff_20260924",
-    "source": "qa_policies.py",
-    "source_sha256": "199a2e7d1d9ff123be874666d042c23c7b77430a429d20c50ff7bd24d3047562",
-    "copied_without_code_changes": true
+    "held_out_zone": "zone2",
+    "seed": 1,
+    "source": "clara/zone2/seed1/clara_decisions.parquet",
+    "source_sha256": "a76acab3cf209279e2e82d780f185224f8453105d0ff1728e787527906cc31e3",
+    "fit_manifest_sha256": "76ef6cc9abcf978f7ab03a3aae67c9511c5c33612017eab99c41b9c5dc4e2d9f"
   },
   {
     "dataset": "GEFCom",
-    "analysis": "exact_state_no_backoff_20260924",
-    "source": "PLAN.md",
-    "source_sha256": "11f94589e839ede8a1f189b8712a4c98dffcac84b6a50c4cbe1b69e8767d8bbd",
-    "copied_without_code_changes": true
+    "held_out_zone": "zone2",
+    "seed": 2,
+    "source": "clara/zone2/seed2/clara_decisions.parquet",
+    "source_sha256": "59ca6ba9d110befe3ea1cdbebb1fc7663ccad40f4889722c2e5a707229a45369",
+    "fit_manifest_sha256": "9e3326d4527931d01866ee8df6c88b8b2f436de4431df4f58c4a7f0af9aedda3"
+  },
+  {
+    "dataset": "GEFCom",
+    "held_out_zone": "zone3",
+    "seed": 0,
+    "source": "clara/zone3/seed0/clara_decisions.parquet",
+    "source_sha256": "e8f2186016a978b1f51b822e8a12e8b93623dbc14b344b6f670ae34d8d56158d",
+    "fit_manifest_sha256": "619e000322ddd1cc503c35346e098fcd0779fa315e127e73de41d7dd20abba87"
+  },
+  {
+    "dataset": "GEFCom",
+    "held_out_zone": "zone3",
+    "seed": 1,
+    "source": "clara/zone3/seed1/clara_decisions.parquet",
+    "source_sha256": "fca74ef6b6679e886486b9708c173b56c3850d0dcbcf5144e6614a6f4e454394",
+    "fit_manifest_sha256": "f0d876d16a9a8eea0bef996f42751536be017785dcadd55db29e8c90a833df41"
+  },
+  {
+    "dataset": "GEFCom",
+    "held_out_zone": "zone3",
+    "seed": 2,
+    "source": "clara/zone3/seed2/clara_decisions.parquet",
+    "source_sha256": "8705e47a367c41f350f238b8a124b3da8e18674777b278dc52e77dc7ab7d3391",
+    "fit_manifest_sha256": "160629c37fef08939a4331ebe6ec7c5e6be1d29e5fda6d5cedb9cdf60f398720"
+  },
+  {
+    "dataset": "GEFCom",
+    "held_out_zone": "zone4",
+    "seed": 0,
+    "source": "clara/zone4/seed0/clara_decisions.parquet",
+    "source_sha256": "7f64b5d1622754ad03eeb22f4ac4182650b843c45b65492f541446ceb16c4e22",
+    "fit_manifest_sha256": "9fd4ab657c74b5c6135c92878ea4ba82b1eb61a9309479c56b77340f3c9eedb9"
+  },
+  {
+    "dataset": "GEFCom",
+    "held_out_zone": "zone4",
+    "seed": 1,
+    "source": "clara/zone4/seed1/clara_decisions.parquet",
+    "source_sha256": "c9b12c29b5688890653eb91efa6a5aa8f6122e7abf9d49db888702f4364cd7d7",
+    "fit_manifest_sha256": "d7fb9706a4193a2073aa3761dcf6ccfbe508ddb14c94603dff70ab335a53afc4"
+  },
+  {
+    "dataset": "GEFCom",
+    "held_out_zone": "zone4",
+    "seed": 2,
+    "source": "clara/zone4/seed2/clara_decisions.parquet",
+    "source_sha256": "4e9403807d8800bb58d6fb04765ba326705f369b16e9ad6d80469e727df67189",
+    "fit_manifest_sha256": "33fac26f0efd768397f6e835a463060062da203980275f3f20f15825bc137709"
+  },
+  {
+    "dataset": "GEFCom",
+    "held_out_zone": "zone5",
+    "seed": 0,
+    "source": "clara/zone5/seed0/clara_decisions.parquet",
+    "source_sha256": "0d0d2ed7869484f127222030c44ba65615f9a5079472e414c6f94b604c3098af",
+    "fit_manifest_sha256": "bf37e0c36a67ee4439e0c5eaf5cb54e18718e23e3e7f5a7112ff9fceee9bddad"
+  },
+  {
+    "dataset": "GEFCom",
+    "held_out_zone": "zone5",
+    "seed": 1,
+    "source": "clara/zone5/seed1/clara_decisions.parquet",
+    "source_sha256": "a51ad304dc48b2d9d37be45043344def6b1ff2b5865a369a56234cb9a1917b90",
+    "fit_manifest_sha256": "3147620e1498d82dc839be693312c8ca80fc1e67a2e0b5c712a1168932ad2b10"
+  },
+  {
+    "dataset": "GEFCom",
+    "held_out_zone": "zone5",
+    "seed": 2,
+    "source": "clara/zone5/seed2/clara_decisions.parquet",
+    "source_sha256": "5491487cff33fcf1b55881a30f33ba2e36502fd339c064b6e53139aa5ed09100",
+    "fit_manifest_sha256": "85ecc2788d3b8750bac1a01da7bac65e7f62a5b4b47fe3f9b7bbe4123296be61"
+  },
+  {
+    "dataset": "GEFCom",
+    "held_out_zone": "zone6",
+    "seed": 0,
+    "source": "clara/zone6/seed0/clara_decisions.parquet",
+    "source_sha256": "60d596e962bc42b7402b52ddfb49e7ff018deebec4b54a673f2088ba93ee14d8",
+    "fit_manifest_sha256": "074363bae77f59d2ac64aa1e7e4463f07310e96c3e51c8f889cbbb84d19541c2"
+  },
+  {
+    "dataset": "GEFCom",
+    "held_out_zone": "zone6",
+    "seed": 1,
+    "source": "clara/zone6/seed1/clara_decisions.parquet",
+    "source_sha256": "f0424ce5f8bfd00de933be1541e4e48551079283639181a146a01fc374faa0a8",
+    "fit_manifest_sha256": "015678c28df25efb7cadfd7269be417fc12f023db9f712390c8d1d76dd7b4565"
+  },
+  {
+    "dataset": "GEFCom",
+    "held_out_zone": "zone6",
+    "seed": 2,
+    "source": "clara/zone6/seed2/clara_decisions.parquet",
+    "source_sha256": "3a0318b8e82e61373bc5f78120ab9b20feceb1fc2f741ecb73fdb3048a5b63f6",
+    "fit_manifest_sha256": "1c903f08e5dc0d69edb1fbbc0e500df6293c5b55886df5b29b0940d805d7eda2"
+  },
+  {
+    "dataset": "GEFCom",
+    "held_out_zone": "zone7",
+    "seed": 0,
+    "source": "clara/zone7/seed0/clara_decisions.parquet",
+    "source_sha256": "36b5ef7cd2ae4a05b2cc6ade3eded01ef2a48a02d9279fcaf0f57e60f860b33c",
+    "fit_manifest_sha256": "f8b7b4e408508300dd02f4b1d11237920e7f260395e6d580658cbe6fe3cc332c"
+  },
+  {
+    "dataset": "GEFCom",
+    "held_out_zone": "zone7",
+    "seed": 1,
+    "source": "clara/zone7/seed1/clara_decisions.parquet",
+    "source_sha256": "7538fe1752cacaa7294808e066bc91a46c8baa85004ac541d99c3af56e56c4cd",
+    "fit_manifest_sha256": "3fefabb3006a6f3cb20dda5e6429a93d89356706c7cfc582ae8f46f36a9c9511"
+  },
+  {
+    "dataset": "GEFCom",
+    "held_out_zone": "zone7",
+    "seed": 2,
+    "source": "clara/zone7/seed2/clara_decisions.parquet",
+    "source_sha256": "3b19b109a594821fa7ef3f5504256d70615dfca7a47631ba89d3771d9d088100",
+    "fit_manifest_sha256": "e36597efd782cbcb51f833178aebff0729aa9107db046dd92dc58ac0af0c3770"
+  },
+  {
+    "dataset": "GEFCom",
+    "held_out_zone": "zone8",
+    "seed": 0,
+    "source": "clara/zone8/seed0/clara_decisions.parquet",
+    "source_sha256": "11a964701fcc02490b1b0f0f366179e64d30f74d1b1bf6a1db45b512e0f36602",
+    "fit_manifest_sha256": "13db32acd4d7cea391a066ee52cd5a47c4c8b2922a875ba9bb00262e5ea996ff"
+  },
+  {
+    "dataset": "GEFCom",
+    "held_out_zone": "zone8",
+    "seed": 1,
+    "source": "clara/zone8/seed1/clara_decisions.parquet",
+    "source_sha256": "32de560304b1b9413ad9543fc0c0fdb20ea42b746a73db05eaac612cc1d2653d",
+    "fit_manifest_sha256": "3a8d2a2a5d7bb92b2d9c45dd4ae28d0a7559d70dee91d19bad58b435d5840b21"
+  },
+  {
+    "dataset": "GEFCom",
+    "held_out_zone": "zone8",
+    "seed": 2,
+    "source": "clara/zone8/seed2/clara_decisions.parquet",
+    "source_sha256": "24f0d874c87f391ffea05de3e8d781295cb3ec33e0aedec424e860e533318a2c",
+    "fit_manifest_sha256": "fe442636cf8fd72b5dfdd714d48dae5dd420a553a9cb08fa81f098a90c48c346"
+  },
+  {
+    "dataset": "GEFCom",
+    "held_out_zone": "zone9",
+    "seed": 0,
+    "source": "clara/zone9/seed0/clara_decisions.parquet",
+    "source_sha256": "91ad0dd6d8e43b3b02f1b256699e0ed6c65c6a6e1d4ac38b7cb16690ea35f98d",
+    "fit_manifest_sha256": "303ccbdbba6a78a0cf4c62ffcd6c33e36df066ceccba799b6db7a170e6e01353"
+  },
+  {
+    "dataset": "GEFCom",
+    "held_out_zone": "zone9",
+    "seed": 1,
+    "source": "clara/zone9/seed1/clara_decisions.parquet",
+    "source_sha256": "5af3eefc241ca6a5d954c0a58e0806daf7cf7ed7d80d846d878fa1011b6a6e7f",
+    "fit_manifest_sha256": "ab9b1fe23eaf1f8c8b9f9433c647eb0e5f734b2a4a5f3a03dac45f62273476d2"
+  },
+  {
+    "dataset": "GEFCom",
+    "held_out_zone": "zone9",
+    "seed": 2,
+    "source": "clara/zone9/seed2/clara_decisions.parquet",
+    "source_sha256": "d6d7dedecc90626fae1864f9dbecf9b5e632bfbb324b62bc03fe5cfa3a4a5336",
+    "fit_manifest_sha256": "4036df544f1fa20f2423d83e178cb9f2d601a10d23af395f3768f06fc2e4e35c"
+  },
+  {
+    "dataset": "GEFCom",
+    "held_out_zone": "zone10",
+    "seed": 0,
+    "source": "clara/zone10/seed0/clara_decisions.parquet",
+    "source_sha256": "497f8f93db510c8fcb879b7fb6b53853a72e114aca6bc5468b506d44700a0e89",
+    "fit_manifest_sha256": "d0dd64e803c26e25c440cd262e90abf1624a690a9afac49bddc0afa99945fcca"
+  },
+  {
+    "dataset": "GEFCom",
+    "held_out_zone": "zone10",
+    "seed": 1,
+    "source": "clara/zone10/seed1/clara_decisions.parquet",
+    "source_sha256": "0e485939ac745366a1c3b394660c45cbd73d52735845da4767e41d9f2b76a746",
+    "fit_manifest_sha256": "b9f1981779e395c44f08648300f877e8d6de5a2205d4090f1077b172da561bfc"
+  },
+  {
+    "dataset": "GEFCom",
+    "held_out_zone": "zone10",
+    "seed": 2,
+    "source": "clara/zone10/seed2/clara_decisions.parquet",
+    "source_sha256": "de7af75ab3252a5180eb20e01fcaa48de5e04db0e4f1324f7fd0f975f804faa5",
+    "fit_manifest_sha256": "6034e95649acfc67982b630cf1bf9d4038151350e5ddae3bf73a74e871545c65"
   }
 ]

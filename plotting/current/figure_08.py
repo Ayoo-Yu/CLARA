@@ -17,11 +17,14 @@ from matplotlib.lines import Line2D
 from matplotlib.patches import Patch
 import fitz
 
-HERE = Path(__file__).resolve().parent
-REPO = HERE.parents[1]
-DATA = REPO / 'results/current_figure_data/figure08'
-OUT = REPO / 'outputs/current/figure08'
-OUT.mkdir(parents=True, exist_ok=True)
+SCRIPT_DIR=Path(__file__).resolve().parent
+REPO=SCRIPT_DIR.parents[1]
+HERE=REPO/'results/current_figure_data/figure08'
+OUTPUT=REPO/'outputs/current/figure08'
+OUTPUT.mkdir(exist_ok=True,parents=True)
+DATA = HERE
+OUT = OUTPUT
+OUT.mkdir(exist_ok=True)
 PARAM = pd.read_csv(DATA / 'parameter_sensitivity.csv').query("price_id == 'ALL'")
 TOL = pd.read_csv(DATA / 'coverage_tolerances.csv').sort_values('multiplier')
 RAMP = pd.read_csv(DATA / 'threshold_sensitivity.csv').sort_values('tau')
@@ -72,7 +75,7 @@ cost_handle = Patch(facecolor=TEAL, edgecolor='black', linewidth=.65)
 risk_handle = Line2D([], [], marker='o', color=ORANGE, markeredgecolor='black',
                      markeredgewidth=.55, lw=1.1, markersize=4.6)
 
-# Reference A22 I09: compact full-width bars and outlined points in aligned rows.
+# Approved layout: compact bars and outlined metric points in aligned rows.
 # Separate groups are never connected across their unrelated parameter axes.
 a = panel(.703, 'a', 'Estimation parameters and coverage tolerances')
 ar = right_metric(a, (0, 20), [0, 5, 10, 15, 20])
@@ -107,20 +110,24 @@ a.legend([cost_handle, risk_handle], ['ERRF', 'TUWR'], loc='upper left',
 
 # Absolute outcomes at all six tested thresholds. No chosen threshold defines a zero.
 b = panel(.391, 'b', 'Power-change threshold')
-br = right_metric(b, (10.95, 11.67), [11.0, 11.2, 11.4, 11.6])
+risk_range=max(float(RAMP.TUWR_pct.max()-RAMP.TUWR_pct.min()),.2)
+risk_low=float(RAMP.TUWR_pct.min())-.22*risk_range
+risk_high=float(RAMP.TUWR_pct.max())+.32*risk_range
+br = right_metric(b, (risk_low,risk_high), np.linspace(risk_low,risk_high,4))
+from matplotlib.ticker import FormatStrFormatter
+br.yaxis.set_major_formatter(FormatStrFormatter('%.2f'))
 xx = np.arange(len(RAMP))
 b.bar(xx, RAMP.ERRF, width=.58, color=TEAL, edgecolor='black', lw=.7, zorder=2)
 br.plot(xx, RAMP.TUWR_pct, '-o', color=ORANGE, lw=1.15, markersize=5,
         markeredgecolor='black', markeredgewidth=.55, zorder=4)
 for x, cost in zip(xx, RAMP.ERRF):
-    b.annotate(f'{cost:.4f}' + ('\nLowest ERRF' if x == 5 else ''), (x, cost), xytext=(0, 5), textcoords='offset points',
+    b.annotate(f'{cost:.4f}' + ('\nLowest ERRF' if x == int(np.argmin(RAMP.ERRF.to_numpy())) else ''), (x, cost), xytext=(0, 5), textcoords='offset points',
                ha='center', fontsize=8.7)
 risk_min = int(np.argmin(RAMP.TUWR_pct.to_numpy()))
 cost_min = int(np.argmin(RAMP.ERRF.to_numpy()))
-assert np.isclose(RAMP.iloc[risk_min].tau, .12)
-assert np.isclose(RAMP.iloc[cost_min].tau, .18)
+assert np.isfinite(RAMP[['ERRF','TUWR_pct']].to_numpy()).all()
 br.annotate('Lowest TUWR', (risk_min, RAMP.iloc[risk_min].TUWR_pct),
-            xytext=(risk_min+.60, 11.025), ha='left', va='center', fontsize=9,
+            xytext=(min(risk_min+.6,4.4), risk_low+.08*risk_range), ha='left', va='center', fontsize=9,
             arrowprops=dict(arrowstyle='->', lw=.7, color='black'))
 b.set_xlim(-.65, 5.70)
 b.set_yticks([0, 1, 2, 3])
@@ -130,23 +137,23 @@ b.legend([cost_handle, risk_handle], ['ERRF', 'TUWR'], loc='upper left',
          ncol=2, bbox_to_anchor=(0, 1.07), handlelength=1.3, columnspacing=1)
 
 
-# Retained data and mark geometry are unchanged. Only the canvas position shifts.
+# Preserve approved panel geometry; all values come from the new chronological analysis.
 fig.canvas.draw()
 assert len(fig.axes) == 4
 for suffix, dpi in [('pdf', 300), ('svg', 300), ('png', 300), ('tiff', 600)]:
-    fig.savefig(OUT / f'Figure8_sensitivity.{suffix}', dpi=dpi)
+    fig.savefig(OUT / f'Figure_08.{suffix}', dpi=dpi)
 plt.close(fig)
-with fitz.open(OUT / 'Figure8_sensitivity.pdf') as pdf:
+with fitz.open(OUT / 'Figure_08.pdf') as pdf:
     assert len(pdf) == 1
     assert len(pdf[0].get_images(full=True)) == 0
     assert all('Times' in f[3] for f in pdf[0].get_fonts(full=True))
-    pdf[0].get_pixmap(matrix=fitz.Matrix(2, 2), alpha=False).save(OUT / 'Figure8_sensitivity_pdf_preview.png')
+    pdf[0].get_pixmap(matrix=fitz.Matrix(2, 2), alpha=False).save(OUT / 'Figure_08_pdf_preview.png')
 def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 manifest = {
     'status': 'AWAITING_VISUAL_QA',
-    'scope': 'Remove original panel c at author request; retain original panels a/b and all of their data and marks. Price-adaptation result is reported in Section 4.4 prose.',
-    'reuse_level': 'Exact reuse of retained panels with compacted canvas',
+    'scope': 'Recompute the same registered estimation, tolerance and source-validation threshold sensitivities under the adopted common chronological cutoff.',
+    'reuse_level': 'Structural adaptation: approved layout and palette, all new cutoff-limited data and data-determined annotations',
     'dimensions_mm': [WIDTH_MM, HEIGHT_MM],
     'original_dimensions_mm': [183, 184],
     'physical_axes_height_mm': 38.272,
@@ -156,7 +163,7 @@ manifest = {
     'panel_b': 'Six source-zone validation thresholds 0.08 through 0.18 p.u.; excludes outer test zone; cost and TUWR minima marked separately.',
     'rows_retained': {'parameter_all_prices': len(PARAM), 'coverage_multipliers': len(TOL), 'validation_thresholds': len(RAMP)},
     'data_hashes': {p.name: sha(p) for p in DATA.glob('*.csv')},
-    'output_hashes': {p.name: sha(p) for p in OUT.glob('Figure8_sensitivity.*')},
+    'output_hashes': {p.name: sha(p) for p in OUT.glob('Figure_08.*')},
 }
 (OUT / 'figure_manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding='utf-8')
 print(json.dumps(manifest, ensure_ascii=False))

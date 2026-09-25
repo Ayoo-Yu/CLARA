@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "portable_source_baseline_refit": true,
+  "unchanged_state_price_actions": 33000,
+  "whole_sensitivity_grid_rerun": false,
+  "additional_ramp_input_requirement_documented": true
+}

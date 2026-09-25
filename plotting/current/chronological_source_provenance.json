@@ -1,0 +1,38 @@
+[
+  {
+    "figure": "04",
+    "script": "plotting/current/figure_04.py",
+    "original_script_sha256": "dc1a09b6130cea79522b72b7dce322657814cd13e5c39656ba4681eb69177d2d",
+    "adaptation": "Input and output paths only"
+  },
+  {
+    "figure": "05",
+    "script": "plotting/current/figure_05.py",
+    "original_script_sha256": "707bb1c1c59073c45598d2dd7b24801988bb291c94a40cfe7c5354f0e967218c",
+    "adaptation": "Input and output paths only"
+  },
+  {
+    "figure": "06",
+    "script": "plotting/current/figure_06.py",
+    "original_script_sha256": "93fafe8fa8139c742c5717064ed881f9000391efd923addb23682b297f7d26f4",
+    "adaptation": "Input and output paths only"
+  },
+  {
+    "figure": "07",
+    "script": "plotting/current/figure_07.py",
+    "original_script_sha256": "5f1e4a30e239a709133bd21fd228631ed2ae530f9f47373f30a0b21428fc6eda",
+    "adaptation": "Input and output paths only"
+  },
+  {
+    "figure": "08",
+    "script": "plotting/current/figure_08.py",
+    "original_script_sha256": "aa721ea2ca12a3181905541e24ce6191c3999200afcd98a0d7c2fcfdf3d104a6",
+    "adaptation": "Input and output paths only"
+  },
+  {
+    "figure": "S1",
+    "script": "plotting/current/figure_S1.py",
+    "original_script_sha256": "b3a828d044507f58274bb5508db6eac4994b239e7a741fddc0fb80e33f2f51a9",
+    "adaptation": "Input and output paths only"
+  }
+]
