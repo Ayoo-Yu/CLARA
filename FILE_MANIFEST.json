@@ -1,6 +1,6 @@
 {
   "format_version": 1,
-  "revision": "2026-09-24",
+  "revision": "2026-09-25",
   "files": [
     {
       "path": ".gitattributes",
@@ -104,8 +104,8 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 830,
-      "sha256": "792daab06e9a4a9d6c07cacf1f461a4f2b36df78377813934eccfd9eb44948ff"
+      "bytes": 861,
+      "sha256": "efbbcf8605947d69fb94abb1eb9c955d5e1d883fbdfbfbe98b6d6d77de2e9ad6"
     },
     {
       "path": "configs/fitted/Commercial_fitted_CLARA_parameters.parquet",
@@ -624,8 +624,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 11370,
-      "sha256": "d67c611ff0b502dde2d2f9f8d15b16f343d9025e0128821ac75e7a3cff15120a"
+      "bytes": 11434,
+      "sha256": "1669cfb7765dd1c0ece68b4a9c4be42dda873739b5b9101e38c4dc2ac419a0fe"
     },
     {
       "path": "requirements-figures.txt",

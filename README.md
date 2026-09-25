@@ -1,14 +1,14 @@
 # CLARA
 
-CLARA selects a complete wind-power prediction interval from six calibration methods using historical cost estimates and coverage requirements. This repository accompanies **CLARA: An Interpretable Contextual Decision Agent for Grid-Dispatch-Cost-Aware Calibration of Wind Power Prediction Intervals**, by Zhongze Yu and Zhenqing Liu.
+CLARA selects a complete wind-power prediction interval from six calibration methods using historical cost estimates and coverage requirements. This repository accompanies **CLARA: An Interpretable Contextual Decision Agent for Cost- and Reliability-Aware Calibration of Wind Power Prediction Intervals**, by Zhongze Yu and Zhenqing Liu.
 
-[Repository](https://github.com/Ayoo-Yu/CLARA) · [Release assets](https://github.com/Ayoo-Yu/CLARA/releases)
+[Repository](https://github.com/Ayoo-Yu/CLARA) · [Version 1.0.0 and data downloads](https://github.com/Ayoo-Yu/CLARA/releases/tag/v1.0.0)
 
 The evaluated candidates are Static, ACI, AgACI, EnbPI-RH, TSC and EEE. The principal comparison includes these six standalone methods, CLARA, CART and LinUCB. The experiments use five exceedance-to-capacity price ratios: 1, 2, 20/3.56, 10 and 20.
 
 Two evaluation protocols are kept distinct. In the GEFCom cross-zone experiment, CLARA's risk estimates and selection mapping are fitted on nine zones and retained when evaluating the excluded zone. In the commercial-farm experiment, an initial local adaptation history is followed by causal updating of all six candidates' cost and coverage estimates. Forecasting and candidate calibration histories follow their specified availability rules in both experiments.
 
-The 24 September 2026 revision updates fitted settings, query timings, the exact-state no-backoff ablation, and the manuscript figures and tables. The repository is currently private and version 1.0.0 remains a draft release. Asset access requires repository permission.
+Version 1.0.0 provides the evaluated implementation, exact fitted settings, query timings, the exact-state no-backoff ablation, and the current manuscript figures and tables. The repository and versioned release assets are publicly accessible. See `DATA_ACCESS.md` for software and dataset reuse terms.
 
 ## Contents
 

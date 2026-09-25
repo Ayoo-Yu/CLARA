@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software or its accompanying analysis, please cite the CLARA manuscript and the source datasets used in your work."
-title: "CLARA: An Interpretable Contextual Decision Agent for Grid-Dispatch-Cost-Aware Calibration of Wind Power Prediction Intervals"
+title: "CLARA: An Interpretable Contextual Decision Agent for Cost- and Reliability-Aware Calibration of Wind Power Prediction Intervals"
 type: software
 version: 1.0.0
 repository-code: "https://github.com/Ayoo-Yu/CLARA"
@@ -17,3 +17,4 @@ keywords:
   - prediction intervals
   - conformal calibration
   - contextual selection
+date-released: "2026-09-25"
