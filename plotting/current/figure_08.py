@@ -17,14 +17,12 @@ from matplotlib.lines import Line2D
 from matplotlib.patches import Patch
 import fitz
 
-SCRIPT_DIR=Path(__file__).resolve().parent
-REPO=SCRIPT_DIR.parents[1]
-HERE=REPO/'results/current_figure_data/figure08'
-OUTPUT=REPO/'outputs/current/figure08'
-OUTPUT.mkdir(exist_ok=True,parents=True)
-DATA = HERE
-OUT = OUTPUT
-OUT.mkdir(exist_ok=True)
+SCRIPT_DIR = Path(__file__).resolve().parent
+REPO = SCRIPT_DIR.parents[1]
+DATA = REPO / 'results/current_figure_data/figure08'
+OUT = REPO / 'outputs/current/figure08'
+OUT.mkdir(parents=True, exist_ok=True)
+HERE = OUT
 PARAM = pd.read_csv(DATA / 'parameter_sensitivity.csv').query("price_id == 'ALL'")
 TOL = pd.read_csv(DATA / 'coverage_tolerances.csv').sort_values('multiplier')
 RAMP = pd.read_csv(DATA / 'threshold_sensitivity.csv').sort_values('tau')
@@ -97,7 +95,7 @@ for name, df, xx in groups:
            ha='center', va='top', fontsize=9.5)
     if name == 'Tolerance multiplier':
         for x, val in zip(xx, df.TUWR_pct):
-            ar.annotate(f'{val:.2f}', (x, val), xytext=(0, 7), textcoords='offset points',
+            ar.annotate(f'{val:.2f}', (x, val), xytext=(0, 17 if val == df.TUWR_pct.max() else 7), textcoords='offset points',
                         ha='center', fontsize=8.5)
     else:
         spread = 100 * (df.ERRF.max() / df.ERRF.min() - 1)

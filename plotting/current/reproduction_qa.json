@@ -4,41 +4,53 @@
     "dimensions_match": true,
     "pixels_identical": true,
     "bytes_identical": true,
-    "different_pixels": 0
+    "different_pixels": 0,
+    "approved_png_sha256": "6960b4d3a16666a3645ecef4a95eb3a277924ab5027da8ccd30e6d8ebea8e8c7",
+    "regenerated_png_sha256": "6960b4d3a16666a3645ecef4a95eb3a277924ab5027da8ccd30e6d8ebea8e8c7"
   },
   "05": {
     "exit_code": 0,
     "dimensions_match": true,
     "pixels_identical": true,
     "bytes_identical": true,
-    "different_pixels": 0
+    "different_pixels": 0,
+    "approved_png_sha256": "ab562d5080a7582a3927b0951e6a7d637359df38bf1c88375cdbed62cd1b4707",
+    "regenerated_png_sha256": "ab562d5080a7582a3927b0951e6a7d637359df38bf1c88375cdbed62cd1b4707"
   },
   "06": {
     "exit_code": 0,
     "dimensions_match": true,
     "pixels_identical": true,
     "bytes_identical": true,
-    "different_pixels": 0
+    "different_pixels": 0,
+    "approved_png_sha256": "2837597d91bc2dc8275b99f69fdefd1ada21296aba41efc9399fcaee3d3a1de0",
+    "regenerated_png_sha256": "2837597d91bc2dc8275b99f69fdefd1ada21296aba41efc9399fcaee3d3a1de0"
   },
   "07": {
     "exit_code": 0,
     "dimensions_match": true,
     "pixels_identical": true,
     "bytes_identical": true,
-    "different_pixels": 0
+    "different_pixels": 0,
+    "approved_png_sha256": "e26df2633724bda7af7fe375c3a82529ea3f747c4db7cde517c470699a2e453e",
+    "regenerated_png_sha256": "e26df2633724bda7af7fe375c3a82529ea3f747c4db7cde517c470699a2e453e"
   },
   "08": {
     "exit_code": 0,
     "dimensions_match": true,
     "pixels_identical": true,
     "bytes_identical": true,
-    "different_pixels": 0
+    "different_pixels": 0,
+    "approved_png_sha256": "125304a9635c56ff59ddcde72a128486c4f56b5fb78616b9bffbaead2c963fc5",
+    "regenerated_png_sha256": "125304a9635c56ff59ddcde72a128486c4f56b5fb78616b9bffbaead2c963fc5"
   },
   "S1": {
     "exit_code": 0,
     "dimensions_match": true,
     "pixels_identical": true,
     "bytes_identical": true,
-    "different_pixels": 0
+    "different_pixels": 0,
+    "approved_png_sha256": "ad2e9b9c84a26bc5fdb72d7c6e349c4bbb39ce566e58e9d45d0ced2e53a1633f",
+    "regenerated_png_sha256": "ad2e9b9c84a26bc5fdb72d7c6e349c4bbb39ce566e58e9d45d0ced2e53a1633f"
   }
 }

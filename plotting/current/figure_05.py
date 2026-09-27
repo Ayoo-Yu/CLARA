@@ -8,13 +8,12 @@ import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 from matplotlib.colors import to_rgb, to_hex
 from matplotlib.ticker import FixedLocator, FixedFormatter, NullLocator
-SCRIPT_DIR=Path(__file__).resolve().parent
-REPO=SCRIPT_DIR.parents[1]
-HERE=REPO/'results/current_figure_data/figure05'
-OUTPUT=REPO/'outputs/current/figure05'
-OUTPUT.mkdir(exist_ok=True,parents=True)
-OUT = OUTPUT
-DATA = HERE
+SCRIPT_DIR = Path(__file__).resolve().parent
+REPO = SCRIPT_DIR.parents[1]
+DATA = REPO / 'results/current_figure_data/figure05'
+OUT = REPO / 'outputs/current/figure05'
+OUT.mkdir(parents=True, exist_ok=True)
+HERE = DATA
 MAIN = ['CLARA', 'LinUCB', 'CART', 'TSC', 'EEE', 'Static', 'ACI', 'AgACI', 'EnbPI-RH']
 METHODS = MAIN+['WIDTH_ONLY', 'FEASIBLE_STATE_ORACLE']
 LABEL = {'WIDTH_ONLY': 'Width-only', 'FEASIBLE_STATE_ORACLE': 'Feasible state oracle'}
@@ -143,7 +142,7 @@ for i,m in enumerate(rankorder):
 c.get_yticklabels()[0].set_weight('bold')
 handles=[plt.scatter([],[],s=area_scale*v,color='#B4B4B4',edgecolors='none',label=f'{v}%') for v in [2,5,10]]
 c.legend(handles=handles,title='Bubble area: relative excess cost',loc='upper center',bbox_to_anchor=(.50,-.19),
-         ncol=3,fontsize=7,title_fontsize=7.4,frameon=False,handletextpad=.5,columnspacing=1.5)
+         ncol=3,fontsize=8,title_fontsize=9,frameon=False,handletextpad=.5,columnspacing=1.5)
 from matplotlib.colors import LinearSegmentedColormap, BoundaryNorm
 from matplotlib.patches import Rectangle
 costorder=means.loc[MAIN].sort_values('ERRF').index.tolist()
@@ -174,9 +173,9 @@ for i,m in enumerate(costorder):
 d.get_yticklabels()[0].set_weight('bold')
 cax=fig.add_axes([.644,.055,.242,.010])
 cb=fig.colorbar(im,cax=cax,orientation='horizontal',ticks=[1,3,5,7,9])
-cb.ax.tick_params(labelsize=7,length=2,pad=2)
+cb.ax.tick_params(labelsize=8,length=2,pad=2)
 cb.outline.set_linewidth(.5)
-cb.set_label('Cost rank within each lead time (1 = lowest)',fontsize=7.1,labelpad=2)
+cb.set_label('Cost rank within each lead time (1 = lowest)',fontsize=9,labelpad=2)
 costs.to_csv(OUT/'figure5d_mean_ERRF.csv')
 ranks.to_csv(OUT/'figure5d_cost_ranks.csv')
 
@@ -191,5 +190,18 @@ fig.savefig(OUT/'Figure_05.pdf')
 fig.savefig(OUT/'Figure_05.svg')
 fig.savefig(OUT/'Figure_05.png',dpi=300)
 fig.savefig(OUT/'Figure_05.tiff',dpi=600,pil_kwargs={'compression':'tiff_lzw'})
+
+# Inspect rendered extents at the original 188 x 174 mm figure size.
+fig.canvas.draw()
+renderer=fig.canvas.get_renderer()
+from matplotlib.text import Text
+text_extents=[]
+for text in fig.findobj(Text):
+    if not text.get_visible() or not text.get_text(): continue
+    box=text.get_window_extent(renderer)
+    text_extents.append({'text':text.get_text(),'font_size':text.get_fontsize(),
+                         'bounds':[float(v) for v in box.bounds]})
+(OUT/'text_extents.json').write_text(json.dumps({'canvas':list(fig.canvas.get_width_height()),'text':text_extents},indent=2),encoding='utf-8')
+
 plt.close(fig)
 print('Saved updated Figure 5: a/b retained, c combines both economic ranking metrics, d shows all 45 lead-time points.')

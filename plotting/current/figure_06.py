@@ -13,25 +13,26 @@ from matplotlib.ticker import FixedLocator, FuncFormatter
 from scipy.ndimage import gaussian_filter, gaussian_filter1d
 from matplotlib import font_manager as fm
 
-SCRIPT_DIR=Path(__file__).resolve().parent
-REPO=SCRIPT_DIR.parents[1]
-HERE=REPO/'results/current_figure_data/figure06'
-OUTPUT=REPO/'outputs/current/figure06'
-OUTPUT.mkdir(exist_ok=True,parents=True)
-FDATA=HERE
-SRC=HERE
-DATA=HERE;FIG=OUTPUT
+SCRIPT_DIR = Path(__file__).resolve().parent
+REPO = SCRIPT_DIR.parents[1]
+DATA = REPO / 'results/current_figure_data/figure06'
+OUT = REPO / 'outputs/current/figure06'
+OUT.mkdir(parents=True, exist_ok=True)
+HERE=OUT
+FDATA=DATA
+SRC=DATA
+FIG=OUT
 mpl.rcParams.update({
-    'font.family':FONT_FAMILY,'font.size':8,'text.color':'#000000',
+    'font.family':FONT_FAMILY,'font.size':12,'text.color':'#000000',
     'axes.labelcolor':'#000000','axes.titlecolor':'#000000',
     'xtick.color':'#000000','ytick.color':'#000000',
     'axes.edgecolor':'#000000','axes.linewidth':.65,
     'xtick.major.width':.65,'ytick.major.width':.65,
     'xtick.major.size':2.5,'ytick.major.size':2.5,
     'xtick.direction':'out','ytick.direction':'out',
-    'xtick.labelsize':7.6,'ytick.labelsize':7.6,
-    'axes.labelsize':8.5,'axes.titlesize':9,
-    'legend.fontsize':7.7,'legend.frameon':False,
+    'xtick.labelsize':12,'ytick.labelsize':12,
+    'axes.labelsize':12,'axes.titlesize':12,
+    'legend.fontsize':12,'legend.frameon':False,
     'svg.fonttype':'none','pdf.fonttype':42,'ps.fonttype':42,
     'savefig.facecolor':'white','figure.facecolor':'white',
     'axes.unicode_minus':True,
@@ -54,21 +55,23 @@ def prettify(ax,grid=True):
     if grid:ax.grid(color=GRID,lw=.35,zorder=0)
 
 def title(ax,label,text):
-    ax.text(0,1.04,label,transform=ax.transAxes,ha='left',va='bottom',fontweight='bold',fontsize=10)
-    ax.text(.063,1.04,text,transform=ax.transAxes,ha='left',va='bottom',fontsize=9.2)
+    ax.text(0,1.04,label,transform=ax.transAxes,ha='left',va='bottom',fontweight='bold',fontsize=13)
+    ax.text(.063,1.04,text,transform=ax.transAxes,ha='left',va='bottom',fontsize=12)
 
 def fmt_tick(v,pos):
     return ('−' if v<0 else '')+f'{abs(v):g}'
 
-W,H=183,174
+W,H=161.29,185
+# Physical millimetres are used for layout so 12 pt stays 12 pt at Word width.
+def box(x,y,w,h): return [x/W,y/H,w/W,h/H]
 fig=plt.figure(figsize=(W/25.4,H/25.4))
 
 # Two-dimensional density and marginal histograms.
 # Condition means are normalized by the corresponding fixed method's ERRF,
 # so both component axes have the same interpretable percentage scale.
-main=fig.add_axes([.073,.477,.405,.426])
-top=fig.add_axes([.073,.910,.405,.047],sharex=main)
-side=fig.add_axes([.485,.477,.054,.426],sharey=main)
+main=fig.add_axes(box(18,95,64,65))
+top=fig.add_axes(box(18,162,64,7),sharex=main)
+side=fig.add_axes(box(84,95,7,65),sharey=main)
 raw=pd.read_parquet(SRC/'condition_means.parquet')
 keys=['zone','price_id','predictor','horizon_steps','target_coverage']
 c=raw[raw.method.eq('CLARA')].set_index(keys)
@@ -104,22 +107,22 @@ prettify(main)
 main.axhline(0,color='black',lw=.65,ls=(0,(3,3)),zorder=1)
 main.axvline(0,color='black',lw=.65,ls=(0,(3,3)),zorder=1)
 main.plot([-30,30],[30,-30],color='black',lw=.9,zorder=5)
-main.text(-28,-22,'Lower total cost',fontsize=8,ha='center',va='center')
-main.text(14,19,'Higher total cost',fontsize=8,rotation=-43.5,ha='center',va='center')
+main.text(-27,-16,'Lower total cost',fontsize=12,ha='center',va='center')
+main.text(14,19,'Higher total cost',fontsize=12,rotation=-43.5,ha='center',va='center')
 main.set_xlabel('Capacity cost change (%)',labelpad=3)
 main.set_ylabel('Exceedance cost change (%)',labelpad=3)
 top.tick_params(left=False,bottom=False,labelleft=False,labelbottom=False)
 side.tick_params(left=False,bottom=False,labelleft=False,labelbottom=False)
 for ax in [top,side]:
     for s in ax.spines.values():s.set_visible(False)
-fig.text(.073,.985,'a',fontweight='bold',fontsize=10,va='top')
-fig.text(.097,.985,'Conditional cost trade-offs',fontsize=9.2,va='top')
+fig.text(18/W,181/H,'(a)',fontweight='bold',fontsize=13,va='top')
+fig.text(26/W,181/H,'Conditional cost trade-offs',fontsize=12,va='top')
 legend=[Line2D([0],[0],color=PAL[ALIASES[a]],lw=1.3,marker='o',markersize=3.5,label=ALIASES[a]) for a in METHODS]
-main.legend(handles=legend,ncol=2,loc='lower left',bbox_to_anchor=(.035,.035),columnspacing=1.1,handlelength=1.1,handletextpad=.5,borderaxespad=0)
+main.legend(handles=legend,ncol=3,frameon=True,facecolor='white',edgecolor='none',framealpha=1,borderpad=.2,loc='lower left',bbox_to_anchor=(.02,.025),columnspacing=.45,handlelength=.65,handletextpad=.3,borderaxespad=0)
 
 # (b) A signed marginal distribution. The exact zero point mass is reported
 # separately rather than smoothed into either economically signed group.
-cart=fig.add_axes([.617,.477,.333,.426])
+cart=fig.add_axes(box(106,95,52,65))
 pos=sum(hfile[p+'_cart_positive'] for p in PRICES)/5
 neg=sum(hfile[p+'_cart_negative'] for p in PRICES)/5
 share=allrow.cart_share
@@ -136,30 +139,31 @@ for v,d,col in [(x[x<0],dn[x<0],LOSS),(x[x>0],dp[x>0],TEAL)]:
     source_curves.extend(dict(panel='b',group='loss' if col==LOSS else 'gain',price_id='ALL',x=float(xx0),density=float(dd)) for xx0,dd in zip(v,d))
 cart.set_xscale('asinh',linear_width=.35)
 cart.set_xlim(-70,70);cart.set_ylim(0,max(dp.max(),dn.max())*1.12)
-cart.xaxis.set_major_locator(FixedLocator([-30,-3,-.3,0,.3,3,30]))
+cart.xaxis.set_major_locator(FixedLocator([-30,-3,0,3,30]))
 cart.xaxis.set_major_formatter(FuncFormatter(fmt_tick));cart.minorticks_off()
 prettify(cart)
 cart.axvline(0,color='black',lw=.7,ls=(0,(3,3)))
 cart.set_xlabel('CART cost − CLARA cost',labelpad=3)
 cart.set_ylabel('Density',labelpad=3)
-fig.text(.617,.985,'b',fontweight='bold',fontsize=10,va='top')
-fig.text(.641,.985,'Decision gains and losses',fontsize=9.2,va='top')
-cart.text(.03,.95,'Higher cost',ha='left',va='top',transform=cart.transAxes,fontsize=7.7)
-cart.text(.97,.95,'Lower cost',ha='right',va='top',transform=cart.transAxes,fontsize=7.7)
-cart.text(.03,.87,f'{allrow.cart_loss_pct:.2f}%\nMean loss {allrow.loss_per_defeat:.4f}',ha='left',va='top',transform=cart.transAxes,fontsize=7.7,linespacing=1.5)
-cart.text(.97,.87,f'{allrow.cart_win_pct:.2f}%\nMean gain {allrow.gain_per_win:.4f}',ha='right',va='top',transform=cart.transAxes,fontsize=7.7,linespacing=1.5)
-fig.text(.7835,.934,f'Equal cost: {allrow.cart_tie_pct:.2f}%',ha='center',va='center',fontsize=7.7)
+fig.text(106/W,181/H,'(b)',fontweight='bold',fontsize=13,va='top')
+fig.text(114/W,181/H,'Decision gains and losses',fontsize=12,va='top')
+cart.text(.03,.95,'Higher cost',ha='left',va='top',transform=cart.transAxes,fontsize=12)
+cart.text(.97,.95,'Lower cost',ha='right',va='top',transform=cart.transAxes,fontsize=12)
+cart.text(.03,.85,f'{allrow.cart_loss_pct:.2f}%\nMean loss\n{allrow.loss_per_defeat:.4f}',ha='left',va='top',transform=cart.transAxes,fontsize=12,linespacing=1.5)
+cart.text(.97,.85,f'{allrow.cart_win_pct:.2f}%\nMean gain\n{allrow.gain_per_win:.4f}',ha='right',va='top',transform=cart.transAxes,fontsize=12,linespacing=1.5)
+fig.text(132/W,168.5/H,f'Equal cost: {allrow.cart_tie_pct:.2f}%',ha='center',va='center',fontsize=12)
 
 # (c) Directly reproduce the paired ridge structure in the author's PDF p12.
 # Same disagreements, five price rows, no exploratory or uncertainty bonuses.
-ridge=fig.add_axes([.105,.084,.875,.309])
+ridge=fig.add_axes(box(24,16,134,49))
 ridge.set_xscale('asinh',linear_width=.35)
 ridge.set_xlim(-80,70);ridge.set_ylim(-.2,5.05)
 ridge.xaxis.set_major_locator(FixedLocator([-50,-10,-2,-.3,0,.3,2,10,50]))
 ridge.xaxis.set_major_formatter(FuncFormatter(fmt_tick));ridge.minorticks_off()
 ridge.set_yticks(range(5),PRICE_LABELS[::-1]);ridge.tick_params(axis='y',length=0,pad=8)
-ridge.set_ylabel('Price ratio',labelpad=8)
-ridge.yaxis.set_label_coords(-.078,.5)
+ridge.set_ylabel('')
+fig.text(4.5/W,40.5/H,'Price ratio',fontsize=12,ha='center',va='center',rotation=90)
+# Price-ratio label is positioned in physical figure coordinates.
 ridge.set_xlabel('Cost-difference prediction error',labelpad=3)
 prettify(ridge,False)
 ridge.grid(axis='x',color=GRID,lw=.35,zorder=0)
@@ -175,18 +179,24 @@ for j,pid in enumerate(PRICES):
         ridge.plot(x,y0+curve,color=col,lw=.8,zorder=zorder+.1)
         source_curves.extend(dict(panel='c',group=name,price_id=pid,x=float(xx0),density=float(dd)) for xx0,dd in zip(x,d))
     r=summary.loc[pid]
-    ridge.text(.82,y0+.39,f'{r.clara_RMSE:.2f}  /  {r.lin_RMSE:.2f}',transform=ridge.get_yaxis_transform(),fontsize=7.7,va='center')
-fig.text(.073,.407,'c',ha='left',va='bottom',fontweight='bold',fontsize=10)
-fig.text(.097,.407,'Estimating the cost of alternative choices',ha='left',va='bottom',fontsize=9.2)
-ridge.text(.82,1.045,'RMSE: CLARA / LinUCB',transform=ridge.transAxes,fontsize=7.7,va='bottom')
+    ridge.text(.995,y0+.39,f'{r.clara_RMSE:.2f}  /  {r.lin_RMSE:.2f}',transform=ridge.get_yaxis_transform(),fontsize=12,va='center',ha='right')
+fig.text(18/W,77/H,'(c)',ha='left',va='bottom',fontweight='bold',fontsize=13)
+fig.text(26/W,77/H,'Estimating the cost of alternative choices',ha='left',va='bottom',fontsize=12)
+fig.text(158/W,75/H,'RMSE\nCLARA / LinUCB',fontsize=12,ha='right',va='top',linespacing=1.05)
 ridge.legend(handles=[Patch(facecolor=TEAL,alpha=.55,label='CLARA'),Patch(facecolor=PURPLE,alpha=.55,label='LinUCB')],
-             loc='lower left',bbox_to_anchor=(.53,1.02),ncol=2,handlelength=1,handletextpad=.45,columnspacing=1.0,borderaxespad=0)
+             loc='lower left',bbox_to_anchor=(0,1.06),ncol=2,handlelength=1,handletextpad=.45,columnspacing=1.0,borderaxespad=0)
 
 fig.canvas.draw()
+visible_text=[t for t in fig.findobj(mpl.text.Text) if t.get_visible() and t.get_text().strip()]
+minimum=min(t.get_fontsize() for t in visible_text)
+assert minimum>=12, minimum
+renderer=fig.canvas.get_renderer()
+text_boxes=[{'text':t.get_text(),'fontsize_pt':t.get_fontsize(),'bbox_pixels':list(t.get_window_extent(renderer).bounds)} for t in visible_text]
+(HERE/'text_geometry.json').write_text(json.dumps(text_boxes,ensure_ascii=False,indent=2),encoding='utf-8')
 pd.concat(fixed_rows,ignore_index=True).to_csv(FIG/'panel_a_points.csv',index=False)
 pd.DataFrame(marg_rows).to_csv(FIG/'panel_a_marginals.csv',index=False)
 pd.DataFrame(source_curves).to_parquet(FIG/'density_curves.parquet',index=False)
-qa.update({'status':'AWAITING_VISUAL_QA','width_mm':W,'height_mm':H,'font':'Times New Roman (author requirement)',
+qa.update({'status':'AWAITING_VISUAL_QA','width_mm':W,'height_mm':H,'minimum_visible_font_pt':minimum,'target_word_width_cm':16.129,'font':'Times New Roman (author requirement)',
     'points_in_a':66000,'conditions_per_fixed_method':11000,'a_normalization':'Both component changes are divided by the same fixed-method mean ERRF within each matched prediction condition, then multiplied by 100.',
     'a_density':'One-percentage-point 2D bins, Gaussian smoothing sigma=1.35 bins, 50% and 85% density mass contours; all points are drawn, with no crop.',
     'b_density':'Signed weighted densities; Gaussian bandwidth 0.055 ERRF with reflection at zero. Exact ties shown separately. Full observed tails retained.',

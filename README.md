@@ -2,11 +2,13 @@
 
 CLARA selects a complete wind-power prediction interval from six calibration methods using historical cost estimates and coverage requirements. This repository accompanies **CLARA: An Interpretable Contextual Decision Agent for Cost- and Reliability-Aware Calibration of Wind Power Prediction Intervals**, by Zhongze Yu and Zhenqing Liu.
 
-[Repository](https://github.com/Ayoo-Yu/CLARA) · [Version 1.1.0 and data downloads](https://github.com/Ayoo-Yu/CLARA/releases/tag/v1.1.0)
+[Repository](https://github.com/Ayoo-Yu/CLARA) · [Version 1.1.1](https://github.com/Ayoo-Yu/CLARA/releases/tag/v1.1.1) · [Chronological data downloads](https://github.com/Ayoo-Yu/CLARA/releases/tag/v1.1.0)
 
 The evaluated candidates are Static, ACI, AgACI, EnbPI-RH, TSC and EEE. The principal comparison includes these six standalone methods, CLARA, CART and LinUCB. The experiments use five exceedance-to-capacity price ratios: 1, 2, 20/3.56, 10 and 20.
 
 Two evaluation protocols are kept distinct. In the GEFCom cross-zone experiment, all selector fitting and tuning use feedback available by 2013-09-05 00:00 UTC from the other nine zones. Evaluation uses only later forecasts in the excluded zone; CLARA's risk estimates and selection mapping remain fixed. In the commercial-farm experiment, an initial local adaptation history is followed by causal updating of all six candidates' cost and coverage estimates. Forecasting and candidate calibration histories follow their specified availability rules in both experiments.
+
+Version 1.1.1 synchronizes the approved manuscript figures, their drawing programs and the two Figure 7 case records. It changes no experimental policy, aggregate result or data archive. The earlier releases remain available.
 
 Version 1.1.0 updates all GEFCom policy analyses to this chronological split, including baselines, ablations, oracle comparisons and the pre-period initialization sensitivity. Version 1.0.0 preserves the earlier full-period source analysis. Commercial-farm results are unchanged. See `DATA_ACCESS.md` for software and dataset reuse terms.
 
@@ -126,7 +128,7 @@ python plotting/current/figure_09.py
 python plotting/current/figure_S1.py
 ```
 
-These programs write to `outputs/current/`. All six updated plots (Figures 4–8 and S1) were executed with the included inputs and matched the approved PNGs byte for byte. Figure 9 is unchanged. Figures 1–3 are editable mechanism artwork. See `figures/current/figure_index.csv` and `plotting/current/reproduction_qa.json` for current paths and checksums.
+These programs write to `outputs/current/`. The six updated plots in v1.1.1, Figures 4–8 and S1, were regenerated from the included inputs and matched the approved PNGs byte for byte. Figure 9 is unchanged. Figures 1–3 are editable mechanism artwork with notation aligned to the manuscript. Figure 7 uses the 2013-09-12 06:00 UTC cost-trade-off case and the 2013-09-06 06:00 UTC coverage-screening case, both from held-out zone 1 at the reference price. Its case data include the corresponding CLARA and LinUCB selections. See `figures/current/figure_index.csv` and `plotting/current/reproduction_qa.json` for paths and checksums.
 
 ## Scope and interpretation
 

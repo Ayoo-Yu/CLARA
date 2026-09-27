@@ -1,0 +1,19 @@
+{
+  "release": "v1.1.1",
+  "date": "2026-09-27",
+  "scope": "Approved figure presentation, Figure 7 case selection and portable plotting resources. No model retraining, policy changes or experimental result recomputation.",
+  "changes": {
+    "01": "Align ERRF-loss and target-observation notation with the manuscript.",
+    "02": "Use f(y) for the density schematic.",
+    "03": "Align group, loss, shrinkage-weight and standard-error notation.",
+    "04": "Center the transfer heatmap on zero with symmetric limits; use proper minus signs.",
+    "05": "Use the approved larger legends.",
+    "06": "Use the approved 12 pt lettering and single-line panel titles.",
+    "07": "Use the two manuscript cases dated 12 September and 6 September 2013, including CLARA and LinUCB choices, cost scores and historical reliability.",
+    "08": "Move the 13.51% label away from the bar.",
+    "S1": "Use Overall in the coverage label."
+  },
+  "unchanged_figure": "09",
+  "verified_against": "Active accepted-view images in the current manuscript and supplementary documents; historical deletion images excluded.",
+  "plotting_input_rule": "Existing numerical plot inputs for Figures 4–6, 8 and S1 remain byte-identical. Figure 7 contains the approved two-case subset."
+}

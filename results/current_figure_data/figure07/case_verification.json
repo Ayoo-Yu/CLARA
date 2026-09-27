@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "records": 12,
+  "cases": [
+    {
+      "case_id": "economic",
+      "display_title": "Cost trade-off",
+      "issue_timestamp": "2013-09-12 06:00:00+00:00",
+      "zone": "zone1",
+      "seed": 0,
+      "predictor": "GBR",
+      "horizon": 6,
+      "target_coverage": 0.9,
+      "price_ratio": 5.617977528089887,
+      "selected_action": "Static",
+      "linucb_selected_action": "AgACI",
+      "target_index": 174,
+      "state_code": 2574,
+      "ramp_state": "ramp",
+      "raw_width_state": "narrow",
+      "rolling_state": "volatile",
+      "raw_width": 0.5533822875606716,
+      "support_n": 111,
+      "support_backoff_name": "exact"
+    },
+    {
+      "case_id": "screening",
+      "display_title": "Coverage screening",
+      "issue_timestamp": "2013-09-06 06:00:00+00:00",
+      "zone": "zone1",
+      "seed": 0,
+      "predictor": "GBR",
+      "horizon": 6,
+      "target_coverage": 0.9,
+      "price_ratio": 5.617977528089887,
+      "selected_action": "EnbPI-RH",
+      "linucb_selected_action": "Static",
+      "target_index": 30,
+      "state_code": 2577,
+      "ramp_state": "ramp",
+      "raw_width_state": "narrow",
+      "rolling_state": "stable",
+      "raw_width": 0.5894942446880422,
+      "support_n": 595,
+      "support_backoff_name": "drop_rolling"
+    }
+  ],
+  "checked": [
+    "interval bounds",
+    "capacity and exceedance losses at reference price",
+    "realized coverage",
+    "historical coverage and TUWR eligibility",
+    "minimum eligible cost score",
+    "one CLARA and one LinUCB choice per case"
+  ],
+  "experimental_rerun": false
+}

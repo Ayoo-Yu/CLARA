@@ -7,14 +7,12 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from matplotlib.colors import LinearSegmentedColormap
-SCRIPT_DIR=Path(__file__).resolve().parent
-REPO=SCRIPT_DIR.parents[1]
-HERE=REPO/'results/current_figure_data/figureS1'
-OUTPUT=REPO/'outputs/current/figureS1'
-OUTPUT.mkdir(exist_ok=True,parents=True)
-DATA = HERE
-OUT = OUTPUT
+SCRIPT_DIR = Path(__file__).resolve().parent
+REPO = SCRIPT_DIR.parents[1]
+DATA = REPO / 'results/current_figure_data/figureS1'
+OUT = REPO / 'outputs/current/figureS1'
 OUT.mkdir(parents=True, exist_ok=True)
+HERE = OUT
 plt.rcParams.update({'font.family':'Times New Roman','font.size':10,'axes.labelsize':11,'axes.titlesize':11,'axes.labelcolor':'black','xtick.color':'black','ytick.color':'black','text.color':'black','axes.edgecolor':'black','axes.linewidth':.8,'xtick.direction':'in','ytick.direction':'in','xtick.top':True,'ytick.right':True,'pdf.fonttype':42,'ps.fonttype':42,'svg.fonttype':'none','legend.frameon':True,'legend.fancybox':False,'legend.edgecolor':'black','legend.framealpha':1,'savefig.facecolor':'white'})
 ORDER=['CLARA','LinUCB','CART','TSC','EEE','Static','ACI','AgACI','EnbPI-RH','WIDTH_ONLY']
 LABEL={'WIDTH_ONLY':'Width-only','OUTCOME_ORACLE':'Outcome oracle'}
@@ -38,11 +36,11 @@ c=pd.read_csv(DATA/'chronology.csv');c.issue_timestamp=pd.to_datetime(c.issue_ti
 methods=['Static','EnbPI-RH','CLARA'];summary=c[c.method.isin(methods)].groupby('method')[['covered','TUWR']].mean().reindex(methods)
 fig=plt.figure(figsize=(7.5,3.9));gs=fig.add_gridspec(2,2,width_ratios=[1,2.1],hspace=.7,wspace=.35)
 a=fig.add_subplot(gs[0,0]);b=fig.add_subplot(gs[:,1]);d=fig.add_subplot(gs[1,0])
-a.bar(range(3),100*summary.covered,color=[COL[m] for m in methods],edgecolor='black',lw=.5);a.axhline(90,color='black',ls='--',lw=.8);a.set(ylim=(0,105),ylabel='Global coverage (%)');a.set_xticks(range(3),methods,fontsize=8);style(a,'a')
+a.bar(range(3),100*summary.covered,color=[COL[m] for m in methods],edgecolor='black',lw=.5);a.axhline(90,color='black',ls='--',lw=.8);a.set(ylim=(0,105),ylabel='Overall coverage (%)');a.set_xticks(range(3),methods,fontsize=8);style(a,'a')
 for i,v in enumerate(summary.covered):a.text(i,100*v+2,f'{100*v:.2f}',ha='center',fontsize=8)
 for m in methods:
  z=c[(c.method==m)&c.issue_timestamp.between('2013-09-01','2013-10-01')];b.plot(z.issue_timestamp,100*z.rolling_coverage,lw=1.1,label=m,color=COL[m])
-b.axhline(100*(.9-1.96*np.sqrt(.9*.1/168)),color='black',ls='--',lw=.8,label='Lower tolerance');b.axhline(90,color='black',ls=':',lw=.8);b.set(ylabel='168 h rolling coverage (%)',xlabel='Forecast date (2013)');style(b,'b','both');b.legend(fontsize=8,loc='lower right');b.xaxis.set_major_locator(mdates.DayLocator(interval=7));b.xaxis.set_major_formatter(mdates.DateFormatter('%d %b'))
+b.axhline(100*(.9-1.96*np.sqrt(.9*.1/168)),color='black',ls=':',lw=.8,label='Lower tolerance');b.axhline(90,color='black',ls='--',lw=.8,label='Target coverage');b.set(ylabel='168 h rolling coverage (%)',xlabel='Forecast date (2013)');style(b,'b','both');b.legend(fontsize=8,loc='lower left',labelspacing=.3);b.xaxis.set_major_locator(mdates.DayLocator(interval=7));b.xaxis.set_major_formatter(mdates.DateFormatter('%d %b'))
 d.bar(range(3),100*summary.TUWR,color=[COL[m] for m in methods],edgecolor='black',lw=.5);d.set(ylabel='TUWR (%)',ylim=(0,25));d.set_xticks(range(3),methods,fontsize=8);style(d,'c')
 for i,v in enumerate(summary.TUWR):d.text(i,100*v+.5,f'{100*v:.2f}',ha='center',fontsize=8)
 save(fig,'S1')

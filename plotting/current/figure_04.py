@@ -10,14 +10,12 @@ from matplotlib.colors import LinearSegmentedColormap, LogNorm, TwoSlopeNorm
 from matplotlib.patches import Rectangle
 from matplotlib import font_manager
 
-SCRIPT_DIR=Path(__file__).resolve().parent
-REPO=SCRIPT_DIR.parents[1]
-HERE=REPO/'results/current_figure_data/figure04'
-OUTPUT=REPO/'outputs/current/figure04'
-OUTPUT.mkdir(exist_ok=True,parents=True)
-DATA = HERE
-OUT = OUTPUT
+SCRIPT_DIR = Path(__file__).resolve().parent
+REPO = SCRIPT_DIR.parents[1]
+DATA = REPO / 'results/current_figure_data/figure04'
+OUT = REPO / 'outputs/current/figure04'
 OUT.mkdir(parents=True, exist_ok=True)
+HERE = OUT
 
 mpl.rcParams.update({
     'font.family': 'Times New Roman',
@@ -109,11 +107,13 @@ style(ax_b, 'b', 'Cost of retaining one candidate', grid='x')
 t = pd.read_csv(DATA / 'conditional_forecaster_transfer_all_prices.csv')
 t = t.loc[t.price_id.eq('ALL')].pivot(index='target_predictor', columns='source_predictor', values='change_pct').reindex(index=FORECASTERS, columns=FORECASTERS)
 cmap_transfer = LinearSegmentedColormap.from_list('transfer_cost', ['#77A3BE', '#FFFFFF', '#B76453'])
-im = ax_c.imshow(t, norm=TwoSlopeNorm(vmin=-.4, vcenter=0, vmax=.8), cmap=cmap_transfer, aspect='auto', interpolation='nearest')
+transfer_limit = float(np.max(np.abs(t.to_numpy(dtype=float))))
+assert np.isfinite(transfer_limit) and transfer_limit > 0
+im = ax_c.imshow(t, norm=TwoSlopeNorm(vmin=-transfer_limit, vcenter=0, vmax=transfer_limit), cmap=cmap_transfer, aspect='auto', interpolation='nearest')
 for i in range(4):
     for j in range(4):
         value = float(t.iloc[i, j])
-        ax_c.text(j, i, '0' if i == j else f'{value:+.2f}', ha='center', va='center', fontsize=9)
+        ax_c.text(j, i, '0' if i == j else f'{value:+.2f}'.replace('-', '−'), ha='center', va='center', fontsize=9)
 ax_c.set_xticks(range(4), FORECASTERS, rotation=32, ha='right', rotation_mode='anchor')
 ax_c.set_yticks(range(4), FORECASTERS)
 ax_c.set(xlabel='Source forecaster', ylabel='Actual forecaster')
@@ -123,7 +123,9 @@ ax_c.grid(which='minor', color='white', linewidth=.7)
 ax_c.tick_params(which='minor', length=0)
 style(ax_c, 'c', 'Transferring a conditional rule')
 cax_c = fig.add_axes([.452, .13, .012, .37])
-cb_c = fig.colorbar(im, cax=cax_c, ticks=[-.4, 0, .4, .8])
+transfer_ticks = np.linspace(-transfer_limit, transfer_limit, 5)
+cb_c = fig.colorbar(im, cax=cax_c, ticks=transfer_ticks)
+cb_c.ax.set_yticklabels(['0' if abs(v) < 1e-12 else f'{v:.2f}'.replace('-', '−') for v in transfer_ticks])
 cb_c.set_label('ERRF change (%)', labelpad=5)
 cb_c.ax.tick_params(labelsize=8, length=2)
 
@@ -170,7 +172,7 @@ for artist in fig.findobj(mpl.text.Text):
         outside.append(artist.get_text())
 assert not outside, outside
 
-stem = OUT / 'Figure_4'
+stem = OUT / 'Figure_04'
 fig.savefig(stem.with_suffix('.pdf'))
 fig.savefig(stem.with_suffix('.svg'))
 fig.savefig(stem.with_suffix('.tiff'), dpi=600, pil_kwargs={'compression': 'tiff_lzw'})
@@ -195,7 +197,7 @@ manifest = {
     'd': {'unique_candidate_conditions': len(r), 'hexbin_count_sum': int(hb.get_array().sum()),
           'price_copies_removed_after_exact_invariance_check': True},
     'outside_canvas_text': outside,
-    'exports': {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(OUT.glob('Figure_4.*'))},
+    'exports': {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(OUT.glob('Figure_04.*'))},
 }
 (OUT / 'figure4_manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding='utf-8')
 print(json.dumps(manifest, ensure_ascii=False, indent=2))

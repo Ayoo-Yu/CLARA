@@ -1,3 +1,3 @@
-case_id,issue_timestamp,seed,zone,predictor,horizon,target_coverage,selected_action,state_code,ramp_state,raw_width_state,raw_width,ramp_proxy,rolling_state,support_n,support_backoff_name
-ordinary,2013-11-12 14:00:00+00:00,0,zone1,GBR,6,0.9,Static,2559,ordinary,narrow,0.4829018970659058,0.027306997575403308,volatile,277,exact
-ramp,2013-09-06 06:00:00+00:00,0,zone1,GBR,6,0.9,EnbPI_RH,2577,ramp,narrow,0.5894942446880422,0.23953862205852752,stable,595,drop_rolling
+case_id,display_title,issue_timestamp,zone,seed,predictor,horizon,target_coverage,price_ratio,selected_action,linucb_selected_action,target_index,state_code,ramp_state,raw_width_state,rolling_state,raw_width,support_n,support_backoff_name
+economic,Cost trade-off,2013-09-12 06:00:00+00:00,zone1,0,GBR,6,0.9,5.617977528089887,Static,AgACI,174,2574,ramp,narrow,volatile,0.5533822875606716,111,exact
+screening,Coverage screening,2013-09-06 06:00:00+00:00,zone1,0,GBR,6,0.9,5.617977528089887,EnbPI-RH,Static,30,2577,ramp,narrow,stable,0.5894942446880422,595,drop_rolling
